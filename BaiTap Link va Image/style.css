@@ -1,0 +1,26 @@
+body {
+	text-align: center;
+}
+img {
+	max-width: 300px;
+	max-height: 300px;
+}
+p {
+	font-weight: bold;
+}
+p::before  {
+	content:"XE MÁY ";
+}
+a:hover img {
+	background: #d1d5d8;
+	border-radius: 10%;
+} 
+a:visited {
+	color: grey;
+}
+a:hover {
+	color: red;
+}
+a:active {
+	color: green;
+}
