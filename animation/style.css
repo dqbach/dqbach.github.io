@@ -7,11 +7,11 @@ body{
 	position: relative;
 }
 @keyframes doimau {
-	0%  {background-color: #EF7126; color: #F9E559;}
-    25%  {background-color: #6F3662; color: #FFFFFF;}
-    50%  {background-color: #9F6164; color: #F8DEBD;}
-    75%  {background-color: #44B3C2; color: #FFFFFF;}
-    100% {background-color: #218C8D; color: #F9E559;}
+	0%  {background-color: #ff0000; color: #F9E559;}
+    25% {background-color: #ffff00; color: #F8DEBD;}
+    50% {background-color: #00ff80; color: #F9E559;}
+    75% {background-color: #8000ff; color: #FFFFFF;}
+    100% {background-color: #ff0000; color: #F9E559;}
 }
 h1	{
 	text-align: center;
@@ -19,7 +19,7 @@ h1	{
 	height: 100px;
 	line-height: 100px;
 	color: #eee;
-	animation: doimau 5s ease-in-out infinite;
+	animation: doimau 10s ease-in-out infinite;
 }
 a {	
 	width: 33.33%;
@@ -46,16 +46,15 @@ img {
 	transition: all 0.3s ease-in-out;
 }
 @keyframes anim {
-	0%  {}
-    25%  {opacity:1;right:0}
-    50%  {opacity:1;right:0}
-    75%  {opacity:0;right:200}
-    100% {opacity:0;right:200}
+	0%  {opacity:0;right:-200px}
+    30%  {opacity:1;right:0}
+    60%  {opacity:1;right:0}
+    90% {opacity:0;right:300px}
+    100% {opacity:0;right:300px}
 }
-p {
+h3 {
 	position: absolute;
 	top: 590px;
-	right: -200px;
-	opacity: 0;
-	animation: anim 5s ease-in-out ;
+	animation: anim 8s ease-in-out infinite;
 }
+
