@@ -1,0 +1,102 @@
+* { box-sizing: border-box;
+	margin: 0;
+	padding: 0; 
+}
+body{
+	background: radial-gradient(#f9aebd, #fb94a6);
+}
+#to{
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 400px;
+	margin: auto ;
+	top: -200px;
+	box-shadow:0px 0px 30px 0px rgba(0, 0, 0, 1);
+	border-radius: 0 0 200px 200px ;
+	height:800px;
+	background-image: linear-gradient(#f9829b,#fd97ab); 
+}
+#nho {
+	position: relative;
+	left: 0;
+	right: 0;
+	width: 330px;
+	margin: auto ;
+	top: -100px;
+	border-radius: 0 0 200px 200px ;
+	height:660px;
+	border : 3px dashed white;
+	background-image: linear-gradient(#f9829b,#fd97ab); 
+}
+img {
+	position: absolute;
+	z-index: -1;
+}
+.hoa1 {
+	left:-130px; 
+	top:50px;
+}
+.hoa8 {
+	right:-130px; 
+	top:50px;
+}
+.hoa2 {
+	left:-130px; 
+	top:240px;
+}
+.hoa7 {
+	right:-130px; 
+	top:240px;
+}
+.hoa3 {
+	left:-130px; 
+	top:440px;
+}
+.hoa6 {
+	right:-130px; 
+	top:440px;
+}
+.hoa4 {
+	left:-20px; 
+	top:620px;
+}
+.hoa5 {
+	right:-20px; 
+	top:620px;
+}
+
+
+
+
+
+
+
+.hoa9 {
+	left:-110px; 
+	top:160px;
+}
+.hoa15 {
+	right:-110px; 
+	top:160px;
+}
+.hoa10 {
+	left:-110px; 
+	top:360px;
+}
+.hoa14 {
+	right:-110px; 
+	top:360px;
+}
+.hoa11 {
+	left:-80px; 
+	top:570px;
+}
+.hoa13 {
+	right:-80px; 
+	top:570px;
+}
+.hoa12 {
+	right:115px;
+	top:677px; 
+}
