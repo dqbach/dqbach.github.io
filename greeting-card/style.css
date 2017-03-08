@@ -225,9 +225,9 @@ div {background: #f9829b}
 	height: 123px;
 }
  @keyframes scale {
-    0% {transform: scale(0)}
-    80% {transform: scale(0)}
-    90% {transform: scale(1.5)}
+    0% {transform: scale(0);}
+    80% {transform: scale(0);}
+    90% {transform: scale(1.2);}
     100% {transform: scale(1);}
 }
 #w {
