@@ -132,8 +132,8 @@ position:absolute;
 
 #content {
 	background: url("images/bg.jpg");
-	height: 1270px ;
-	padding-top: 30px;
+	height: 1307px;
+	padding-top: 60px;
 }
 h2 {
 	font-weight: lighter;
@@ -146,12 +146,12 @@ h2 {
 	clear: both;
 }
 .main-product {
-	max-width: 33.33%;
+	max-width: 340px;
 	float:left;
-	padding: 0 40px;
+	padding: 0px 40px;
 	height: 500px;
-	margin: 10px 0 40px 0  ;
-	transition : all 0.2s ease-in-out ;
+	margin: 20px 0 40px 0;
+	transition : all 0.2s ease-in-out;
 	border-radius:10%;
 }
 .main-product h3{
@@ -259,7 +259,7 @@ h2 {
 
 #ds {
 	width: 1020px;
-	height: 1760px;
+	height: 960px;
 }
 #ds-list {
 	width: 255px;
@@ -271,8 +271,8 @@ h2 {
 	width: 765px;
 	float: right;
 	background: url("images/bg.jpg");
-    padding:6px;
-    
+	padding:6px;
+	margin-bottom: 40px;
 }
 .box {
 	float: left;
@@ -327,6 +327,25 @@ h2 {
 } 
 .box:hover {
 	background: rgba(0,0,0,0.3);
-
 }
+
+.so {background: #2b2b2b;width: 765px;float: right;vertical-align: middle;}
+.so a {
+	float: right;
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	margin: 5px;
+	color: #fff;
+}
+.so a:hover {
+	background: #ed1c24;
+    color: #fff;
+}
+.so a:last-child {
+	background: #ed1c24;
+    color: #fff;
+}
+
+
 /*------------------------------------------------------------------------------------*/
