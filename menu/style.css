@@ -2,6 +2,7 @@
 	box-sizing:border-box;
 	margin: 0;
 	padding: 0;
+	color: #fff;
 	list-style: none;
 }
 body {
@@ -9,7 +10,6 @@ body {
 	margin: auto ;
 	background: url('images/pattern-body.jpg') ;
 	font-family: Arial;	
-	color: #fff;
 	position: relative ; 
 	text-align: center;
 }
@@ -26,6 +26,25 @@ position:absolute;
 .none {
 	display: none;
 }
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.center{
+	text-align: center !important;
+}
+
+
+
+
+
+
+
 #header {
 	width: 100%;
 }
@@ -98,6 +117,7 @@ position:absolute;
 .menu ul{
 	display: none;
 	position: absolute;
+
 }
 .menu ul a{
 	background: url('images/pattern-body.jpg') ;
@@ -122,9 +142,12 @@ position:absolute;
 #menu-list li:nth-child(4) a {
 	border-right: 0px;
 }
+#menu-list *{
+	list-style-type: none;
+}
 /*------------------------------------------*/
 #banner img{
-	margin: 30px 0 60px 0 ;
+	margin: 30px 0 30px 0 ;
 	width: 1020px ;
 }
 
@@ -134,6 +157,8 @@ position:absolute;
 	background: url("images/bg.jpg");
 	height: 1307px;
 	padding-top: 60px;
+	margin-bottom: 30px;
+    overflow: hidden;
 }
 h2 {
 	font-weight: lighter;
@@ -194,7 +219,7 @@ h2 {
 /*------------------------------------------------------------------------------------*/
 #footer {
 	border-top: 1px solid #fff;
-	margin: 40px 0 0 0 ;
+	height: 259px;
 
 }
 #footer p{
@@ -259,20 +284,73 @@ h2 {
 
 #ds {
 	width: 1020px;
-	height: 960px;
+	height: 920px;
 }
 #ds-list {
 	width: 255px;
 	height: 500px;
-	background: green;
 	float: left;
+	text-align: left;
 }
+#ds-list li {
+	padding: 0 15px 30px 15px  ;
+} 
+#ds-list li li{
+	padding: 15px 15px 15px 30px ;
+} 
+#ds-list .picked {
+	background: #ED1C24;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+#ds-list .picked:hover {
+	color: #fff ;
+	border-bottom: 1px solid rgba(0,0,0,0) !important ;
+}
+#ds-list li ul li a {
+	font-size: 12px;
+} 
+#ds-list a{
+	padding: 0 0 3px 0; 
+	border-bottom: 1px solid rgba(0,0,0,0) ;
+} 
+#ds-list a:hover {
+	color: #ED1C24;
+	border-bottom: 1px solid white ;
+} 
+#ds-list .list-do-an ul{ 
+	height: 0px;
+	overflow: hidden;
+	transition : all 0.5s ease-in-out ;
+}
+#ds-list .list-do-an:hover ul{ 
+	height: 192px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #ds-box {
 	width: 765px;
 	float: right;
 	background: url("images/bg.jpg");
 	padding:6px;
-	margin-bottom: 40px;
+	margin-bottom: 5px;
 }
 .box {
 	float: left;
@@ -281,7 +359,7 @@ h2 {
 	border-radius: 10%;
 	transition: all 0.2s ease-in-out;
 	height: 404px;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .box p {
 	font-size: 13px;
@@ -348,4 +426,120 @@ h2 {
 }
 
 
-/*------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+#ct {
+	width: 1020px;
+	height: 700px;
+	text-align: left;
+}
+#chi-tiet-box {
+	width: 765px;
+	float: right;
+	margin-bottom: 5px;
+}
+#chi-tiet-box img{
+	width: 400px;
+	background: url("images/bg.jpg");
+	margin-right: 30px;
+}
+#chi-tiet-box h1{
+	font-size: 25px;
+	color: #F9CD5B;
+	margin-bottom: 30px;
+}
+#chi-tiet-box p {
+	text-align: justify;
+	margin-bottom: 25px;
+}
+#chi-tiet-box .price {
+	color: #ed1c24;
+	font-size: 35px;
+}
+.size {
+	height: 137px;
+}
+.size a {
+	background: #fff;
+	color: #444;
+	padding: 5px 5px 5px 10px;
+	border-radius: 5px;
+	margin: 0 5px 5px 0 ;
+	width: 127px; 
+}
+.size a:hover {
+	background: #ed1c24;
+	color: #fff;
+}
+.size li:hover .ct-size{
+	display: block;
+}
+#chi-tiet-box .ct-buy {
+	background: #ed1c24;
+	color:#fff;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+#chi-tiet-box .ct-buy:hover {
+	
+
+
+
+} 
+
+.line {
+	width: 100%;
+	height: 1px;
+	background:#fff;
+	display: block;
+	float: right;
+	margin-top:90px; 
+}
+
+
+
+.appendix {
+	margin: 30px 0 ;
+	width: 100% ;
+	background: url("images/bg.jpg");
+	text-align: center !important;
+	height: 145px;
+
+}
+
+.appendix div {
+	width: 225px;
+	float: left;
+	height: 145px;
+}
+
+
+
+.appendix .arrow {
+	width: 45px;
+	height: 145px;
+	background: url("images/arrow.png") center no-repeat;
+	background-size: 30px 30px ;
+}
+.appendix .arrow:first-child {
+	transform:rotate(180deg);
+} 
+.appendix div img {
+	margin: 0 !important;
+	width: 50% !important;
+	background: none !important;
+	transition: all 0.2s ease-in-out;
+}
+.appendix p {
+color: #F9CD5B;
+font-size: 14px;
+margin-bottom: 0px !important;
+transition: all 0.2s ease-in-out;
+}
+.appendix div:hover img {
+	transform:scale(1.2);    
+}
+{
+	color: #fff;  
+}
