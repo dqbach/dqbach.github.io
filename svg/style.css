@@ -1,0 +1,178 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+div {
+	height:51px ;
+	width:83px ;
+}
+
+div#yen{
+	position: absolute;
+}
+
+div#yen {
+top: 120px;
+left:135px;
+
+}
+/*----------------------------------------------------*/
+@keyframes vanh_xe{
+  0%  {stroke-dashoffset: 530;}  
+  100%  {stroke-dashoffset: 0;}
+}
+.vanh_xe{
+  stroke-dasharray: 530;
+  animation: vanh_xe 1s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes lop_xe{
+  0%  {stroke-dashoffset: 563;}   
+  100%  {stroke-dashoffset: 0;}
+}
+.lop_xe{
+  stroke-dasharray: 563;
+  animation: lop_xe 1.5s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes lan_hoa {
+  0%  {stroke-dashoffset: 180;} 
+  40%  {stroke-dashoffset: 180;}
+  100%  {stroke-dashoffset: 0;}
+}
+.lan_hoa {
+  stroke-dasharray:180;
+ animation: lan_hoa 1.5s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes tron_nho {
+  0%  {stroke-dashoffset: 80;} 
+  100%  {stroke-dashoffset: 0;}
+}
+.tron_nho {
+  stroke-dasharray:80;
+ animation: tron_nho 1.5s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes tron_do_nho {
+  0%  {stroke-dashoffset: 30;}
+  100%  {stroke-dashoffset: 0;}
+}
+#tron_do_nho {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 0;
+  animation: tron_do_nho 1s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes tron_do_to {
+  0%  {stroke-dashoffset: 190;}
+  100%  {stroke-dashoffset: 0;}
+}
+#tron_do_to {
+  stroke-dasharray: 190;
+  animation: tron_do_to 1.5s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes day_xich{
+  0%  {stroke-dashoffset: 135;} 
+  20%  {stroke-dashoffset: 135;} 
+  100%  {stroke-dashoffset: 0;}
+}
+.day_xich {
+  stroke-dasharray: 135;
+  animation: day_xich 1.5s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes thanh_ban_dap{
+  0%  {stroke-dashoffset: 60;}
+  60%  {stroke-dashoffset: 60;}   
+  100%  {stroke-dashoffset: 0;}
+}
+.thanh_ban_dap {
+  stroke-dasharray: 60;
+  animation: thanh_ban_dap 1s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes ban_dap{
+  0%  {stroke-dashoffset: 30;}
+  40%  {stroke-dashoffset: 30;}   
+  100%  {stroke-dashoffset: 0;}
+}
+
+.ban_dap {
+  stroke-dasharray: 30;
+animation: ban_dap 1.5s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes hai_thanh {
+  0%  {stroke-dashoffset: 200;}
+  50%  {stroke-dashoffset: 200;}    
+  100%  {stroke-dashoffset: 0;}
+}
+.hai_thanh {
+  stroke-dasharray: 200;
+ animation: hai_thanh 2s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes khung {
+  0%  {stroke-dashoffset: 370;} 
+  50%  {stroke-dashoffset: 370;} 
+  100%  {stroke-dashoffset: 0;}
+}
+.khung {
+  stroke-dasharray: 370;
+  animation: khung 2s ease-in-out;
+}
+/*----------------------------------------------------*/
+@keyframes tay_cam {
+  0%  {stroke-dashoffset: 80;}
+  90%  {stroke-dashoffset: 80;}   
+  100%  {stroke-dashoffset: 0;}
+}
+#tay_cam{
+  stroke-dasharray: 80;
+  animation: tay_cam 2s ease-in-out;
+}
+@keyframes tc {
+  0%  {transform: rotate(0deg);}
+  100%  {transform: rotate(10deg);}
+}
+#tc{
+  transform-origin: 100% 50% ;
+  animation: tc 0.5s ease-in-out infinite alternate;
+}
+/*----------------------------------------------------*/
+@keyframes yen_scale {
+	0%  {transform: scale(0);}
+	90%  {transform: scale(0);}		
+ 	100%  {transform: scale(1.1)}
+}
+#yen svg {
+  transform-origin: 20% 40%;
+  transform: scale(1.1);
+  animation: yen_scale 2s ease-in-out;
+}
+@keyframes yen {
+	0%  {transform:rotate(0deg) translateY(-10px) ; }		
+ 	100%  {transform:rotate(5deg) translateY(-10px) ; }
+}
+#yen {
+	transform:rotate(0deg) ;
+	transform-origin: 20% 40%;
+  animation: yen 0.5s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes bicycle {
+  0%  {transform:scaleY(1) ;}
+  100%  {transform:scaleY(0.97)  ;}   
+}
+#bicycle {
+  width: 500px;
+  height: 400px;
+  transform-origin: 50% 100%; 
+  animation: bicycle 0.5s ease-in-out infinite alternate;
+}
+
+
