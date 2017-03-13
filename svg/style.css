@@ -1,0 +1,187 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+svg{
+	position: absolute;
+}
+
+#yen {
+top: 120px;
+left:135px;
+
+}
+
+
+@keyframes yen {
+	0%  {transform: scale(0);}
+	90%  {transform: scale(0);}		
+ 	100%  {transform: scale(1.2)}
+}
+#yen{
+  transform: scale(1.2);
+  animation: yen 3s ease-in-out 
+}
+
+@keyframes tron_nho_sau {
+	0%  {stroke-dashoffset: 80;}
+	40%  {stroke-dashoffset: 80;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+#tron_nho_sau{
+  stroke-dasharray: 80;
+  stroke-dashoffset: 0;
+  animation: tron_nho_sau 1s linear  
+}
+
+@keyframes khung {
+	0%  {stroke-dashoffset: 650;}	
+ 	100%  {stroke-dashoffset: 0;}
+}
+#khung {
+  stroke-dasharray: 650;
+  stroke-dashoffset: 0;
+  animation: khung 2s linear  ;
+}
+
+
+@keyframes tron_do_nho {
+	0%  {stroke-dashoffset: 200;}
+	65%  {stroke-dashoffset: 200;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+
+#tron_do_nho {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  animation: tron_do_nho 3s linear ;
+}
+
+@keyframes tron_do_to {
+	0%  {stroke-dashoffset: 190;}
+	75%  {stroke-dashoffset: 190;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+
+#tron_do_to {
+  stroke-dasharray: 190;
+  stroke-dashoffset: 0;
+  animation: tron_do_to 3s linear ;
+}
+
+
+
+@keyframes thanh_ban_dap{
+	0%  {stroke-dashoffset: 60;}
+	75%  {stroke-dashoffset: 60;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+
+.thanh_ban_dap {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+  animation: thanh_ban_dap 2.5s linear ;
+}
+
+@keyframes ban_dap{
+	0%  {stroke-dashoffset: 22;}
+	90%  {stroke-dashoffset: 22;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+
+.ban_dap {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 0;
+  animation: ban_dap 2.7s linear ;
+}
+
+@keyframes day_xich{
+	0%  {stroke-dashoffset: 130;}
+	90%  {stroke-dashoffset: 130;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+
+.day_xich {
+  stroke-dasharray: 130;
+  stroke-dashoffset: 0;
+  animation: day_xich 2.7s linear ;
+}
+
+
+
+@keyframes hai_thanh {
+	0%  {stroke-dashoffset: 200;}
+	67%  {stroke-dashoffset: 200;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+
+#hai_thanh {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  animation: hai_thanh 3s linear ;
+}
+
+
+
+@keyframes tron_nho_truoc {
+	0%  {stroke-dashoffset: 80;}
+	90%  {stroke-dashoffset: 80;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+#tron_nho_truoc{
+  stroke-dasharray: 80;
+  stroke-dashoffset: 0;
+  animation: tron_nho_truoc 3.2s linear  
+}
+
+@keyframes tay_cam {
+	0%  {stroke-dashoffset: 80;}
+	90%  {stroke-dashoffset: 80;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+#tay_cam{
+  stroke-dasharray: 80;
+  stroke-dashoffset: 0;
+  animation: tay_cam 3.2s linear  
+}
+
+
+
+@keyframes lan_hoa {
+	0%  {stroke-dashoffset: 90;}
+	80%  {stroke-dashoffset: 90;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+.lan_hoa {
+  stroke-dasharray: 90;
+  stroke-dashoffset: 0;
+  animation: lan_hoa 3.5s linear ;
+}
+
+
+@keyframes tron_to{
+	0%  {stroke-dashoffset: 565;}
+	85%  {stroke-dashoffset: 565;}		
+ 	100%  {stroke-dashoffset: 0;}
+}
+.tron_to{
+  stroke-dasharray: 565;
+  stroke-dashoffset: 0;
+  animation: tron_to 4s linear  
+}
+
+
+@keyframes bong{
+	0%  {fill:#fff ;}
+	85%  {fill:#fff ;}		
+ 	100%  {fill:#cccdcd;}
+}
+.bong{
+  fill:#cccdcd ;
+  animation: bong 4s ease-in-out 
+}
+
+
+
+
+
