@@ -214,10 +214,13 @@ animation: ban_dap 1.5s ease-in-out;
 
 
 @keyframes cloud_gr  {
-  0%  {transform:translate(500px,0px) }   
-  100%  {transform:translate(-500px,0px)}
+  0%  {transform:translate(700px,0px) }   
+  100%  {transform:translate(-700px,0px)}
 }
 .cloud_gr1 {
+	position: absolute;
+	right: 530px;
+
   animation: cloud_gr  10s linear infinite ;
 }
 .cloud_gr2 {
