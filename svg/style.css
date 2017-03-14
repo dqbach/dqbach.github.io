@@ -1,6 +1,7 @@
-body {
+*{
 	margin: 0;
 	padding: 0;
+  box-sizing: border-box;
 }
 div {
 	height:51px ;
@@ -18,11 +19,11 @@ left:135px;
 }
 /*----------------------------------------------------*/
 @keyframes vanh_xe{
-  0%  {stroke-dashoffset: 530;}  
+  0%  {stroke-dashoffset: 580;}  
   100%  {stroke-dashoffset: 0;}
 }
 .vanh_xe{
-  stroke-dasharray: 530;
+  stroke-dasharray: 580;
   animation: vanh_xe 1s ease-in-out;
 }
 /*----------------------------------------------------*/
@@ -161,18 +162,73 @@ animation: ban_dap 1.5s ease-in-out;
 	transform-origin: 20% 40%;
   animation: yen 0.5s ease-in-out infinite alternate;
 }
-
-
+/*----------------------------------------------------*/
 
 @keyframes bicycle {
   0%  {transform:scaleY(1) ;}
-  100%  {transform:scaleY(0.97)  ;}   
+  100%  {transform:scaleY(1)  ;}   
 }
 #bicycle {
   width: 500px;
   height: 400px;
   transform-origin: 50% 100%; 
   animation: bicycle 0.5s ease-in-out infinite alternate;
+  
+ 
 }
+/*----------------------------------------------------*/
+.sky {
+  width: 500px;
+  background: lightblue;
+  height: 500px;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
+
+}
+
+.cloud1 {
+  transform:scale(0.05) translate(3200px,350px) ;
+}
+.cloud2 {
+  transform:scale(0.1) translate(1960px,220px);
+}
+.cloud3 {
+  transform:scale(0.1) translate(690px,50px);
+}
+.cloud4 {
+  transform:scale(0.15) translate(40px,50px) ;
+}
+.cloud5 {
+  transform:scale(0.15) translate(650px,200px) ;
+}
+.cloud_gr1 {
+  float: left;
+ 
+}
+.cloud_gr2 {
+  transform:translate(800px,-220px) ;
+  float: right;
+}
+
+
+@keyframes cloud_gr  {
+  0%  {transform:translate(500px,0px) }   
+  100%  {transform:translate(-500px,0px)}
+}
+.cloud_gr1 {
+  animation: cloud_gr  10s linear infinite ;
+}
+.cloud_gr2 {
+  animation: cloud_gr  10s linear infinite ;
+}
+
+
+
+
+
+
+
 
 
