@@ -166,9 +166,10 @@ animation: ban_dap 1.5s ease-in-out;
 
 @keyframes bicycle {
   0%  {transform:scaleY(1) ;}
-  100%  {transform:scaleY(0.95)  ;}   
+  100%  {transform:scaleY(0.98)  ;}   
 }
 #bicycle {
+	margin-top: 80px; 
   width: 500px;
   height: 400px;
   transform-origin: 50% 100%; 
@@ -178,7 +179,7 @@ animation: ban_dap 1.5s ease-in-out;
 }
 /*----------------------------------------------------*/
 .sky {
-  width: 500px;
+  width: 530px;
   background: lightblue;
   height: 500px;
   position: absolute;
@@ -208,7 +209,6 @@ animation: ban_dap 1.5s ease-in-out;
  
 }
 .cloud_gr2 {
-  transform:translate(800px,-220px) ;
   float: right;
 }
 
