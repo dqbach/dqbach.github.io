@@ -2,15 +2,19 @@
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
     text-rendering: geometricPrecision;
+
     
 }
 a {
 	text-decoration: none !important;	
 }
-/*-----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
 
 .home-header {
 	border-bottom: 3px solid rgb(239,62,67); 
+	width: 100%;
+	float: left;
+	padding: 0 0 0 15px ;
 }
 .home-header-box {
 	font-size: 22px;
@@ -23,35 +27,47 @@ a {
 	background: linear-gradient(90deg, blue 0%,rgb(239,62,67) 100%);
 	position: relative;
 	bottom: -3px;
+	font-weight: bold;
 }
 .home-header-box:hover {
 	color:white;
 	text-decoration: none;
 } 
 .more {
-	font-size: 20px;
 	float: right;
+	font-size: 20px;
 	color :rgb(239,62,67);
-	padding-top: 8px;
+	padding: 8px 8px 0 0;
 }
-/*--------------------------------------------------------------------------------------------------------*/
-
-.col-sm-6 {
-	text-align: center;
-
+.plus-icon {
+	width: 40px;
+	height: 40px;
+	float: right;
+	background: url("../icon/plus-icon.svg")  center right no-repeat;
+	background-size: 50px 50px;
 }
+    
+/*-----------------------------------------------------------------------------------------------------------------*/
 
-#product-box {
-	background:#fff;
-	border: 1px solid #e5e5e5;
+.product-box-border {
+	border: 1px solid #b3b3b3;
 	margin-top: 30px ;
-    display: inline-block;
-    position: relative;
-    padding: 0 10px;
-    width: 100%;
-
+	width: 100%;
+	overflow: hidden;
+	
 }
-#tag-hot {
+.view-box {
+	width: 400%;
+	transform: translateX(0px);
+}
+.product-box {
+	float: left;
+	background:#fff;	
+    display: inline-block;
+    padding: 0 10px;
+    width: 25%;
+}
+.tag-hot {
 	display: inline-block;
 	font-size: 15px;
 	padding: 5px 10px;
@@ -59,44 +75,47 @@ a {
 	color: white;
 	background: red;
 	font-weight: bold;
-	position:absolute;
-	top:0px;
-	left:0px;
 }
-#img-product {
-	max-width: 100%;
-	background:url("../images/iphone-7-plus-13-300x300.jpg") no-repeat center;
+.img-product {
+	width: 100%;
+	padding-top: 100%;
+	margin: 15px 0 40px 0;
+}
+.img-ph1 {
+	background:url("../images/p1.jpg") no-repeat center ;
 	background-size: 100%;
 }
-@media (max-width: 767px) {
-	#img-product {height: 400px;}
+.img-p2 {
+	background:url("../images/p2.jpg") no-repeat center ;
+	background-size: 100%;
 }
-@media (min-width: 768px) {
-	#img-product {height: 370px;}
+.img-p3 {
+	background:url("../images/p3.jpg") no-repeat center ;
+	background-size: 100%;
 }
-@media (min-width: 992px) {
-	#img-product {height: 250px;}
+.img-p4 {
+	background:url("../images/p4.jpg") no-repeat center ;
+	background-size: 100%;
 }
-@media (min-width: 1200px) {
-	#img-product {height: 310px;}
-}
-#product-box span {
+
+
+.product-box span {
 	display: block;
 	height: 3px ;
 	background: blue;
 	width: 30px;
 	margin: auto;
-	margin-bottom:20px; 
+	margin-bottom:30px;
 }
-#name-product {
+.name-product {
 	color: #404040;
 	float: left; 
 	font-size: 20px;
 	font-weight:bold;
 	text-align: left;
-	margin: 5px 5px;
+	margin: 0px 5px;
 }
-#price-product {
+.price-product {
 	color: rgb(239,62,67);
 	clear: left;
 	float: left; 
@@ -106,40 +125,78 @@ a {
 	width: 100%;
 	text-align: left;
 }
-#info-product {
+
+/*---------------------------------------------------------------------------------------------------------------*/
+.info-product {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	background:white;
-	opacity: 0;
-	width: 100%;
-	transition: opacity 0.3s ease-in-out;
+	width: 25%;
 	text-align: justify;
-	padding:10px;
+	padding: 20px 20px 200px 20px;
+	z-index: -1;
 }
-#product-box:hover #info-product  {
-	opacity: 1;
+.info-ph1 , .info-ph2 , .info-ph3 , .info-ph4 {
+opacity: 0;
+
+	transition : all 0.3s ease-in-out;
 }
-#info-product .line {
-	border-top:1px solid grey; 
-	padding-top: 10px; 
+
+.ph1:hover .info-ph1  {
+opacity: 1;
+
+
+}
+.info-product .line {
+	border-top:1px solid #b3b3b3; 
+	padding-top: 20px; 
 	clear: both;
 }
 .watch , .buy {
 	font-size: 18px;
+	display: inline-block;
 	width: 100%;
-	float: left;
 	color: white;
 	padding: 10px;
 	text-align: center;
+	font-weight: bold;
+	float: right;
 }
 .watch {
 	background: #6363ff;
+	margin-bottom: 10px;
 }
 .buy {
 	background: rgb(239,62,67);
 }
-#info-product span {
+.info-product span {
 display: inline;
 background: rgb(239,62,67);
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+.hide-box-1 {
+	top:-507px;
+	left: 329px;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 767px) {
+	.more , .col2 , .col3 , .col4 {display: none;}
+	
+	
+}
+@media (min-width: 767px) {
+	.product-box-border {height: 504px;}
+
+	}
+@media (min-width: 992px) {
+	.info-product span {display: none;}
+	/*.hide-box-1 {display: none;}*/
+	.product-box-border {height: auto;}
+}
+@media (min-width: 1200px) {
+	/*.hide-box-1 {display: none;}*/
 }
