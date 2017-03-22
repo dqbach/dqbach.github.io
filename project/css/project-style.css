@@ -2,13 +2,136 @@
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
     text-rendering: geometricPrecision;
+    list-style-type: none;
 
     
 }
 a {
 	text-decoration: none !important;	
+	display: block;
 }
+span {
+	display: block;
+}
+
+
 /*----------------------------------------------------------------------------------------------------------------*/
+
+
+
+.search-bar {
+	position:absolute;
+	width: 100%;
+	background: linear-gradient(45deg, #0000ff 0%,#ef3e43 100%);
+	padding-top: 10px;
+	color:white;
+
+}
+.search-box {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.search-box form {
+	width: 100% ;
+	box-shadow:none !important;
+	margin-left:0px;
+	margin-right:0px; 
+}
+.search-box .form-group {
+	width: 96%;
+	position:absolute;
+}
+.search-box input {
+	height: 40px;
+	margin-bottom: 10px;
+	width: 100% !important;
+}
+.search-box button {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 40px;
+	width: 50px;
+	background: url("../icon/search.png") no-repeat center;
+	background-size: 30px 30px;
+	border: 0px;
+
+}
+.search-bar a {
+	padding: 15px 0px 15px 50px;
+	color:white;
+	background: url("../icon/tai-khoan.png") no-repeat;
+	background-size: 35px 35px;
+	background-position: 5% center ;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+
+
+.main-menu-bar {
+	color:white;
+	height: 110px;
+}
+.main-menu-bar .container{
+	position: relative;
+}
+.logo-box {
+	position: absolute;
+
+}
+header .logo {
+	background-image: url("../svg/logo.svg");
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-top: 28%;
+
+}
+.main-menu {
+	position: absolute;
+	right: 0;
+	top:12px;
+}
+.main-menu li {
+	float: left;
+}
+.main-menu a{
+	color:rgb(239,62,67);
+	font-size: 16px ;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.ph-menu {background:url("../icon/ph.png") no-repeat center 0%;background-size: 25%;}
+.ph2-menu {background:url("../icon/ph2.png") no-repeat center 0%;background-size: 25%;}
+.pk-menu {background:url("../icon/pk.png") no-repeat center 0%;background-size: 25%;}
+.bh-menu {background:url("../icon/bh.png") no-repeat center 0%;background-size: 25%;}
+.km-menu {background:url("../icon/km.png") no-repeat center 0%;background-size: 25%;}
+.gh-menu {background:url("../icon/gh.png") no-repeat center 0%;background-size: 30%;}
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+img {
+	width: 100%;
+	margin: 50px 0 ;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+
 
 .home-header {
 	border-bottom: 3px solid rgb(239,62,67); 
@@ -45,9 +168,15 @@ a {
 	float: right;
 	background: url("../svg/plus.svg")  center right no-repeat;
 	background-size: 28px 28px;
+
 }
     
+
+
 /*-----------------------------------------------------------------------------------------------------------------*/
+
+
+
 .col1 {
 margin-bottom: 50px; 
 
@@ -124,7 +253,6 @@ margin-bottom: 50px;
 
 
 .product-box span {
-	display: block;
 	height: 3px ;
 	background: blue;
 	width: 30px;
@@ -150,7 +278,12 @@ margin-bottom: 50px;
 	text-align: left;
 }
 
+
+
 /*---------------------------------------------------------------------------------------------------------------*/
+
+
+
 .info-product {
 	position: absolute;
 	top: 666px;
@@ -190,12 +323,17 @@ margin-bottom: 50px;
 .buy {
 	background-color: rgb(239,62,67)  ;
 	background-image: url("../svg/gio-hang-2.svg") ;
-	background-repeat: no-repeat;
 	background-size: 35px 35px;
 	background-repeat: no-repeat;
 	background-position: 95% 60% ;
 }
+
+
+
 /*----------------------------------------------------------------------------------------------------------------*/
+
+
+
 .col-md-4 {
 	margin-top: 30px; 
 }
@@ -215,19 +353,26 @@ margin-bottom: 50px;
 .text {
 	text-align: justify;
 }
+
+
+
 /*----------------------------------------------------------------------------------------------------------------*/
+
+
+
 footer {
 	width: 100%;
 	background: linear-gradient(45deg, #131530 0%,#271625 100%);
-
 	color:rgb(239,62,67);
 	font-size: 18px; 
 }
 footer .gradient-line {
-	display: block;
 	height: 10px ;
 	background: linear-gradient(45deg, #0000ff 0%,#ef3e43 100%);
 	width: 100%;
+}
+footer .col1 {
+	padding: 0 20px;
 }
 footer .logo {
 	background-image: url("../svg/logo.svg");
@@ -238,55 +383,117 @@ footer .logo {
 }
 footer a {
 	color:rgb(239,62,67);
-	display: block;
 	margin-bottom: 10px  ;
 }
 footer .thong-tin  {
 	float: left;
-	margin-left:50px;
+	margin-left:20px;
 }
  footer .nhan-hieu {
 	float: right;
-	margin-right:50px;
+	margin-right:20px;
+}
+footer .thong-tin p, footer .nhan-hieu p{
+	font-weight: 700;
+	margin-bottom: 20px; 
 }
 footer .col-md-4 span {
-	display: block;
     height: 3px;
     background: blue;
     width: 30px;
     margin: 20px 0 ;
 }
-footer p {
-	margin-bottom: 20px; 
-}
 footer .col-md-4 {
-	margin-bottom:100px; 
+	height: 350px ;
+}
+footer input , footer button {
+	color: white;
+	width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    margin-top:  10px;
+    font-size: 16px;
+    border: 1px solid rgb(239,62,67);
+    background: none;
+    letter-spacing: 1px;
+}
+footer button  {
+	color: rgb(239,62,67);
+	text-align: left;
+	height: 35px;
+	width: 137px;
+	background-image: url("../svg/mail.svg") ;
+	background-repeat: no-repeat;
+	background-size: 20%;
+	background-position: 95% center ;
+	margin-bottom: 50px;
 }
 
+.facebook , .youtube {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-size: 100%;
 
-
-
-
-
+}
+.facebook {
+	background:url("../images/facebook.png") ;
+	background-size: 100%;
+}
+.youtube {
+	background:url("../images/youtube.png") ;
+	background-size: 100%;	
+	margin-left: 10px;
+}
 
 
 
 /*----------------------------------------------------------------------------------------------------------------*/
+
+
+
 @media (min-width: 1px) {
 	.more , .col2 , .col3 , .col4 {display: none;}
 	.video {width:290px;height:163.13px;}
-}
+	.logo-box {width: 60%; left:20%}
+	.search-bar {top:72px;}
+	.main-menu {display: none;}
+	.main-menu-bar {border-bottom: none;}
+	.main-menu-bar .container{top:10%;}
+	.search-box .form-group {left: 2%;top: -14px;}
+
+
+
+
+
+
 @media (min-width: 768px) {
 	.video {width:345px;height:194.06px;}
 	.col2 , .more  {display: block;}
 }
+
+
+
+
+
+
 @media (min-width: 992px) {
 	.video {width:293.33px;height:164.81px;}
 	.col2 , .col3 , .col4 {display: block;}
 	.pk {display: none;}
 	.buy {background-image: none;}
+	.logo-box {width: 24%;left:0}
+	.main-menu a{width: 115px;padding-top: 33px;}
+	.main-menu-bar {height: 170px;border-bottom: 3px solid rgb(239,62,67)}
+	.search-bar {top:0px;}
+	.main-menu-bar .container{top:90px;}
+	.main-menu {display: block;}
+
 }
 @media (min-width: 1200px) {
 	.buy {background-image: url("../svg/gio-hang-2.svg") ;}
 	.video {width:360px;height:202.50px;}
+	.main-menu a {width: 140px;padding-top: 40px}
+	.main-menu-bar {height: 170px;}
+
 }
