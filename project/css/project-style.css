@@ -3,8 +3,6 @@
 	box-sizing: border-box;
     text-rendering: geometricPrecision;
     list-style-type: none;
-
-    
 }
 a {
 	text-decoration: none !important;	
@@ -229,6 +227,16 @@ margin-bottom: 30px;
 .view-box {
 	width: 400%;
 	transform: translateX(0px);
+	transition:all 0.3s ease-in-out;
+}
+.view-box-move-right-1 {
+	transform: translateX(-288px);
+}
+.view-box-move-right-2 {
+	transform: translateX(-576px);
+}
+.view-box-move-right-3 {
+	transform: translateX(-864px);
 }
 .product-box {
 	float: left;
@@ -237,6 +245,7 @@ margin-bottom: 30px;
     padding: 0 10px;
     width: 25%;
     position: relative;
+    z-index: 1;
 
 }
 .tag-hot {
@@ -253,16 +262,34 @@ margin-bottom: 30px;
 	float: right;
 	background: white;
 	color: #ef3e43;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	position: absolute;
+	top:0px ;
+	right: 0px;
+	z-index: 10;
 }
 .less-than {
-	margin-right: 0px;
-	border: 1px solid #ccc;
+
+	right: 30px;
+}
+.greater-than {
+	right: 0px;
+}
+@media (min-width: 1px) {
+	.less-than , .greater-than {
+		display: block;
+	}
+}
+@media (min-width: 992px) {
+	.less-than , .greater-than {
+		display: none;
+	}
 }
 
-.greater-than {
-	margin-left: 0px;
-	margin-right: -10px;
-}
+
+
+
 
 
 
@@ -351,6 +378,7 @@ margin-bottom: 30px;
 	transition : all 0.5s ease-in-out;
 	padding: 20px 10px 260px 10px;
 }
+
 
 .ph1:hover .info-ph1  {top: 0px;}
 .ph2:hover .info-ph2  {top: 0px;}
@@ -568,14 +596,15 @@ footer button  {
 		background: #ef3e43;
 	}
 	
-	.main-menu li:first-child {background: linear-gradient(90deg, blue 0%,rgb(239,62,67) 100%)}
+	.main-menu li:first-child {
+		background: linear-gradient(90deg, blue 0%,rgb(239,62,67) 100%);
+	}
 	.main-menu li:last-child {border-bottom: 1px solid #ccc;}
 	.main-menu li a{
 		text-align: left;
 		padding: 10px 10px 10px 60px;
 		color: white;
 		font-weight: normal;
-	
 	}
 	.dndk-menu {background:url("../images/tai-khoan copy.png") no-repeat 5% center ;background-size: 8%;}
 	.ph-menu {background:url("../images/ph12.png") no-repeat 6% center ;background-size: 5%;}
@@ -583,14 +612,6 @@ footer button  {
 	.pk-menu {background:url("../images/pk12.png") no-repeat 5% center ;background-size: 8%;}
 	.bh-menu {background:url("../images/bh2.png") no-repeat 5% center ;background-size: 8%;}
 	.km-menu {background:url("../images/km2.png") no-repeat 5% center ;background-size: 8%;}
-
-
-	
-
-
-
-
-
 
 	.main-menu-bar .logo{width: 192px;height: 53px;}
 	.main-menu-bar{top:0px;padding: 10px 0;border-bottom: 0px;}
@@ -907,6 +928,21 @@ background: none;
 
 
 
+@media (min-width: 1px) {
+	.iframe-header{height: 363px; width: 100%;}
+}
+@media (min-width: 992px) {
+	.iframe-header{height: 192px;}
 
+}
+
+
+@media (min-width: 1px) {
+	.iframe-footer{height: 1140px; width: 100%;}
+}
+@media (min-width: 992px) {
+	.iframe-footer{height: 440px;}
+
+}
 
 
