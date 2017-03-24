@@ -486,6 +486,11 @@ footer button  {
 
 
 /*----------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------*/
+
 
 
 
@@ -497,7 +502,11 @@ footer button  {
 	.logo-box {width: 60%; }
 
 
-	.main-menu-box {left: -40px;right: 0px;top: 53px;transform: translateX(0px);}
+	.main-menu-box {left: -40px;right: 0px;top: 53px;transform: translateX(-320px);}
+
+	.menu-button-box:hover .main-menu-box {transform: translateX(0px) !important;}
+
+
 	.main-menu li {
 		width: 100%;
 		border-top: 1px solid #ccc;
@@ -549,7 +558,7 @@ footer button  {
 
 	
 
-	.main-menu-box {left: 250px;right: 70px;}
+	.main-menu-box {left: 250px;right: 70px;transform: translateX(0px);}
 	.main-menu li:first-child{display: none;}
 	.main-menu li {
 		width: 20%;
@@ -576,7 +585,9 @@ footer button  {
 
 
 
-	.main-menu a{width: 159px;padding-top: 33px;}
+
+
+	.main-menu a{padding-top: 33px;}
 	.main-menu {display: block;}
 	.main-menu-bar{top:80px;padding: 20px 0;border-bottom: 3px solid rgb(239,62,67);}
 	.main-menu-box {top:0px;}
@@ -588,7 +599,7 @@ footer button  {
 @media (min-width: 1200px) {
 	.buy {background-image: url("../svg/gio-hang-2.svg") ;}
 	.video {width:360px;height:202.50px;}
-	.main-menu a {width: 151px;padding-top: 40px}
+	.main-menu a {padding-top: 40px}
 	.main-menu-box {top:-4px;left: 270px;}
 
 
