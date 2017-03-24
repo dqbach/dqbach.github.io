@@ -14,11 +14,12 @@
 
   </head>
   <body>
+  	<div id="page">
 
     <header>
     	<div class="search-bar">
     		<div class="container">
-    			<div class="row">
+    			<div class="row no-bg">
 
 		    		<div class="col4 dia-chi">
 			    		<span></span><p>123 Phố ABC - Quận XYZ - Hà Nội</p>
@@ -35,7 +36,8 @@
 		    		</div>
 
 		    		<div class="sign col4">
-			    		<a href="">Đăng nhập / Đăng ký tài khoản</a>
+			    		<!-- <a href=""> Đăng nhập / Đăng ký tài khoản</a> -->
+			    		<span id="login" href=""> Đăng nhập / Đăng ký tài khoản </span>
 		    		</div>
 
 		    	</div> <!-- end row -->
@@ -48,7 +50,7 @@
     			<div class="row">
 
 					<div class="menu-button-box">
-    					<a class="menu-button" href=""></a>
+    					<span class="menu-button" href=""></span>
     				</div>
 
     				<div class="logo-box">
@@ -86,18 +88,17 @@
 <!-- HEADER ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- HEADER ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	 
-	<div style="width:100%;height:191px" ></div><!-- KHOẢNG TRẮNG , ÁP DỤNG CHO CÁC TRANG KHÁC -->
+	<div style="width:100%;height:196px" ></div><!-- KHOẢNG TRẮNG , ÁP DỤNG CHO CÁC TRANG KHÁC -->
 
 
 
-    <div class="container">
-    	<div class="row">
-    		
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div class="banner-box container">
     			<img src="../images/banner.jpg">
-    		
-    	</div>
-    </div><!-- ĐỂ TẠM ĐỂ THAY BAN NẺ VÀO ! -->
-
+    </div><!-- ĐỂ TẠM ĐỂ THAY BANNER VÀO NHÉ ! -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
@@ -122,6 +123,8 @@
 	            	<div class="view-box">
 		              	<div class="product-box ph1">
 		                  	<p class="tag-hot">HOT </p>
+		                  	<p class="tag-hot greater-than">&gt;</p>
+		                  	<p class="tag-hot less-than">&lt;</p>
 		                  	<div class="img-product img-ph1"></div>
 		                  	<span></span>
 		                  	<p class="name-product">IPHONE 7 PLUS 32GB</p>
@@ -1154,7 +1157,7 @@
     <footer>
 	    <span class="gradient-line"></span>
 	    <div class="container">
-		    <div class="row">
+		    <div class="row no-bg">
 
 		    	<div class="col-md-4 col1">
 		    		<a class="logo" href=""></a>
@@ -1206,7 +1209,14 @@
 	    </div><!-- end container -->
     </footer><!-- end footer-->
 
+	</div><!-- end page -->
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="../js/project.js"></script>
+
     <script src="js/bootstrap.min.js"></script>
-  </body>
+	</body>
 </html>
