@@ -90,7 +90,7 @@ span {
 	position: absolute;
 	top:80px;
 	left: 0px;
-	color:white;
+	color:white;v
 	background:white;
 }
 .main-menu-bar .row{
@@ -117,7 +117,6 @@ span {
 }
 .main-menu-box {
 	position:absolute;
-	right:90px;
 
 }
 .main-menu li {
@@ -127,16 +126,7 @@ span {
 	color:rgb(239,62,67);
 	font-size: 16px ;
 	font-weight: bold;
-	text-align: center;
 }
-
-.ph-menu {background:url("../images/ph.png") no-repeat center 0%;background-size: 25%;}
-.ph2-menu {background:url("../images/ph2.png") no-repeat center 0%;background-size: 25%;}
-.pk-menu {background:url("../images/pk.png") no-repeat center 0%;background-size: 25%;}
-.bh-menu {background:url("../images/bh.png") no-repeat center 0%;background-size: 25%;}
-.km-menu {background:url("../images/km.png") no-repeat center 0%;background-size: 25%;}
-
-
 .gh-box {
 	width: 20%;
 	float: right;
@@ -211,7 +201,7 @@ margin-bottom: 50px;
 
 }
 .product-box-border {
-	border: 1px solid #f2f2f2;
+	border: 1px solid #ccc;
 	margin-top: 30px ;
 	width: 100%;
 	overflow: hidden;
@@ -344,18 +334,36 @@ margin-bottom: 50px;
 	text-align: center;
 	font-weight: bold;
 	float: right;
+	background: white;
+
 }
-.watch {
-	background: #6363ff;
+.watch{
+	border: 1px solid #6363ff;
 	margin-bottom: 10px;
+	color: #6363ff;
+	transition: all 0.2s ease-in-out;
 }
-.buy {
-	background-color: rgb(239,62,67)  ;
+.buy{
+	border: 1px solid rgb(239,62,67);
+	color: rgb(239,62,67);
+	transition: all 0.2s ease-in-out;
 	background-image: url("../svg/gio-hang-2.svg") ;
 	background-size: 35px 35px;
 	background-repeat: no-repeat;
-	background-position: 95% 60% ;
+	background-position: 5% 60% ;
 }
+.watch:hover {
+	border: 0px;
+	background: #6363ff;
+	border: 1px solid white;
+	color: white;
+}
+.buy:hover {
+	color: white;
+	border: 1px solid white;
+	background-color: rgb(239,62,67);
+}
+	
 
 
 
@@ -487,47 +495,101 @@ footer button  {
 	.search-box {width: 100%;margin: 10px 0 ;padding: 0 10px;}
 	.search-bar{top:74px;}
 	.logo-box {width: 60%; }
-	.main-menu {display: none;}
+
+
+	.main-menu-box {left: -40px;right: 0px;top: 53px;transform: translateX(0px);}
+	.main-menu li {
+		width: 100%;
+		border-top: 1px solid #ccc;
+		background: #ef3e43;
+	}
+	
+	.main-menu li:first-child {background: linear-gradient(90deg, blue 0%,rgb(239,62,67) 100%)}
+	.main-menu li:last-child {
+		border-bottom: 1px solid #ccc;
+	}
+	.main-menu li a{
+		text-align: left;
+		padding: 10px 10px 10px 60px;
+		color: white;
+		font-weight: normal;
+	
+	}
+	.dndk-menu {background:url("../images/tai-khoan copy.png") no-repeat 5% center ;background-size: 7%;}
+	.ph-menu {background:url("../images/ph.png") no-repeat 5% center ;background-size: 7%;}
+	.ph2-menu {background:url("../images/ph2.png") no-repeat 5% center ;background-size: 7%;}
+	.pk-menu {background:url("../images/pk.png") no-repeat 5% center ;background-size: 7%;}
+	.bh-menu {background:url("../images/bh.png") no-repeat 5% center ;background-size: 7%;}
+	.km-menu {background:url("../images/km.png") no-repeat 5% center ;background-size: 7%;}
+
+
+
+
+
+
+
 	.main-menu-bar .logo{width: 192px;height: 53px;}
 	.main-menu-bar{top:0px;padding: 10px 0;border-bottom: 0px;}
-
-
-
-
-
 
 @media (min-width: 768px) {
 	.video {width:345px;height:194.06px;}
 	.col2 , .more  {display: block ;}
+
+	.main-menu-box {left: -49px;right: -9px;}
 }
-
-
-	
-
-
 
 @media (min-width: 992px) {
 	.video {width:293.33px;height:164.81px;}
 	.col2 , .col3 , .col4 {display: block;}
 	.buy {background-image: none;}
+	.pk {display: none;}
 	.search-box {width: 50%;margin: 20px 0;padding:0;}
 	.search-bar{top:0px;}
 	.logo-box {width: 25%;}
-	.main-menu a{width: 114px;padding-top: 33px;}
+
+	
+
+	.main-menu-box {left: 250px;right: 70px;}
+	.main-menu li:first-child{display: none;}
+	.main-menu li {
+		width: 20%;
+		background: white;
+		border-top: 1px solid white;
+	}
+	.main-menu li:last-child {
+		border-bottom: 1px solid white;
+	}
+	.main-menu li a{
+		text-align: center;
+		font-size: 15px;
+		color: #ef3e43;
+		font-weight:bold;
+		padding: 40px 10px 10px 10px;
+	}
+	.ph-menu {background:url("../images/ph.png") no-repeat center 0%;background-size: 22%;}
+	.ph2-menu {background:url("../images/ph2.png") no-repeat center 0%;background-size: 22%;}
+	.pk-menu {background:url("../images/pk.png") no-repeat center 0%;background-size: 22%;}
+	.bh-menu {background:url("../images/bh.png") no-repeat center 0%;background-size: 22%;}
+	.km-menu {background:url("../images/km.png") no-repeat center 0%;background-size: 22%;}
+
+
+
+
+
+	.main-menu a{width: 159px;padding-top: 33px;}
 	.main-menu {display: block;}
 	.main-menu-bar{top:80px;padding: 20px 0;border-bottom: 3px solid rgb(239,62,67);}
 	.main-menu-box {top:0px;}
 	.menu-button {display: none;}
 	.main-menu-bar .logo{width: 243px;height: 68px;}
 
-	
 
 }
 @media (min-width: 1200px) {
 	.buy {background-image: url("../svg/gio-hang-2.svg") ;}
 	.video {width:360px;height:202.50px;}
-	.main-menu a {width: 139px;padding-top: 40px}
-	.main-menu-box {top:-4px;}
+	.main-menu a {width: 151px;padding-top: 40px}
+	.main-menu-box {top:-4px;left: 270px;}
 
 
 }
@@ -647,7 +709,7 @@ footer button  {
 	float: left;
 	width: 100%;
 	padding-top: 100%;
-	background-image: url("../images/big.jpg");
+	background: url("../images/big.jpg") center;
 	border: 2px solid #ccc;
 }
 .produce-detail h2  , .produce-detail h3 {
@@ -738,10 +800,22 @@ footer button  {
 	float: left;
 	margin: 30px 0; 
 }
+.product-buy-box {
+	padding: 15px;
+}
 .quantity-input{
-	padding: 10px;*/
+	padding: 10px;
 }
 
+.product-video-title {
+	margin-top:60px; 
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+.product-video {
+	width: 100%;
+	margin-top: 30px; 
+}
 
 
 
