@@ -7,10 +7,10 @@
 	<title>TRANG CHU</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-
 	<link href="../css/project-style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/login-form-style.css">
+	<link rel="icon" href="../images/ph11.png" type="image/gif" sizes="16x16">
 
 </head>
 <body>
@@ -24,7 +24,7 @@
 						<div class="col4 dia-chi">
 							<span></span><p>123 Phố ABC - Quận XYZ - Hà Nội</p>
 							<p><b>HỖ TRỢ :</b> 0987.654.321</p>
-						</div>	
+						</div>  
 
 						<div class="search-box">
 							<form role="search">
@@ -32,11 +32,11 @@
 									<input type="text"  placeholder="Bạn muốn tìm gì ?">
 									<button type="submit"></button>
 								</div>
-							</form>	
+							</form>   
 						</div>
 
 						<div class="sign col4">
-							<span id="login" > Đăng nhập / Đăng ký tài khoản </span>
+							<span id="login" href="">Đăng nhập / Đăng ký tài khoản</span>
 						</div>
 
 					</div> <!-- end row -->
@@ -44,12 +44,12 @@
 			</div> <!-- end search-bar -->
 
 
-			<div class="main-menu-bar">	
+			<div class="main-menu-bar"> 
 				<div class="container">
 					<div class="row">
 
 						<div class="menu-button-box">
-							<span class="menu-button"></span>
+							<span class="menu-button" href=""></span>
 						</div>
 
 						<div class="logo-box">
@@ -60,12 +60,12 @@
 							<nav>
 								<ul class="main-menu">
 									<li><a class="dndk-menu" href="">ĐĂNG NHẬP / ĐĂNG KÝ</a></li>
-									<li><a class="ph-menu" href="danh-sach.html">ĐIỆN THOẠI</a></li>
-									<li><a class="ph2-menu" href="danh-sach.html">MÁY 2ND</a></li>
-									<li><a class="pk-menu" href="danh-sach.html">PHỤ KIỆN</a></li>
+									<li><a class="ph-menu" href="">ĐIỆN THOẠI</a></li>
+									<li><a class="ph2-menu" href="">MÁY 2ND</a></li>
+									<li><a class="pk-menu" href="">PHỤ KIỆN</a></li>
 									<li><a class="bh-menu" href="">BẢO HÀNH</a></li>
 									<li><a class="km-menu" href="">KHUYẾN MÃI</a></li>
-								</ul>	
+								</ul>   
 
 							</nav>
 						</div>
@@ -82,11 +82,151 @@
 				</div> <!-- end container -->
 			</div> <!-- end main-menu -->
 
+			<div id="outer" class="container">
+				<div id="sign-in-form" class="login-modal animate">
+					<button id="x" type="button" class="x" ></button>
+					<form  class="log-in-form" action="">
+						<div class="container-item login-name">
+							<span>Đăng Nhập Tài Khoản</span>
+						</div>
+						<div class="container-item">
+							<input id="user-input" class="input user" type="text" placeholder="Email hoặc Số điện thoại" name="uname">
+							<label for="user-input" ></label>
+						</div>
+						<div class="container-item">
+							<input id="pass-input" class="input password" type="password" placeholder="Mật khẩu" name="upas">
+							<label for="pass-input" ></label>
+						</div>
+						<div class="container-item remember-container">
+							<div class="remember-item remember-checkbox">
+								<input id="checkboxG6" type="checkbox" name="checkboxG6"  class="css-checkbox" />
+								<label for="checkboxG6" class="css-label">Lưu Đăng Nhập</label>
+							</div>
+							<div class="remember-item remember-buttonbox">
+								<button class="button-submit" type="submit" name="btnSubmit">Đăng Nhập</button>
+							</div>
+						</div>
+
+						<div class="container-item">
+							<p>Bạn quên Mật Khẩu ?,ấn vào <span id="clickHere" class="clickHere" >Đây</span></p>
+						</div>
+						<div class="container-item">
+							<p>Bạn chưa có Tài Khoản ?,<br> <span id="createAccount" class="createAccount"  >Tạo Tài Khoản</span></p>
+						</div>
+						<div class="container-item or">
+							<span class="or-text">Hoặc</span>
+						</div>
+						<div class="container-item oauth-container">
+							<div class="oauth-container-item login-facebook">
+								<div class="o-c-i-item fb">
+									<img src="../images/facebook.png">
+								</div>
+								<div class="o-c-i-item ">
+									<a href="">Đăng nhập bằng Facebook</a>
+								</div>
+							</div>
+							<div class="oauth-container-item login-google">
+								<div class="o-c-i-item gg">
+									<img src="../images/google.png">
+								</div>
+								<div class="o-c-i-item ">
+									<a href="">Đăng nhập bằng Google</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div id="recover-form" class="lost-password-form login-modal animate">
+					<button id="x" type="button" class="x" ></button>
+					<form class="password-recover-form">
+						<div class="container-item login-name">
+							<span>Tìm Lại Mật Khẩu</span>
+						</div>
+						<div class="container-item">
+							<input id="email-or-phone-input" class="input user" type="text" placeholder="Điền Email hoặc Số điện thoại" name="uname">
+							<label for="email-or-phone-input" ></label>
+						</div>
+						<div class="container-item">
+							<button class="button-recover" type="submit" name="btnSubmit">Gửi</button>
+						</div>
+					</form>
+				</div>
+				<div id="sign-up-form" class="create-account-form login-modal animate">
+					<button id="x" type="button" class="x" ></button>
+					<form class="sign-up-form" >
+						<div class="container-item login-name">
+							<span>Đăng Ký</span>
+						</div>
+						<div class="container-item">
+							<label for="user-input" ></label>
+							<input id="user-input" class="input user" type="text" placeholder="Điền Email hoặc Số điện thoại" name="uname">
+
+						</div>
+						<div class="container-item">
+							<label for="pass-input" ></label>
+							<input id="pass-input" class="input password" type="password" placeholder="Mật khẩu" name="upas">
+						</div>
+
+						<div class="container-item">
+							<label for="confirm-input" ></label>
+							<input id="confirm-input" class="input password" type="password" placeholder="Nhập lại mật khẩu" name="ucorn">      
+						</div>
+						<div class="container-item">
+							<label for="real-name-input" ></label>
+							<input id="real-name-input" class="input real-name" type="text" placeholder="Họ tên" name="uRealName">      
+						</div>
+						<div class="container-item gender-radio">
+							<div class="gender-radio-title">
+								<span>Giới tính</span><br>
+							</div>
+							<div class="gender-radio-chooses">
+								<input id="checkbox-gender" type="radio" name="checkbox-gender"  class="radio" value="male" /> Nam 
+								<input id="checkbox-gender" type="radio" name="checkbox-gender"  class="radio" value="female" /> Nữ 
+								<label for="checkbox-gender" class="css-label"></label>
+							</div>
+						</div>
+						<div class="container-item dk">
+							<input id="checkbox-rule" type="checkbox" name="checkbox-rule"  class="css-checkbox" />
+							<label for="checkbox-rule" class="css-label">Tôi đồng ý với qui định của shop.</label>
+
+						</div>
+						<div class="remember-item btnSignUp">
+							<button class="button-sign-up" type="submit" name="btnSignUp">Đăng Ký</button>
+						</div>
+						<div class="container-item or">
+							<span class="or-text">Hoặc</span>
+						</div>
+						<div class="container-item oauth-container">
+							<div class="oauth-container-item login-facebook">
+								<div class="o-c-i-item fb">
+									<img src="../images/facebook.png">
+								</div>
+								<div class="o-c-i-item ">
+									<a href="">Đăng nhập bằng Facebook</a>
+								</div>
+							</div>
+							<div class="oauth-container-item login-google">
+								<div class="o-c-i-item gg">
+									<img src="../images/google.png">
+								</div>
+								<div class="o-c-i-item ">
+									<a href="">Đăng nhập bằng Google</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
 		</header>
-		<!-- HEADER ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-		<!-- HEADER ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-		<!-- HEADER ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+		<!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /--><!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /--><!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /--><!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /-->
+
+
 		
+
+
+
 		<div style="width:100%;height:196px" ></div><!-- KHOẢNG TRẮNG , ÁP DỤNG CHO CÁC TRANG KHÁC -->
 
 
@@ -94,10 +234,29 @@
 
 
 		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
 		<div class="banner-box container">
-			<img src="../images/banner.jpg">
+			<div class="row">
+
+				<div class="banner">
+
+				</div>
+
+				<div class="quang-cao">
+					
+				</div>
+
+			</div>
 		</div><!-- ĐỂ TẠM ĐỂ THAY BANNER VÀO NHÉ ! -->
 		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
 
 
 
@@ -1151,6 +1310,37 @@
 
 
 
+		<a href="#page"class="back-to-top"></a>
+
+		<div class="contact-box">
+			<p class="contact-box-title contact-box-button">Liên hệ - Góp ý <span class="inline">với chúng tôi</span></p>
+			<span class="contact-box-icon contact-box-button"></span>
+
+			<form role="form">
+				<div class="form-group">
+					<label for="contact-name">Tên của bạn :</label>
+					<input type="text" class="form-control" id="contact-name" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-email">Địa chỉ Email của bạn :</label>
+					<input type="email" class="form-control" id="contact-email" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-content">Nội dung:</label>
+					<br>
+					<textarea rows="4" cols="30" name="comment" id="contact-content"></textarea>
+				</div>
+				<div class="form-group"><button type="submit" class="btn btn-default">Submit</button></div>
+			</form>
+		</div> <!-- end contact-box  -->
+
+
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / -->
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
 
 
 
@@ -1159,7 +1349,6 @@
 
 
 		<footer>
-			<span class="gradient-line"></span>
 			<div class="container">
 				<div class="row no-bg">
 
@@ -1218,9 +1407,8 @@
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 	<script src="../js/project.js"></script>
-
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/login-form-js.js"></script>
 </body>
 </html>

@@ -1,0 +1,1 @@
+var indexSlide=0;

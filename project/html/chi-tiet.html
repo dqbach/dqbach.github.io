@@ -12,6 +12,8 @@
 
     <link href="../css/project-style.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="../css/detail-style.css">
+
   </head>
   <body>
 
@@ -114,10 +116,10 @@
 
 				<h2 class="name-product">IPHONE 7 PLUS 32GB</h2>
 				<span class="product-big-image"></span>
-				<span class="product-sm-image sm1"></span>
-				<span class="product-sm-image sm2"></span>
-				<span class="product-sm-image sm3"></span>
-				<span class="product-sm-image sm4"></span>
+				<span class="product-sm-image sm1" onclick="currentImg(0)"></span>
+				<span class="product-sm-image sm2" onclick="currentImg(1)"></span>
+				<span class="product-sm-image sm3" onclick="currentImg(2)"></span>
+				<span class="product-sm-image sm4" onclick="currentImg(3)"></span>
 
 				<h3>Thông số kỹ thuật </h3>
 				<ul>
@@ -443,11 +445,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script type="text/javascript">
-    // $(function(){
-    // $("#footer").load("footer.html");
-   	// 	});
-    	
-    // </script> -->
+	<script type="text/javascript" src="../js/detail-js.js"></script>
   </body>
 </html>
