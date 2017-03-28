@@ -1,310 +1,83 @@
-
-/*	test,bỏ khỉ ghép file*/
-/*html{
-	background: grey;
+/* user and pass */
+.form-group-user-pass{
+	/*! margin-bottom: 0 !important; */
 }
 
+/* day and taotaikhoan */
 
-*{
-	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
-}
-*/
-
-/*log-in,sign-up*/
-	.dndk-menu{
-		cursor: pointer;
-	}
-	.log-in-span{
-		cursor: pointer;
-	}
-/*form*/
-.container{
-	position: relative;
-}
-.login-modal{
-	width: 100%;
-	border:2px solid grey;
-	/*! padding-bottom: 30px; */
-	border-radius: 10px;
-	background: #FFF;
-	display: none;
-	position: absolute;
-
-/*! right: 20px; */ /*
-z-index: 9999999999;*/
-/*chỉnh vị trí ở đây*/
-
-padding: 10px 40px;
-}
-@media (min-width: 1px) {
-	.login-modal{ top:140px;}
-
-}
-@media (min-width: 992px) {
-	.login-modal{ top:80px;}
-
-}
-
-@media (min-width: @screen-xs-max) and (max-width: @screen-sm-max){
-	.login-modal{ top:80px;}
-	.login-name>span{
-		font-size: 16px;
-	}
-}
-
-
-
-
-
-.container-item{
-	margin: 0 auto;
-}
-.log-in-form{
+.show-text>span{
 	text-align: center;
-	clear: both;
 }
-/*cancel button (x)*/
-.x{
-	border:0;
-	width: 50px;
+#show-recover,#show-register{
+	color: blue;
+	cursor: pointer;
+}
+
+.remember-checkbox>label>input{
+	margin-right: 10px;
+}
+
+/* button submid */
+.button-submit{
+	width: 120px;
+}
+.form-group-button{
+	text-align: center;
+}
+
+/* form-footer */
+.oauth-login-container{
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	justify-content: -webkit-center;
+}
+.oauth-login-item{
+	width: 100%;
 	height: 50px;
-	background: url("../images/x.png") no-repeat;
-	cursor:pointer;
-	background-color: #fff;
-	position: relative;
-	/*! margin-top: 10px; */
-	margin-left: 92%;
-	/*! z-index: 3; */
+	color: white;
+}
+.oauth-fb{
+	background-color: blue;
+}
+.oauth-gg{
+	background-color: red;
+}
+.oauth-fb:hover{
+	color: white;
+	background-color: rgba(125, 0, 255, 1.0);
+	border-color: rgba(17, 0, 255, 1.0)
+}
+.oauth-gg:hover{
+	color: white;
+	background-color: rgba(254, 0, 109, 0.6);
+	border-color: rgba(255, 0, 0,1.0);
 }
 
-/*login-title*/
-.login-name{
-	margin-bottom: 30px;
-}
-.login-name>span{
-	color: rgb(255,45,45);
-	font-size: 28px;
-}
-
-/*midle text*/
-#outer>a{
-	text-decoration: none;
-}
-
-/*or*/
+/* hoặc */
 .or{
-	margin-top: 25px;
-	margin-bottom: 30px;
-}
-
-
-/*checkbox */
-input[type=checkbox].css-checkbox {
-	position:absolute; 
-	z-index:-1000; 
-	left:-1000px; 
-	overflow: hidden; 
-	clip: rect(0 0 0 0); 
-	height:1px; 
-	width:1px; 
-	margin:-1px; 
-	padding:0; 
-	border:0;
-}
-
-input[type=checkbox].css-checkbox + label.css-label {
-	padding-left:35px;
-	height:32px; 
-	display:inline-block;
-	line-height:40px;
-	background-repeat:no-repeat;
-	background-position: 0 0;
-	font-size:16px !important;
-	vertical-align:middle;
-	cursor:pointer;
-	margin-left: 5px;
+	margin: 0 auto;
+	width: 50px;
+	background-color: white;
+	text-align: center;
 	margin-bottom: 10px;
-
-
+	margin-top: -25px;
 }
 
-input[type=checkbox].css-checkbox:checked + label.css-label {
-	background-position: 0 -32px;
-}
-label.css-label {
-	background-image:url(../images/checkbox.png);
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	font-weight: 100!important; 
+/* recover-form */
+.send{
+	width: 120px;
 }
 
+/* register-form */
+.gender-radio>span{
+	font-weight: bold;
+}
 
+input#conditionRule{
+	margin-right: 10px;
+}
 
-/*.remember-checkbox{
-	margin-left: -210px;
-	}*/
-
-	/*submid-button*/
-	.button-submit{
-		background: blue; /* For browsers that do not support gradients */    
-		background: linear-gradient(45deg, blue, red); /* Standard syntax (must be last) */
-		border:0;
-		border-radius: 5px;
-		width: 100%;
-		height: 50px;
-		color: #fff;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		font-size: 22px;
-	}
-
-
-
-	/*imput and username*/
-	.input{
-		width: 100%;
-		height: 50px;
-		padding: 10px;
-		border: 2px solid rgb(84,51,255);
-		border-radius: 5px;
-		margin-bottom: 10px;
-		text-align: justify;
-		font-size: 16px;
-	}
-
-	/*remember and login*/
-	.remember-container{
-		/*	display: column;*/
-	}
-	.checkbox{
-		width: 50px;
-	}
-
-	/*login with fg/gg*/
-	.oauth-container{
-		/*	display: column;*/
-		width: 100%;
-	}
-	.oauth-container-item{
-		display: flex;
-		width: 100%;
-		border-radius: 5px;
-		height: 70px;
-		padding: 10px;
-		margin-bottom: 15px;
-	}
-	.login-facebook{
-		background-color: rgb(84,51,255);
-		cursor: pointer;
-	}
-	.login-google{
-		background-color: rgb(255,45,45);
-		cursor: pointer;
-	}
-
-	.fb>img,.gg>img{
-		width: auto !important;
-		height: 50px !important;
-		border-radius: 5px !important;
-		margin-left: 30px;
-		margin: 0 0 !important;
-	}
-	.o-c-i-item{
-		margin: auto 0;
-	}
-	.o-c-i-item>a{
-
-		text-decoration: none;
-		color: #fff;
-		/*	margin-left: 30px;*/
-	}
-
-	/*animate the form*/
-	.animate {
-		-webkit-animation: animatezoom 0.6s;
-		animation: animatezoom 0.6s
-	}
-
-	@-webkit-keyframes animatezoom {
-		from {-webkit-transform: scale(0)} 
-		to {-webkit-transform: scale(1)}
-	}
-
-	@keyframes animatezoom {
-		from {transform: scale(0)} 
-		to {transform: scale(1)}
-	}
-
-
-	/* find password form */
-	.password-recover-form{
-		text-align: center;
-	}
-
-	/* button click here and create account */
-	.clickHere{
-		cursor: pointer;
-		color: #6060fe;
-	}
-	.createAccount{
-		cursor: pointer;
-		color: #6060fe;
-	}
-
-	.button-recover{
-		border: none;
-		background: #ff8700;
-		color: white;
-		width: 100px;
-		height: 40px;
-		font-size: 20px;
-		border-radius: 5px;
-		margin-top: 20px;
-	}
-
-
-	/*sign-up form*/
-	.sign-up-form{
-		text-align: center;
-	}
-	.gender-radio-title{
-		margin-top:5px;
-		margin-bottom: 10px;
-		text-align: left;
-		padding-left: 60px; 
-	}
-	.gender-radio-chooses{
-		text-align: left;
-		margin-bottom: 10px;
-		padding-left: 75px;
-	}
-	.dk{
-		text-align: left;
-		margin-left: 60px;
-	}
-
-	.button-sign-up{
-		border: none;
-		background: #00b7ff;
-		color: white;
-		width: 100px;
-		height: 40px;
-		font-size: 20px;
-		border-radius: 5px;
-		margin-top: 20px;
-
-	}
-
-
-
-
-
-
-	.col-xs-12 {
-		padding:0px; 
-	}
+.register-button{
+text-align: center;
+}

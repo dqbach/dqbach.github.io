@@ -1,0 +1,22 @@
+.banner-box{
+	margin-top: 400px;
+}
+
+/*xóa sau khi ghép*/
+
+
+
+.banner {
+	/*width: 776px;*/
+	width: 80%;
+	height: 320px;
+	background: #f4f4f4;
+	float: left;
+}
+.quang-cao {
+	/*width: 380px;*/
+	width: 20%;
+	height: 320px;
+	background: #f4f4f4;
+	float: right;
+}

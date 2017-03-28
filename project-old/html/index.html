@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="wclassth=device-wclassth, initial-scale=1">
+	<title>TRANG CHU</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/project-style.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/login-form-style.css">
+	<link rel="icon" href="../images/ph11.png" type="image/gif" sizes="16x16">
+
+</head>
+<body>
+	<div id="page">
+
+		<header>
+			<div class="search-bar">
+				<div class="container">
+					<div class="row no-bg">
+
+						<div class="col4 dia-chi">
+							<span></span><p>123 Phố ABC - Quận XYZ - Hà Nội</p>
+							<p><b>HỖ TRỢ :</b> 0987.654.321</p>
+						</div>  
+
+						<div class="search-box">
+							<form role="search">
+								<div>
+									<input type="text"  placeholder="Bạn muốn tìm gì ?">
+									<button type="submit"></button>
+								</div>
+							</form>   
+						</div>
+
+						<div class="sign col4">
+							<span id="login" href="">Đăng nhập / Đăng ký tài khoản</span>
+						</div>
+
+					</div> <!-- end row -->
+				</div> <!-- end container -->
+			</div> <!-- end search-bar -->
+
+
+			<div class="main-menu-bar"> 
+				<div class="container">
+					<div class="row">
+
+						<div class="menu-button-box">
+							<span class="menu-button" href=""></span>
+						</div>
+
+						<div class="logo-box">
+							<a class="logo" href=""></a>
+						</div>
+
+						<div class="main-menu-box">
+							<nav>
+								<ul class="main-menu">
+									<li><a class="dndk-menu" href="">ĐĂNG NHẬP / ĐĂNG KÝ</a></li>
+									<li><a class="ph-menu" href="">ĐIỆN THOẠI</a></li>
+									<li><a class="ph2-menu" href="">MÁY 2ND</a></li>
+									<li><a class="pk-menu" href="">PHỤ KIỆN</a></li>
+									<li><a class="bh-menu" href="">BẢO HÀNH</a></li>
+									<li><a class="km-menu" href="">KHUYẾN MÃI</a></li>
+								</ul>   
+
+							</nav>
+						</div>
+
+						<div class="gh-box">
+							<a class="gh" href=""></a>
+						</div>
+
+
+
+
+
+					</div> <!-- end row -->
+				</div> <!-- end container -->
+			</div> <!-- end main-menu -->
+
+			<div id="outer" class="container">
+				<div id="sign-in-form" class="login-modal animate">
+					<button id="x" type="button" class="x" ></button>
+					<form  class="log-in-form" action="">
+						<div class="container-item login-name">
+							<span>Đăng Nhập Tài Khoản</span>
+						</div>
+						<div class="container-item">
+							<input id="user-input" class="input user" type="text" placeholder="Email hoặc Số điện thoại" name="uname">
+							<label for="user-input" ></label>
+						</div>
+						<div class="container-item">
+							<input id="pass-input" class="input password" type="password" placeholder="Mật khẩu" name="upas">
+							<label for="pass-input" ></label>
+						</div>
+						<div class="container-item remember-container">
+							<div class="remember-item remember-checkbox">
+								<input id="checkboxG6" type="checkbox" name="checkboxG6"  class="css-checkbox" />
+								<label for="checkboxG6" class="css-label">Lưu Đăng Nhập</label>
+							</div>
+							<div class="remember-item remember-buttonbox">
+								<button class="button-submit" type="submit" name="btnSubmit">Đăng Nhập</button>
+							</div>
+						</div>
+
+						<div class="container-item">
+							<p>Bạn quên Mật Khẩu ?,ấn vào <span id="clickHere" class="clickHere" >Đây</span></p>
+						</div>
+						<div class="container-item">
+							<p>Bạn chưa có Tài Khoản ?,<br> <span id="createAccount" class="createAccount"  >Tạo Tài Khoản</span></p>
+						</div>
+						<div class="container-item or">
+							<span class="or-text">Hoặc</span>
+						</div>
+						<div class="container-item oauth-container">
+							<div class="oauth-container-item login-facebook">
+								<div class="o-c-i-item fb">
+									<img src="../images/facebook.png">
+								</div>
+								<div class="o-c-i-item ">
+									<a href="">Đăng nhập bằng Facebook</a>
+								</div>
+							</div>
+							<div class="oauth-container-item login-google">
+								<div class="o-c-i-item gg">
+									<img src="../images/google.png">
+								</div>
+								<div class="o-c-i-item ">
+									<a href="">Đăng nhập bằng Google</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div id="recover-form" class="lost-password-form login-modal animate">
+					<button id="x" type="button" class="x" ></button>
+					<form class="password-recover-form">
+						<div class="container-item login-name">
+							<span>Tìm Lại Mật Khẩu</span>
+						</div>
+						<div class="container-item">
+							<input id="email-or-phone-input" class="input user" type="text" placeholder="Điền Email hoặc Số điện thoại" name="uname">
+							<label for="email-or-phone-input" ></label>
+						</div>
+						<div class="container-item">
+							<button class="button-recover" type="submit" name="btnSubmit">Gửi</button>
+						</div>
+					</form>
+				</div>
+				<div id="sign-up-form" class="create-account-form login-modal animate">
+					<button id="x" type="button" class="x" ></button>
+					<form class="sign-up-form" >
+						<div class="container-item login-name">
+							<span>Đăng Ký</span>
+						</div>
+						<div class="container-item">
+							<label for="user-input" ></label>
+							<input id="user-input" class="input user" type="text" placeholder="Điền Email hoặc Số điện thoại" name="uname">
+
+						</div>
+						<div class="container-item">
+							<label for="pass-input" ></label>
+							<input id="pass-input" class="input password" type="password" placeholder="Mật khẩu" name="upas">
+						</div>
+
+						<div class="container-item">
+							<label for="confirm-input" ></label>
+							<input id="confirm-input" class="input password" type="password" placeholder="Nhập lại mật khẩu" name="ucorn">      
+						</div>
+						<div class="container-item">
+							<label for="real-name-input" ></label>
+							<input id="real-name-input" class="input real-name" type="text" placeholder="Họ tên" name="uRealName">      
+						</div>
+						<div class="container-item gender-radio">
+							<div class="gender-radio-title">
+								<span>Giới tính</span><br>
+							</div>
+							<div class="gender-radio-chooses">
+								<input id="checkbox-gender" type="radio" name="checkbox-gender"  class="radio" value="male" /> Nam 
+								<input id="checkbox-gender" type="radio" name="checkbox-gender"  class="radio" value="female" /> Nữ 
+								<label for="checkbox-gender" class="css-label"></label>
+							</div>
+						</div>
+						<div class="container-item dk">
+							<input id="checkbox-rule" type="checkbox" name="checkbox-rule"  class="css-checkbox" />
+							<label for="checkbox-rule" class="css-label">Tôi đồng ý với qui định của shop.</label>
+
+						</div>
+						<div class="remember-item btnSignUp">
+							<button class="button-sign-up" type="submit" name="btnSignUp">Đăng Ký</button>
+						</div>
+						<div class="container-item or">
+							<span class="or-text">Hoặc</span>
+						</div>
+						<div class="container-item oauth-container">
+							<div class="oauth-container-item login-facebook">
+								<div class="o-c-i-item fb">
+									<img src="../images/facebook.png">
+								</div>
+								<div class="o-c-i-item ">
+									<a href="">Đăng nhập bằng Facebook</a>
+								</div>
+							</div>
+							<div class="oauth-container-item login-google">
+								<div class="o-c-i-item gg">
+									<img src="../images/google.png">
+								</div>
+								<div class="o-c-i-item ">
+									<a href="">Đăng nhập bằng Google</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</header>
+
+
+		<!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /--><!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /--><!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /--><!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /-->
+
+
+		
+
+
+
+		<div style="width:100%;height:196px" ></div><!-- KHOẢNG TRẮNG , ÁP DỤNG CHO CÁC TRANG KHÁC -->
+
+
+
+
+
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+		<div class="banner-box container">
+			<div class="row">
+
+				<div class="banner">
+
+				</div>
+
+				<div class="quang-cao">
+					
+				</div>
+
+			</div>
+		</div><!-- ĐỂ TẠM ĐỂ THAY BANNER VÀO NHÉ ! -->
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<section class="container" >
+			<div class="row">
+				<div class="home-header">
+					<a href="" class="home-header-box">ĐIỆN THOẠI HOT</a>
+					<a class="plus-icon" href=""></a>
+					<a class="more" href="">Xem thêm</a>
+				</div>
+			</div> <!-- end -row -->
+			<!-- THANH TIÊU ĐỀ //////////////////////////////////////////////////////////////////////// -->
+
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col1">
+					<div class="product-box-border">
+						<div class="view-box">
+							<div class="product-box ph1 ">
+								<p class="tag-hot">HOT </p>
+
+		                  	<!-- <p class="tag-hot greater-than gt1">&gt;</p>
+		                  	<p class="tag-hot less-than lt1">&lt;</p> -->
+		                  	<!-- <button class="tag-hot greater-than gt1" onclick="plusDivs(1)">&gt;</button>
+		                  	<button class="tag-hot less-than lt1" onclick="plusDivs(-1)">&lt;</button> -->
+
+		                  	
+		                  	<div class="img-product img-ph1"></div>
+		                  	<span></span>
+		                  	<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		                  	<p class="price-product">22.000.000 VNĐ</p>
+		                  	<div class="info-product info-ph1">
+		                  		<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		                  		<p class="price-product">22.000.000 VNĐ</p>
+		                  		<p class="line">Màn hình: 5.5" Retina HD</p>
+		                  		<p>CPU: Apple A10 Fusion</p>
+		                  		<p>RAM: 3 GB</p>
+		                  		<p>Camera : 2x12 MP</p>
+		                  		<p>PIN : 2900 mAh</p>
+		                  		<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+		                  		<a class="buy" href="">Cho vào giỏ hàng             
+		                  			
+		                  		</a>
+		                  	</div><!-- end info-box -->
+		                  </div><!-- end product-box -->
+		                  <div class="product-box ph2">
+		                  	<p class="tag-hot">HOT </p>
+		                  	<div class="img-product img-ph2"></div>
+		                  	<span></span>
+		                  	<p class="name-product">222222222222222</p>
+		                  	<p class="price-product">22.000.000 VNĐ</p>
+		                  	<div class="info-product info-ph2">
+		                  		<p class="name-product">2222222222222222</p>
+		                  		<p class="price-product">22.000.000 VNĐ</p>
+		                  		<p class="line">Màn hình: 5.5" Retina HD</p>
+		                  		<p>CPU: Apple A10 Fusion</p>
+		                  		<p>RAM: 3 GB</p>
+		                  		<p>Camera : 2x12 MP</p>
+		                  		<p>PIN : 2900 mAh</p>
+		                  		<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+		                  		<a class="buy" href="">Cho vào giỏ hàng             
+		                  			
+		                  		</a>
+		                  	</div><!-- end info-box -->
+		                  </div><!-- end product-box -->
+		                  <div class="product-box ph3">
+		                  	<p class="tag-hot">HOT </p>
+		                  	<div class="img-product img-ph3"></div>
+		                  	<span></span>
+		                  	<p class="name-product">3333333333333</p>
+		                  	<p class="price-product">22.000.000 VNĐ</p>
+		                  	<div class="info-product info-ph3">
+		                  		<p class="name-product">3333333333333</p>
+		                  		<p class="price-product">22.000.000 VNĐ</p>
+		                  		<p class="line">Màn hình: 5.5" Retina HD</p>
+		                  		<p>CPU: Apple A10 Fusion</p>
+		                  		<p>RAM: 3 GB</p>
+		                  		<p>Camera : 2x12 MP</p>
+		                  		<p>PIN : 2900 mAh</p>
+		                  		<a href="" class="watch">Xem chi tiết</a>
+		                  		<a class="buy" href="">Cho vào giỏ hàng             
+		                  			
+		                  		</a>
+		                  	</div><!-- end info-box -->
+		                  </div><!-- end product-box -->
+		                  <div class="product-box ph4">
+		                  	<p class="tag-hot">HOT </p>
+		                  	<div class="img-product img-ph4"></div>
+		                  	<span></span>
+		                  	<p class="name-product">444444444444444</p>
+		                  	<p class="price-product">22.000.000 VNĐ</p>
+		                  	<div class="info-product info-ph4">
+		                  		<p class="name-product">4444444444444444</p>
+		                  		<p class="price-product">22.000.000 VNĐ</p>
+		                  		<p class="line">Màn hình: 5.5" Retina HD</p>
+		                  		<p>CPU: Apple A10 Fusion</p>
+		                  		<p>RAM: 3 GB</p>
+		                  		<p>Camera : 2x12 MP</p>
+		                  		<p>PIN : 2900 mAh</p>
+		                  		<a href="" class="watch">Xem chi tiết</a>
+		                  		<a class="buy" href="">Cho vào giỏ hàng             
+		                  			
+		                  		</a>
+		                  	</div><!-- end info-box -->
+		                  </div><!-- end product-box -->
+		              </div><!-- end view box -->
+		          </div><!-- end product-box-border -->
+		      </div>
+		      <!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		      <div class="col-md-3 col-sm-6 col2">
+		      	<div class="product-box-border">
+		      		<div class="view-box">
+		      			<div class="product-box ph2">
+		      				<p class="tag-hot">HOT </p>
+		      				<div class="img-product img-ph2"></div>
+		      				<span></span>
+		      				<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		      				<p class="price-product">22.000.000 VNĐ</p>
+		      				<div class="info-product info-ph2">
+		      					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		      					<p class="price-product">22.000.000 VNĐ</p>
+		      					<p class="line">Màn hình: 5.5" Retina HD</p>
+		      					<p>CPU: Apple A10 Fusion</p>
+		      					<p>RAM: 3 GB</p>
+		      					<p>Camera : 2x12 MP</p>
+		      					<p>PIN : 2900 mAh</p>
+		      					<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+		      					<a class="buy" href="">Cho vào giỏ hàng             
+		      						
+		      					</a>
+		      				</div><!-- end info-box -->
+		      			</div><!-- end product-box -->
+		      			<div class="product-box ph1">
+		      				<p class="tag-hot">HOT </p>
+		      				<div class="img-product img-ph1"></div>
+		      				<span></span>
+		      				<p class="name-product">222222222222222</p>
+		      				<p class="price-product">22.000.000 VNĐ</p>
+		      				<div class="info-product info-ph1">
+		      					<p class="name-product">2222222222222222</p>
+		      					<p class="price-product">22.000.000 VNĐ</p>
+		      					<p class="line">Màn hình: 5.5" Retina HD</p>
+		      					<p>CPU: Apple A10 Fusion</p>
+		      					<p>RAM: 3 GB</p>
+		      					<p>Camera : 2x12 MP</p>
+		      					<p>PIN : 2900 mAh</p>
+		      					<a href="" class="watch">Xem chi tiết</a>
+		      					<a class="buy" href="">Cho vào giỏ hàng             
+		      						
+		      					</a>
+		      				</div><!-- end info-box -->
+		      			</div><!-- end product-box -->
+		      			<div class="product-box ph3">
+		      				<p class="tag-hot">HOT </p>
+		      				<div class="img-product img-ph3"></div>
+		      				<span></span>
+		      				<p class="name-product">3333333333333</p>
+		      				<p class="price-product">22.000.000 VNĐ</p>
+		      				<div class="info-product info-ph3">
+		      					<p class="name-product">3333333333333</p>
+		      					<p class="price-product">22.000.000 VNĐ</p>
+		      					<p class="line">Màn hình: 5.5" Retina HD</p>
+		      					<p>CPU: Apple A10 Fusion</p>
+		      					<p>RAM: 3 GB</p>
+		      					<p>Camera : 2x12 MP</p>
+		      					<p>PIN : 2900 mAh</p>
+		      					<a href="" class="watch">Xem chi tiết</a>
+		      					<a class="buy" href="">Cho vào giỏ hàng             
+		      						
+		      					</a>
+		      				</div><!-- end info-box -->
+		      			</div><!-- end product-box -->
+		      			<div class="product-box ph4">
+		      				<p class="tag-hot">HOT </p>
+		      				<div class="img-product img-ph4"></div>
+		      				<span></span>
+		      				<p class="name-product">444444444444444</p>
+		      				<p class="price-product">22.000.000 VNĐ</p>
+		      				<div class="info-product info-ph4">
+		      					<p class="name-product">4444444444444444</p>
+		      					<p class="price-product">22.000.000 VNĐ</p>
+		      					<p class="line">Màn hình: 5.5" Retina HD</p>
+		      					<p>CPU: Apple A10 Fusion</p>
+		      					<p>RAM: 3 GB</p>
+		      					<p>Camera : 2x12 MP</p>
+		      					<p>PIN : 2900 mAh</p>
+		      					<a href="" class="watch">Xem chi tiết</a>
+		      					<a class="buy" href="">Cho vào giỏ hàng             
+		      						
+		      					</a>
+		      				</div><!-- end info-box -->
+		      			</div><!-- end product-box -->
+		      		</div><!-- end view box -->
+		      	</div><!-- end product-box-border -->
+		      </div>
+		      <!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		      <div class="col-md-3 col-sm-6 col3">
+		      	<div class="product-box-border">
+		      		<div class="view-box">
+		      			<div class="product-box ph3">
+		      				<p class="tag-hot">HOT </p>
+		      				<div class="img-product img-ph3"></div>
+		      				<span></span>
+		      				<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		      				<p class="price-product">22.000.000 VNĐ</p>
+		      				<div class="info-product info-ph3">
+		      					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		      					<p class="price-product">22.000.000 VNĐ</p>
+		      					<p class="line">Màn hình: 5.5" Retina HD</p>
+		      					<p>CPU: Apple A10 Fusion</p>
+		      					<p>RAM: 3 GB</p>
+		      					<p>Camera : 2x12 MP</p>
+		      					<p>PIN : 2900 mAh</p>
+		      					<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+		      					<a class="buy" href="">Cho vào giỏ hàng             
+		      						
+		      					</a>
+		      				</div><!-- end info-box -->
+		      			</div><!-- end product-box -->
+		      			
+		      			
+		      		</div><!-- end view box -->
+		      	</div><!-- end product-box-border -->
+		      </div>
+		      <!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		      <div class="col-md-3 col-sm-6 col4">
+		      	<div class="product-box-border">
+		      		<div class="view-box">
+		      			<div class="product-box ph4">
+		      				<p class="tag-hot">HOT </p>
+		      				<div class="img-product img-ph4"></div>
+		      				<span></span>
+		      				<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		      				<p class="price-product">22.000.000 VNĐ</p>
+		      				<div class="info-product info-ph4">
+		      					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		      					<p class="price-product">22.000.000 VNĐ</p>
+		      					<p class="line">Màn hình: 5.5" Retina HD</p>
+		      					<p>CPU: Apple A10 Fusion</p>
+		      					<p>RAM: 3 GB</p>
+		      					<p>Camera : 2x12 MP</p>
+		      					<p>PIN : 2900 mAh</p>
+		      					<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+		      					<a class="buy" href="">Cho vào giỏ hàng             
+		      						
+		      					</a>
+		      				</div><!-- end info-box -->
+		      			</div><!-- end product-box -->
+		      			
+		      		</div><!-- end view box -->
+		      	</div><!-- end product-box-border -->
+		      </div>
+		  </div> <!-- end -row -->
+		  <!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		  <!-- HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI -->
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		  <div class="row">
+		  	<div class="home-header">
+		  		<a href="" class="home-header-box">ĐIỆN THOẠI MỚI</a>
+		  		<a class="plus-icon" href=""></a>
+		  		<a class="more" href="">Xem thêm</a>
+		  	</div>
+		  </div>
+		  <!-- THANH TIÊU ĐỀ //////////////////////////////////////////////////////////////////////// -->
+
+		  <div class="row">
+		  	<div class="col-md-3 col-sm-6 col1">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph1">
+		  					<p class="tag-hot">MỚI</p>
+		  					<div class="img-product img-ph3"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph1">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph2">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph2"></div>
+		  					<span></span>
+		  					<p class="name-product">222222222222222</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph2">
+		  						<p class="name-product">2222222222222222</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph3">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph3"></div>
+		  					<span></span>
+		  					<p class="name-product">3333333333333</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">3333333333333</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph4">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph4"></div>
+		  					<span></span>
+		  					<p class="name-product">444444444444444</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">4444444444444444</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col2">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph2">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph4"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph2">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph1">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph1"></div>
+		  					<span></span>
+		  					<p class="name-product">222222222222222</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph1">
+		  						<p class="name-product">2222222222222222</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph3">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph3"></div>
+		  					<span></span>
+		  					<p class="name-product">3333333333333</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">3333333333333</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph4">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph4"></div>
+		  					<span></span>
+		  					<p class="name-product">444444444444444</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">4444444444444444</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col3">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph3">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph1"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col4">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph4">
+		  					<p class="tag-hot">MỚI </p>
+		  					<div class="img-product img-ph2"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  </div>    
+		  <!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		  <!-- HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI -->
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		  <div class="row">
+		  	<div class="home-header">
+		  		<a href="" class="home-header-box">KHUYỄN MẠI HOT</a>
+		  		<a class="plus-icon" href=""></a>
+		  		<a class="more" href="">Xem thêm</a>
+		  	</div>
+		  </div>
+		  <!-- THANH TIÊU ĐỀ //////////////////////////////////////////////////////////////////////// -->
+
+		  <div class="row">
+		  	<div class="col-md-3 col-sm-6 col1">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph1">
+		  					<p class="tag-hot tag-sale">SALE </p>
+		  					<div class="img-product img-ph1"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph1">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph2">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph2"></div>
+		  					<span></span>
+		  					<p class="name-product">222222222222222</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph2">
+		  						<p class="name-product">2222222222222222</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph3">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph3"></div>
+		  					<span></span>
+		  					<p class="name-product">3333333333333</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">3333333333333</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph4">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph4"></div>
+		  					<span></span>
+		  					<p class="name-product">444444444444444</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">4444444444444444</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col2">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph2">
+		  					<p class="tag-hot tag-sale">SALE </p>
+		  					<div class="img-product img-ph2"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph2">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph1">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph1"></div>
+		  					<span></span>
+		  					<p class="name-product">222222222222222</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph1">
+		  						<p class="name-product">2222222222222222</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph3">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph3"></div>
+		  					<span></span>
+		  					<p class="name-product">3333333333333</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">3333333333333</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph4">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph4"></div>
+		  					<span></span>
+		  					<p class="name-product">444444444444444</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">4444444444444444</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col3">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph3">
+		  					<p class="tag-hot tag-sale">SALE </p>
+		  					<div class="img-product img-ph3"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col4">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph4">
+		  					<p class="tag-hot tag-sale">SALE </p>
+		  					<div class="img-product img-ph4"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  </div>
+		  <!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		  <!-- HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI -->
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		  <div class="row">
+		  	<div class="home-header">
+		  		<a href="" class="home-header-box">PHỤ KIỆN BÁN CHẠY</a>
+		  		<a class="plus-icon" href=""></a>
+		  		<a class="more" href="">Xem thêm</a>
+		  	</div>
+		  </div>
+		  <!-- THANH TIÊU ĐỀ //////////////////////////////////////////////////////////////////////// -->
+
+		  <div class="row">
+		  	<div class="col-md-3 col-sm-6 col1">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph1">
+		  					
+		  					<div class="img-product img-pk1"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph1">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph2 pk">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph2"></div>
+		  					<span></span>
+		  					<p class="name-product">222222222222222</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph2">
+		  						<p class="name-product">2222222222222222</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph3 pk">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph3"></div>
+		  					<span></span>
+		  					<p class="name-product">3333333333333</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">3333333333333</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph4 pk">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph4"></div>
+		  					<span></span>
+		  					<p class="name-product">444444444444444</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">4444444444444444</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col2">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph2">
+		  					
+		  					<div class="img-product img-pk2"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph2">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph1 pk">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph1"></div>
+		  					<span></span>
+		  					<p class="name-product">222222222222222</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph1">
+		  						<p class="name-product">2222222222222222</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph3 pk">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph3"></div>
+		  					<span></span>
+		  					<p class="name-product">3333333333333</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">3333333333333</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				<div class="product-box ph4 pk">
+		  					<p class="tag-hot">HOT </p>
+		  					<div class="img-product img-ph4"></div>
+		  					<span></span>
+		  					<p class="name-product">444444444444444</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">4444444444444444</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col3">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph3">
+		  					
+		  					<div class="img-product img-pk3"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph3">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  	<!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  	<div class="col-md-3 col-sm-6 col4">
+		  		<div class="product-box-border">
+		  			<div class="view-box">
+		  				<div class="product-box ph4">
+		  					
+		  					<div class="img-product img-pk4"></div>
+		  					<span></span>
+		  					<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  					<p class="price-product">22.000.000 VNĐ</p>
+		  					<div class="info-product info-ph4">
+		  						<p class="name-product">IPHONE 7 PLUS 32GB</p>
+		  						<p class="price-product">22.000.000 VNĐ</p>
+		  						<p class="line">Màn hình: 5.5" Retina HD</p>
+		  						<p>CPU: Apple A10 Fusion</p>
+		  						<p>RAM: 3 GB</p>
+		  						<p>Camera : 2x12 MP</p>
+		  						<p>PIN : 2900 mAh</p>
+		  						<a href="" class="watch">Xem chi tiết</a>
+		  						<a class="buy" href="">Cho vào giỏ hàng             
+		  							
+		  						</a>
+		  					</div><!-- end info-box -->
+		  				</div><!-- end product-box -->
+		  				
+		  			</div><!-- end view box -->
+		  		</div><!-- end product-box-border -->
+		  	</div>
+		  </div>
+		  <!-- HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM / HẾT 1 BOX SẢN PHẨM-->
+
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		  <!-- HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI -->
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		  <div class="row">
+		  	<div class="home-header">
+		  		<a href="" class="home-header-box">VIDEO TRẢI NGHIỆM</a>
+		  		<a class="plus-icon" href=""></a>
+		  		<a class="more" href="">Xem thêm</a>
+		  	</div>
+		  </div>
+		  
+		  <!-- THANH TIÊU ĐỀ //////////////////////////////////////////////////////////////////////// -->
+		  <div class="row main-video-box">
+		  	<div class="col-md-4 col-sm-6 col-sx-12 col1">
+		  		<div class="video"><iframe class="video"  src="https://www.youtube.com/embed/kLaYZtTJ_qk" frameborder="0" allowfullscreen>></iframe>
+		  		</div>
+		  		<p class="title">Trên tay Samsung Galaxy S7 Edge Blue Coral Mỹ giá cực tốt, có 4G</p>
+		  		<p class="text">Galaxy Note 7 gây ấn tượng với màu xanh Blue Coral độc đáo, và Samsung đã mang lên chiếc Galaxy S7 Edge. Với hàng Mỹ thì mức giá cực kì tốt và hoàn toàn sử dụng được 4G tại Việt Nam.</p>
+
+		  	</div>
+		  	<div class="col-md-4 col-sm-6 col2">
+		  		<div class="video"><iframe class="video"  src="https://www.youtube.com/embed/0aEYlJRfza8" frameborder="0" allowfullscreen></iframe>
+		  		</div>
+		  		<p class="title">Đại chiến LG G6 và Samsung Galaxy S7 | S7 Edge</p>
+		  		<p class="text">LG G6 mới ra mắt và Galaxy S7|S7 Edge đã ra mắt được một năm, đâu sẽ là sản phẩm mạnh mẽ hơn về cấu hình khi mà G6 không sở hữu những thông số khủng nhất?</p>
+
+		  	</div>
+		  	<div class="col-md-4 col-sm-6 col3">
+		  		<div class="video"><iframe class="video"  src="https://www.youtube.com/embed/ukFaQivsA7g" frameborder="0" allowfullscreen></iframe>
+		  		</div>
+		  		<p class="title">Hàn Xẻng đại chiến: W S1 Mobile và Galaxy J7 Prime</p>
+		  		<p class="text">W S1 Mobile có cấu hình cực tốt trong mức giá trong khi J7 Prime có mức giá cao hơn. Với mức giá chênh lệch giữa 2 sản phẩm chính hãng thì đâu là smartphone đáng để lựa chọn về hiệu năng?</p>
+
+		  	</div>
+
+		  </div><!-- end row-->
+
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		  <!-- HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI / HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI/ HẾT 1 HÀNG RỒI -->
+		  <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		</section>
+
+
+
+		<a href="#page"class="back-to-top"></a>
+
+		<div class="contact-box">
+			<p class="contact-box-title contact-box-button">Liên hệ - Góp ý <span class="inline">với chúng tôi</span></p>
+			<span class="contact-box-icon contact-box-button"></span>
+
+			<form role="form">
+				<div class="form-group">
+					<label for="contact-name">Tên của bạn :</label>
+					<input type="text" class="form-control" id="contact-name" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-email">Địa chỉ Email của bạn :</label>
+					<input type="email" class="form-control" id="contact-email" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-content">Nội dung:</label>
+					<br>
+					<textarea rows="4" cols="30" name="comment" id="contact-content"></textarea>
+				</div>
+				<div class="form-group"><button type="submit" class="btn btn-default">Submit</button></div>
+			</form>
+		</div> <!-- end contact-box  -->
+
+
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / -->
+		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+		<footer>
+			<div class="container">
+				<div class="row no-bg">
+
+					<div class="col-md-4 col1">
+						<a class="logo" href=""></a>
+						<p>Địa chỉ : 123 Phố ABC - Quận XYZ - Hà Nội</p>
+						<p>Phone : 0987.654.321</p>
+						<p>Email : thanhquan@gmail.com</p>
+						<p>Mở cửa : 9:00 đến 21:00</p>
+					</div>
+
+					<div class="col-md-4 col1">
+						<div class="thong-tin">
+							<p>THÔNG TIN</p>
+							<span></span>
+							<a href="">Giới thiệu</a>
+							<a href="">Tuyển dụng</a>
+							<a href="">Mua Online</a>
+							<a href="">Mua trả góp</a>
+							<a href="">Đổi trả</a>
+							<a href="">Giao hàng</a>
+							<a href="">Thanh toán</a>
+							<a href="">Bảo hành</a>
+						</div>
+						<div class="nhan-hieu">
+							<p>NHÃN HIỆU</p>
+							<span></span>
+							<a href="">APPLE</a>
+							<a href="">SAMSUNG</a>
+							<a href="">SONY</a>
+							<a href="">ASUS</a>
+							<a href="">OPPO</a>
+							<a href="">XIAOMI</a>
+							<a href="">HTC</a>
+							<a href="">LG  </a>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<form>
+							<label for="email">ĐĂNG KÝ NHẬN TIN :</label>
+							<input type="email" id="email" placeholder="Địa chỉ Email của bạn">
+							<button type="submit">GỬI MAIL </button>
+						</form>
+						<p>Kết nối với chúng tôi qua :</p>
+						<a class="facebook" href=""></a>
+						<a class="youtube" href=""></a>
+					</div>
+
+				</div> <!-- end row -->
+			</div><!-- end container -->
+		</footer><!-- end footer-->
+
+	</div><!-- end page -->
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../js/project.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/login-form-js.js"></script>
+</body>
+</html>
