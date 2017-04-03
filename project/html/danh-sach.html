@@ -16,9 +16,10 @@
 
 </head>
 <body>
+	<div id="page">
 
-	<!-- <iframe class="iframe-header" src="header.html" width="100%" height="191px" style="border:none;"></iframe> -->
-	<header>
+	
+		<header>
 			<div class="search-bar">
 				<div class="container">
 					<div class="row no-bg">
@@ -37,8 +38,17 @@
 							</form>   
 						</div>
 
-						<div class="sign col4">
+						<div class="sign col4 log-in">
 							<span id="login" >Đăng nhập - Đăng ký tài khoản</span>
+						</div>
+
+						<div class="sign col4 logged">
+							<span id="login"> $ Tên người dùng</span>
+							<ul class="logged-box">
+								<li><a href="">Quản lý tài khoản</a></li>
+								<li><a href="gio-hang.html">Đơn hàng của tôi</a></li>
+								<li><a href="">Đăng xuất</a></li>
+							</ul>	
 						</div>
 
 					</div> <!-- end row -->
@@ -57,27 +67,27 @@
 						</div>
 
 						<div class="logo-box">
-							<a class="logo" href=""></a>
+							<a class="logo" href="index.html"></a>
 						</div> 
 
 						<div class="main-menu-box">
 							<nav class="main-menu">
 								<ul class="">
 									<li class="dkdn"><a href="#">ĐĂNG KÍ - ĐĂNG NHẬP</a></li>
-									<li class="mm-tc"><a class="active" href="index.html">TRANG CHỦ</a></li>
-									<li class="mm-dt"><a href="danh-sach.html">ĐIỆN THOẠI</a></li>
+									<li class="mm-tc"><a href="index.html">TRANG CHỦ</a></li>
+									<li class="mm-dt"><a class="active" href="danh-sach.html">ĐIỆN THOẠI</a></li>
 									<li class="mm-pk"><a href="danh-sach.html">PHỤ KIỆN</a></li>
 									<li class="mm-km"><a href="danh-sach.html">KHUYẾN MẠI</a></li>
 									<li class="mm-mdr"><a href="danh-sach.html">MÁY DÙNG RỒI</a></li>
-									<li class="mm-sc"><a href="#">SỬA CHỮA</a></li>
-									<li class="mm-tcn"><a href="#">TIN CÔNG NGHỆ</a></li>
+									<li class="mm-sc"><a href="sua-chua.html">SỬA CHỮA</a></li>
+									<li class="mm-tcn"><a href="tin-tuc.html">TIN CÔNG NGHỆ</a></li>
 								</ul>
 
 							</nav>
 						</div>
 
 						<div class="gh-box">
-							<a class="gh" href=""></a>
+							<a class="gh" href="gio-hang.html"></a>
 						</div>
 
 
@@ -110,28 +120,6 @@
 
 
 
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<section class="container" id="list-page">
 		<div class="row mot-hang">
 					<a href="" class="big-title">DANH SÁCH ĐIỆN THOẠI</a>
@@ -143,20 +131,16 @@
 		<div class="row">
 			<aside class="col-md-3 list-menu-box">
 				<ul>
-					<li class="menu-box"><a class="title-list" href="">SẮP XẾP</a>
-						<ul>
+					<li class="menu-box"><span class="title-list sap-xep-title" >SẮP XẾP</span>
+						<ul class="sap-xep">
 							<li><a href="">Mới nhất</a></li>
 							<li><a href="">Bán chạy nhất</a></li>
 							<li><a href="">Gía: thấp -> cao</a></li>
 							<li><a href="">Giá: cao -> thấp</a></li>
-<!-- 							<li><a href="">Camera: cao -> thấp</a></li>
-							<li><a href="">Camera: thấp -> cao</a></li>
-							<li><a href="">Màn hình: to -> nhỏ</a></li>
-							<li><a href="">Màn hình: nhỏ -> to</a></li> -->
 						</ul>
 					</li>
-					<li class="menu-box"><a class="title-list" href="">NHÃN HIỆU</a>
-						<ul>
+					<li class="menu-box"><span class="title-list nhan-hieu-title" >NHÃN HIỆU</span>
+						<ul class="nhan-hieu">
 							<li><a href="">APPLE</a></li>
 							<li><a href="">SAMSUNG</a></li>
 							<li><a href="">SONY</a></li>
@@ -165,8 +149,8 @@
 							<li><a href="">Các hãng khác</a></li>
 						</ul>
 					</li>
-					<li class="menu-box"><a class="title-list" href="">GIÁ TIỀN</a>
-						<ul>
+					<li class="menu-box"><span class="title-list gia-tien-title" >GIÁ TIỀN</span>
+						<ul class="gia-tien">
 							<li><a href="">Dưới 1 Triệu</a></li>
 							<li><a href="">Từ 1 đến 3 triệu</a></li>
 							<li><a href="">Từ 3 đến 5 triệu</a></li>
@@ -176,24 +160,24 @@
 							<li><a href="">Trên 15 triệu</a></li>
 						</ul>
 					</li>
-					<li class="menu-box"><a class="title-list" href="">LOẠI ĐIỆN THOẠI</a>
-						<ul>
+					<li class="menu-box"><span class="title-list loai-dien-thoai-title" >LOẠI ĐIỆN THOẠI</span>
+						<ul class="loai-dien-thoai">
 							<li><a href="">IOS (iPhone) </a></li>
 							<li><a href="">Android</a></li>
 							<li><a href="">Hệ điều hành khác</a></li>
 							<li><a href="">Phổ thông</a></li>
 						</ul>
 					</li>
-					<li class="menu-box"><a class="title-list" href="">MÀN HÌNH</a>
-						<ul>
+					<li class="menu-box"><span class="title-list man-hinh-title" >MÀN HÌNH</span>
+						<ul class="man-hinh">
 							<li><a href="">Dưới 3 inch</a></li>
 							<li><a href="">3 đến 4 inch</a></li>
 							<li><a href="">4 đến 5 inch</a></li>
 							<li><a href="">Trên  5 inch</a></li>
 						</ul>
 					</li>
-					<li class="menu-box"><a class="title-list" href="">CHẤT LIỆU VỎ</a>
-						<ul>
+					<li class="menu-box"><span class="title-list chat-lieu-vo-title" href="">CHẤT LIỆU VỎ</span>
+						<ul class="chat-lieu-vo">
 							<li><a href="">Kim loại</a></li>
 							<li><a href="">Kim loại và nhựa</a></li>
 							<li><a href="">Nhựa</a></li>
@@ -209,7 +193,7 @@
 			<!-- HẾT CỘT NÀY RỒI  //////////////////////////////////////////////////////////////////////////////////////////// -->
 		
 
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-6">
 				<div class="product-box ph1">
 				                  	<div class="img-product img-ph1"></div>
 				                  	<div class="name-price">
@@ -261,7 +245,7 @@
 			<!-- HẾT CỘT NÀY RỒI  //////////////////////////////////////////////////////////////////////////////////////////// -->
 			<!-- HẾT CỘT NÀY RỒI  //////////////////////////////////////////////////////////////////////////////////////////// -->
 
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-6">
 				<div class="product-box ph1">
 				                  	<div class="img-product img-ph5"></div>
 				                  	<div class="name-price">
@@ -313,7 +297,7 @@
 			<!-- HẾT CỘT NÀY RỒI  //////////////////////////////////////////////////////////////////////////////////////////// -->
 			<!-- HẾT CỘT NÀY RỒI  //////////////////////////////////////////////////////////////////////////////////////////// -->
 
-			<div class="col-md-3">
+			<div class="col-md-3 col4">
 				<div class="product-box ph1">
 				                  	<div class="img-product img-ph4"></div>
 				                  	<div class="name-price">
@@ -404,6 +388,30 @@
 
 	</section>
 
+	<a href="#page" class="back-to-top"></a>
+
+		<div class="contact-box">
+			<p class="contact-box-title contact-box-button">Liên hệ - Góp ý <span class="inline">với chúng tôi</span></p>
+			<span class="contact-box-icon contact-box-button"></span>
+
+			<form role="form">
+				<div class="form-group">
+					<label for="contact-name">Tên của bạn :</label>
+					<input type="text" class="form-control" id="contact-name" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-email">Địa chỉ Email của bạn :</label>
+					<input type="email" class="form-control" id="contact-email" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-content">Nội dung:</label>
+					<br>
+					<textarea rows="4" cols="30" name="comment" id="contact-content"></textarea>
+				</div>
+				<div class="form-group"><button type="submit" class="btn btn-default">Submit</button></div>
+			</form>
+		</div> <!-- end contact-box  -->
+
 
 
 
@@ -413,7 +421,14 @@
 
 	<iframe class="iframe-footer" src="footer.html" width="100%" height="270px" style="border:none;"></iframe>
 
+
+
+</div>
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/login-form-js.js"></script>
 </body>
 </html>

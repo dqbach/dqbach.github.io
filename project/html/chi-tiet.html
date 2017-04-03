@@ -17,7 +17,7 @@
 
   </head>
   <body>
-
+	<div id="page">
     <!-- <iframe class="iframe-header" src="header.html" width="100%" height="191px" style="border:none;"></iframe> -->
 
     <header>
@@ -66,8 +66,8 @@
 							<nav class="main-menu">
 								<ul class="">
 									<li class="dkdn"><a href="#">ĐĂNG KÍ - ĐĂNG NHẬP</a></li>
-									<li class="mm-tc"><a class="active" href="index.html">TRANG CHỦ</a></li>
-									<li class="mm-dt"><a href="danh-sach.html">ĐIỆN THOẠI</a></li>
+									<li class="mm-tc"><a href="index.html">TRANG CHỦ</a></li>
+									<li class="mm-dt"><a class="active" href="danh-sach.html">ĐIỆN THOẠI</a></li>
 									<li class="mm-pk"><a href="danh-sach.html">PHỤ KIỆN</a></li>
 									<li class="mm-km"><a href="danh-sach.html">KHUYẾN MẠI</a></li>
 									<li class="mm-mdr"><a href="danh-sach.html">MÁY DÙNG RỒI</a></li>
@@ -255,7 +255,7 @@
 				   min="1" max="100" step="1" value="1">
 				</form>
 
-				<a class="buy product-buy-box" href="">MUA HÀNG</a>
+				<span class="buy product-buy-box" >MUA HÀNG</span>
 
 			</div>
 
@@ -300,9 +300,9 @@
 <!-- HẾT CỘT NÀY RỒI  //////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-
+		<div class="container">
 			<div class="row mot-hang">
-					<a href="" class="big-title">SẢN PHẨM TƯƠNG TỰ</a>
+					<a href="" class="big-title no-margin">SẢN PHẨM TƯƠNG TỰ</a>
 					<span></span>
 			</div> <!-- end -row -->
 			<!-- THANH TIÊU ĐỀ //////////////////////////////////////////////////////////////////////// -->
@@ -369,6 +369,10 @@
 				     	 	</div><!-- end product-carousel-box -->
 				     	 	
 						</div><!-- end carousel item -->
+					</div>
+				</div>
+			</div>
+		</div>
 	
 
 	
@@ -386,6 +390,30 @@
 		
 	</section>
 
+	<a href="#page" class="back-to-top"></a>
+
+		<div class="contact-box">
+			<p class="contact-box-title contact-box-button">Liên hệ - Góp ý <span class="inline">với chúng tôi</span></p>
+			<span class="contact-box-icon contact-box-button"></span>
+
+			<form role="form">
+				<div class="form-group">
+					<label for="contact-name">Tên của bạn :</label>
+					<input type="text" class="form-control" id="contact-name" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-email">Địa chỉ Email của bạn :</label>
+					<input type="email" class="form-control" id="contact-email" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-content">Nội dung:</label>
+					<br>
+					<textarea rows="4" cols="30" name="comment" id="contact-content"></textarea>
+				</div>
+				<div class="form-group"><button type="submit" class="btn btn-default">Submit</button></div>
+			</form>
+		</div> <!-- end contact-box  -->
+
    	<iframe class="iframe-footer" src="footer.html" width="100%" height="270px" style="border:none;"></iframe>
 
 
@@ -396,10 +424,14 @@
 
 	
 
-    
+    	
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../js/project.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/login-form-js.js"></script>
+
+
   </body>
 </html>

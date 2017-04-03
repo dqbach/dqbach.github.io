@@ -22,16 +22,17 @@ margin-bottom: 50px;
 	float: left;
 	width: 100%;
 	padding-top: 100%;
-	background: url("../images/big.jpg") no-repeat center;
+	background: white url("../images/big.jpg") no-repeat center;
 	background-size: 85%; 
-	border: 1px solid #e5e5e5;
+	border: 1px solid #bfbfbf;
 }
 .product-sm-image {
 	float: left;
-	width: 24.4%;
-	padding-top: 24.4%;
-	border: 1px solid #e5e5e5;
-	margin: 5px 5px 0 0;
+	width: 25%;
+	padding-top: 25%;
+	border: 1px solid #bfbfbf;
+	border-top: 0px;
+	/*margin: 5px 5px 0 0;*/
 	background-size: contain !important; 
 }
 .sm4 {
@@ -102,13 +103,13 @@ color: #333;
 	width: 100%;
 }
 .produce-detail li p{
-	border-top: 1px solid #e5e5e5;
+	border-top: 1px solid #bfbfbf;
 	font-size: 16px;
 	padding:10px;
 	margin-bottom: 0px;
 }
 .last {
-border-bottom: 1px solid #e5e5e5;
+border-bottom: 1px solid #bfbfbf;
 
 }
 .produce-detail li p:first-child {
@@ -134,12 +135,12 @@ border-bottom: 1px solid #e5e5e5;
 
 
 .promotion {
-	border: 1px solid #e5e5e5;
+	border: 1px solid #bfbfbf;
 	border-bottom: 0px ;
 
 }
 .promotion>li {
-	border-bottom: 1px solid #e5e5e5;
+	border-bottom: 1px solid #bfbfbf;
 }
 
 .promotion li li {
@@ -162,12 +163,22 @@ list-style-type: none !important;
 
 
 .chi-tiet-active{
-	background: #f2f2f2;
+	background: #bfbfbf;
 
 }
 .list-menu-box {
 	padding-left: 0px;
 }
+
+@media (min-width: 1px) {
+	.list-menu-box {display: none;}
+}
+@media (min-width: 992px) {
+	.list-menu-box {display: block;}
+}
+
+
+
 
 
 .color-box {
@@ -179,7 +190,7 @@ list-style-type: none !important;
 }
 .color-text {
 	font-size: 20px;
-	padding: 30px 0;
+	padding: 50px 0 10px 0;
 	display: inline-block;
 	width: 100%;
 	float: left;
@@ -192,7 +203,7 @@ list-style-type: none !important;
 .quantity {
 	clear: both;
 	float: left;
-	margin: 30px 0; 
+	margin: 70px 0; 
 	font-size: 16px;
 }
 .quantity-input{
@@ -217,6 +228,8 @@ list-style-type: none !important;
 
 }
 
-
+.no-margin{
+	margin: 0px !important;
+}
 
 

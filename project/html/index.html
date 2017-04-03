@@ -11,6 +11,7 @@
 	
 	<link href="../css/index-style.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/login-form-style.css">
+	
 	<link rel="icon" href="../images/ph11.png" type="image/gif" sizes="16x16">
 
 
@@ -39,8 +40,17 @@
 							</form>   
 						</div>
 
-						<div class="sign col4">
+						<div class="sign col4 log-in">
 							<span id="login" >Đăng nhập - Đăng ký tài khoản</span>
+						</div>
+
+						<div class="sign col4 logged">
+							<span id="login"> $ Tên người dùng</span>
+							<ul class="logged-box">
+								<li><a href="">Quản lý tài khoản</a></li>
+								<li><a href="gio-hang.html">Đơn hàng của tôi</a></li>
+								<li><a href="">Đăng xuất</a></li>
+							</ul>	
 						</div>
 
 					</div> <!-- end row -->
@@ -59,27 +69,27 @@
 						</div>
 
 						<div class="logo-box">
-							<a class="logo" href=""></a>
+							<a class="logo" href="index.html"></a>
 						</div> 
 
 						<div class="main-menu-box">
 							<nav class="main-menu">
 								<ul class="">
 									<li class="dkdn"><a href="#">ĐĂNG KÍ - ĐĂNG NHẬP</a></li>
-									<li class="mm-tc"><a class="active" href="#">TRANG CHỦ</a></li>
+									<li class="mm-tc"><a class="active" href="index.html">TRANG CHỦ</a></li>
 									<li class="mm-dt"><a href="danh-sach.html">ĐIỆN THOẠI</a></li>
 									<li class="mm-pk"><a href="danh-sach.html">PHỤ KIỆN</a></li>
 									<li class="mm-km"><a href="danh-sach.html">KHUYẾN MẠI</a></li>
 									<li class="mm-mdr"><a href="danh-sach.html">MÁY DÙNG RỒI</a></li>
-									<li class="mm-sc"><a href="#">SỬA CHỮA</a></li>
-									<li class="mm-tcn"><a href="#">TIN CÔNG NGHỆ</a></li>
+									<li class="mm-sc"><a href="sua-chua.html">SỬA CHỮA</a></li>
+									<li class="mm-tcn"><a href="tin-tuc.html">TIN CÔNG NGHỆ</a></li>
 								</ul>
 
 							</nav>
 						</div>
 
 						<div class="gh-box">
-							<a class="gh" href=""></a>
+							<a class="gh" href="gio-hang.html"></a>
 						</div>
 
 
@@ -102,7 +112,7 @@
 
 
 
-		<div class="blank-box" ></div><!-- KHOẢNG TRẮNG , ÁP DỤNG CHO CÁC TRANG KHÁC -->
+		<div class="blank-box" ></div>
 
 
 
@@ -116,54 +126,57 @@
 		<div class="container banner-box">
 			<div class="row">
 				<div class="col-md-9 no-padding">					
-
-					<div id="myCarousel" class="carousel1 slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#myCarousel" data-slide-to="1"></li>
-							<li data-target="#myCarousel" data-slide-to="2"></li>
-						</ol>
-						<div class="carousel-inner" role="listbox">
+				  	<div id="carousel-example-generic" class="carousel1 slide" data-ride="carousel">
+					  	<!-- Indicators -->
+					  	<!-- <ol class="carousel-indicators">
+					    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					    	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    	<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  	</ol> -->
+					  	<!-- Wrapper for slides -->
+					  	<div class="carousel-inner">
 							<div class="item active">
-								<img src="../images/b3.jpg" width="100%">
+								<a href=""><img src="../images/b3.jpg" width="100%"></a>
 							</div>
 							<div class="item">
-								<img src="../images/b2.jpg" width="100%">
+								<a href=""><img src="../images/b2.jpg" width="100%"></a>
 							</div>
 							<div class="item">
-								<img src="../images/b1.jpg" width="100%">
-							</div>
-						</div>
+								<a href=""><img src="../images/b1.jpg" width="100%"></a>
+							</div>  	   	
+					  	</div>
+					  	<!-- Controls -->
+					  	<!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					  	</a>
+					  	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					  	</a> -->
 					</div>
 				</div>	<!-- end col -->
 
 
+
+
 				<div class="col-md-3 news-box ">
-					<a class="news-title-1" href="">
+					<a class="news-title-1" href="bai-viet.html">
 						<img src="../images/news1.jpg">
 						<p>iPhone 6 32GB giá tốt chính thức lên kệ tại TQSP</p>
 						<span>28/03/2017</span>
 					</a>
-					<a class="news-title-1" href="">
+					<a class="news-title-1" href="bai-viet.html">
 						<img src="../images/news2.jpg">
 						<p>Xiaomi Redmi Note 4 bản đen nhám sang trọng như iPhone 7 sẽ lên kệ tại TQSP</p>
 						<span>27/03/2017</span>
 					</a>
-					<a class="news-title-1" href="">
+					<a class="news-title-1" href="bai-viet.html">
 						<img src="../images/news3.jpg">
 						<p>Thời điểm ra mắt flagship Nokia 8 chip Snapdaron 835, RAM 6 GB, camera 24 MP</p>
 						<span>26/03/2017</span>
 					</a>
-					<a class="more" href="">Đọc thêm</a>
+					<a class="more" href="tin-tuc.html">Đọc thêm</a>
 				</div>
 
 			</div> <!-- end row -->
 		</div> <!--container -->
-
-
-
-
-
 
 
 
@@ -196,11 +209,11 @@
 									<span class="tag-new tag-hot">HOT</span>
 									<div class="img-product img-ph1"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
+										<p class="name-product">iPHONE 7 PLUS 32GB</p>
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -209,11 +222,11 @@
 								<div class="product-box ph1 ">
 									<div class="img-product img-ph2"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Samsung Galaxy A5 (2017)</p>
+										<p class="price-product">8.990.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -222,11 +235,11 @@
 								<div class="product-box ph1 ">
 									<div class="img-product img-ph3"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">iPhone 6s Plus 64GB</p>
+										<p class="price-product">17.991.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -235,11 +248,11 @@
 								<div class="product-box ph1 ">
 									<div class="img-product img-ph4"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">OPPO F3 Plus</p>
+										<p class="price-product">10.690.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -255,11 +268,11 @@
 								<div class="product-box ph1 ">
 									<div class="img-product img-ph5"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Samsung Galaxy A9 Pro</p>
+										<p class="price-product">10.990.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -268,11 +281,11 @@
 								<div class="product-box ph1 ">
 									<div class="img-product img-ph6"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">OPPO F1s [17] 64GB</p>
+										<p class="price-product">6.990.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -281,11 +294,11 @@
 								<div class="product-box ph1 ">
 									<div class="img-product img-ph7"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Sony Xperia XA</p>
+										<p class="price-product">4.490.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -294,11 +307,11 @@
 								<div class="product-box ph1 ">
 									<div class="img-product img-ph8"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">iPhone SE 64GB</p>
+										<p class="price-product">9.990.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -318,7 +331,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -331,7 +344,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -344,7 +357,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -357,7 +370,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -377,7 +390,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -390,7 +403,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -403,7 +416,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -416,7 +429,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -466,11 +479,11 @@
 									<span class="tag-new">NEW</span>
 									<div class="img-product img-ph5"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Samsung Galaxy A9 Pro</p>
+										<p class="price-product">10.990.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -480,11 +493,11 @@
 									<span class="tag-new">NEW</span>
 									<div class="img-product img-ph6"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">OPPO F1s [17] 64GB</p>
+										<p class="price-product">6.990.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -494,11 +507,11 @@
 									<span class="tag-new">NEW</span>
 									<div class="img-product img-ph7"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Sony Xperia XA</p>
+										<p class="price-product">4.490.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -508,11 +521,11 @@
 									<span class="tag-new">NEW</span>
 									<div class="img-product img-ph8"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">iPhone SE 64GB</p>
+										<p class="price-product">11.990.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -533,7 +546,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -547,7 +560,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -561,7 +574,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -575,7 +588,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -596,7 +609,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -610,7 +623,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -624,7 +637,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -638,7 +651,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -659,7 +672,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -673,7 +686,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -687,7 +700,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -701,7 +714,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-ph1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -750,11 +763,11 @@
 								<div class="product-box pk1 ">
 									<div class="img-product img-pk1"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Loa Bluetooth Awei Y200</p>
+										<p class="price-product">480.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -763,11 +776,11 @@
 								<div class="product-box pk1 ">
 									<div class="img-product img-pk2"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Thẻ nhớ Micro SD 64 GB Class 10</p>
+										<p class="price-product">750.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -776,11 +789,11 @@
 								<div class="product-box pk1 ">
 									<div class="img-product img-pk3"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Dây cáp Micro USB 1 m Cliptec Titanium</p>
+										<p class="price-product">100.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -789,11 +802,11 @@
 								<div class="product-box pk1 ">
 									<div class="img-product img-pk4"></div>
 									<div class="name-price">
-										<p class="name-product">IPHONE 7 PLUS 32GB</p>
-										<p class="price-product">22.000.000 VNĐ</p>
+										<p class="name-product">Tai nghe</p>
+										<p class="price-product">2.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -813,7 +826,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -826,7 +839,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -839,7 +852,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -852,7 +865,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -872,7 +885,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -885,7 +898,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -898,7 +911,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -911,7 +924,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -931,7 +944,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -944,7 +957,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -957,7 +970,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -970,7 +983,7 @@
 										<p class="price-product">22.000.000 VNĐ</p>
 										<div class="info-product info-pk1">
 											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
-											<a class="buy" href="">Mua hàng</a>
+											<a class="buy" href="" data-toggle="modal" data-target="#myModal">Mua hàng</a>
 										</div><!-- end info-box -->
 									</div><!-- end name-price -->
 								</div><!-- end product-box -->
@@ -1042,7 +1055,7 @@
 
 
 
-		<a href="#page"class="back-to-top"></a>
+		<a href="#page" class="back-to-top"></a>
 
 		<div class="contact-box">
 			<p class="contact-box-title contact-box-button">Liên hệ - Góp ý <span class="inline">với chúng tôi</span></p>
@@ -1070,6 +1083,27 @@
 		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 		<!-- HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / -->
 		<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		       <!--  <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
+		      </div>
+		      <div class="modal-body">
+		        Bạn đã thêm 1 sản phẩm vào giỏ hàng .
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		       <!--  <button type="button" class="btn btn-primary">Save changes</button> -->
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
 
 
@@ -1122,13 +1156,18 @@
 			</div><!-- end container -->
 		</footer><!-- end footer-->
 
+
+
+
+
+
 	</div><!-- end page -->
 
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="../js/project.js"></script>
+	<script src="../js/index.js"></script>
 	<script type="text/javascript" src="../js/login-form-js.js"></script>
 </body>
 </html>

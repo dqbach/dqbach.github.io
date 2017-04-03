@@ -5,10 +5,16 @@
 	list-style-type: none;
 	color:#333;
 }
+body {
+	background: #f2f2f2;
+}
 a {
 	text-decoration: none !important;	
 	display: block;
 }
+a:focus {
+    color: white;
+    }
 span {
 	display: block;
 }
@@ -36,8 +42,22 @@ span {
 .search-bar {
 	position:absolute;
 	width: 100%;
-	background: #f4f4f4;
+	background: #e5e5e5;
 }
+@media (min-width: 1px) {
+	.search-bar{top:60px;}
+}
+@media (min-width: 992px) {
+	.search-bar {height: 80px;}
+}
+	
+
+
+
+
+
+
+
 .search-bar .dia-chi{
 	width: 25%;
 	float: left;
@@ -99,11 +119,44 @@ span {
 
 }
 
-
-
-
-
-
+.log-in{
+	display: block;
+}
+.logged {
+	display: none !important;
+	position: relative;
+}
+.logged-box {
+	position: absolute;
+	top:70px;
+	right: 0;
+	background: #ccc;
+	z-index: 2; 
+	padding: 10px;
+	display: none;
+}
+.logged-box a {
+	padding: 10px;
+	color: #333;
+}
+.logged-box a:hover {
+	color: #808080;
+}
+.logged-box::after {
+	content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 8px 8px;
+    border-color: #ccc transparent;
+    display: block;
+    width: 0;
+    z-index: 11;
+    top: -7px;
+    right: 32px;
+}
+.appear{
+	display: block;
+}
 
 
 /* MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU / MAIN MENU */
@@ -115,8 +168,25 @@ span {
 .main-menu-bar {
 	width: 100%;
 	position: absolute;
-	border-bottom: 1px solid #e5e5e5;
 }
+@media (min-width: 1px) {
+	.main-menu-bar {
+		border-bottom:none;
+		height: 72px;
+	}
+}
+@media (min-width: 992px) {
+	.main-menu-bar {
+		border-bottom: 1px solid #ccc;
+		height: 89px;
+	}
+}
+
+
+
+
+
+
 .main-menu-bar .row{
 	position: relative;
 }
@@ -164,7 +234,6 @@ span {
 }
 
 @media (min-width: 1px) {
-	.main-menu-bar {border-bottom:none}
 	.main-menu-bar .logo-box {width: 60%; }
 	.menu-button-box {display:block;} 
 	.main-menu-bar .logo {width: 192px;height: 72px;}
@@ -199,7 +268,7 @@ span {
 @media (min-width: 992px) {
 	.main-menu-bar .logo-box {width: 20%; }
 	.menu-button-box {display: none;}
-	.main-menu-bar {border-bottom: 1px solid #e5e5e5;top:80px;}
+	.main-menu-bar {top:80px;}
 	.main-menu-box {left:225px;top:10px;}
 	.gh-box {width: 5%;}
 	.dkdn {display: none !important;}
@@ -232,35 +301,29 @@ span {
 }
 
 
-
-
-
-
-.banner {
-	/*width: 776px;*/
-	width: 80%;
-	height: 320px;
-	background: #f4f4f4;
-	float: left;
-}
-.quang-cao {
-	/*width: 380px;*/
-	width: 20%;
-	height: 320px;
-	background: #f4f4f4;
-	float: right;
-}
-
 .carousel1 {
 	overflow: hidden;
+}.control-banner-left {
+	left:0 !important;
+	top:50%;
 }
+.control-banner-right {
+	top:50%;
+}
+
+
+
+
+
+
+
+
 .news-box a {
-	background: #f2f2f2;
 	padding: 5px;
 	border-bottom: 1px solid black ;
 }
 .news-box a:hover {
-	background: #ccc;
+	background: #d9d9d9;
 	
 }
 
@@ -385,8 +448,8 @@ font-size: 12px;
 
 
 .product-box:hover {
-	transform:translateY(-10px);
-	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+	transform:translateY(-20px);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 .info-product {
 	position: absolute;
@@ -476,6 +539,7 @@ font-size: 12px;
 	width: 100%;
 	font-size: bold;
 	color: black !important;
+	text-transform: uppercase;
 	
 }
 .name-product {
@@ -497,7 +561,7 @@ font-size: 12px;
 }
 .watch{
 	margin-bottom: 10px;
-	background-color: #f2f2f2;
+	background-color: #e5e5e5;
 	color: #333;
 }
 .watch:hover {
@@ -564,7 +628,7 @@ font-size: 12px;
 /* FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / FOOTER / */
 footer {
 	width: 100%;
-	background: #f4f4f4;
+	background: #e5e5e5;
 	font-size: 14px; 
 	padding-top: 30px;
 }
@@ -664,7 +728,7 @@ footer button  {
 	bottom: -373px;
 	right: 50px;
 	transition:all 0.3s ease-in-out;
-	z-index: 9999999999;
+	z-index: 123;
 
 }
 .contact-box-up {
@@ -676,7 +740,7 @@ footer button  {
 }
 .contact-box-title {
 	padding: 10px;
-	background:#f4f4f4;
+	background:#e5e5e5;
 	color:#4d4d4d;
 	font-size: 15px;
 	font-weight: bold;
@@ -701,7 +765,7 @@ footer button  {
 .contact-box-icon {
 	width: 21%;
 	height: 41px;
-	background: #f4f4f4 url("../svg/chat.svg") no-repeat center;
+	background: #e5e5e5 url("../svg/chat.svg") no-repeat center;
 	background-size: 100%;
 	float: right;
 
@@ -733,13 +797,8 @@ footer button  {
 	background-size:33%;
 }
 
-
-@media (min-width: 1px) {
-
-
-}
-@media (min-width: 992px) {
-
+.modal-body {
+	font-size: 20px;
 
 }
 
