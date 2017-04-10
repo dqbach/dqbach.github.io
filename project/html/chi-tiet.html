@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1">
+    <title>CHI TIET</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../css/index-style.css" rel="stylesheet">
+    <link href="../css/danh-sach-style.css" rel="stylesheet">
+    <link href="../css/chi-tiet-style.css" rel="stylesheet">
+
+    <link rel="icon" href="../images/ph11.png" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="../owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="../owlcarousel/owl.theme.default.min.css">
+	<!-- Owl Carousel 2 -->
+
+  </head>
+  <body>
+	<div id="page" class="trang-chi-tiet">
+
+
+		<header>
+			<div class="search-bar">
+				<div class="container">
+					<div class="row no-bg">
+						<div class="col4 dia-chi">
+							<p><b>Địa chỉ: </b>  169 Ga Đỗ Xá - Thường Tín - Hà Nội</p>
+							<p><b>Liên hệ:</b>  0943271111 _ 0963948686</p>
+						</div>  
+						<div class="search-box">
+							<form role="search">
+								<div>
+									<input type="text" name="search" placeholder="Bạn muốn tìm gì ?">
+									<button class="search-button glyphicon glyphicon-search" type="submit"></button>
+								</div>
+							</form>   
+						</div>
+
+						<div class="sign log-in display-none">
+							<span id="login" class="show-login" >Đăng nhập - Đăng ký tài khoản</span>
+							<ul class="logged-box log-in-box">
+								<li>
+									<span data-toggle="modal" data-target="#loginModal">Đăng nhập </span>
+								</li>
+								<li>
+									<span data-toggle="modal" data-target="#registerModal">Đăng Ký</span>
+								</li>
+								
+							</ul>
+						</div>
+						<div class="sign logged display-none">
+							<span id="login"> $ Tên người dùng</span>
+							<ul class="logged-box">
+								<li><a href="user-account-information.html">Quản lý tài khoản</a></li>
+								<li><a href="gio-hang.html">Đơn hàng của tôi</a></li>
+								<li><span href="" class="onclick-loggoff show-logged loggoff-button">Đăng xuất</span></li>
+							</ul>	
+						</div>
+					</div> <!-- end row -->
+				</div> <!-- end container -->
+			</div> <!-- end search-bar -->
+
+
+			<div class="main-menu-bar"> 
+				<div class="container">
+					<div class="row">
+						<div class="menu-button-box">
+							<button class="menu-button" type="button">
+							</button>
+						</div>
+						<div class="logo-box">
+							<a class="logo" href="index.html"></a>
+						</div> 
+						<div class="main-menu-box">
+							<nav class="main-menu">
+								<ul>
+									<li class="dkdn"><span href="#">ĐĂNG KÍ - ĐĂNG NHẬP</span>
+										<ul class="logged-box dkdn-box ">
+											<li>
+												<span data-toggle="modal" data-target="#loginModal">Đăng nhập </span>
+											</li>
+											<li>
+												<span data-toggle="modal" data-target="#registerModal">Đăng Ký</span>
+											</li>
+										</ul>
+									</li>
+									<li class="usn"><span href="#">Username</span>
+										<ul class="logged-box usn-box">
+											<li><a href="user-account-information.html">Quản lý tài khoản</a></li>
+											<li><a href="gio-hang.html">Đơn hàng của tôi</a></li>
+											<li><span href="" class="onclick-loggoff show-logged loggoff-button">Đăng xuất</span></li>
+										</ul>
+									</li>
+
+									<li class="mm-tc"><a class="active" href="index.html">TRANG CHỦ</a></li>
+									<li class="mm-dt"><a href="danh-sach.html">ĐIỆN THOẠI</a>
+
+										<div class="menu-dropdown menu-dropdown1">
+											<ul>
+												<li>HÃNG SẢN XUẤT</li>
+												<li><a href="danh-sach.html">APPLE</a></li>
+												<li><a href="danh-sach.html">SAMSUNG</a></li>
+												<li><a href="danh-sach.html">SONY</a></li>
+												<li><a href="danh-sach.html">OPPO</a></li>
+												<li><a href="danh-sach.html">ASUS</a></li>
+												<li><a href="danh-sach.html">LENOVO</a></li>
+												<li><a href="danh-sach.html">CÁC HÃNG KHÁC</a></li>
+											</ul>
+											<ul>
+												<li>GIÁ TIỀN</li>
+												<li><a href="danh-sach.html">Dưới 1 Triệu</a></li>
+												<li><a href="danh-sach.html">Từ 1 đến 3 triệu</a></li>
+												<li><a href="danh-sach.html">Từ 3 đến 5 triệu</a></li>
+												<li><a href="danh-sach.html">Từ 3 đến 7 triệu</a></li>
+												<li><a href="danh-sach.html">Từ 7 đến 10 triệu</a></li>
+												<li><a href="danh-sach.html">Từ 10 đến 15 triệu</a></li>
+												<li><a href="danh-sach.html">Trên 15 triệu</a></li>
+											</ul>
+											<ul>
+												<li>LOẠI ĐIỆN THOẠI</li>
+												<li><a href="danh-sach.html">IOS (iPhone) </a></li>
+												<li><a href="danh-sach.html">Android</a></li>
+												<li><a href="danh-sach.html">Hệ điều hành khác</a></li>
+												<li><a href="danh-sach.html">Phổ thông</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="mm-pk"><a href="phu-kien.html">PHỤ KIỆN</a>
+										<div class="menu-dropdown menu-dropdown2">
+											<ul>			
+												<li><a href="phu-kien.html" class="pk-icon-1">Pin sạc</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-2">Cáp sạc</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-3">Thẻ nhớ</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-4">Tai nghe</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-5">Loa</a></li>
+											</ul>
+											<ul>			
+												<li><a href="phu-kien.html" class="pk-icon-6">Ốp lưng</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-8">Gậy chụp ảnh</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-7">Phụ kiện Apple</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-9">Phụ kiện Sony</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-10">Khuyến mại</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="mm-tt"><a href="tin-tuc.html">TIN TỨC</a></li>
+									<li class="mm-lh"><a href="lien-he.html">LIÊN HỆ</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="gh-box">
+							<a class="gh" href="gio-hang.html"></a>
+						</div>
+					</div> <!-- end row -->
+				</div> <!-- end container -->
+			</div> <!-- end main-menu -->
+			
+		</header>
+		
+
+
+		<nav>
+			<div class="modal fade accountModal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Đăng nhập tài khoản</h4>
+							<form>
+								<div class="form-group accountFormGroupStyle">
+									<label >Tên đăng nhập</label>
+									<input type="text" name="" class="form-control" placeholder="Email hoặc Số điện thoại">
+								</div>
+								<div class="form-group  accountFormGroupStyle">
+									<label>Mật khẩu</label>
+									<input type="password" name="" class="form-control" placeholder="Mật khẩu">
+								</div>
+								<div class="checkbox accountFormGroupStyle form-group accountCheckbox">
+									<div>
+										<label>
+											<input type="checkbox" name="" > <span class="checkboxText">Lưu đăng nhập</span>
+										</label>
+									</div>
+									<div>
+										<span data-toggle="modal" data-target="#lostPassword" data-dismiss="modal" class="checkboxText lostPassword">Tìm lại mật khẩu</span>
+									</div>
+								</div>
+								<div class="form-group accountFormGroupStyle submitButton">
+									<button type="submit" class="btn btn-submit-account">Đăng Nhập</button>
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<div class="sub-container">
+										<div class="sub-left sub-item"></div><div class="sub-text sub-item"><span>Hoặc</span></div><div class="sub-right sub-item"></div>
+									</div>
+								</div>
+							</form>
+							<div class=" form-group oauth-container">
+								<div class="oauth-item fb">
+									<img src="../images/facebook.png">
+									<button>Đăng nhập bằng Facebook</button>
+								</div>
+								<div class="oauth-item gg">
+									<img src="../images/google.png">
+									<button>Đăng nhập bằng Google</button>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="modal fade accountModal" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Đăng ký tài khoản</h4>
+							<form>
+								<div class="form-group accountFormGroupStyle">
+									<label>Họ và Tên</label>
+									<input type="text" name="" class="form-control" placeholder="Họ Tên">
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Tên đăng nhập</label>
+									<input type="text" name="" class="form-control" placeholder="Email hoặc Số điện thoại">
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Mật khẩu</label>
+									<input type="password" name="" class="form-control" placeholder="Mật khẩu phải lớn hơn 6 và nhỏ hơn 30 ký tự">
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Nhập lại Mật khẩu</label>
+									<input type="password" name="" class="form-control" placeholder="Nhập lại Mật khẩu phải giống Mật khẩu">
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Giới tính</label>
+									<select>
+										<option checked="checked">Khác</option>
+										<option>Nữ</option>
+										<option>Nam</option>
+									</select>
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Địa chỉ của bạn</label>
+									<textarea class="form-control accountFormGroupStyle" rows="3"></textarea>
+								</div>
+								<div class="checkbox form-group accountFormGroupStyle">
+									<label>
+										<input type="checkbox" name=""> Tôi đồng ý với các điều khoản của shop
+									</label>
+								</div>
+								<div class="form-group accountFormGroupStyle submitButton">
+									<button type="submit" class="btn btn-submit-account">Đăng Ký</button>
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<div class="sub-container">
+										<div class="sub-left sub-item"></div><div class="sub-text sub-item"><span>Hoặc</span></div><div class="sub-right sub-item"></div>
+									</div>
+								</div>
+							</form>
+							<div class=" form-group oauth-container">
+								<div class="oauth-item fb">
+									<img src="../images/facebook.png">
+									<button>Đăng nhập bằng Facebook</button>
+								</div>
+								<div class="oauth-item gg">
+									<img src="../images/google.png">
+									<button>Đăng nhập bằng Google</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade accountModal" id="lostPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Tìm lại Mật khẩu</h4>
+							<form>
+								<div class="form-group accountFormGroupStyle">
+									<label >Nhập lại Email hoặc Số điện thoại</label>
+									<input type="text" name="" class="form-control" placeholder="Email hoặc Số điện thoại">
+								</div>
+								
+
+								<div class="form-group  lostPasswordBtn">
+									<button type="submit" class="btn btn-primary">Gửi thông tin</button>
+									<button type="button" data-dismiss="modal" data-toggle="modal" data-target="#loginModal" class="btn btn-danger">Bỏ qua</button>
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+		<!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /-->
+
+
+
+
+
+
+
+		<div class="blank-box" ></div> <!-- khoảng trắng ở phía trên để cách header với banner-->
+
+
+
+
+
+		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+    <section class="container" id="list-page">
+		<div class="row mot-hang">
+					<a href="" class="big-title big-title-list-page">ĐIỆN THOẠI</a>
+					<span></span>
+			</div> <!-- end -row -->
+			<!-- THANH TIÊU ĐỀ //////////////////////////////////////////////////////////////////////// -->
+
+
+      	<div class="row">
+
+
+      		<aside class="col-md-2 list-menu-box">
+				<ul>
+					<li class="menu-box"><a class="title-list" href="">HÃNG SẢN XUẤT</a>
+						<ul>
+							<li><a class="chi-tiet-active" href="">APPLE</a></li>
+							<li><a href="">SAMSUNG</a></li>
+							<li><a href="">SONY</a></li>
+							<li><a href="">OPPO</a></li>
+							<li><a href="">ASUS</a></li>
+							<li><a href="">LENOVO</a></li>
+							<li><a href="">Các hãng khác</a></li>
+						</ul>
+					</li>
+					<li class="menu-box"><a class="title-list" href="">GIÁ TIỀN</a>
+						<ul>
+							<li><a href="">Dưới 1 Triệu</a></li>
+							<li><a href="">Từ 1 đến 3 triệu</a></li>
+							<li><a href="">Từ 3 đến 5 triệu</a></li>
+							<li><a href="">Từ 3 đến 7 triệu</a></li>
+							<li><a href="">Từ 7 đến 10 triệu</a></li>
+							<li><a href="">Từ 10 đến 15 triệu</a></li>
+							<li><a href="">Trên 15 triệu</a></li>
+						</ul>
+					</li>
+					<li class="menu-box"><a class="title-list" href="">LOẠI ĐIỆN THOẠI</a>
+						<ul>
+							<li><a href="">IOS (iPhone) </a></li>
+							<li><a href="">Android</a></li>
+							<li><a href="">Hệ điều hành khác</a></li>
+							<li><a href="">Phổ thông</a></li>
+						</ul>
+					</li>
+					
+					
+				</ul>
+
+
+			</aside> <!-- end list-menu-box -->
+
+			<!-- HẾT CỘT NÀY RỒI  //////////////////////////////////////////////////////////////////////////////////////////// -->
+
+      		<div class="col-md-7 produce-detail">
+				<h2 class="name-product">iPHONE7 PLUS 32GB</h2>
+			</div>
+
+			<div class="col-md-7 produce-detail" >
+				<div class="image-product-box">
+					
+					<div class="mau mau0">
+						<img class="product-big-image showImageAfterOnclick" src="../images/sm1.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm1.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm2.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm3.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm4.jpg">
+					</div>
+					<div class="mau mau1">
+						<img class="product-big-image showImageAfterOnclick " src="../images/sm21.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm21.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm26.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm24.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm25.jpg">
+					</div>
+					<div class="mau mau2">
+						<img class="product-big-image showImageAfterOnclick " src="../images/sm32.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm32.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm33.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm34.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm35.jpg">
+					</div>
+					<div class="mau mau3">
+						<img class="product-big-image showImageAfterOnclick " src="../images/sm42.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm42.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm43.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm44.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm46.jpg">
+					</div>
+					<div class="mau mau4">
+						<img class="product-big-image showImageAfterOnclick " src="../images/sm52.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm52.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm53.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm54.jpg">
+						<img class="product-sm-image ClickEvent" src="../images/sm55.jpg">
+					</div>
+				</div>
+				
+			</div>
+
+			
+
+
+
+			<div class="col-md-3 col-xs-12 produce-detail-2">
+				<h2 class="price-product">22.290.000 VNĐ</h2>
+				<p class="code">Mã sản phẩm:<span>123ABC</span></P>
+				<ul class="promotion">
+					<li>
+						<ul>
+							<li>Trong hộp có :</li>
+							<li>Sạc, Tai nghe, Sách hướng dẫn, Jack chuyển tai nghe 3.5mm, Cáp, Cây lấy sim</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>Bảo hành chính hãng :</li>
+							<li class="cut-bot">Thân máy 12 tháng</li>
+							<li class="cut-bot">Sạc 12 tháng</li>
+							<li>Tai nghe 12 tháng</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>Giao hàng :</li>
+							<li>Tận nơi miễn phí trong 30 phút</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>Đổi hàng :</li>
+							<li>1 đổi 1 trong 1 tháng với sản phẩm lỗi</li>
+						</ul>
+					</li>
+				</ul>
+
+				<p class="color-text">Màu sắc :</p>
+				<button productColor="mau0" class="color-box cb0 onclickColor"href=""></button>
+				<button productColor="mau1" class="color-box cb1 onclickColor"href=""></button>
+				<button productColor="mau2" class="color-box cb2 onclickColor"href=""></button>
+				<button productColor="mau3" class="color-box cb3 onclickColor"href=""></button>
+				<button productColor="mau4" class="color-box cb4 onclickColor"href=""></button>
+
+  				<p class="quantity color-text"> Chỉ còn : 3 sản phẩm</p>
+
+				<span class="buy product-buy-box" >MUA HÀNG</span>
+				<span class="buy product-buy-box added" >Đã thêm vào giỏ hàng</span>
+
+			</div>
+
+			<div class="col-md-7 col-sm-12 col-sx-12 produce-detail detail-product-box">
+					<h3>Thông số kỹ thuật </h3>
+					<ul class="cau-hinh-don-gian">
+						<li><p>Màn hình:<span>LED IPS LCD, 5.5", Retina HD<span></p></li>
+						<li><p>Hệ điều hành:<span>iOS 10</span></p></li>
+						<li><p>CPU:<span>Apple A10 Fusion 4 nhân 64-bit</span></p></li>
+						<li><p>Camera sau:<span>Hai camera 12 MP</span></p></li>
+						<li><p>Camera trước:<span>7 MP</span></p></li>
+						<li><p>Bộ nhớ trong:<span>256GB</span></p></li>
+						<li><p>Thẻ SIM:<span>1 SIM, Nano SIM<span></p></li>
+						<li><p>Dung lượng pin:<span>2900 mAh</span></p></li>
+					</ul>
+					<button class="watch-more">Xem cấu hình chi tiết</button>
+					<ul class="cau-hinh-chi-tiet">
+						<li class="label">Màn hình</li>
+						<li>
+							<p>Công nghệ màn hình</p>
+							<p>LED-backlit IPS LCD</p>
+						</li>
+						<li>
+							<p>Độ phân giải</p>
+							<p>Full HD (1080 x 1920 pixels)</p>
+						</li>
+						<li>
+							<p>Màn hình rộng</p>
+							<p>5.5"</p>
+						</li>
+						<li>
+							<p>Mặt kính cảm ứng</p>
+							<p>Kính oleophobic (ion cường lực)</p>
+						</li>
+						<li class="label">Camera sau</li>
+						<li>
+							<p>Độ phân giải</p>
+							<p>Hai camera 12 MP</p>
+						</li>
+						<li>
+							<p>Quay phim</p>
+							<p>Quay phim 4K 2160p@30fps</p>
+						</li>
+						<li>
+							<p>Đèn Flash</p>
+							<p>4 đèn LED (2 tông màu)</p>
+						</li>
+						<li>
+							<p>Chụp ảnh nâng cao</p>
+							<p>Tự động lấy nét, Chạm lấy nét, Nhận diện khuôn mặt, HDR, Panorama, Chống rung quang học (OIS)</p>
+						</li>
+						<li class="label">Camera trước</li>
+						<li>
+							<p>Độ phân giải</p>
+							<p>7MP</p>
+						</li>
+						<li>
+							<p>Videocall</p>
+							<p>Hỗ trợ VideoCall thông qua ứng dụng OTT</p>
+						</li>
+						<li>
+							<p>Thông tin khác</p>
+							<p>Nhận diện khuôn mặt, Quay video Full HD, Tự động lấy nét, Selfie ngược sáng HDR</p>
+						</li>
+						<li class="label">Hệ điều hành - CPU</li>
+						<li>
+							<p>Hệ điều hành</p>
+							<p>iOS 10</p>
+						</li>
+						<li>
+							<p>Chipset (hãng SX CPU)</p>
+							<p>Apple A10 Fusion 4 nhân 64-bit</p>
+						</li>
+						<li>
+							<p>Tốc độ CPU</p>
+							<p>2.3 GHz</p>
+						</li>
+						<li>
+							<p>Chip đồ họa (GPU)</p>
+							<p>Chip đồ họa 6 nhân</p>
+						</li>
+						<li class="label">Bộ nhớ & Lưu trữ</li>
+						<li>
+							<p>RAM</p>
+							<p>3GB</p>
+						</li>
+						<li>
+							<p>Bộ nhớ trong</p>
+							<p>256GB</p>
+						</li>
+						<li>
+							<p>Bộ nhớ còn lại khả dụng</p>
+							<p>Khoảng 247.52 GB</p>
+						</li>
+						<li>
+							<p>Thẻ nhớ ngoài</p>
+							<p>Không</p>
+						</li>
+						<li class="label">Kết nối</li>
+						<li>
+							<p>Mạng di động</p>
+							<p>3G, 4G LTE Cat 9</p>
+						</li>
+						<li>
+							<p>SIM</p>
+							<p>1 Nano SIM</p>
+						</li>
+						<li>
+							<p>Wifi</p>
+							<p>Wi-Fi 802.11 a/b/g/n/ac, Dual-band, Wi-Fi hotspot</p>
+						</li>
+						<li>
+							<p>GPS</p>
+							<p>A-GPS, GLONASS</p>
+						</li>
+						<li>
+							<p>Bluetooth</p>
+							<p>v4.2, A2DP, LE</p>
+						</li>
+						<li>
+							<p>Cổng kết nối / Sạc</p>
+							<p>Lightning</p>
+						</li>
+						<li>
+							<p>Jack tai nghe</p>
+							<p>Không</p>
+						</li>
+						<li>
+							<p>Kết nối khác</p>
+							<p>NFC, Air Play, OTG, HDMI</p>
+						</li>
+						<li class="label">Thiết kế & Trọng lượng</li>
+						<li>
+							<p>Thiết kế</p>
+							<p>Nguyên khối, mặt kính cong 2.5D</p>
+						</li>
+						<li>
+							<p>Chất liệu</p>
+							<p>Hợp kim Nhôm + Magie</p>
+						</li>
+						<li>
+							<p>Kích thước</p>
+							<p>Dài 158.2 mm - Ngang 77.9 mm - Dày 7.3 mm</p>
+						</li>
+						<li>
+							<p>Trọng lượng</p>
+							<p>188 g</p>
+						</li>
+						<li class="label">Thông tin pin & Sạc</li>
+						<li>
+							<p>Dung lượng pin</p>
+							<p>2900 mAh</p>
+						</li>
+						<li>
+							<p>Loại pin</p>
+							<p>Pin chuẩn Li-Ion</p>
+						</li>
+						<li>
+							<p>Công nghệ pin</p>
+							<p>Tiết kiệm pin</p>
+						</li>
+						<li class="label">Tiện ích</li>
+						<li>
+							<p>Bảo mật nâng cao</p>
+							<p>	Mở khóa bằng vân tay</p>
+						</li>
+						<li>
+							<p>Tính năng đặc biệt</p>
+							<p>Chống nước , chống bụi , 3D Touch</p>
+						</li>
+						<li>
+							<p>Ghi âm</p>
+							<p>Có, microphone chuyên dụng chống ồn</p>
+						</li>
+						<li>
+							<p>Radio</p>
+							<p>Không</p>
+						</li>
+						<li>
+							<p>Xem phim</p>
+							<p>H.265, 3GP, MP4, AVI, WMV, H.264(MPEG4-AVC), DivX, WMV9, Xvid</p>
+						</li>
+						<li>
+							<p>Nghe nhạc</p>
+							<p>Lossless, Midi, MP3, WAV, WMA, eAAC+, OGG, AC3, FLAC</p>
+						</li>
+					</ul>
+					<button class="watch-more close-button">Đóng</button>
+
+			</div>
+
+
+
+
+
+			<div class="col-md-3 col-xs-12 produce-detail-2 video-box">
+				<p class="big-title video-text">Video sản phẩm</p>
+				<div class="chi-tiet-video embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/R4jul7XuhK0" frameborder="0" allowfullscreen>></iframe>
+				</div>	
+				<div class="video2 chi-tiet-video embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/voPP7LPX01E" frameborder="0" allowfullscreen></iframe>
+				</div>
+
+			</div>		
+
+
+
+
+			</div> <!-- end col-->
+		</div> <!-- end row -->	
+
+<!-- HẾT CỘT NÀY RỒI  //////////////////////////////////////////////////////////////////////////////////////////// -->
+		<div class="container" >
+			<div class="row mot-hang">
+						<a href="danh-sach.html" class="big-title">SẢN PHẨM TƯƠNG TỰ</a>
+						<span></span>
+					</div> <!-- end row -->
+
+					<div class="row">
+						<div class="owl-carousel">
+							<div class="owl-carousel-slide">
+								<div class="product-box ph">
+									<img src="../images/p9.jpg">
+									<div class="name-price">
+										<p class="name-product">Samsung Galaxy C9 Pro</p>
+										<p class="price-product">11.490.000 VNĐ</p>
+										<div class="info-product info-ph">
+											<div>
+												<p>Samsung Galaxy C9 Pro</p>
+												<p>11.490.000 VNĐ</p>
+												<span></span>
+												<p>Màn hình: 6", Retina HD</p>
+												<p>HĐH: Android 6.0 (Marshmallow)</p>
+												<p>CPU: Apple A10 Fusion 4 nhân</p>
+												<p>Camera: 2x12 MP, Selfie: 7 MP</p>
+												<p>PIN: 2900 mAh, SIM: 1 SIM</p>
+											</div>
+											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+											<span class="buy">Mua hàng</span>
+											<span class="buy added">Đã thêm vào giỏ hàng</span>
+										</div><!-- end info-box -->
+									</div><!-- end name-price -->
+								</div><!-- end product-box -->
+							</div>
+							<div class="owl-carousel-slide">
+								<div class="product-box ph">
+									<img src="../images/p10.jpg">
+									<div class="name-price">
+										<p class="name-product">OPPO F1s</p>
+										<p class="price-product">6.490.000 VNĐ</p>
+										<div class="info-product info-ph">
+											<div>
+												<p>OPPO F1s</p>
+												<p>6.490.000 VNĐ</p>
+												<span></span>
+												<p>Màn hình: 6", Retina HD</p>
+												<p>HĐH: Android 6.0 (Marshmallow)</p>
+												<p>CPU: Apple A10 Fusion 4 nhân</p>
+												<p>Camera: 2x12 MP, Selfie: 7 MP</p>
+												<p>PIN: 2900 mAh, SIM: 1 SIM</p>
+											</div>
+											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+											<span class="buy">Mua hàng</span>
+											<span class="buy added">Đã thêm vào giỏ hàng</span>
+										</div><!-- end info-box -->
+									</div><!-- end name-price -->
+								</div><!-- end product-box -->
+							</div>
+							<div class="owl-carousel-slide">
+								<div class="product-box ph">
+									<img src="../images/p11.jpg">
+									<div class="name-price">
+										<p class="name-product">HTC Desire 728G LTE</p>
+										<p class="price-product">3.490.000 VNĐ</p>
+										<div class="info-product info-ph">
+											<div>
+												<p>HTC Desire 728G LTE</p>
+												<p>3.490.000 VNĐ</p>
+												<span></span>
+												<p>Màn hình: 6", Retina HD</p>
+												<p>HĐH: Android 6.0 (Marshmallow)</p>
+												<p>CPU: Apple A10 Fusion 4 nhân</p>
+												<p>Camera: 2x12 MP, Selfie: 7 MP</p>
+												<p>PIN: 2900 mAh, SIM: 1 SIM</p>
+											</div>
+											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+											<span class="buy">Mua hàng</span>
+											<span class="buy added">Đã thêm vào giỏ hàng</span>
+										</div><!-- end info-box -->
+									</div><!-- end name-price -->
+								</div><!-- end product-box -->
+							</div>
+							<div class="owl-carousel-slide">
+								<div class="product-box ph">
+									<img src="../images/p12.jpg">
+									<div class="name-price">
+										<p class="name-product">OPPO A39 (Neo 9s)</p>
+										<p class="price-product">4.490.000 VNĐ</p>
+										<div class="info-product info-ph">
+											<div>
+												<p>OPPO A39 (Neo 9s)</p>
+												<p>4.490.000 VNĐ</p>
+												<span></span>
+												<p>Màn hình: 6", Retina HD</p>
+												<p>HĐH: Android 6.0 (Marshmallow)</p>
+												<p>CPU: Apple A10 Fusion 4 nhân</p>
+												<p>Camera: 2x12 MP, Selfie: 7 MP</p>
+												<p>PIN: 2900 mAh, SIM: 1 SIM</p>
+											</div>
+											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+											<span class="buy">Mua hàng</span>
+											<span class="buy added">Đã thêm vào giỏ hàng</span>
+										</div><!-- end info-box -->
+									</div><!-- end name-price -->
+								</div><!-- end product-box -->
+							</div>
+							<div class="owl-carousel-slide">
+								<div class="product-box ph">
+									<img src="../images/p4.jpg">
+									<div class="name-price">
+										<p class="name-product">iPhone 5s 32GB</p>
+										<p class="price-product">5.990.000 VNĐ</p>
+										<div class="info-product info-ph">
+											<div>
+												<p>iPhone 5s 32GB</p>
+												<p>5.990.000 VNĐ</p>
+												<span></span>
+												<p>Màn hình: 4", Retina </p>
+												<p>HĐH: iOS 10</p>
+												<p>CPU: Apple A7 2 nhân</p>
+												<p>Camera: 8 MP, Selfie: 5 MP</p>
+												<p>PIN: 1560 mAh, SIM: 1 Sim</p>
+											</div>
+											<a href="chi-tiet.html" class="watch">Xem chi tiết</a>
+											<span class="buy">Mua hàng</span>
+											<span class="buy added">Đã thêm vào giỏ hàng</span>
+										</div><!-- end info-box -->
+									</div><!-- end name-price -->
+								</div><!-- end product-box -->		
+							</div>
+						</div><!-- end owl-carousel -->	
+					</div><!-- end row -->	
+					<!-- HẾT HÀNG NÀY RÔI / HẾT HÀNG NÀY RÔI / HẾT HÀNG NÀY RÔI / HẾT HÀNG NÀY RÔI /-->
+				</div>
+
+
+
+		
+	
+
+	
+	</section>
+
+
+
+
+
+
+
+
+
+	<a href="#page" class="back-to-top"></a>
+
+		<div class="contact-box">
+			<p class="contact-box-title contact-box-button">Liên hệ - Góp ý <span class="inline">với chúng tôi</span></p>
+			<span class="contact-box-icon contact-box-button"></span>
+
+			<form role="form">
+				<div class="form-group">
+					<label for="contact-name">Tên của bạn :</label>
+					<input type="text" class="form-control" id="contact-name" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-email">Địa chỉ Email của bạn :</label>
+					<input type="email" class="form-control" id="contact-email" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="contact-content">Nội dung:</label>
+					<br>
+					<textarea rows="4" cols="30" name="comment" id="contact-content"></textarea>
+				</div>
+				<div class="form-group"><button type="submit" class="btn btn-default btt-button">Submit</button></div>
+			</form>
+		</div> <!-- end contact-box  -->
+		<!-- HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / -->
+
+
+
+
+
+
+
+
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2 col1">
+						<a class="logo" href=""></a>
+					</div>
+					<div class="col-md-3 col1 ad">
+						<p>Địa chỉ : <br>169 Ga Đỗ Xá - Thường Tín - Hà Nội</p>
+						<p>Điện thoại : <br>0943271111 _ 0963948686</p>
+					</div>
+					<div class="col-md-3 col1 thong-tin">
+						<div class="thong-tin1">
+							<a href="">Mua Online</a>
+							<a href="">Thanh toán</a>
+							<a href="">Giao hàng</a>
+						</div>
+						<div class="thong-tin2">
+							<a href="">Mua trả góp</a>
+							<a href="">Bảo hành</a>
+							<a href="">Tuyển dụng</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<form>
+							<label for="email">Đăng ký nhận tin mới :</label>
+							<input type="email" id="email" placeholder="Địa chỉ Email của bạn">
+							<button type="submit">Gửi</button>
+						</form>
+						<a class="facebook" href=""></a>
+					</div>
+				</div> <!-- end row -->
+			</div><!-- end container -->
+		</footer><!-- end footer-->
+
+	
+
+
+
+
+
+
+
+	
+
+    	
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../js/index.js"></script>
+	<script type="text/javascript" src="../js/login-form-js.js"></script>
+	<script type="text/javascript" src="../js/detail-js.js"></script>
+
+	<script src="../owlcarousel/owl.carousel.min.js"></script>
+	<script src="../owlcarousel/carousel.js"></script>
+		<!-- OwlCarousel2 -->
+
+
+  </body>
+</html>

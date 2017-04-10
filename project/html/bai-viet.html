@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="wclassth=device-wclassth, initial-scale=1">
+	<title>BAI VIET</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+
+	<link href="../css/index-style.css" rel="stylesheet">
+	<link href="../css/danh-sach-style.css" rel="stylesheet">
+	<link href="../css/tin-tuc-style.css" rel="stylesheet">
+	<link href="../css/bai-viet-style.css" rel="stylesheet">
+	<link rel="icon" href="../images/ph11.png" type="image/gif" sizes="16x16">
+
+
+</head>
+<body>
+	<div id="page">
+
+		<header>
+			<div class="search-bar">
+				<div class="container">
+					<div class="row no-bg">
+						<div class="col4 dia-chi">
+							<p><b>Địa chỉ: </b>  169 Ga Đỗ Xá - Thường Tín - Hà Nội</p>
+							<p><b>Liên hệ:</b>  0943271111 _ 0963948686</p>
+						</div>  
+						<div class="search-box">
+							<form role="search">
+								<div>
+									<input type="text" name="search" placeholder="Bạn muốn tìm gì ?">
+									<button class="search-button glyphicon glyphicon-search" type="submit"></button>
+								</div>
+							</form>   
+						</div>
+
+						<div class="sign log-in display-none">
+							<span id="login" class="show-login" >Đăng nhập - Đăng ký tài khoản</span>
+							<ul class="logged-box log-in-box">
+								<li>
+									<span data-toggle="modal" data-target="#loginModal">Đăng nhập </span>
+								</li>
+								<li>
+									<span data-toggle="modal" data-target="#registerModal">Đăng Ký</span>
+								</li>
+								
+							</ul>
+						</div>
+						<div class="sign logged display-none">
+							<span id="login"> $ Tên người dùng</span>
+							<ul class="logged-box">
+								<li><a href="user-account-information.html">Quản lý tài khoản</a></li>
+								<li><a href="gio-hang.html">Đơn hàng của tôi</a></li>
+								<li><span href="" class="onclick-loggoff show-logged loggoff-button">Đăng xuất</span></li>
+							</ul>	
+						</div>
+					</div> <!-- end row -->
+				</div> <!-- end container -->
+			</div> <!-- end search-bar -->
+
+
+			<div class="main-menu-bar"> 
+				<div class="container">
+					<div class="row">
+						<div class="menu-button-box">
+							<button class="menu-button" type="button">
+							</button>
+						</div>
+						<div class="logo-box">
+							<a class="logo" href="index.html"></a>
+						</div> 
+						<div class="main-menu-box">
+							<nav class="main-menu">
+								<ul>
+									<li class="dkdn"><span href="#">ĐĂNG KÍ - ĐĂNG NHẬP</span>
+										<ul class="logged-box dkdn-box ">
+											<li>
+												<span data-toggle="modal" data-target="#loginModal">Đăng nhập </span>
+											</li>
+											<li>
+												<span data-toggle="modal" data-target="#registerModal">Đăng Ký</span>
+											</li>
+										</ul>
+									</li>
+									<li class="usn"><span href="#">Username</span>
+										<ul class="logged-box usn-box">
+											<li><a href="user-account-information.html">Quản lý tài khoản</a></li>
+											<li><a href="gio-hang.html">Đơn hàng của tôi</a></li>
+											<li><span href="" class="onclick-loggoff show-logged loggoff-button">Đăng xuất</span></li>
+										</ul>
+									</li>
+
+									<li class="mm-tc"><a class="active" href="index.html">TRANG CHỦ</a></li>
+									<li class="mm-dt"><a href="danh-sach.html">ĐIỆN THOẠI</a>
+
+										<div class="menu-dropdown menu-dropdown1">
+											<ul>
+												<li>HÃNG SẢN XUẤT</li>
+												<li><a href="danh-sach.html">APPLE</a></li>
+												<li><a href="danh-sach.html">SAMSUNG</a></li>
+												<li><a href="danh-sach.html">SONY</a></li>
+												<li><a href="danh-sach.html">OPPO</a></li>
+												<li><a href="danh-sach.html">ASUS</a></li>
+												<li><a href="danh-sach.html">LENOVO</a></li>
+												<li><a href="danh-sach.html">CÁC HÃNG KHÁC</a></li>
+											</ul>
+											<ul>
+												<li>GIÁ TIỀN</li>
+												<li><a href="danh-sach.html">Dưới 1 Triệu</a></li>
+												<li><a href="danh-sach.html">Từ 1 đến 3 triệu</a></li>
+												<li><a href="danh-sach.html">Từ 3 đến 5 triệu</a></li>
+												<li><a href="danh-sach.html">Từ 3 đến 7 triệu</a></li>
+												<li><a href="danh-sach.html">Từ 7 đến 10 triệu</a></li>
+												<li><a href="danh-sach.html">Từ 10 đến 15 triệu</a></li>
+												<li><a href="danh-sach.html">Trên 15 triệu</a></li>
+											</ul>
+											<ul>
+												<li>LOẠI ĐIỆN THOẠI</li>
+												<li><a href="danh-sach.html">IOS (iPhone) </a></li>
+												<li><a href="danh-sach.html">Android</a></li>
+												<li><a href="danh-sach.html">Hệ điều hành khác</a></li>
+												<li><a href="danh-sach.html">Phổ thông</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="mm-pk"><a href="phu-kien.html">PHỤ KIỆN</a>
+										<div class="menu-dropdown menu-dropdown2">
+											<ul>			
+												<li><a href="phu-kien.html" class="pk-icon-1">Pin sạc</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-2">Cáp sạc</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-3">Thẻ nhớ</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-4">Tai nghe</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-5">Loa</a></li>
+											</ul>
+											<ul>			
+												<li><a href="phu-kien.html" class="pk-icon-6">Ốp lưng</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-8">Gậy chụp ảnh</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-7">Phụ kiện Apple</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-9">Phụ kiện Sony</a></li>
+												<li><a href="phu-kien.html" class="pk-icon-10">Khuyến mại</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="mm-tt"><a href="tin-tuc.html">TIN TỨC</a></li>
+									<li class="mm-lh"><a href="lien-he.html">LIÊN HỆ</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="gh-box">
+							<a class="gh" href="gio-hang.html"></a>
+						</div>
+					</div> <!-- end row -->
+				</div> <!-- end container -->
+			</div> <!-- end main-menu -->
+			
+		</header>
+		
+
+
+		<nav>
+			<div class="modal fade accountModal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Đăng nhập tài khoản</h4>
+							<form>
+								<div class="form-group accountFormGroupStyle">
+									<label >Tên đăng nhập</label>
+									<input type="text" name="" class="form-control" placeholder="Email hoặc Số điện thoại">
+								</div>
+								<div class="form-group  accountFormGroupStyle">
+									<label>Mật khẩu</label>
+									<input type="password" name="" class="form-control" placeholder="Mật khẩu">
+								</div>
+								<div class="checkbox accountFormGroupStyle form-group accountCheckbox">
+									<div>
+										<label>
+											<input type="checkbox" name="" > <span class="checkboxText">Lưu đăng nhập</span>
+										</label>
+									</div>
+									<div>
+										<span data-toggle="modal" data-target="#lostPassword" data-dismiss="modal" class="checkboxText lostPassword">Tìm lại mật khẩu</span>
+									</div>
+								</div>
+								<div class="form-group accountFormGroupStyle submitButton">
+									<button type="submit" class="btn btn-submit-account">Đăng Nhập</button>
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<div class="sub-container">
+										<div class="sub-left sub-item"></div><div class="sub-text sub-item"><span>Hoặc</span></div><div class="sub-right sub-item"></div>
+									</div>
+								</div>
+							</form>
+							<div class=" form-group oauth-container">
+								<div class="oauth-item fb">
+									<img src="../images/facebook.png">
+									<button>Đăng nhập bằng Facebook</button>
+								</div>
+								<div class="oauth-item gg">
+									<img src="../images/google.png">
+									<button>Đăng nhập bằng Google</button>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="modal fade accountModal" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Đăng ký tài khoản</h4>
+							<form>
+								<div class="form-group accountFormGroupStyle">
+									<label>Họ và Tên</label>
+									<input type="text" name="" class="form-control" placeholder="Họ Tên">
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Tên đăng nhập</label>
+									<input type="text" name="" class="form-control" placeholder="Email hoặc Số điện thoại">
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Mật khẩu</label>
+									<input type="password" name="" class="form-control" placeholder="Mật khẩu phải lớn hơn 6 và nhỏ hơn 30 ký tự">
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Nhập lại Mật khẩu</label>
+									<input type="password" name="" class="form-control" placeholder="Nhập lại Mật khẩu phải giống Mật khẩu">
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Giới tính</label>
+									<select>
+										<option checked="checked">Khác</option>
+										<option>Nữ</option>
+										<option>Nam</option>
+									</select>
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<label>Địa chỉ của bạn</label>
+									<textarea class="form-control accountFormGroupStyle" rows="3"></textarea>
+								</div>
+								<div class="checkbox form-group accountFormGroupStyle">
+									<label>
+										<input type="checkbox" name=""> Tôi đồng ý với các điều khoản của shop
+									</label>
+								</div>
+								<div class="form-group accountFormGroupStyle submitButton">
+									<button type="submit" class="btn btn-submit-account">Đăng Ký</button>
+								</div>
+								<div class="form-group accountFormGroupStyle">
+									<div class="sub-container">
+										<div class="sub-left sub-item"></div><div class="sub-text sub-item"><span>Hoặc</span></div><div class="sub-right sub-item"></div>
+									</div>
+								</div>
+							</form>
+							<div class=" form-group oauth-container">
+								<div class="oauth-item fb">
+									<img src="../images/facebook.png">
+									<button>Đăng nhập bằng Facebook</button>
+								</div>
+								<div class="oauth-item gg">
+									<img src="../images/google.png">
+									<button>Đăng nhập bằng Google</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade accountModal" id="lostPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Tìm lại Mật khẩu</h4>
+							<form>
+								<div class="form-group accountFormGroupStyle">
+									<label >Nhập lại Email hoặc Số điện thoại</label>
+									<input type="text" name="" class="form-control" placeholder="Email hoặc Số điện thoại">
+								</div>
+								
+
+								<div class="form-group  lostPasswordBtn">
+									<button type="submit" class="btn btn-primary">Gửi thông tin</button>
+									<button type="button" data-dismiss="modal" data-toggle="modal" data-target="#loginModal" class="btn btn-danger">Bỏ qua</button>
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER / HEADER /-->
+
+
+
+
+
+
+
+		<div class="blank-box" ></div> <!-- khoảng trắng ở phía trên để cách header với banner-->
+
+
+
+
+
+
+
+
+
+
+
+	<section class="container" id="content-page">
+		
+		<div class="row mot-hang">
+					<a href="" class="big-title">TIN CÔNG NGHỆ</a>
+					<span></span>
+		</div> <!-- end -row -->
+			<!-- THANH TIÊU ĐỀ //////////////////////////////////////////////////////////////////////// -->
+
+		<div class="row">
+			<div class="col-md-9">
+				<h1>Xperia XA1 có giá bán và chính thức lên kệ tại Thành Quân SmartPhone</h1>
+				<span>29/03/2017</span>
+				<img src="../images/news4.jpg" alt="">
+				<p>Xperia XA đã rất thành công vì vậy mà nhiều người đang mong đợi phiên bản Xperia XA1 sẽ về Việt Nam. Tin vui là máy đã có giá bán chính thức và lên kệ tại Thế giới di động.<p>
+
+				<p>Theo đó, Xperia XA1 có giá bán chính thức là 6.49 triệu đồng tại nước ta, hiện sản phẩm chỉ được bán độc quyền tại hệ thống siêu thị TGDĐ. Các bạn có thể mua máy trong thời gian từ 28/3 - 30/4 sẽ nhận được khuyến mãi là trả góp 0% hoặc phiếu mua hàng trị giá 500 ngàn đồng.</p>
+				<img src="../images/news9.jpg" alt="">
+				<p>Xperia XA1 vẫn có thiết kế đẹp mắt, trẻ trung với viền cạnh siêu mỏng và thừa hưởng ngôn ngữ thiết kế của Xperia XZs nên rất sang trọng.</p>
+				
+				<p>XA1 sở hữu camera sau với thông số 23 MP tương tự trên Xperia Z5. Camera trước của thiết bị cũng được nâng lên 8 MP. Về cấu hình, thiết bị của Sony được trang bị khá tốt như màn hình 5 inch HD, chip Helio P20, RAM 3 GB, ROM 32 GB và viên pin 2.300 mAh.</p>
+			</div>
+
+			<aside class="col-md-offset-1 col-md-2 list-menu-box">
+					<ul>
+						<li class="menu-box"><span class="title-list the-loai-title" >Thể loại</span>
+							<ul class="the-loai">
+								<li><a href="">Sản phẩm mới</a></li>
+								<li><a href="">Đánh giá</a></li>
+								<li><a href="">So sánh</a></li>
+								<li><a href="">Sự kiện ra mắt</a></li>
+								<li><a href="">Mẹo hay</a></li>
+								<li><a href="">Game - App</a></li>
+							</ul>
+						</li>
+						<li class="menu-box"><span class="title-list nhan-hieu-title" >Hãng sản xuất</span>
+							<ul class="nhan-hieu">
+								<li><a href="">APPLE</a></li>
+								<li><a href="">SAMSUNG</a></li>
+								<li><a href="">SONY</a></li>
+								<li><a href="">OPPO</a></li>
+								<li><a href="">ASUS</a></li>
+								<li><a href="">Các hãng khác</a></li>
+							</ul>
+						</li>
+						
+						<li class="menu-box"><span class="title-list thoi-gian-title" >Thời gian</span>
+							<ul class="thoi-gian">
+								<li><a href="">Tuần này (4)</a></li>
+								<li><a href="">Tháng ba (17)</a></li>
+								<li><a href="">Tháng hai (15)</a></li>
+								<li><a href="">Tháng một (20)</a></li>
+							</ul>
+						</li>
+						<li class="menu-box"><span class="title-list sap-xep-title" >Sắp xếp</span>
+							<ul class="sap-xep">
+								<li><a href="">Tin mới nhất</a></li>
+								<li><a href="">Tin cũ nhất</a></li>
+							</ul>
+						</li>			
+					</ul>
+				</aside> <!-- end list-menu-box -->
+			</div> <!-- end -row -->
+
+
+
+
+
+
+			<div class="row mot-hang">
+				<a href="danh-sach.html" class="big-title big-title2">TIN TỨC LIÊN QUAN</a>
+				<span></span>
+				
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-3">
+					<a href=""><img src="../images/news5.jpg" alt=""></a>
+					<h4>So sánh nhanh những khác biệt giữa Galaxy S8 và Galaxy S8 Plus</h4>
+				</div>
+				<div class="col-md-3">
+					<a href=""><img src="../images/news6.jpg" alt=""></a>
+					<h4>Siêu phẩm 2017 , Galaxy S8, Galaxy S8 Plus chính thức trình làng .</h4>
+				</div>
+				<div class="col-md-3">
+					<a href=""><img src="../images/news7.jpg" alt=""></a>
+					<h4>Galaxy S8 sẽ là smartphone sạc đầy pin nhanh nhất thế giới ?</h4>
+				</div>
+				<div class="col-md-3">
+					<a href=""><img src="../images/news8.jpg" alt=""></a>
+					<h4>Samsung ra đòn để tiêu diệt những chiếc Note 7 khách hàng chưa trả</h4>
+				</div>
+				
+			</div>
+
+	</section>
+
+
+
+	<a href="#page" class="back-to-top"></a>
+
+			<div class="contact-box">
+				<p class="contact-box-title contact-box-button">Liên hệ - Góp ý <span class="inline">với chúng tôi</span></p>
+				<span class="contact-box-icon contact-box-button"></span>
+
+				<form role="form">
+					<div class="form-group">
+						<label for="contact-name">Tên của bạn :</label>
+						<input type="text" class="form-control" id="contact-name" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="contact-email">Địa chỉ Email của bạn :</label>
+						<input type="email" class="form-control" id="contact-email" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="contact-content">Nội dung:</label>
+						<br>
+						<textarea rows="4" cols="30" name="comment" id="contact-content"></textarea>
+					</div>
+					<div class="form-group"><button type="submit" class="btn btn-default btt-button">Submit</button></div>
+				</form>
+			</div> <!-- end contact-box  -->
+			<!-- HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / HẾT CONTACT BOX / -->
+
+
+
+
+
+
+
+
+
+
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2 col1">
+							<a class="logo" href=""></a>
+						</div>
+						<div class="col-md-3 col1 ad">
+							<p>Địa chỉ : <br>169 Ga Đỗ Xá - Thường Tín - Hà Nội</p>
+							<p>Điện thoại : <br>0943271111 _ 0963948686</p>
+						</div>
+						<div class="col-md-3 col1 thong-tin">
+							<div class="thong-tin1">
+								<a href="">Mua Online</a>
+								<a href="">Thanh toán</a>
+								<a href="">Giao hàng</a>
+							</div>
+							<div class="thong-tin2">
+								<a href="">Mua trả góp</a>
+								<a href="">Bảo hành</a>
+								<a href="">Tuyển dụng</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-xs-12">
+							<form>
+								<label for="email">Đăng ký nhận tin mới :</label>
+								<input type="email" id="email" placeholder="Địa chỉ Email của bạn">
+								<button type="submit">Gửi</button>
+							</form>
+							<a class="facebook" href=""></a>
+						</div>
+					</div> <!-- end row -->
+				</div><!-- end container -->
+			</footer><!-- end footer-->
+
+
+
+
+
+	</div><!-- end page -->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="../js/index.js"></script>
+		<script type="text/javascript" src="../js/login-form-js.js"></script>
+
+
+
+
+
+
+</body>
+</html>
