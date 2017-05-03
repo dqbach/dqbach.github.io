@@ -1,0 +1,168 @@
+<html >
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+
+
+	<style type="text/css">
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		font-size: 25px;
+		font-weight: 100;
+		font-family: sans-serif;
+	}
+	body {
+		background: linear-gradient(to bottom, rgb(45,175,217) 0%,rgb(40,148,152) 100%);
+	}
+	div {
+		width: 500px;
+		margin:100px auto 0 auto;
+		height: 650px;
+		box-shadow:0px 0px 20px 0px rgba(50, 50, 50, 0.5);
+	}
+	input {
+		width: 100%;
+		border: none;
+		color: white;
+		padding: 10px;
+		text-align: right;
+		letter-spacing: 3px;background:#165569;
+		height: 50px;
+	}
+	input:focus{	
+		outline:none; 
+	}
+	#kq {
+		height: 100px;
+		background:#165569;
+		font-size: 60px;
+	}
+	button {
+		width: 100px;
+		height: 100px;
+		background: #1D3C49;
+		border: 1px solid #1D414D; 
+		float: left;
+		cursor: pointer;
+		color: #14d9e0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.result {
+		background: #14d9e0;
+		font-size: 40px;
+		border: 1px solid #1D414D; 
+	}
+	.white {
+		color: white;
+	}
+	.s {
+		font-size: 15px;
+
+	}
+	button:active {	
+		background:#1D414D; 
+	}
+	button:focus{	
+		outline:none; 
+	}
+
+	</style>
+
+
+</head>		
+
+<body>
+
+	<div>
+
+		<input type="text" disabled id="kq" />
+
+		<input type="text" disabled id="x" />
+
+		<button onclick=" kq.value = '' ; x.value = '' " > C </button>
+
+		<button onclick="x.value = x.value.substr(0,x.value.length-1)"> &larr; </button>
+
+		<button onclick="x.value = x.value * -1 "> +&nbsp;/&nbsp;- </button>
+
+		<button onclick="x.value += '*' + x.value ; kq.value = eval(x.value) "> x <sup class="s">2</sup> </button>
+
+		<button onclick="x.value = giaithua(x.value) ; kq.value = x.value "> x! </button>
+
+		<button class="white" onclick="x.value += 7 "> 7 </button>
+
+		<button class="white" onclick="x.value += 8 "> 8 </button>
+
+		<button class="white" onclick="x.value += 9 "> 9 </button>
+
+		<button onclick="x.value += '/' + 100 ; kq.value = eval(x.value) "> % </button>
+
+		<button onclick="kq.value = Math.sqrt(x.value) ; x.value = Math.sqrt(x.value) "> √ </button>
+
+		<button class="white" onclick="x.value += 4 "> 4 </button>
+
+		<button class="white" onclick="x.value += 5 "> 5 </button>
+
+		<button class="white" onclick="x.value += 6 "> 6 </button>
+
+		<button onclick="x.value += '+' "> + </button>
+
+		<button onclick="x.value += '-' "> - </button>
+
+		<button class="white" onclick="x.value += 1 "> 1 </button>
+
+		<button class="white" onclick="x.value += 2 "> 2 </button>
+
+		<button class="white" onclick="x.value += 3 "> 3 </button>
+
+		<button onclick="x.value += '*' "> * </button>
+
+		<button onclick="x.value += '/' "> / </button>	
+
+		<button onclick="x.value += '(' "> ( </button>
+
+		<button onclick="x.value += ')' "> ) </button>
+
+		<button onclick="x.value += 0 " class="white"> 0 </button>
+
+		<button onclick="x.value += '.' "class="white"> . </button>
+
+		<button class="white result" onclick="kq.value = eval(x.value) ; x.value = eval(x.value) "> = </button>
+
+	</div>
+
+
+
+	<script>
+		// var a = document.getElementById('x').value.length  ;
+		// // if ( a > 13) {
+		// // 	break;
+		// //}
+
+		// a = a.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+
+		
+
+
+
+		function giaithua(n) {
+			var x = 1 ;
+			for (var i = 1 ; i <= n ; i ++) {
+				x = x * i ;
+			}
+			return x;
+		}
+
+
+
+
+	</script>
+
+</body>			
+</html>
