@@ -1,0 +1,144 @@
+<html >
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+
+	<style type="text/css">
+    * {
+        box-sizing: border-box;
+        font: bold 14px Arial;
+    }
+    .screen {
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 8px;
+        border-color: #d2691e;
+        height: 50px;
+        margin: 8px;
+        padding-right: 8px;
+        background-color: #fff8dc;
+        text-align: right;
+    }
+    #value {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .wrap {
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 8px;
+        width:320px;
+        height: 360px;
+        margin: 50px auto;
+        text-align:center;
+        background-color: #deb887;
+        border-color: #d2691e;
+    }
+    button {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 3px;
+        background-color: #fff8dc;
+    }
+    .double {
+        width: 108px;
+    }
+
+    </style>
+</head>		
+
+<body>
+
+    <div class="wrap">
+        <div class="screen">
+            <p id="value"></p>  
+        </div>
+        <div class="button">
+            <button onclick="press(this)">7</button>
+            <button onclick="press(this)">8</button>
+            <button onclick="press(this)">9</button>
+            <button onclick="press(this)">+</button>
+            <button onclick="btnSqrt()">&radic;</button>
+            <br/>
+            <button onclick="press(this)">4</button>
+            <button onclick="press(this)">5</button>
+            <button onclick="press(this)">6</button>
+            <button onclick="press(this)">-</button>
+            <button onclick="btnSq()">x&sup2;</button>
+            <br/>
+            <button onclick="press(this)">1</button>
+            <button onclick="press(this)">2</button>
+            <button onclick="press(this)">3</button>
+            <button onclick="press(this)">&times;</button>
+            <button onclick="btnFact()">x!</button>
+            <br/>
+            <button onclick="press(this)">0</button>
+            <button onclick="btnPerc()">%</button>
+            <button onclick="btnDot()">.</button>
+            <button onclick="press(this)">&divide;</button>
+            <button onclick="btnInv()">1/x</button>
+            <br/>
+            <button onclick="btnEqual()" class="double">=</button>
+            <button onclick="clr()">C</button>
+            <button onclick="backSpace()">&larr;</button>
+            <button onclick="btnMinus()">-x</button>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+    var btnVal = ''; // Tạo 1 chuỗi rỗng tên btnVal
+    var operation = ["+","-","×","÷"]; // cho các phép toán vào 1 mảng operation
+    var lastChar = ''; // Tạo 1 chuỗi rỗng tên lastChar (dùng để cho kí tự cuối vào)
+    var dot = false; // tạo 1 biến dot đặt là false ( dùng trong trường hợp in dấu chấm)
+    var input = document.getElementById('value').innerText; //gán giá trị sẽ in ra màn hình là input , chứ chưa phải là lệnh in ra đâu nhé
+
+    function press (button){
+        btnVal = button.innerHTML; // btnVal bằng giá trị in ra của các nút , ấn nút nào in ra nút ấy í 
+        if (operation.indexOf(btnVal) > -1){ // Nếu ấn vào nút các phép tính thì sẽ chạy trường hợp này ; máy hiểu là đang có phép tính ở cuối đó nha
+            if (operation.indexOf(lastChar) > -1 && lastChar != '') { //nếu lastChar không phải rỗng , đang có 1 kí tự nào đó rồi , ở đây chính là dấu phép toán đấy
+                input = input.substr(0,input.length-1)+btnVal;// giá trị in ra sẽ bỏ thành phần cuối chính là dấu phép toán (lastchar)  và cộng thêm giá trị của nút vừa ấn (là 1 phép toán khác - để không có 2 phép toán đứng cạnh nhau)
+                lastChar = btnVal; // biến lastchar lại = giá trị vừa ấn vào ( = chứ ko phải nhập thêm đâu nhé)
+                dot = true; // dot là true để cho phép ấn dấu chấm 
+            } else if (operation.indexOf(lastChar) == -1 && lastChar != '') {//nếu lastchar ko rỗng và ko có giá trị thuộc operation , chính là có dấu chấm ở cuối đấy : operataion['.']
+                input += btnVal; // giá trị in ra sẽ cộng thêm giá trị in ra của nút ( ko phải xóa cuối vì cuối đang ko phải là dấu như trên)
+                lastChar = btnVal; // lastchar cập nhật tiếp ,  
+                dot = false; // dot là false để không cho phép dấu chấm nữa hiện lên
+            }       
+        } 
+        else { // máy hiểu là không có phép tính , nút nhập vào chỉ là số
+            input += btnVal; // màn hình in ra giá trị in ra của nút đó ;  
+            lastChar = btnVal; // lastchar lại = số cuối
+        }
+        document.getElementById('value').innerText = input; // cho cái màn hình hiện ra giá trị của thằng input
+    }
+
+    function clr(){
+        input = "";
+        lastChar = '';
+        dot=false;
+        document.getElementById('value').innerText = input;
+    }
+
+    function btnDot(){
+        if (!dot) { // !dot đang hiểu là dot không sai , chính là dot = false như đã đặt í 
+            input = input + '.'; // kết quả nhận thêm giá trị của nút '.'
+        } 
+        lastChar = '.'; // lastchar giờ là dáu chấm
+        dot = true; // chuyển dot = true , để nó khác lúc đầu , như vậy lệnh if sẽ sai và dấu chấm sẽ không thêm được
+        document.getElementById('value').innerText = input;
+    }
+
+
+
+
+
+    
+    </script>
+
+
+</body>			
+</html>
