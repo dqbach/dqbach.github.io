@@ -26,15 +26,16 @@
 		width: 100%;
 		border: none;
 		color: white;
-		padding: 10px;
-		text-align: right;
-		letter-spacing: 3px;background:#165569;
-		height: 50px;
-	}
-	#kq {
-		height: 100px;
+		padding-right: 10px;
+		letter-spacing: 3px;
+		height: 150px;
 		background:#165569;
 		font-size: 60px;
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+
+
 	}
 	button {
 		width: 100px;
@@ -44,9 +45,7 @@
 		float: left;
 		cursor: pointer;
 		color: #14d9e0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+
 	}
 	
 	.result {
@@ -54,15 +53,14 @@
 		font-size: 40px;
 		border: 1px solid #1D414D; 
 	}
-	.white {
+	.num {
 		color: white;
 	}
-	.s {
-		font-size: 15px;
-
+	.operation {
+		font-size:40px;
 	}
 	button:active {	
-		background:#1D414D; 
+		background:#165569; 
 	}
 	button:focus{	
 		outline:none; 
@@ -77,37 +75,62 @@
 
 	<div>
 		<p id="kq"></p>
-		<p id="x"></p>
-		<button onclick="press(this)">C</button>
-		<button onclick="press(this)">&larr;</button>
-		<button onclick="press(this)"> +&nbsp;/&nbsp;- </button>
-		<button onclick="press(this)">x<sup class="s">2</sup> </button>
+		<button onclick="c()">C</button>
+		<button onclick="press(this)">←</button>
+		<button onclick="press(this)">+/−</button>
+		<button onclick="press(this)">x²</button>
 		<button onclick="press(this)">x!</button>
-		<button onclick="press(this)" class="white">7</button>
-		<button onclick="press(this)" class="white">8</button>
-		<button onclick="press(this)" class="white">9</button>
+		<button onclick="press(this)" class="num">7</button>
+		<button onclick="press(this)" class="num">8</button>
+		<button onclick="press(this)" class="num">9</button>
 		<button onclick="press(this)">%</button>
 		<button onclick="press(this)">√</button>
-		<button onclick="press(this)" class="white">4</button>
-		<button onclick="press(this)" class="white">5</button>
-		<button onclick="press(this)" class="white">6</button>
-		<button onclick="press(this)">+</button>
-		<button onclick="press(this)">-</button>
-		<button onclick="press(this)" class="white" >1</button>
-		<button onclick="press(this)" class="white" >2</button>
-		<button onclick="press(this)" class="white" >3</button>
-		<button onclick="press(this)">×</button>
-		<button onclick="press(this)">÷</button>	
+		<button onclick="press(this)" class="num">4</button>
+		<button onclick="press(this)" class="num">5</button>
+		<button onclick="press(this)" class="num">6</button>
+		<button onclick="ope()" class="operation">+</button>
+		<button onclick="ope()" class="operation">-</button>
+		<button onclick="press(this)" class="num" >1</button>
+		<button onclick="press(this)" class="num" >2</button>
+		<button onclick="press(this)" class="num" >3</button>
+		<button onclick="ope()" class="operation">×</button>
+		<button onclick="ope()" class="operation">÷</button>	
 		<button onclick="press(this)">(</button>
 		<button onclick="press(this)">)</button>
-		<button onclick="press(this)" class="white">0</button>
+		<button onclick="press(this)" class="num">0</button>
 		<button onclick="press(this)">.</button>
-		<button onclick="press(this)" class="white result">=</button>
+		<button onclick="result()" class="num result">=</button>
 	</div>
 
 
 
 	<script>
+
+	var operation = ['+','−','×','÷'];
+	
+	var btnVal = '' ;
+	var lastChar = '';
+	var dot = false ;
+
+
+	function press(button){
+		kq.innerText += button.innerText ;
+	}
+
+	function ope(){
+
+
+	}
+
+	function result(){
+		kq.innerText = kq.innerText.replace(/×/g, '*').replace(/÷/g, '/');  
+		kq.innerText = eval(kq.innerText) ;
+	}
+
+	function c(){
+		kq.innerText = '' ;
+	}
+
 
 
 	</script>
