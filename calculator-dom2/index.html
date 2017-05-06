@@ -56,7 +56,7 @@
 	.num {
 		color: white;
 	}
-	.operation {
+	.ope {
 		font-size:40px;
 	}
 	button:active {	
@@ -76,9 +76,9 @@
 	<div>
 		<p id="kq"></p>
 		<button onclick="c()">C</button>
-		<button onclick="press(this)">←</button>
-		<button onclick="press(this)">+/−</button>
-		<button onclick="press(this)">x²</button>
+		<button onclick="back()">←</button>
+		<button onclick="butSwitch()">+/−</button>
+		<button onclick="butSquare()">x²</button>
 		<button onclick="press(this)">x!</button>
 		<button onclick="press(this)" class="num">7</button>
 		<button onclick="press(this)" class="num">8</button>
@@ -88,17 +88,17 @@
 		<button onclick="press(this)" class="num">4</button>
 		<button onclick="press(this)" class="num">5</button>
 		<button onclick="press(this)" class="num">6</button>
-		<button onclick="ope()" class="operation">+</button>
-		<button onclick="ope()" class="operation">-</button>
-		<button onclick="press(this)" class="num" >1</button>
-		<button onclick="press(this)" class="num" >2</button>
-		<button onclick="press(this)" class="num" >3</button>
-		<button onclick="ope()" class="operation">×</button>
-		<button onclick="ope()" class="operation">÷</button>	
-		<button onclick="press(this)">(</button>
-		<button onclick="press(this)">)</button>
+		<button onclick="press(this)" class="ope">+</button>
+		<button onclick="press(this)" class="ope">-</button>
+		<button onclick="press(this)" class="num">1</button>
+		<button onclick="press(this)" class="num">2</button>
+		<button onclick="press(this)" class="num">3</button>
+		<button onclick="press(this)" class="ope">×</button>
+		<button onclick="press(this)" class="ope">÷</button>	
+		<button onclick="butOpen()">(</button>
+		<button onclick="butClose()">)</button>
 		<button onclick="press(this)" class="num">0</button>
-		<button onclick="press(this)">.</button>
+		<button onclick="butDot()">.</button>
 		<button onclick="result()" class="num result">=</button>
 	</div>
 
@@ -106,34 +106,90 @@
 
 	<script>
 
-	var operation = ['+','−','×','÷'];
-	
-	var btnVal = '' ;
 	var lastChar = '';
-	var dot = false ;
+	var dot = true ;
+	var operation = ['+','-','×','÷'];
 
-
-	function press(button){
-		kq.innerText += button.innerText ;
+	function press(button){	
+		if (operation.indexOf(button.innerText) > -1 ) { // nếu nút ấn vào là phép toán thuộc mảng trên
+			if (operation.indexOf(lastChar) == -1 && lastChar != ''){ // nếu kí tự cuối không phải là phép toán và là 1 số gì đó rồi
+				kq.innerText += button.innerText ;
+				lastChar = button.innerText;
+				dot = true;
+			}
+			else if (lastChar == ''){ // nếu kí tự cuối không có gì cả
+				kq.innerText = '' ;
+			}
+			else { // nếu kí tự cuối là phép toán 
+				kq.innerText = kq.innerText.substr(0,kq.innerText.length-1);
+				kq.innerText += button.innerText ;
+				lastChar = button.innerText;
+			}
+		}
+		else { // trường hợp còn lại : nếu nút ấn là số bỉnh thường
+			kq.innerText += button.innerText ;
+			lastChar = button.innerText;
+		}			
 	}
 
-	function ope(){
-
-
+	function butDot(){
+		if (lastChar != '' && lastChar != '.' && dot == true && Number(lastChar)>=0 ){
+			kq.innerText += '.' ;
+			lastChar = '.';
+			dot = false ;
+		}
+		else { kq.innerText = kq.innerText ;}	
 	}
 
-	function result(){
+	function result(){	
 		kq.innerText = kq.innerText.replace(/×/g, '*').replace(/÷/g, '/');  
 		kq.innerText = eval(kq.innerText) ;
 	}
 
 	function c(){
-		kq.innerText = '' ;
+		kq.innerText = lastChar = '' ;
+		dot = true ;
 	}
+
+	function back() {
+		kq.innerText = kq.innerText.substr(0,kq.innerText.length-1);
+	}
+
+	function butOpen() {	
+		if ( lastChar != '(' && Number(lastChar)>=0 ) {
+			kq.innerText += '(' ;
+			lastChar = '(';
+		}
+		// else if (lastChar == '') {
+		// 	kq.innerText += '(' ;
+		// 	lastChar = '(';
+		// }
+		else { kq.innerText = kq.innerText ;}	
+	}
+
+	function butClose() {	
+		if ( lastChar != ')' && Number(lastChar)>=0 && kq.innerText.search(/\(/) > -1) {
+			kq.innerText += ')' ;
+			lastChar = ')';
+		}
+		else { kq.innerText = kq.innerText ;}	
+	}
+	function butSwitch() {
+		kq.innerText = kq.innerText*(-1);
+	}
+	function butSquare() {
+		kq.innerText = Math.pow(kq.innerText,2);
+
+	}
+
+
+
 
 
 
 	</script>
 
+
 </body>			
 </html>
+
