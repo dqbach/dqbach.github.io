@@ -19,23 +19,21 @@
 	div {
 		width: 500px;
 		margin:100px auto 0 auto;
-		height: 650px;
+		height: 625px;
 		box-shadow:0px 0px 20px 0px rgba(50, 50, 50, 0.5);
 	}
 	p {
 		width: 100%;
 		border: none;
 		color: white;
-		padding-right: 10px;
+		padding-right: 5px;
 		letter-spacing: 3px;
-		height: 150px;
+		height: 125px;
 		background:#165569;
-		font-size: 60px;
+		font-size: 35px;
 		display: flex;
-		align-items: center;
-		flex-direction: row-reverse;
-
-
+    	justify-content: center;
+    	align-items: center;
 	}
 	button {
 		width: 100px;
@@ -45,19 +43,23 @@
 		float: left;
 		cursor: pointer;
 		color: #14d9e0;
-
 	}
-	
 	.result {
 		background: #14d9e0;
 		font-size: 40px;
 		border: 1px solid #1D414D; 
+		width: 200px;
+		float: right;
+		color: white;
 	}
 	.num {
 		color: white;
 	}
 	.ope {
 		font-size:40px;
+	}
+	.o {
+		width: 200px;
 	}
 	button:active {	
 		background:#165569; 
@@ -79,12 +81,12 @@
 		<button onclick="back()">←</button>
 		<button onclick="butSwitch()">+/−</button>
 		<button onclick="butSquare()">x²</button>
-		<button onclick="press(this)">x!</button>
+		<button onclick="fact()">x!</button>
 		<button onclick="press(this)" class="num">7</button>
 		<button onclick="press(this)" class="num">8</button>
 		<button onclick="press(this)" class="num">9</button>
-		<button onclick="press(this)">%</button>
-		<button onclick="press(this)">√</button>
+		<button onclick="percent()">%</button>
+		<button onclick="sqrt()">√</button>
 		<button onclick="press(this)" class="num">4</button>
 		<button onclick="press(this)" class="num">5</button>
 		<button onclick="press(this)" class="num">6</button>
@@ -94,18 +96,10 @@
 		<button onclick="press(this)" class="num">2</button>
 		<button onclick="press(this)" class="num">3</button>
 		<button onclick="press(this)" class="ope">×</button>
-<<<<<<< HEAD
 		<button onclick="press(this)" class="ope">÷</button>
-		<button onclick="press(this)">(</button>
-		<button onclick="press(this)">)</button>
-=======
-		<button onclick="press(this)" class="ope">÷</button>	
-		<button onclick="butOpen()">(</button>
-		<button onclick="butClose()">)</button>
->>>>>>> origin/master
-		<button onclick="press(this)" class="num">0</button>
+		<button onclick="press(this)" class="num o">0</button>
 		<button onclick="butDot()">.</button>
-		<button onclick="result()" class="num result">=</button>
+		<button onclick="result()" class="result">=</button>
 	</div>
 
 
@@ -116,9 +110,14 @@
 	var dot = true ;
 	var operation = ['+','-','×','÷'];
 
+
+
 	function press(button){	
 		if (operation.indexOf(button.innerText) > -1 ) { // nếu nút ấn vào là phép toán thuộc mảng trên
-			if (operation.indexOf(lastChar) == -1 && lastChar != ''){ // nếu kí tự cuối không phải là phép toán và là 1 số gì đó rồi
+			if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
+				alert('NHẬP VỪA THÔI , TROLL NHAU À !')
+			}
+			else if (operation.indexOf(lastChar) == -1 && lastChar != ''){ // nếu kí tự cuối không phải là phép toán và là 1 số gì đó rồi
 				kq.innerText += button.innerText ;
 				lastChar = button.innerText;
 				dot = true;
@@ -132,40 +131,28 @@
 				lastChar = button.innerText;
 			}
 		}
-		else { // trường hợp còn lại : nếu nút ấn là số bỉnh thường
+		else if (kq.innerText + button.innerText == 0) {
+			kq.innerText = '' 
+		}
+		else if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
+			alert('NHẬP VỪA THÔI , TROLL NHAU À !');
+		}
+		else { // trường hợp còn lại : nếu nút ấn là số bình thường
 			kq.innerText += button.innerText ;
 			lastChar = button.innerText;
-		}			
+		}	
 	}
 
 	function butDot(){
-		if (lastChar != '' && lastChar != '.' && dot == true && Number(lastChar)>=0 ){
+		if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
+			kq.innerText = kq.innerText ;
+		}
+		else if (lastChar != '' && lastChar != '.' && dot == true && Number(lastChar)>=0 ){
 			kq.innerText += '.' ;
 			lastChar = '.';
 			dot = false ;
 		}
 		else { kq.innerText = kq.innerText ;}	
-	}
-
-<<<<<<< HEAD
-	function press(button){
-		var lastChar = button.innerText ;
-		if (operation.indexOf(button.innerText) > -1 ) {
-			if (operation.indexOf(lastChar) != -1) {
-				kq.innerText = kq.innerText.substr(0,kq.innerText.length-1) + button.innerText ;
-			}
-		}	
-		else {
-			kq.innerText += button.innerText ;
-			lastChar = button.innerText
-
-		}
-	}
-
-=======
-	function result(){	
-		kq.innerText = kq.innerText.replace(/×/g, '*').replace(/÷/g, '/');  
-		kq.innerText = eval(kq.innerText) ;
 	}
 
 	function c(){
@@ -177,38 +164,43 @@
 		kq.innerText = kq.innerText.substr(0,kq.innerText.length-1);
 	}
 
-	function butOpen() {	
-		if ( lastChar != '(' && Number(lastChar)>=0 ) {
-			kq.innerText += '(' ;
-			lastChar = '(';
-		}
-		// else if (lastChar == '') {
-		// 	kq.innerText += '(' ;
-		// 	lastChar = '(';
-		// }
-		else { kq.innerText = kq.innerText ;}	
-	}
->>>>>>> origin/master
-
-	function butClose() {	
-		if ( lastChar != ')' && Number(lastChar)>=0 && kq.innerText.search(/\(/) > -1) {
-			kq.innerText += ')' ;
-			lastChar = ')';
-		}
-		else { kq.innerText = kq.innerText ;}	
-	}
 	function butSwitch() {
 		kq.innerText = kq.innerText*(-1);
 	}
-	function butSquare() {
-		kq.innerText = Math.pow(kq.innerText,2);
 
+	function butSquare() {
+			kq.innerText = Math.pow(kq.innerText,2);
+			var n = parseFloat(kq.innerText) ;
 	}
 
+	function percent() {
+		kq.innerText = kq.innerText/100 ;
+	}
 
+	function fact() {
+		if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
+			kq.innerText = kq.innerText ;
+		}
+		else {
+			var x = Number(kq.innerText) ;
+			var n = 1;
+			for (var i = 1 ; i<=x ; i++) {
+				n = i * n ; 
+			}
+			kq.innerText = n;
+		}
+	}
+	function sqrt() {
+		kq.innerText = Math.sqrt(kq.innerText);
+		var n = parseFloat(kq.innerText) ;
+	}
 
+	function result(){	
+		kq.innerText = kq.innerText.replace(/×/g, '*').replace(/÷/g, '/');  
+		kq.innerText = eval(kq.innerText) ;
+	}
 
-
+	
 
 	</script>
 
