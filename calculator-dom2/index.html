@@ -113,19 +113,19 @@
 
 
 	function press(button){	
-		if (operation.indexOf(button.innerText) > -1 ) { // nếu nút ấn vào là phép toán thuộc mảng trên
+		if (operation.indexOf(button.innerText) > -1 ) {
 			if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
 				alert('NHẬP VỪA THÔI , TROLL NHAU À !')
 			}
-			else if (operation.indexOf(lastChar) == -1 && lastChar != ''){ // nếu kí tự cuối không phải là phép toán và là 1 số gì đó rồi
+			else if (operation.indexOf(lastChar) == -1 && lastChar != ''){
 				kq.innerText += button.innerText ;
 				lastChar = button.innerText;
 				dot = true;
 			}
-			else if (lastChar == ''){ // nếu kí tự cuối không có gì cả
+			else if (lastChar == ''){
 				kq.innerText = '' ;
 			}
-			else { // nếu kí tự cuối là phép toán 
+			else {
 				kq.innerText = kq.innerText.substr(0,kq.innerText.length-1);
 				kq.innerText += button.innerText ;
 				lastChar = button.innerText;
@@ -137,7 +137,7 @@
 		else if (kq.innerText.length == 20 || kq.innerText == 'NaN' || kq.innerText == 'Infinity') {
 			alert('NHẬP VỪA THÔI , TROLL NHAU À !');
 		}
-		else { // trường hợp còn lại : nếu nút ấn là số bình thường
+		else {
 			kq.innerText += button.innerText ;
 			lastChar = button.innerText;
 		}	
