@@ -45,17 +45,20 @@
 			text-align: center;
 			transition: all 0.3s ease-in-out;
 			cursor: pointer;
+			    border: none;
 			position: relative;
 		}
 		button:hover {
 			background: #002b1c;
 		}
+		button:focus{	
+		outline:none; 
+	}
 		span {
 			display: inline-block;
 			margin-left: 30px;
 			color: white;
 		}
-		
 		#go {
 			width: 20% ;
 			margin:auto 40% ;
@@ -69,7 +72,8 @@
     		top:25%;
     		right: 10%;
 		}
-
+		img:focus {
+    outline: none;
 	</style>
 
 
@@ -77,10 +81,10 @@
 	<body>
 		<main>
 			<p id="ques">Cau1</p>
-			<button onclick="press(this)" value='1' > A : <span id="ans1"> đúng </span> <img src=''>  </button>
-			<button onclick="press(this)" value='2' > B : <span id="ans2"> sai </span> <img src=''>  </button>
-			<button onclick="press(this)" value='3' > C : <span id="ans3"> sai </span> <img src=''>  </button>
-			<button onclick="press(this)" value='4' > D : <span id="ans4"> sai </span> <img src=''>  </button>
+			<button onclick="press(this)" value='1' > A : <span id="ans1"> aaa </span> <img src='n.png'>  </button>
+			<button onclick="press(this)" value='2' > B : <span id="ans2"> bbb </span> <img src='n.png'>  </button>
+			<button onclick="press(this)" value='3' > C : <span id="ans3"> ccc </span> <img src='n.png'>  </button>
+			<button onclick="press(this)" value='4' > D : <span id="ans4"> ddd </span> <img src='n.png'>  </button>
 			<button id="go" onclick="check()" > KIỂM TRA </button>
 						
 
@@ -88,68 +92,73 @@
 
 		<script>
 
-		var cau1 = {
+		var cauhoi = [
+		cau1 = {
 			ask : 'cau1' ,
-			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
-			ok : 'mot' 
-		} ;
-		var cau2 = {
+			ans : ['aaa' , 'bbb' , 'ccc' , 'ddd'] ,
+			ok : 'aaa' 
+		} ,
+		cau2 = {
 			ask : 'cau2' ,
-			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
-			ok : 'mot' 
-		} ;
-		var cau3 = {
+			ans : ['eee' , 'fff' , 'ggg' , 'hhh'] ,
+			ok : 'eee' 
+		} ,
+		cau3 = {
 			ask : 'cau3' ,
-			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
-			ok : 'mot' 
-		} ;
-		var cau4 = {
+			ans : ['iii' , 'jjj' , 'kkk' , 'lll'] ,
+			ok : 'iii' 
+		} ,
+		cau4 = {
 			ask : 'cau4' ,
-			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
-			ok : 'mot' 		
-		} ;
-		var cau5 = {
+			ans : ['mmm' , 'nnn' , 'ooo' , 'ppp'] ,
+			ok : 'mmm' 		
+		} ,
+		cau5 = {
 			ask : 'cau5' ,
-			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
-			ok : 'mot' 
-		} ;
+			ans : ['qqq' , 'rrr' , 'sss' , 'ttt'] ,
+			ok : 'qqq' 
+		} 
+		]
 
 		var kq = '' ;
 		var img = document.getElementsByTagName('img') ;
 		var button = document.getElementsByTagName('button') ;
 
 
-		// function press(button){
-		// 	kq += button.innerText ;
-		// 	if (img == true) {
 
-		// 		button.innerHTML += '<img src="v.png">' ;
-		// 	img = false;
-		// 	}
-		// }
 
 		function press(button){
+			kq = '' ;
 			kq += button.innerText ;
+			var bv = button.value-1;
+	
+				for ( var i = 0 ; i<4 ; i++) {
+					if (bv==i) {img[i].src = "v.png" ;}
+					else {img[i].src = 'n.png' ;}
+				}
+
 		}
-
-		function i1(){
-			var i = 0;
-			for ( var j = 0 ; j<4 ; j++) {
-				if (i==j) {img[i].src = "v.png" ;}
-				else {img[j].src = '' ;}
-			}
-		}
-
-
-
-
-
-
 
 		function check(){
 
-		}
+			for (var i=0 ; i<4 ; i++) { 
+				if(kq.indexOf(cauhoi[i].ok) > -1){ //nếu trong kết quả có câu trả lời thì
+					ques.innerText = cauhoi[i+1].ask ;
+					ans1.innerText = cauhoi[i+1].ans[0] ;
+					ans2.innerText = cauhoi[i+1].ans[1] ;
+					ans3.innerText = cauhoi[i+1].ans[2] ;
+					ans4.innerText = cauhoi[i+1].ans[3] ;
+					for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
+				}
+				else {
+					for (var j=0 ; j<4 ; j++) {
+						if (img[j].src == 'dqbach.github.io/Quiz/v.png') {img[j].src = 'x.png';}
+						else {kq=''}
+					}
+				}
+			}
 
+		}
 
 
 
