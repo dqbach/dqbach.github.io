@@ -1,0 +1,160 @@
+<html >
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+
+
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+			margin: 0 ;
+			padding: 0 ;
+			font-family: 'Pangolin', cursive;
+		}
+		body{
+			background: url('bg.jpg');
+			background-size: cover ;
+		}
+		main {
+			width: 70%;
+			height: 500px;
+			margin: 100px auto;
+			    
+		}
+		p {
+			padding: 30px;
+			background: #00523e;
+			width: 100%;
+			margin: 0 0 6% 0;
+			font-size: 40px;
+			letter-spacing: 3px;
+			color: white;
+			border-radius:25px;
+			line-height: 1.8;
+		}
+		button {
+			background: #00523e;
+			color: #e78f28;
+			width: 46%;
+			margin: 0 2% 4% 2%;
+			padding: 30px;
+			float: left;
+			border-radius:25px; 
+			font-size: 30px;
+			text-align: center;
+			transition: all 0.3s ease-in-out;
+			cursor: pointer;
+			position: relative;
+		}
+		button:hover {
+			background: #002b1c;
+		}
+		span {
+			display: inline-block;
+			margin-left: 30px;
+			color: white;
+		}
+		
+		#go {
+			width: 20% ;
+			margin:auto 40% ;
+			border-radius:25px;
+			background-size: 100%;
+		}
+		img {
+			width: 50px;
+    		height: 50px;
+    		position: absolute;
+    		top:25%;
+    		right: 10%;
+		}
+
+	</style>
+
+
+</head>		
+	<body>
+		<main>
+			<p id="ques">Cau1</p>
+			<button onclick="press(this)" value='1' > A : <span id="ans1"> đúng </span> <img src=''>  </button>
+			<button onclick="press(this)" value='2' > B : <span id="ans2"> sai </span> <img src=''>  </button>
+			<button onclick="press(this)" value='3' > C : <span id="ans3"> sai </span> <img src=''>  </button>
+			<button onclick="press(this)" value='4' > D : <span id="ans4"> sai </span> <img src=''>  </button>
+			<button id="go" onclick="check()" > KIỂM TRA </button>
+						
+
+		</main>
+
+		<script>
+
+		var cau1 = {
+			ask : 'cau1' ,
+			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
+			ok : 'mot' 
+		} ;
+		var cau2 = {
+			ask : 'cau2' ,
+			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
+			ok : 'mot' 
+		} ;
+		var cau3 = {
+			ask : 'cau3' ,
+			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
+			ok : 'mot' 
+		} ;
+		var cau4 = {
+			ask : 'cau4' ,
+			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
+			ok : 'mot' 		
+		} ;
+		var cau5 = {
+			ask : 'cau5' ,
+			ans : ['mot' , 'hai' , 'ba' , 'bon'] ,
+			ok : 'mot' 
+		} ;
+
+		var kq = '' ;
+		var img = document.getElementsByTagName('img') ;
+		var button = document.getElementsByTagName('button') ;
+
+
+		// function press(button){
+		// 	kq += button.innerText ;
+		// 	if (img == true) {
+
+		// 		button.innerHTML += '<img src="v.png">' ;
+		// 	img = false;
+		// 	}
+		// }
+
+		function press(button){
+			kq += button.innerText ;
+		}
+
+		function i1(){
+			var i = 0;
+			for ( var j = 0 ; j<4 ; j++) {
+				if (i==j) {img[i].src = "v.png" ;}
+				else {img[j].src = '' ;}
+			}
+		}
+
+
+
+
+
+
+
+		function check(){
+
+		}
+
+
+
+
+		</script>
+
+	</body>			
+</html>
+
