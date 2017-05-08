@@ -124,41 +124,43 @@
 		var img = document.getElementsByTagName('img') ;
 		var button = document.getElementsByTagName('button') ;
 
-
-
-
 		function press(button){
 			kq = '' ;
 			kq += button.innerText ;
 			var bv = button.value-1;
-	
-				for ( var i = 0 ; i<4 ; i++) {
-					if (bv==i) {img[i].src = "v.png" ;}
-					else {img[i].src = 'n.png' ;}
-				}
+			for ( var i = 0 ; i<4 ; i++) {
+				if (bv==i) {img[i].src = "v.png" ;}
+				else {img[i].src = 'n.png' ;}
+			}
+			go.innerText = 'KIỂM TRA';
 
 		}
 
 		function check(){
-
+			for (var j=0 ; j<4 ; j++) {
+				//if (img[j].src == "https://dqbach.github.io/Quiz/v.png") {img[j].src = 'x.png';}
+				if (img[j].src == "file:///D:/dqbach.github.io/Quiz/v.png") {img[j].src = 'x.png';}
+				go.innerText = 'Ồ , SAI RỒI !'
+			}
 			for (var i=0 ; i<4 ; i++) { 
-				if(kq.indexOf(cauhoi[i].ok) > -1){ //nếu trong kết quả có câu trả lời thì
+				if(kq.indexOf(cauhoi[i].ok) > -1){ 
 					ques.innerText = cauhoi[i+1].ask ;
 					ans1.innerText = cauhoi[i+1].ans[0] ;
 					ans2.innerText = cauhoi[i+1].ans[1] ;
 					ans3.innerText = cauhoi[i+1].ans[2] ;
 					ans4.innerText = cauhoi[i+1].ans[3] ;
 					for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
+					go.innerText = 'KIỂM TRA';
 				}
-				else {
-					for (var j=0 ; j<4 ; j++) {
-						if (img[j].src == 'dqbach.github.io/Quiz/v.png') {img[j].src = 'x.png';}
-						else {kq=''}
-					}
+				else if(kq.indexOf(cauhoi[4].ok) > -1) {
+					go.innerText = 'THẮNG RỒI';
+					for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
 				}
 			}
-
+			
 		}
+
+		
 
 
 
