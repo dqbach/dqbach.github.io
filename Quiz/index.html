@@ -81,10 +81,10 @@
 	<body>
 		<main>
 			<p id="ques">Cau1</p>
-			<button onclick="press(this)" value='0' > A : <span id="ans1"> 6 </span> <img src='n.png'>  </button>
-			<button onclick="press(this)" value='1' > B : <span id="ans2"> 7 </span> <img src='n.png'>  </button>
-			<button onclick="press(this)" value='2' > C : <span id="ans3"> 8 </span> <img src='n.png'>  </button>
-			<button onclick="press(this)" value='3' > D : <span id="ans4"> 9 </span> <img src='n.png'>  </button>
+			<button onclick="press(this)" value='0' > A : <span id="ans1"> 6 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
+			<button onclick="press(this)" value='1' > B : <span id="ans2"> 7 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
+			<button onclick="press(this)" value='2' > C : <span id="ans3"> 8 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
+			<button onclick="press(this)" value='3' > D : <span id="ans4"> 9 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
 			<button id="go" onclick="check()" > HÃY CHỌN ĐÁP ÁN </button>
 		</main>
 
@@ -122,15 +122,16 @@
 		var img = document.getElementsByTagName('img') ;
 		var button = document.getElementsByTagName('button') ;
 
+
 		function press(button){
 			kq = '' ;
 			kq += button.innerText ;
 			var bv = button.value;
 			for ( var i = 0 ; i<4 ; i++) {
 				if (bv==i) {
-					img[i].src = 'https://dqbach.github.io/Quiz/v.png' ;
+					img[i].src = 'https://dqbach.github.io/Quiz/q.png' ;
 				}
-				else {img[i].src = 'n.png' ;}
+				else {img[i].src = 'https://dqbach.github.io/Quiz/n.png' ;}
 			}
 			go.innerText = 'KIỂM TRA';
 
@@ -149,7 +150,7 @@
 						ans3.innerText = cauhoi[i+1].ans[2] ;
 						ans4.innerText = cauhoi[i+1].ans[3] ;
 						kq = '' ;
-						for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
+						for (var j=0 ; j<4 ; j++) {img[j].src = 'https://dqbach.github.io/Quiz/n.png';};
 						go.innerText = 'KIỂM TRA';
 					}	
 				}	
@@ -157,21 +158,30 @@
 			else {
 				for (var i=0 ; i<5 ; i++) { 
 					if (kq.indexOf(cauhoi[i].ok) == -1){ 
+
 						go.innerText = 'Ồ , SAI RỒI ! , CHỌN CÂU KHÁC XEM ';
-						if (img[i].src == 'https://dqbach.github.io/Quiz/v.png') {img[i].src = 'https://dqbach.github.io/Quiz/x.png'}
+						if (img[i].src == 'https://dqbach.github.io/Quiz/q.png') {img[i].src = 'https://dqbach.github.io/Quiz/x.png'}
 					}
 					else if(kq.indexOf(cauhoi[4].ok) > -1) {
 						go.innerText = 'THẮNG RỒI';
-						for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
+						for (var j=0 ; j<4 ; j++) {img[j].src = 'https://dqbach.github.io/Quiz/n.png';};
 						break;
 					}
 					else if(kq.indexOf(cauhoi[i].ok) > -1){ 
 						go.innerText = 'ĐÚNG RỒI , ẤN ĐỂ CHƠI TIẾP NHÉ';
+						for (var j=0 ; j<4 ; j++) {
+							if (img[j].src == 'https://dqbach.github.io/Quiz/x.png' || img[j].src == 'https://dqbach.github.io/Quiz/q.png') {
+								img[j].src = 'https://dqbach.github.io/Quiz/v.png' ;
+							}
+						}
 						break;
 					}
 				}
 			}
 		}
+		for (var j=0 ; j<4 ; j++) {
+							if (img[j].src == 'https://dqbach.github.io/Quiz/x.png') {img[j].src = 'v.png'}
+						}
 
 		
 
