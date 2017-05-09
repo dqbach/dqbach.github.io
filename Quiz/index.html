@@ -60,8 +60,8 @@
 			color: white;
 		}
 		#go {
-			width: 20% ;
-			margin:auto 40% ;
+			width: 40% ;
+			margin:auto 30% ;
 			border-radius:25px;
 			background-size: 100%;
 		}
@@ -81,13 +81,11 @@
 	<body>
 		<main>
 			<p id="ques">Cau1</p>
-			<button onclick="press(this)" value='1' > A : <span id="ans1"> aaa </span> <img src='n.png'>  </button>
-			<button onclick="press(this)" value='2' > B : <span id="ans2"> bbb </span> <img src='n.png'>  </button>
-			<button onclick="press(this)" value='3' > C : <span id="ans3"> ccc </span> <img src='n.png'>  </button>
-			<button onclick="press(this)" value='4' > D : <span id="ans4"> ddd </span> <img src='n.png'>  </button>
-			<button id="go" onclick="check()" > KIỂM TRA </button>
-						
-
+			<button onclick="press(this)" value='0' > A : <span id="ans1"> 6 </span> <img src='n.png'>  </button>
+			<button onclick="press(this)" value='1' > B : <span id="ans2"> 7 </span> <img src='n.png'>  </button>
+			<button onclick="press(this)" value='2' > C : <span id="ans3"> 8 </span> <img src='n.png'>  </button>
+			<button onclick="press(this)" value='3' > D : <span id="ans4"> 9 </span> <img src='n.png'>  </button>
+			<button id="go" onclick="check()" > HÃY CHỌN ĐÁP ÁN </button>
 		</main>
 
 		<script>
@@ -95,11 +93,11 @@
 		var cauhoi = [
 		cau1 = {
 			ask : 'cau1' ,
-			ans : ['aaa' , 'bbb' , 'ccc' , 'ddd'] ,
-			ok : 'aaa' 
+			ans : ['6' , '7' , '8' , '9'] ,
+			ok : '7' 
 		} ,
 		cau2 = {
-			ask : 'cau2' ,
+			ask : 'cau2',
 			ans : ['eee' , 'fff' , 'ggg' , 'hhh'] ,
 			ok : 'eee' 
 		} ,
@@ -127,9 +125,11 @@
 		function press(button){
 			kq = '' ;
 			kq += button.innerText ;
-			var bv = button.value-1;
+			var bv = button.value;
 			for ( var i = 0 ; i<4 ; i++) {
-				if (bv==i) {img[i].src = "v.png" ;}
+				if (bv==i) {
+					img[i].src = 'https://dqbach.github.io/Quiz/v.png' ;
+				}
 				else {img[i].src = 'n.png' ;}
 			}
 			go.innerText = 'KIỂM TRA';
@@ -137,27 +137,40 @@
 		}
 
 		function check(){
-			for (var j=0 ; j<4 ; j++) {
-				//if (img[j].src == "https://dqbach.github.io/Quiz/v.png") {img[j].src = 'x.png';}
-				if (img[j].src == "file:///D:/dqbach.github.io/Quiz/v.png") {img[j].src = 'x.png';}
-				go.innerText = 'Ồ , SAI RỒI !'
+			if (go.innerText == 'HÃY CHỌN ĐÁP ÁN') {
+				go.innerText = 'HÃY CHỌN ĐÁP ÁN' ;
 			}
-			for (var i=0 ; i<4 ; i++) { 
-				if(kq.indexOf(cauhoi[i].ok) > -1){ 
-					ques.innerText = cauhoi[i+1].ask ;
-					ans1.innerText = cauhoi[i+1].ans[0] ;
-					ans2.innerText = cauhoi[i+1].ans[1] ;
-					ans3.innerText = cauhoi[i+1].ans[2] ;
-					ans4.innerText = cauhoi[i+1].ans[3] ;
-					for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
-					go.innerText = 'KIỂM TRA';
-				}
-				else if(kq.indexOf(cauhoi[4].ok) > -1) {
-					go.innerText = 'THẮNG RỒI';
-					for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
+			else if (go.innerText == 'ĐÚNG RỒI , ẤN ĐỂ CHƠI TIẾP NHÉ') {
+				for (var i=0 ; i<4 ; i++) { 
+					if(kq.indexOf(cauhoi[i].ok) > -1){
+						ques.innerText = cauhoi[i+1].ask ;
+						ans1.innerText = cauhoi[i+1].ans[0] ;
+						ans2.innerText = cauhoi[i+1].ans[1] ;
+						ans3.innerText = cauhoi[i+1].ans[2] ;
+						ans4.innerText = cauhoi[i+1].ans[3] ;
+						kq = '' ;
+						for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
+						go.innerText = 'KIỂM TRA';
+					}	
+				}	
+			}
+			else {
+				for (var i=0 ; i<5 ; i++) { 
+					if (kq.indexOf(cauhoi[i].ok) == -1){ 
+						go.innerText = 'Ồ , SAI RỒI ! , CHỌN CÂU KHÁC XEM ';
+						if (img[i].src == 'https://dqbach.github.io/Quiz/v.png') {img[i].src = 'https://dqbach.github.io/Quiz/x.png'}
+					}
+					else if(kq.indexOf(cauhoi[4].ok) > -1) {
+						go.innerText = 'THẮNG RỒI';
+						for (var j=0 ; j<4 ; j++) {img[j].src = 'n.png';};
+						break;
+					}
+					else if(kq.indexOf(cauhoi[i].ok) > -1){ 
+						go.innerText = 'ĐÚNG RỒI , ẤN ĐỂ CHƠI TIẾP NHÉ';
+						break;
+					}
 				}
 			}
-			
 		}
 
 		
