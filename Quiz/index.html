@@ -28,10 +28,10 @@
 			width: 100%;
 			margin: 0 0 6% 0;
 			font-size: 40px;
-			letter-spacing: 3px;
+			letter-spacing: 4px;
 			color: white;
 			border-radius:25px;
-			line-height: 1.8;
+			line-height: 1.5;
 		}
 		button {
 			background: #00523e;
@@ -80,11 +80,11 @@
 </head>		
 	<body>
 		<main>
-			<p id="ques">Cau1</p>
-			<button onclick="press(this)" value='0' > A : <span id="ans1"> 6 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
-			<button onclick="press(this)" value='1' > B : <span id="ans2"> 7 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
-			<button onclick="press(this)" value='2' > C : <span id="ans3"> 8 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
-			<button onclick="press(this)" value='3' > D : <span id="ans4"> 9 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
+			<p id="ques">Hai con vịt đi trước 2 con vịt, 2 con vịt đi sau 2 con vịt, 2 con vịt đi giữa 2 con vịt. Hỏi có mấy con vịt?</p>
+			<button onclick="press(this)" value='0' > A : <span id="ans1"> 3 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
+			<button onclick="press(this)" value='1' > B : <span id="ans2"> 4 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
+			<button onclick="press(this)" value='2' > C : <span id="ans3"> 5 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
+			<button onclick="press(this)" value='3' > D : <span id="ans4"> 6 </span> <img src='https://dqbach.github.io/Quiz/n.png'>  </button>
 			<button id="go" onclick="check()" > HÃY CHỌN ĐÁP ÁN </button>
 		</main>
 
@@ -92,29 +92,29 @@
 
 		var cauhoi = [
 		cau1 = {
-			ask : 'cau1' ,
-			ans : ['6' , '7' , '8' , '9'] ,
-			ok : '7' 
+			ask : 'cau1'  ,
+			ans : ['3' , '4' , '5' , '6'] ,
+			ok : '4' 
 		} ,
 		cau2 = {
-			ask : 'cau2',
-			ans : ['eee' , 'fff' , 'ggg' , 'hhh'] ,
-			ok : 'eee' 
+			ask : 'Trong 1 cuộc thi chạy, nếu bạn vượt qua người thứ 2 bạn sẽ đứng thứ mấy?',
+			ans : ['Thứ Nhất' , 'Thứ Ba' , 'Thứ Hai'  , 'Thứ Tư' ] ,
+			ok : 'Thứ Hai' 
 		} ,
 		cau3 = {
-			ask : 'cau3' ,
-			ans : ['iii' , 'jjj' , 'kkk' , 'lll'] ,
-			ok : 'iii' 
+			ask : 'Sở thú bị cháy, con gì chạy ra đầu tiên?' ,
+			ans : ['Con Khỉ' , 'Con Người' , 'Con Ngựa' , 'Con Voi'] ,
+			ok : 'Con Người' 
 		} ,
 		cau4 = {
-			ask : 'cau4' ,
-			ans : ['mmm' , 'nnn' , 'ooo' , 'ppp'] ,
-			ok : 'mmm' 		
+			ask : 'Cái gì tay trái cầm được còn tay phải cầm không được?' ,
+			ans : ['Chân phải' , 'Tay trái' , 'Chân trái' , 'Tay phải'] ,
+			ok : 'Tay phải' 		
 		} ,
 		cau5 = {
-			ask : 'cau5' ,
-			ans : ['qqq' , 'rrr' , 'sss' , 'ttt'] ,
-			ok : 'qqq' 
+			ask : 'Con trai có gì quí nhất?' ,
+			ans : ['Tiền' , 'Vàng' , 'Kim cương' , 'Ngọc trai'] ,
+			ok : 'Ngọc trai' 
 		} 
 		]
 
@@ -158,7 +158,6 @@
 			else {
 				for (var i=0 ; i<5 ; i++) { 
 					if (kq.indexOf(cauhoi[i].ok) == -1){ 
-
 						go.innerText = 'Ồ , SAI RỒI ! , CHỌN CÂU KHÁC XEM ';
 						if (img[i].src == 'https://dqbach.github.io/Quiz/q.png') {img[i].src = 'https://dqbach.github.io/Quiz/x.png'}
 					}
@@ -179,9 +178,7 @@
 				}
 			}
 		}
-		for (var j=0 ; j<4 ; j++) {
-							if (img[j].src == 'https://dqbach.github.io/Quiz/x.png') {img[j].src = 'v.png'}
-						}
+	
 
 		
 
