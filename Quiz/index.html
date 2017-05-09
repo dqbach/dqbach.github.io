@@ -155,12 +155,12 @@
 		var h = 0 ;
 
 		function run() {
-			if (color.style.width = 100 +'%') {color.style.animation = 'run' +' ' +20+'s linear';}
+			if (color.style.width = 100 +'%') {color.style.animation = 'run' +' ' +25+'s linear';}
 		}
 		run()	
 		setTimeout(function run() {
 			if (color.style.width = 0 +'%') {alert('haha');}
-		}, 20000);
+		}, 25000);
 
 		function press(button){
 			kq = '' ;
@@ -181,45 +181,37 @@
 			}
 			else if (go.innerText == 'ĐÚNG RỒI , ẤN ĐỂ CHƠI TIẾP NHÉ') {
 				cauhoi.shift(); 
-					
-						ques.innerText = cauhoi[0].ask ;
-						ans1.innerText = cauhoi[0].ans[0] ;
-						ans2.innerText = cauhoi[0].ans[1] ;
-						ans3.innerText = cauhoi[0].ans[2] ;
-						ans4.innerText = cauhoi[0].ans[3] ;
-						kq = '' ;
-						for (var j=0 ; j<4 ; j++) {img[j].src = 'https://dqbach.github.io/Quiz/n.png';};
-						go.innerText = 'KIỂM TRA';
-					
+				ques.innerText = cauhoi[0].ask ;
+				ans1.innerText = cauhoi[0].ans[0] ;
+				ans2.innerText = cauhoi[0].ans[1] ;
+				ans3.innerText = cauhoi[0].ans[2] ;
+				ans4.innerText = cauhoi[0].ans[3] ;
+				kq = '' ;
+				for (var j=0 ; j<4 ; j++) {img[j].src = 'https://dqbach.github.io/Quiz/n.png';};
+				go.innerText = 'KIỂM TRA';		
 			}
-			else if (go.innerText == 'KIỂM TRA') {
-				
-					if (kq.indexOf(cauhoi[0].ok) == -1){ 
-						go.innerText = 'Ồ , SAI RỒI ! , CHỌN CÂU KHÁC XEM ';
-						for (var j=0 ; j<4 ; j++){
-							if (img[j].src == 'https://dqbach.github.io/Quiz/q.png') {img[j].src = 'https://dqbach.github.io/Quiz/x.png'};
-						}
-						heart[2-h].style.display = 'none' ;
-						h ++ ;
-						if (h<3){break;}
-						else {alert('NGU')}
+			else{
+				if (kq.indexOf(cauhoi[0].ok) == -1){ 
+					go.innerText = 'Ồ , SAI RỒI ! , CHỌN CÂU KHÁC XEM ';
+					for (var j=0 ; j<4 ; j++){
+						if (img[j].src == 'https://dqbach.github.io/Quiz/q.png') {img[j].src = 'https://dqbach.github.io/Quiz/x.png'};
 					}
-					// else if(kq.indexOf(cauhoi[0].ok) > -1) {
-					// 	go.innerText = 'THẮNG RỒI';
-					// 	for (var j=0 ; j<4 ; j++) {img[j].src = 'https://dqbach.github.io/Quiz/n.png';};
-					// 	break;
-					// }
-					else if(kq.indexOf(cauhoi[0].ok) > -1){ 
+					heart[2-h].style.display = 'none' ;
+					h ++ ;
+					if (h==3){window.location.href='https://dqbach.github.io/Quiz/fun.html'}
+				}
+				else if(kq.indexOf(cauhoi[0].ok) > -1){ 
+					if (cauhoi[1] == undefined) {window.location.href='https://dqbach.github.io/Quiz/ok.html'}
+					else {
 						go.innerText = 'ĐÚNG RỒI , ẤN ĐỂ CHƠI TIẾP NHÉ';
 						for (var j=0 ; j<4 ; j++) {
 							if (img[j].src == 'https://dqbach.github.io/Quiz/x.png' || img[j].src == 'https://dqbach.github.io/Quiz/q.png') {
 								img[j].src = 'https://dqbach.github.io/Quiz/v.png' ;
-							}
-						}
-					
+							}	
+						}			
 					}
-			}
-			
+				}
+			}	
 		}
 
 		
