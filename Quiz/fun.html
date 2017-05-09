@@ -2,6 +2,7 @@
 <head>
 	<title></title>
 	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
 
 
 	<style type="text/css">
@@ -9,6 +10,7 @@
 			box-sizing: border-box;
 			margin: 0 ;
 			padding: 0 ;
+			font-family: 'Pangolin', cursive;
 		}
 		body{
 			background: url('bg.jpg');
@@ -16,14 +18,23 @@
 		}
 		div {
 			width: 50%;
-			margin: auto;
-			text-align: center;;
+			margin: 200px auto;
+			text-align: center;
 		}
 		img{
+			
 		}
 		p {
-			float: right;
 			width: 100%;
+			background: #00412f;
+			color: #e78f28;
+			margin: 100px 2% 4% 2%;
+			padding: 20px;
+			float: left;
+			border-radius:30px; 
+			font-size: 30px;
+			text-align: center;
+			cursor: pointer;
 		}
 		</style>
 
@@ -32,8 +43,14 @@
 <body>
 	<div>
 		<img src='fun.gif'>
-		<p>THUA MẤT RỒI ! DÁM CHƠI LẠI THÌ ẤN VÀO ĐÂY ?</p>
+		<p onclick="go()">THUA MẤT RỒI ! DÁM CHƠI LẠI THÌ ẤN VÀO ĐÂY ! </p>
 	</div>
+	<script type="text/javascript">
+		function go(){
+			window.location.href='https://dqbach.github.io/Quiz/index.html'
+		}
+	</script>
+	}
 </body>			
 </html>
 
