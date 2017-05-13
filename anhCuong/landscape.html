@@ -56,7 +56,7 @@
 		}
 		.page {
 			width: 279.4mm;
-        	min-height: 215.9mm;
+        	height: 215.9mm;
         	padding: 20mm;
         	margin: 10mm auto;
         	border: 1px #D3D3D3 solid;
@@ -116,13 +116,15 @@
     		margin: 0 0.5mm;
 		}
 		@page {
-        	size: letter;
+        	size: landscape ;
         	margin: 0;
    	 	}
 		@media print {
+
+
 	        html, body {
-	            width: 215.9mm;
-        		height: 279.4mm;       
+	            width: 279.4mm; 
+        		height: 215.9mm;      
 	        }
 	        .page {
 	            margin: 0;
