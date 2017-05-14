@@ -84,7 +84,7 @@
 		<div> <button>%</button> </div>
 		<div> <button class="bigger">+</button> </div>
 
-		<div> <button onclick="press(this)">7</button> </div>
+		<div> <button>7</button> </div>
 		<div> <button>8</button> </div>
 		<div> <button>9</button> </div>
 		<div> <button class="bigger">-</button> </div>
@@ -104,16 +104,24 @@
 		<div> <button>.</button> </div>
 		<div> <button class="square">=</button> </div>
 	</main>
+	<input type="" name="" value="anh ơi">
+
+
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-          $("button").click(function(){
-            var x = $(this).html();
-            kq += x ;
-            $('#kq').html();
-          });
+			$('button').click(function(){
+				var a = $(this).html();
+				var kq = $('#kq').html();
+				kq += a ;
+				$('#kq').html(kq);
+			}); 
+
+			$('input').click(function(){
+				alert($(this).val());
+			});
 		});
 
 	</script>
