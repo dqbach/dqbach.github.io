@@ -3,6 +3,128 @@
 	var page_box = $('.page_box') ;
 	var image_box = $('.image_box') ;
 
+	var data = [
+	  {
+	    "desc" : "Violet flower",
+	    "file" : "01.jpg"
+	  },
+	  {
+	    "desc" : "Hong Kong",
+	    "file" : "02.jpg"
+	  },
+	  {
+	    "desc" : "Sunshine in mountain",
+	    "file" : "03.jpg"
+	  },
+	  {
+	    "desc" : "Falling strawbery",
+	    "file" : "04.jpg"
+	  },
+	  {
+	    "desc" : "Pakistan crepe",
+	    "file" : "05.jpg"
+	  },
+	  {
+	    "desc" : "Bike chain",
+	    "file" : "06.jpg"
+	  },
+	  {
+	    "desc" : "King frog",
+	    "file" : "07.jpg"
+	  },
+	  {
+	    "desc" : "Breakfast",
+	    "file" : "08.jpg"
+	  },
+	  {
+	    "desc" : "Stone Hedge",
+	    "file" : "09.jpg"
+	  },
+	  {
+	    "desc" : "Time for beer",
+	    "file" : "10.jpg"
+	  },
+	  {
+	    "desc" : "Light bulb in rain",
+	    "file" : "11.jpg"
+	  },
+	  {
+	    "desc" : "Ever green",
+	    "file" : "12.jpg"
+	  },
+	  {
+	    "desc" : "Black berry",
+	    "file" : "13.jpg"
+	  },
+	  {
+	    "desc" : "Dad and son walking rail way",
+	    "file" : "14.jpg"
+	  },
+	  {
+	    "desc" : "Coffee beans",
+	    "file" : "15.jpg"
+	  },
+	  {
+	    "desc" : "Cherry Blossom",
+	    "file" : "16.jpg"
+	  },
+	  {
+	    "desc" : "Gecko on stone",
+	    "file" : "17.jpg"
+	  },
+	  {
+	    "desc" : "Dad car",
+	    "file" : "18.jpg"
+	  },
+	  {
+	    "desc" : "Surfing in Danang",
+	    "file" : "19.jpg"
+	  },
+	  {
+	    "desc" : "Cookie",
+	    "file" : "20.jpg"
+	  },
+	  {
+	    "desc" : "Desert fox",
+	    "file" : "21.jpg"
+	  },
+	  {
+	    "desc" : "Dump man",
+	    "file" : "22.jpg"
+	  },
+	  {
+	    "desc" : "Green hope",
+	    "file" : "23.jpg"
+	  },
+	  {
+	    "desc" : "White lamp",
+	    "file" : "24.jpg"
+	  },
+	  {
+	    "desc" : "Morning Farm",
+	    "file" : "25.jpg"
+	  },
+	  {
+	    "desc" : "Silent wave",
+	    "file" : "26.jpg"
+	  },
+	  {
+	    "desc" : "Light house",
+	    "file" : "27.jpg"
+	  },
+	  {
+	    "desc" : "Oceana",
+	    "file" : "28.jpg"
+	  },
+	  {
+	    "desc" : "Sky scrapper",
+	    "file" : "29.jpg"
+	  },
+	  {
+	    "desc" : "Mang Tay",  
+	    "file" : "30.jpg"
+	  }
+	];
 	
 	function getImage(totalImage,imagesPerPage){
 
@@ -13,9 +135,10 @@
 				$(main).html(content);
 			}
 			var img = $('img');
+			var title = $('.title') ;
 			for (var j = 1 ; j<=totalImage ; j++ ){
-				img[j-1].src = "images/"+j+".jpg" ;
-				$('.imageNumber')[j-1].innerText = j ;
+				img[j-1].src = "images/"+data[j-1].file ;
+				title[j-1].innerText = data[j-1].desc;;
 			}
 			image_box = $('.image_box') ;
 			img = $('.img');
@@ -26,6 +149,7 @@
 		}
 		importImage(totalImage);
 		img = $('.img');
+		title = $('.title') ;
 		var allPage = $('.allPage');
 		
 
