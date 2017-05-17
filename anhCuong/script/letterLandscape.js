@@ -21,7 +21,7 @@
 
 		//truyền thông tin vào ảnh và xóa class kích thước ảnh nếu có
 		for (var i=0 ; i<totalImage ; i++ ){
-			$('img')[i].src = "images/"+data[i].file ;
+			$('.image')[i].src = "images/"+data[i].file ;
 			$('.title')[i].innerText = data[i].desc;
 			$('img')[i].className = $('img')[i].className.replace(" b2","").replace(" b3","").replace(" b5","").replace(" b7","").replace(" b10","");
 		}
@@ -31,15 +31,15 @@
 		for (var i=0 ; i<numberOfPage ; i++){
 			for(var j=0 ; j<imagesPerPage ; j++){
 				var k = j+i*imagesPerPage ;
-				$($('.img')[k]).appendTo(image_box[i]);
+				$($('.image_info')[k]).appendTo(image_box[i]);
 			}
 		}
 
 		//số trang
 		var allPage =$('.allPage');
 		var pageNumber =$('.pageNumber');
-		for (var i=0 ; i<numberOfPage ; i++) {
-			allPage[i].innerText = numberOfPage ;
+		for (var i=0 ; i<=numberOfPage ; i++) {
+			allPage[i].innerText = numberOfPage+1 ;
 			pageNumber[i].innerText = i+1 ;
 		}
 		
@@ -48,33 +48,33 @@
 			case 1 : break;
 			case 2 : 
 				for (var i=0 ; i<totalImage ; i++) {
-					$('.img')[i].className += ' b2' ;
+					$('.image_info')[i].className += ' b2' ;
 				}
 				break;
 			case 3 : 
 			case 4 :
 				for (var i=0 ; i<totalImage ; i++) {
-					$('.img')[i].className += ' b3' ;
+					$('.image_info')[i].className += ' b3' ;
 				}
 				break;	
 			case 5 :
 			case 6 :
 				for (var i=0 ; i<totalImage ; i++) {
-					$('.img')[i].className += ' b5' ;
+					$('.image_info')[i].className += ' b5' ;
 				}
 				break;
 			case 7 :
 			case 8 :
 			case 9 :
 				for (var i=0 ; i<totalImage ; i++) {
-					$('.img')[i].className += ' b7' ;
+					$('.image_info')[i].className += ' b7' ;
 				}
 				break;
 			case 10 :
 			case 11 :
 			case 12 :
 				for (var i=0 ; i<totalImage ; i++) {
-					$('.img')[i].className += ' b10' ;
+					$('.image_info')[i].className += ' b10' ;
 				}
 				break;
 		}	

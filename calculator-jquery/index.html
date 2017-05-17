@@ -74,8 +74,8 @@
 
 	<main>
 		<p id='kq'></p>
-		<div> <button>C</button> </div>
-		<div> <button>←</button> </div>
+		<div> <button id="c" >C</button> </div>
+		<div> <button id="back" >←</button> </div>
 		<div> <button>√</button> </div>
 		<div> <button class="bigger">☺</button> </div>
 
@@ -104,7 +104,6 @@
 		<div> <button>.</button> </div>
 		<div> <button class="square">=</button> </div>
 	</main>
-	<input type="" name="" value="anh ơi">
 
 
 
@@ -119,9 +118,16 @@
 				$('#kq').html(kq);
 			}); 
 
-			$('input').click(function(){
-				alert($(this).val());
+			$('#c').click(function(){
+				$('#kq').html('');
 			});
+
+			$('#back').click(function(){
+				var a = $('#kq').html();
+				a = a.substr(0,a.length-1);
+				$('#kq').html(a);
+			});
+
 		});
 
 	</script>
