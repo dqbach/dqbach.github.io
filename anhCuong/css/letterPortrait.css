@@ -18,8 +18,11 @@
 }
 .subpage {
 	height: 239.4mm;
+	/*outline: 2cm #FFEAEA solid;*/
 }
-p { text-align: center;}
+p {
+	text-align: center;
+}
 .image_box {
 	width: 100% ;
 	height: 872px ;
@@ -27,7 +30,8 @@ p { text-align: center;}
 	text-align: center ;
 	vertical-align: middle
 }
-.image_info  { display:inline-block ;
+.image_info {
+	display: inline-block ;
 	padding-right: 1mm
 }
 img {
@@ -88,8 +92,12 @@ section div {
 	padding:10px;
 	border: 1px solid #ffc786 ;
 }
+section * {
+	overflow: hidden;
+}
 #greetingText {
 	width: 100%;
+	height: 58px ;
 	float:right;
 	text-align: justify;
 	margin-bottom:20px;
@@ -98,14 +106,14 @@ section div {
 	border: 0;
 }
 aside {
-	width: 150px;
+	width: 160px;
 	height: 383px;
 	background: #ffc786;
 	text-align: center;
 	float: left;
 }
 #logo_box {
-	height: 101px;
+	height: 107px;
 	background: white;
 	text-align: center;
 	border: 1px solid #ffc786;
@@ -122,10 +130,13 @@ aside {
 }
 #topDoctorText , #bottomDoctorText {
 	text-transform: uppercase;
-	padding: 10px;
 	font-weight: bold;
 	letter-spacing: 2px;
 	font-size: 1.3em;
+}
+#topDoctorText {
+	height: 42px;
+	padding: 15px;
 }
 #avatar {
 	padding: 8px;
@@ -137,10 +148,12 @@ aside {
 #bottomDoctorText {
 	background: #f89f37;
 	color: white;
+	height: 68px;
+	padding: 9px;
 }
 #surgeryInfoText {
 	float: right;
-	width: 492.84px;
+	width: 482.84px;
 	height:383px;
 }
 #bottomText1 , #bottomText2 {

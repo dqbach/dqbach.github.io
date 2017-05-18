@@ -17,11 +17,11 @@
     page-break-after: always;
 }
 .subpage {
-	height: 175.9mm
+	height: 175.9mm;
+	/*outline: 2cm #FFEAEA solid;*/
 }
 p {
 	text-align: center ;
-	height: 32.82px
 }
 .image_box {
 	width: 100% ;
@@ -84,24 +84,29 @@ section div {
 	padding:10px;
 	border: 1px solid #ffc786 ;
 }
+section * {
+	overflow: hidden;
+}
 #greetingText {
-	width: 100%;
+	width: 722.84px;
+	height: 58px ;
 	float:right;
 	text-align: justify;
 	margin-bottom:20px;
 	background: #f89f37;
 	color: white;
 	border: 0;
+
 }
 aside {
-	width: 150px;
-	height: 383px;
+	width: 160px;
+	height: 366px;
 	background: #ffc786;
 	text-align: center;
 	float: left;
 }
 #logo_box {
-	height: 101px;
+	height: 90px;
 	background: white;
 	text-align: center;
 	border: 1px solid #ffc786;
@@ -118,10 +123,13 @@ aside {
 }
 #topDoctorText , #bottomDoctorText {
 	text-transform: uppercase;
-	padding: 10px;
 	font-weight: bold;
 	letter-spacing: 2px;
 	font-size: 1.3em;
+}
+#topDoctorText {
+	height: 42px;
+	padding: 15px;
 }
 #avatar {
 	padding: 8px;
@@ -133,27 +141,29 @@ aside {
 #bottomDoctorText {
 	background: #f89f37;
 	color: white;
+	height: 68px;
+	padding: 9px;
 }
 #surgeryInfoText {
 	float: right;
-	width: 492.84px;
-	height:383px;
+	width: 722.84px;
+	height:288px;
 }
 #bottomText1 , #bottomText2 {
-	width: 321.42px;
-	height: 200px;
+	width: 441.42px;
+	height: 100px;
 	float: left;
 	margin:20px 0;
 }
 #bottomImageHeader1 , #bottomImageHeader2 {
-	width: 321.42px;
+	width: 441.42px;
 	float: left;
 	background: #f89f37;
 	color: white;
 	border: 0;
 }
 .bottomImageBox {
-	width: 321.42px;
+	width: 441.42px;
 	float: left;
 	border-top: 0; 
 	padding: 0;
@@ -162,12 +172,12 @@ aside {
 	float: right;
 }
 #bottomImage1 , #bottomImage2 {
-	height:117px;			
+	height:76px;			
 	width:auto;
 }
 #bottomImageCaption1 , #bottomImageCaption2 {
-	width: 202px ;
-	height:117px;	
+	width: 363px ;
+	height:80px;	
 	border: 0 ;
 	border-left: 1px solid #ffc786 ;			
 }
