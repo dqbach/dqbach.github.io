@@ -86,21 +86,21 @@ section{
 }
 section div {
 	padding:10px;
-	border: 1px solid #ffc786 ;
+	border: 1px solid #afdbf3 ;
 }
 #greetingText {
 	width: 100%;
 	float:right;
 	text-align: justify;
 	margin-bottom:20px;
-	background: #f89f37;
+	background: #1b3d73;
 	color: white;
 	border: 0;
 }
 aside {
 	width: 150px;
 	height: 383px;
-	background: #ffc786;
+	background: #afdbf3;
 	text-align: center;
 	float: left;
 }
@@ -108,7 +108,7 @@ aside {
 	height: 101px;
 	background: white;
 	text-align: center;
-	border: 1px solid #ffc786;
+	border: 1px solid #afdbf3;
 	padding: 5px;
 	display: flex;
 	justify-content: center;
@@ -135,7 +135,7 @@ aside {
 	border-radius: 50%;
 }
 #bottomDoctorText {
-	background: #f89f37;
+	background: #1b3d73;
 	color: white;
 }
 #surgeryInfoText {
@@ -152,7 +152,7 @@ aside {
 #bottomImageHeader1 , #bottomImageHeader2 {
 	width: 321.42px;
 	float: left;
-	background: #f89f37;
+	background: #1b3d73;
 	color: white;
 	border: 0;
 }
@@ -173,5 +173,5 @@ aside {
 	width: 202px ;
 	height:117px;	
 	border: 0 ;
-	border-left: 1px solid #ffc786 ;			
+	border-left: 1px solid #afdbf3 ;			
 }
