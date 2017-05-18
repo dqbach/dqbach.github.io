@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
 	* {
 		box-sizing: border-box;
@@ -43,7 +44,7 @@
 		align-items: center;
 		justify-content: center;
 	}
-	button {
+	button , .button {
 		width: 73px;
 		height: 73px;
 		border-radius: 50%;
@@ -55,7 +56,7 @@
 		cursor: pointer;
 		transition: all 0.1s linear;
 	}
-	button:hover {
+	button:hover , .button:hover {
 		background: orangered;
 		color: aliceblue;
 	}
@@ -75,14 +76,14 @@
 	<main>
 		<p id='kq'></p>
 		<div> <button id="c" >C</button> </div>
-		<div> <button id="back" >←</button> </div>
-		<div> <button>√</button> </div>
+		<div> <button id="back" class='fa fa-2x fa-long-arrow-left' ></button> </div>
+		<div> <button> √</button></div>
 		<div> <button class="bigger">☺</button> </div>
 
-		<div> <button>x²</button> </div>
-		<div> <button>x!</button> </div>
-		<div> <button>%</button> </div>
-		<div> <button class="bigger">+</button> </div>
+		<div> <div class="button"> x² </div> </div>
+		<div> <div class="button"> x! </div> </div>
+		<div> <div class="button"> % </div> </div>
+		<div> <div class="button bigger"> + </div> </div>
 
 		<div> <button>7</button> </div>
 		<div> <button>8</button> </div>
