@@ -2,7 +2,8 @@
 	box-sizing: border-box ;
 	margin: 0 ;
 	padding: 0 ;
-	font-family: sans-serif
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
 }
 .page {
 	width: 215.9mm;
@@ -16,12 +17,9 @@
     page-break-after: always;
 }
 .subpage {
-	height: 239.4mm
+	height: 239.4mm;
 }
-p {
-	text-align: center ;
-	height: 32.82px
-}
+p { text-align: center;}
 .image_box {
 	width: 100% ;
 	height: 872px ;
@@ -80,4 +78,93 @@ img {
 		margin: 0; 
 		page-break-after: always; 
 	}
+}
+
+/* FIRST PAGE / FIRST PAGE / FIRST PAGE / FIRST PAGE / FIRST PAGE / FIRST PAGE /*/
+section{
+	margin-top: 20px;
+}
+section div {
+	padding:10px;
+	border: 1px solid #afdbf3 ;
+}
+#greetingText {
+	width: 100%;
+	float:right;
+	text-align: justify;
+	margin-bottom:20px;
+	background: #1b3d73;
+	color: white;
+	border: 0;
+}
+aside {
+	width: 150px;
+	background: #afdbf3;
+	text-align: center;
+	float: left;
+}
+#logo_box {
+	background: white;
+	text-align: center;
+	border: 1px solid #afdbf3;
+	padding: 0px;
+}
+#reportLogo{
+	width: 50%;
+	margin: 10px 0 5px 0;
+}
+#topDoctorText , #bottomDoctorText {
+	text-transform: uppercase;
+	padding: 10px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 1.3em;
+}
+#avatar {
+	padding: 8px;
+	margin-bottom: 10px;
+}
+#topDoctorImage {
+	border-radius: 50%;
+}
+#bottomDoctorText {
+	background: #1b3d73;
+	color: white;
+}
+#surgeryInfoText {
+	float: right;
+	width: 492.84px;
+	height:383px;
+}
+#bottomText1 , #bottomText2 {
+	width: 321.42px;
+	height: 200px;
+	float: left;
+	margin:20px 0;
+}
+#bottomImageHeader1 , #bottomImageHeader2 {
+	width: 321.42px;
+	float: left;
+	background: #1b3d73;
+	color: white;
+	border: 0;
+}
+.bottomImageBox {
+	width: 321.42px;
+	float: left;
+	border-top: 0; 
+	padding: 0;
+}
+#bottomText2 , #bottomImageHeader2 , .bottomImageBox2 , #bottomImageCaption1 , #bottomImageCaption2 {
+	float: right;
+}
+#bottomImage1 , #bottomImage2 {
+	height:117px;			
+	width:auto;
+}
+#bottomImageCaption1 , #bottomImageCaption2 {
+	width: 202px ;
+	height:117px;	
+	border: 0 ;
+	border-left: 1px solid #afdbf3 ;			
 }
