@@ -3,8 +3,6 @@
 	<title></title>
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
 	* {
 		box-sizing: border-box;
@@ -14,6 +12,7 @@
 	}
 	body {
 		background: #151B34;
+		transition: all 1s ease-in-out 
 	}
 	main {
 		background: white;
@@ -35,6 +34,7 @@
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 30px;
+		transition: all 1s ease-in-out 
 	}
 	div {
 		width: 25%;
@@ -67,6 +67,9 @@
 	.bigger {
 		font-size: 40px;
 	}
+	.change {
+		background:#145f14;		
+	}
 	</style>
 
 </head>		
@@ -75,15 +78,15 @@
 
 	<main>
 		<p id='kq'></p>
-		<div> <button id="c" >C</button> </div>
-		<div> <button id="back" class='fa fa-2x fa-long-arrow-left' ></button> </div>
-		<div> <button> √</button></div>
-		<div> <button class="bigger">☺</button> </div>
+		<div> <button id="ac" > AC </button> </div>
+		<div> <div id="back" class="bigger button"> ← </div> </div>
+		<div> <div id="sqrt" class="button"> √ </div></div>
+		<div> <div id="smile" class="bigger button"> ☺ </div> </div>
 
-		<div> <div class="button"> x² </div> </div>
+		<div> <div id ="square" class="button"> x² </div> </div>
 		<div> <div class="button"> x! </div> </div>
 		<div> <div class="button"> % </div> </div>
-		<div> <div class="button bigger"> + </div> </div>
+		<div> <button class="button bigger"> + </button> </div>
 
 		<div> <button>7</button> </div>
 		<div> <button>8</button> </div>
@@ -100,7 +103,7 @@
 		<div> <button>3</button> </div>
 		<div> <button class="bigger">÷</button> </div>
 
-		<div> <button>+/−</button> </div>
+		<div> <div id='switch' class="button"> +/− </div> </div>
 		<div> <button>0</button> </div>
 		<div> <button>.</button> </div>
 		<div> <button class="square">=</button> </div>
@@ -111,28 +114,54 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
-		$(document).ready(function(){
+			var kq = $('#kq').html();
+
 			$('button').click(function(){
 				var a = $(this).html();
-				var kq = $('#kq').html();
 				kq += a ;
 				$('#kq').html(kq);
 			}); 
 
-			$('#c').click(function(){
-				$('#kq').html('');
+			$('#ac').click(function(){
+				kq = '' ;
+				$('#kq').html(kq);
 			});
 
 			$('#back').click(function(){
-				var a = $('#kq').html();
-				a = a.substr(0,a.length-1);
-				$('#kq').html(a);
+				kq = kq.substr(0,kq.length-1);
+				$('#kq').html(kq);
 			});
 
-		});
+			$('#switch').click(function(){
+				kq = kq*(-1);
+				$('#kq').html(kq);
+			});
+
+			$('#sqrt').click(function(){
+				if (kq == '') {kq = ''}
+				else {
+					kq = Math.sqrt(kq);
+					$('#kq').html(kq);
+				}
+			});
+
+			$('#square').click(function(){
+				if (kq == '') {kq = ''}
+				else {
+					kq = kq*kq ;
+					$('#kq').html(kq);
+				}
+			});
+
+			$('#smile').click(function(){
+				$('body').toggleClass('change');
+
+
+			});
 
 	</script>
 
 </body>			
 </html>
+
 

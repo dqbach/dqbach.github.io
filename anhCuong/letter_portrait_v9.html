@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">	
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/letterPortrait.css">	
+</head>
+<body>
+	<div id="report">
+		<div class="page" id ="firstPage">
+			<div class="subpage">
+				<section>
+					<div id="logo_box"><img id="reportLogo" src="images/logo2.png"></div>
+					<p id="topDoctorText">
+						The name of the Doctor <br>
+						Organization <br>
+						Andress <br>
+						Phone / fax <br>
+						Website link
+
+						</p>
+					<span class="hr"></span>
+					<div id="greetingText">
+					Greetings Text<br>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<div id=avatar><img id="topDoctorImage" src="images/doctor1.jpg"></div>
+					<p id="bottomDoctorText">The name of the Doctor</p>
+					<span class="hr"></span>
+					<div id="surgeryInfoText">
+						Surgery Info Text<br>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</div>
+					<span class="hr"></span>
+					<div class="bottom">
+						<div class="bottomText" id="bottomText1">Text of the attending Physician</div>
+						<p class="bottomImageHeader" id="bottomImageHeader1">Name of Physician Assistant</p>
+						<img class="bottomImage" id="bottomImage1" src="images/doctor2.jpg">
+						<p class="bottomImageCaption" id="bottomImageCaption1">Name of Physician</p>
+					</div>
+					<div class="bottom">
+						<div class="bottomText" id="bottomText2">Text of the attending Physician</div>
+						<p class="bottomImageHeader" id="bottomImageHeader2">Name of Physician Assistant</p>
+						<img class="bottomImage" id="bottomImage2" src="images/doctor3.jpg" >
+						<p class="bottomImageCaption" id="bottomImageCaption2">Name of Physician</p>
+					</div>
+				</section>
+				<p class="line">Page <span class="pageNumber">1</span> / <span class="allPage"></span></p>
+			</div>
+		</div>
+
+
+
+		<!-- From here page 2 ... -->
+		<div class="page" id="secondPage">
+			<div class="subpage">
+				<div id="doctorInfo">
+					<div>
+						<p>Dr. Brad Cohen</p>
+						<p>Paloma Health</p>
+						<p>Arch Health Partners</p>
+						<p>Partien Name: 12-2-2016</p>
+					</div>
+					<div>
+						<p>MRN: 12-2-2016</p>
+						<p>Doctor Email:</p>	
+					</div>
+					<div>
+						<img src="images/logo2.png">	
+					</div>
+				</div>
+				<div class="image_box image_box2">
+					<div class="image_info">
+						<img src="" class="image">
+						<p class="title"></p>
+					</div>
+				</div>
+				<p class="line">Page <span class="pageNumber">2</span> / <span class="allPage"></span></p>
+			</div>
+		</div>
+
+
+
+		<!-- From here page 3,4,5 ... -->
+		<div id="otherPages">
+			<div class="page ">
+				<div class="subpage">
+					<div class="image_box">
+						<div class="image_info">
+							<img src="" class="image">
+							<p class="title"></p>
+						</div>
+					</div>
+					<p class="line">Page <span class="pageNumber">3</span> / <span class="allPage"></span></p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- LAST PAGE / LAST PAGE / LAST PAGE / LAST PAGE -->
+		<div id="lastPage" class="page ">
+			<div class="subpage">
+				<pre>
+					Congratulations, you have just completed the surgical phase and entered the recovery/rehabilitation phase of your operative experience.
+					Please follow the post operative instructions below to ensure an optimal recovery.
+					
+					General Information:
+					If any unexpected problems occur, please call our office.
+					You should have someone assist you for the next few days.
+					Anesthesia effects can be felt for over 36 hours.
+					We reviewed your surgical findings with you in the recovery room, it is not unusual that you may not remember this. We will discuss your surgical findings at your follow up appointment. If you have not already scheduled your follow up appointment, please do so.
+					
+					Dressings:
+					A clean and sterile dressing was placed on your wounds. You may remove this 48 hours after surgery. Place Band-Aids over your small wounds and sutures. Replace these daily. Keep your dressings clean and dry during the first 2 days. Keep wounds clean and dry until your sutures are removed. If you cover these and keep them dry, you may shower.
+					
+					Activity:
+					Please follow the Post Operative activity instructions you have been given.
+					
+					Diet:
+					Your regular diet is recommended
+					
+					Medication:
+					You have received a prescription for pain medication. Please follow the pain medication plan discussed. Generally you can expect significant pain improvement by post-op day 3.
+					
+					Questions;
+					You may call the office, we will assist you. If you experience fever/chills, excessive bleeding, shortness of breath, chest pain, redness around wounds, nausea or vomiting, please go to the Emergency Room.
+				</pre>
+				<p class="line">Page <span class="pageNumber"></span> / <span class="allPage"></span></p>
+			</div>
+		</div>	
+
+	</div> <!-- End of report -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script/letterPortrait.js"></script>
+	<script>
+			var data = [
+	  {
+	    "desc" : "Violet flower",
+	    "file" : "01.jpg"
+	  },
+	  {
+	    "desc" : "Hong Kong",
+	    "file" : "02.jpg"
+	  },
+	  {
+	    "desc" : "Sunshine in mountain",
+	    "file" : "03.jpg"
+	  },
+	  {
+	    "desc" : "Falling strawbery",
+	    "file" : "04.jpg"
+	  },
+	  {
+	    "desc" : "Pakistan crepe",
+	    "file" : "05.jpg"
+	  },
+	  {
+	    "desc" : "Bike chain",
+	    "file" : "06.jpg"
+	  },
+	  {
+	    "desc" : "King frog",
+	    "file" : "07.jpg"
+	  },
+	  {
+	    "desc" : "Breakfast",
+	    "file" : "08.jpg"
+	  },
+	  {
+	    "desc" : "Stone Hedge",
+	    "file" : "09.jpg"
+	  },
+	  {
+	    "desc" : "Time for beer",
+	    "file" : "10.jpg"
+	  },
+	  {
+	    "desc" : "Light bulb in rain",
+	    "file" : "11.jpg"
+	  },
+	  {
+	    "desc" : "Ever green",
+	    "file" : "12.jpg"
+	  },
+	  {
+	    "desc" : "Black berry",
+	    "file" : "13.jpg"
+	  },
+	  {
+	    "desc" : "Dad and son walking",
+	    "file" : "14.jpg"
+	  },
+	  {
+	    "desc" : "Coffee beans",
+	    "file" : "15.jpg"
+	  },
+	  {
+	    "desc" : "Cherry Blossom",
+	    "file" : "16.jpg"
+	  },
+	  {
+	    "desc" : "Gecko on stone",
+	    "file" : "17.jpg"
+	  },
+	  {
+	    "desc" : "Dad car",
+	    "file" : "18.jpg"
+	  },
+	  {
+	    "desc" : "Surfing in Danang",
+	    "file" : "19.jpg"
+	  },
+	  {
+	    "desc" : "Cookie",
+	    "file" : "20.jpg"
+	  },
+	  {
+	    "desc" : "Desert fox",
+	    "file" : "21.jpg"
+	  },
+	  {
+	    "desc" : "Dump man",
+	    "file" : "22.jpg"
+	  },
+	  {
+	    "desc" : "Green hope",
+	    "file" : "23.jpg"
+	  },
+	  {
+	    "desc" : "White lamp",
+	    "file" : "24.jpg"
+	  },
+	  {
+	    "desc" : "Morning Farm",
+	    "file" : "25.jpg"
+	  },
+	  {
+	    "desc" : "Silent wave",
+	    "file" : "26.jpg"
+	  },
+	  {
+	    "desc" : "Light house",
+	    "file" : "27.jpg"
+	  },
+	  {
+	    "desc" : "Oceana",
+	    "file" : "28.jpg"
+	  },
+	  {
+	    "desc" : "Sky scrapper",
+	    "file" : "29.jpg"
+	  },
+	  {
+	    "desc" : "Mang Tay",  
+	    "file" : "30.jpg"
+	  }
+	];
+	// getImage(1,1);
+	</script>
+</body>

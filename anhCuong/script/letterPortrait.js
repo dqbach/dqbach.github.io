@@ -1,20 +1,18 @@
-	var origin = $('#otherPages').html(); // gán biến origin là trạng thái HTML đầu tiên
+	var origin = $('#report').html(); // gán biến origin là trạng thái HTML đầu tiên
 
 	function getImage(totalImage,imagesPerPage){
 		//reset lại lúc đầu tiên
-		$('#otherPages').html(origin);
+		$('#report').html(origin);
 
 		// gọi ra số trang sẽ hiển thị
-		var numberOfPage = Math.ceil(totalImage/imagesPerPage) ; 
-
+		var numberOfPage = Math.ceil(totalImage/imagesPerPage)-1 ;
 		//tạo số trang
 		var content = '' ;
 		for (var i=0 ; i<numberOfPage ; i++ ){
 			content += $('#otherPages').html();
 		}
-
 		//tạo ảnh 
-		for (var i=numberOfPage ; i<totalImage ; i++ ){
+		for (var i=numberOfPage ; i<totalImage-1 ; i++ ){
 			content += $('.image_box').html();
 		}
 		$('#otherPages').html(content);
@@ -28,7 +26,7 @@
 
 		// chia ảnh ra các trang
 		var image_box = $('.image_box')
-		for (var i=0 ; i<numberOfPage ; i++){
+		for (var i=0 ; i<=numberOfPage ; i++){
 			for(var j=0 ; j<imagesPerPage ; j++){
 				var k = j+i*imagesPerPage ;
 				$($('.image_info')[k]).appendTo(image_box[i]);
@@ -38,8 +36,8 @@
 		//số trang
 		var allPage =$('.allPage');
 		var pageNumber =$('.pageNumber');
-		for (var i=0 ; i<=numberOfPage ; i++) {
-			allPage[i].innerText = numberOfPage+1 ;
+		for (var i=0 ; i<=numberOfPage+2 ; i++) {
+			allPage[i].innerText = numberOfPage+3 ;
 			pageNumber[i].innerText = i+1 ;
 		}
 		
@@ -52,13 +50,9 @@
 				}
 				break;
 			case 3 : 
-				for (var i=0 ; i<totalImage ; i++) {
-					$('.image_info')[i].className += ' b3' ;
-				}
-				break;
 			case 4 :
 				for (var i=0 ; i<totalImage ; i++) {
-					$('.image_info')[i].className += ' b4' ;
+					$('.image_info')[i].className += ' b3' ;
 				}
 				break;	
 			case 5 :
@@ -69,13 +63,9 @@
 				break;
 			case 7 :
 			case 8 :
-				for (var i=0 ; i<totalImage ; i++) {
-					$('.image_info')[i].className += ' b7' ;
-				}
-				break;
 			case 9 :
 				for (var i=0 ; i<totalImage ; i++) {
-					$('.image_info')[i].className += ' b9' ;
+					$('.image_info')[i].className += ' b7' ;
 				}
 				break;
 			case 10 :
