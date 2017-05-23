@@ -29,24 +29,19 @@ p {
 }
 .image_box {
 	width: 100% ;
-	height: 911px ;
+	height: 768px;
 	display: table-cell ;
 	text-align: center ;
 	vertical-align: middle
 }
 .image_info {
 	display: inline-block ;
-	padding-right: 1mm ; 
-	border: 1px solid orange ;
-	border-radius: 10px ; 
-	padding: 55px 20px;
-	margin: 0.5% ;
 }
 img {
 	width: 100%
 }
 .image{
-	padding-bottom: 21px;
+	margin-bottom: 1%;
 }
 .displayNone {
 	display: none
@@ -55,25 +50,25 @@ img {
 	display: block
 }
 .b2 {
-	width: 69%;
-    margin: 0.5%;
-    padding: 10px
+	width: 72%;
+    margin: 1.4%;
 }
 .b3 {
-	width: 49%;
-    padding: 55px 10px
+	width: 48%;
+    margin: 6% 1%;
 }
 .b5 {
-	width: 43%;
-    padding: 5px;
+	width: 48%;
+    margin: 0% 1%;
 }
 .b7 { 
-	width: 32.33%;
-    padding: 30px 5px;
+	width: 32%;
+    margin: 4% 0.65%;
 }
 .b10 { 
-	width: 29%;
-    padding: 5px;
+	width: 32%;
+    margin: 1.1% 0.65%;
+
 }
 @page {
 	size: letter ;
@@ -170,7 +165,6 @@ section *{
 	width: 90%;
 	padding: 10px;
 	margin: 5px 0;
-
 }
 .bottomImageHeader {
 	border: 1px solid #f89828;
@@ -185,8 +179,6 @@ section *{
 	width: 99px;
 	height: 107px;
 	margin: 0 0 10px 40px;
-
-
 }
 .bottomImageCaption {
 	border: 1px solid #f89828;
@@ -198,37 +190,30 @@ section *{
 
 /* SECOND PAGE / SECOND PAGE / SECOND PAGE / SECOND PAGE / SECOND PAGE / SECOND PAGE / SECOND PAGE */
 
-.image_box2 {
-	height: 768px;
-}
-.image_box2 .image{
-	/*padding-bottom: 0px;*/
-}
-.image_box2 .image_info {
-	/*padding: 10px 5px 5px 5px ;*/
-}
-#doctorInfo {
+
+.doctorInfo {
 	width: 100%;
 	height: 143px;
 	background: #CBD2E4;
 	border-radius:10px; 
+	font-weight: bold;
 }
-#doctorInfo p {
+.doctorInfo p {
 	text-align: left;
 	padding: 8px 0 8px 20px;
 }
-#doctorInfo div:nth-child(1){
+.doctorInfo div:nth-child(1){
 	width: 35%; 
 	height: 100%;
 	float: left;
 }
-#doctorInfo div:nth-child(2){
+.doctorInfo div:nth-child(2){
 	width: 30%; 
 	height: 100%;
 	padding-top: 36px;
 	float: left;
 }
-#doctorInfo div:nth-child(3){
+.doctorInfo div:nth-child(3){
 	width: 35%; 
 	height: 100%;
 	padding-right: 10px;

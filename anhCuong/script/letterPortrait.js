@@ -5,14 +5,14 @@
 		$('#report').html(origin);
 
 		// gọi ra số trang sẽ hiển thị
-		var numberOfPage = Math.ceil(totalImage/imagesPerPage)-1 ;
+		var numberOfPage = Math.ceil(totalImage/imagesPerPage) ;
 		//tạo số trang
 		var content = '' ;
 		for (var i=0 ; i<numberOfPage ; i++ ){
 			content += $('#otherPages').html();
 		}
 		//tạo ảnh 
-		for (var i=numberOfPage ; i<totalImage-1 ; i++ ){
+		for (var i=numberOfPage ; i<totalImage ; i++ ){
 			content += $('.image_box').html();
 		}
 		$('#otherPages').html(content);
@@ -36,8 +36,8 @@
 		//số trang
 		var allPage =$('.allPage');
 		var pageNumber =$('.pageNumber');
-		for (var i=0 ; i<=numberOfPage+2 ; i++) {
-			allPage[i].innerText = numberOfPage+3 ;
+		for (var i=0 ; i<=numberOfPage+1 ; i++) {
+			allPage[i].innerText = numberOfPage+2 ;
 			pageNumber[i].innerText = i+1 ;
 		}
 		
