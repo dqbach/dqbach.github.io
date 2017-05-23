@@ -1,0 +1,114 @@
+<html >
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	body {
+		background: url('bg.jpg') no-repeat;
+		background-size:100%; 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	* {
+		box-sizing: content-box;
+	}
+	main {
+		max-width: 1100px ;
+		margin: auto;
+	}
+	.card {
+		width: 14%;
+		margin: 0.33%;
+		position: relative;
+		float: left;
+		border: 10px solid rgba(255,165,0,0) ;
+		border-radius:10px; 
+		transition: 0.2s ;
+	}
+	.card:hover {
+		border: 10px solid rgba(255,165,0,1) ;
+	}
+	img {
+		width: 100%;
+		backface-visibility: hidden;
+		transition: 1s ;
+	}
+	.front {
+		transform: rotateY(180deg);
+	}
+	.back {
+		position: absolute;
+		top: 0;
+		transform: rotateY(0deg);
+	}
+	.r0 {
+		transform: rotateY(0deg);
+	}
+	.r180 {
+		transform: rotateY(180deg);
+	}
+	</style>
+
+</head>		
+
+<body>
+	<main>
+		<div data-name="" class="card">
+			<img class="front" src="">
+			<img class="back" src="a10.jpg">
+		</div>
+	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		var array = ['a1','a2','a3','a4','a5','a6','a7','a8','a9'];
+		array = array.concat(array) ;
+
+		function shuffle(array) {
+		    var currentIndex = array.length, temporaryValue, randomIndex;
+		    while (0 !== currentIndex) {
+		        randomIndex = Math.floor(Math.random() * currentIndex);
+		        currentIndex -= 1;
+		        temporaryValue = array[currentIndex];
+		        array[currentIndex] = array[randomIndex];
+		        array[randomIndex] = temporaryValue;
+		  	}
+		  return array;
+		}
+		shuffle(array);
+		
+
+
+		var content ='' ;
+		for( var i=0 ; i<array.length ; i++ ){
+			content += $('main').html()
+		}
+		$('main').html(content);
+		for( var i=0 ; i<array.length ; i++ ){
+			$($('.card')[i]).attr('data-name',array[i]);
+			$('.front')[i].src = array[i] + '.jpg' ;
+		}
+
+
+
+
+
+		$('.card').on('click',function(){
+			if ( $('.r0').length<2) {
+				$($(this).children()[0]).addClass('r0') ;
+				$($(this).children()[1]).addClass('r180');	
+				setTimeout(function(){
+					if ( $('.r0').length>1) {
+				 		$('.card').children().removeClass('r0 , r180')
+					}
+				},1100);	
+			}
+				
+		})
+	</script>
+
+</body>			
+</html>
+
+
