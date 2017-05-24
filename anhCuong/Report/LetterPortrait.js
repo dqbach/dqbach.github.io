@@ -1,7 +1,7 @@
 	let origin = $('#report').html() ; // gán biến origin là trạng thái HTML đầu tiên
 
 	function getImage(data,imagesPerPage){
-		const totalImage = data.length ;
+		const totalImage = data.length-21 ;
 		
 		//reset lại lúc đầu tiên
 		$('#report').html(origin);
