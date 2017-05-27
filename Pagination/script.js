@@ -35,7 +35,7 @@ var totalImage = data.length ;
 
 
 // số sản phẩm trên 1 trang
-var imagesPerPage = 7 ;
+var imagesPerPage = 9 ;
 
 // Số trang sẽ phải có là :
 var numberOfPage = Math.ceil(totalImage/imagesPerPage) 
@@ -64,7 +64,7 @@ for (var i=0 ; i<numberOfPage+2 ; i++ ){
       $('ul').append('<li><span> » </span></li>')
     }
     else {
-      $('ul').append('<li><span>' + i + '</span></li>')
+      $('ul').append('<li><span class="">' + i + '</span></li>')
     }
 }
 
@@ -106,17 +106,7 @@ $('span').click(function() {
 				}
 			}
 
-			//Khi ô ảnh ko có ảnh thì sẽ ẩn đi
-			for ( var i =0 ; i<$('img').length ; i++) {
-				if( $('img')[i].src.indexOf("jpg",'png','jpeg')==-1 ){
-					$($('img')[i]).parent().css('display','none')
-				}
-			}
-
-
-
-
-
+			
 
 			//bỏ active thằng cũ
 			for (var i=0 ; i<numberOfPage+1 ; i++){
@@ -131,6 +121,7 @@ $('span').click(function() {
 			}
 
 
+
 			//Nút «
 			if ( $('span')[1].className == 'active' ) {
 				$('span')[0].className = $('span')[0].className.replace("disabled","");
@@ -141,17 +132,26 @@ $('span').click(function() {
 			}
 
 
+
 			//Nút »
 			if ($('span')[numberOfPage].className == 'active') {
 				$('span')[numberOfPage+1].className = $('span')[numberOfPage+1].className.replace("disabled","");
 				$('span')[numberOfPage+1].className += "disabled";
 			}
-			if ($('span')[imagesPerPage-1].className == '') {
-				$('span')[imagesPerPage].className = $('span')[imagesPerPage].className.replace("disabled","");
+			if ($('span')[numberOfPage].className == '') {
+				$('span')[numberOfPage+1].className = $('span')[numberOfPage+1].className.replace("disabled","");
 			}
-  
 
 
-  			
+
+			// trang cuối chỉ hiển ô nào có ảnh
+			for ( var i =0 ; i<$('img').length ; i++) {
+				if( $('img')[i].src.indexOf('jpeg')==-1 ){
+					$($('img')[i]).css('display','none')
+				}
+				else if ( $('img')[i].src.indexOf('jpeg')>-1 ){
+					 $($('img')[i]).css('display','block')
+				}
+			}
 
 });
