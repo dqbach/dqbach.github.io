@@ -43,6 +43,7 @@ span {
 	line-height: 1.3333333;
 	margin-left: -1px;
 	cursor: pointer;
+	display: block;
 }
 li:last-child>span  {
 	border-top-right-radius: 6px;

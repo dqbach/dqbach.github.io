@@ -29,7 +29,7 @@
 	img {
 		width: 100%;
 		backface-visibility: hidden;
-		transition: 1s ;
+		transition: all 0.5s ;
 		border: 5px solid rgba(255,165,0,0) ;
 		border-radius:10px; 
 	}
@@ -59,6 +59,16 @@
 		</div>
 	</main>
 
+
+
+
+
+
+
+
+
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		var array = ['a1','a2','a3','a4','a5','a6','a7','a8','a9'];
@@ -76,6 +86,11 @@
 		  return array;
 		}
 		shuffle(array);
+
+
+
+
+
 		
 		var content ='' ;
 		for( var i=0 ; i<array.length ; i++ ){
@@ -88,18 +103,37 @@
 		}
 
 		var current = '' ;
+
+
 		$('.card').on('click',function(){
+
 			if ( $('.r0').length<2) {
 				$($(this).children()[0]).addClass('r0') ;
-				$($(this).children()[1]).addClass('r180');	
-				setTimeout(function(){
-					if ( $('.r0').length>1) {
-				 		$('.card').children().removeClass('r0 , r180')
-					}
-				},1100);	
+				$($(this).children()[1]).addClass('r180');		
 			}
 			
-			current = $(this).attr('data-name')	
+			if (current == '') {
+				current = $(this)	
+			}
+			else {
+				if (current.attr('data-name') == $(this).attr('data-name')) { 
+					var self = this;
+					setTimeout(function(){ 
+					 	$(current).css('opacity','0') ;
+						$(self).css('opacity','0');
+						current = ''
+					}, 1000);
+				}
+				else {
+					setTimeout(function(){
+				 		$('.card').children().removeClass('r0 , r180')
+
+					},1000);
+					current = ''
+				}
+
+			}
+			
 		})
 
 

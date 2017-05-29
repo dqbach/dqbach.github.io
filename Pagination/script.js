@@ -34,12 +34,14 @@ var data = [
 var totalImage = data.length ;
 
 
+
 // số sản phẩm trên 1 trang
-var imagesPerPage = 9 ;
+var imagesPerPage = 4 ;
+
+
 
 // Số trang sẽ phải có là :
 var numberOfPage = Math.ceil(totalImage/imagesPerPage) 
-
 
 
 
@@ -50,108 +52,161 @@ for (var i=0 ; i<imagesPerPage ; i++ ){
 
 
 
-
-
 //Tạo số trang cho thanh phân trang
-for (var i=0 ; i<numberOfPage+2 ; i++ ){
+for (var i=0 ; i<numberOfPage+4 ; i++ ){
 	if (i==0){
-      $('ul').append('<li><span class="disabled"> « </span></li>')
+      $('ul').append('<li><span> Đầu </span></li>')
     }
     else if (i==1){
-      $('ul').append('<li><span class="active">' + i + '</span></li>')
+      $('ul').append('<li><span> « </span></li>')
     }
-    else if (i==numberOfPage+1){
+    else if (i==2){
+      $('ul').append('<li><span class="active">' + (i-1) + '</span></li>')
+    }
+    else if (i==numberOfPage+2){
       $('ul').append('<li><span> » </span></li>')
     }
+    else if (i==numberOfPage+3){
+      $('ul').append('<li><span> Cuối </span></li>')
+    }
     else {
-      $('ul').append('<li><span class="">' + i + '</span></li>')
+      	$('ul').append('<li><span class="">' + (i-1) + '</span></li>')
     }
 }
+
+
+
+// từ trang 3 trở đi thì ẩn
+for (var i=5 ; i<numberOfPage+2 ; i++ ) {
+	$($('span')[i]).css('display','none')
+}
+
 
 
 //hiện sẵn ra trang 1
 for (var i=0 ; i<imagesPerPage ; i++){
-	$('img')[i].src = data[i].file
+	$('img')[i].src = data[i].file;
 }
+$($('span')[0]).css('visibility','hidden');
+$($('span')[1]).css('visibility','hidden');
+
+
+
 var n = 1 ;
-
-
-
 //ấn vào từng ô
 $('span').click(function() {
-			if (this.innerText != '«' && this.innerText != '»' ){ n = this.innerText ;} // khi ấn vào số
-			else if (this.innerText == '«' && $('span')[1].className == 'active' ){ n = n ;} // ấn back khi 1 đang active
-			else if (this.innerText == '«' && $('span')[1].className != 'active' ){ n = +n - 1 ;} // ấn back khi 1 ko active
-			else if (this.innerText == '»' && $('span')[numberOfPage].className != 'active' ){ n = +n + 1 ;} // ấn next khi số cuối ko active
-			else if (this.innerText == '»' && $('span')[numberOfPage].className == 'active' ){ n = n ; } // ấn next khi số cuối đang active
+
+	if (+this.innerText > 0 ){ //ấn số
+		n = +this.innerText ;
+		displayNone() ;
+		var current = +this.innerText ;
+		displayBlock() ;	
+	}
+	else if (this.innerText == 'Đầu') { // ấn Đầu
+		n = 1 ;
+		displayNone() ;
+		var current = 1 ;
+		displayBlock() ;
+	} 
+	else if (this.innerText == '«'){ // ấn back
+		n = n - 1 ;
+		displayNone() ;
+		var current = n ;
+		displayBlock() ;
+	} 
+	else if (this.innerText == '»'){ // ấn next
+		n = n + 1 ;
+		displayNone() ;
+		var current = n ;
+		displayBlock() ;
+	} 
+	else if (this.innerText == 'Cuối') { // ấn Cuối
+		n = numberOfPage ;
+		displayNone() ;
+		var current = numberOfPage ;
+		displayBlock() ;	
+	} 
+
+
+
+	// ấn , hiện 2 cái đầu và cuối
+	if(n==1) {
+		$($('span')[0]).css('visibility','hidden');
+		$($('span')[1]).css('visibility','hidden');
+	}
+	else {
+		$($('span')[0]).css('visibility','visible');
+		$($('span')[1]).css('visibility','visible');
+	}
+	if(n==numberOfPage ){
+		$($('span')[numberOfPage+2]).css('visibility','hidden');
+		$($('span')[numberOfPage+3]).css('visibility','hidden');
+	}
+	else {
+		$($('span')[numberOfPage+2]).css('visibility','visible');
+		$($('span')[numberOfPage+3]).css('visibility','visible');
+	}	
+
+
+
+	//xóa hết ảnh đi
+  	for (var i=0 ; i<imagesPerPage ; i++) {
+		$('img')[i].src = '';
+	}
+	//cho link ảnh vào
+	for (var i=0 ; i<imagesPerPage ; i++) {
+		var j = i+((n-1)*imagesPerPage) ;
+		if(j == totalImage) {
+			break;
+		}
+		else {
+			$('img')[i].src = data[j].file;
+		}
+	}
+
 			
 
+	//bỏ active cũ
+	for (var i=0 ; i<numberOfPage+2 ; i++){
+		$('span')[i].className = $('span')[i].className.replace("active","");
+	}
+	// hiện active mới
+	if (+this.innerText > 0 ){
+		this.className += "active" ;
+	}
+	else if (this.innerText == '»' || this.innerText == '«') {
+		$('span')[n+1].className += "active" ;
+	}
+	else if (this.innerText == '' && n == '1') {
+		$('span')[2].className += "active"
+	}
+	else if (this.innerText == '' && n == numberOfPage) {
+		$('span')[numberOfPage+1].className += "active"
+	}
 
 
 
-
-			//xóa hết ảnh đi
-  			for (var i=0 ; i<imagesPerPage ; i++) {
-				$('img')[i].src = '';
-			}
-
-			//cho link ảnh vào
-	  		for (var i=0 ; i<imagesPerPage ; i++) {
-	  			var j = i+((n-1)*imagesPerPage) ;
-				if(j == totalImage) {
-					break;
-				}
-				else {
-					$('img')[i].src = data[j].file;
-				}
-			}
-
-			
-
-			//bỏ active thằng cũ
-			for (var i=0 ; i<numberOfPage+1 ; i++){
-				$('span')[i].className = $('span')[i].className.replace("active","");
-			}
-			// cho thằng ấn vào được active
-			if (this.innerText != '«' && this.innerText != '»'){
-				this.className += "active" ;
-			}
-			else if (this.innerText == '»' || this.innerText == '«') {
-				$('span')[n].className += "active" ;
-			}
+	// trang cuối chỉ hiển thị ô nào có ảnh
+	for ( var i =0 ; i<$('img').length ; i++) {
+		if( $('img')[i].src.indexOf('jpeg')==-1 ){
+			$($('img')[i]).css('display','none')
+		}
+		else if ( $('img')[i].src.indexOf('jpeg')>-1 ){
+			$($('img')[i]).css('display','block')
+		}
+	}
 
 
 
-			//Nút «
-			if ( $('span')[1].className == 'active' ) {
-				$('span')[0].className = $('span')[0].className.replace("disabled","");
-				$('span')[0].className += "disabled"
-			}	
-			else if ( $('span')[1].className == '' ) {
-				$('span')[0].className = $('span')[0].className.replace("disabled","");
-			}
-
-
-
-			//Nút »
-			if ($('span')[numberOfPage].className == 'active') {
-				$('span')[numberOfPage+1].className = $('span')[numberOfPage+1].className.replace("disabled","");
-				$('span')[numberOfPage+1].className += "disabled";
-			}
-			if ($('span')[numberOfPage].className == '') {
-				$('span')[numberOfPage+1].className = $('span')[numberOfPage+1].className.replace("disabled","");
-			}
-
-
-
-			// trang cuối chỉ hiển ô nào có ảnh
-			for ( var i =0 ; i<$('img').length ; i++) {
-				if( $('img')[i].src.indexOf('jpeg')==-1 ){
-					$($('img')[i]).css('display','none')
-				}
-				else if ( $('img')[i].src.indexOf('jpeg')>-1 ){
-					 $($('img')[i]).css('display','block')
-				}
-			}
-
+	function displayNone(){
+		for (var i = 2 ; i <numberOfPage+2 ; i++ ){
+			$($('span')[i]).css('display','none')
+		}
+	};
+	function displayBlock(){
+		for (var j = current-1 ; j <=current+3 ; j++ ){	 
+			$($('span')[j]).css('display','block')
+		}
+	};
 });
+
