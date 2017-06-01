@@ -8,12 +8,16 @@
 	width: 770px;
 	margin: 10px auto;
 	overflow: hidden;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	flex-flow: row wrap;
+
 }
 .item {
 	width: 236px;
 	height: 190px;
 	margin: 10px;
-	float: left;
 }
 img {
 	width:100%;
@@ -66,6 +70,11 @@ span:hover{
 	color: #999;
 	cursor: not-allowed;
 	background-color: #fff;
+}
+input {
+    font-size: 20px;
+    padding: 5px;
+    width: 40px;
 }
 
 

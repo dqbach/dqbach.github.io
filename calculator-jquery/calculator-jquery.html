@@ -11,8 +11,8 @@
 		font-family: 'Orbitron', sans-serif;
 	}
 	body {
-		background: url('1.jpg');
-		background: cover ;
+		background: url('2.jpg');
+		background: cover; ;
 		transition: all 1s ease-in-out ;
 
 	}
@@ -70,7 +70,8 @@
 		font-size: 40px;
 	}
 	.change {
-		background:#145f14;		
+		background:#145f14;	
+
 	}
 	</style>
 
@@ -108,7 +109,7 @@
 		<div> <div id='switch' class="button"> +/− </div> </div>
 		<div> <button>0</button> </div>
 		<div> <button>.</button> </div>
-		<div> <button class="square">=</button> </div>
+		<div> <div id ="result" class="square button">=</div> </div>
 	</main>
 
 
@@ -157,9 +158,21 @@
 
 			$('#smile').click(function(){
 				$('body').toggleClass('change');
-
-
 			});
+
+
+			$('#result').click(function(){
+				kq = kq.replace(/×/g, '*').replace(/÷/g, '/');  
+				kq = eval(kq);
+				$('#kq').html(kq);
+			});
+
+
+
+
+
+
+
 
 	</script>
 

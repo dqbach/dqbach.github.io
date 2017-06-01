@@ -21,7 +21,8 @@
 		width: 14%;
 		margin: 0.33%;
 		position: relative;
-		float: left;	
+		float: left;
+		transition: all 0.2s ; 
 	}
 	.card:hover .back , .card:hover .front {
 		border: 5px solid rgba(255,165,0,1) ;
@@ -57,20 +58,22 @@
 			<img class="front" src="">
 			<img class="back" src="a10.jpg">
 		</div>
+
+		<audio id="bg-music">
+    		<source src="bg.mp3" type="audio/mpeg">
+		</audio>
+
+
+
+
+
+
 	</main>
-
-
-
-
-
-
-
-
-
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
+		
+		document.getElementById('bg-music').play();
+
 		var array = ['a1','a2','a3','a4','a5','a6','a7','a8','a9'];
 		array = array.concat(array) ;
 
@@ -105,7 +108,13 @@
 		var current = '' ;
 
 
+
+
+
+		// CLICK
+
 		$('.card').on('click',function(){
+			$(this).css('pointer-events','none');
 
 			if ( $('.r0').length<2) {
 				$($(this).children()[0]).addClass('r0') ;
@@ -121,21 +130,18 @@
 					setTimeout(function(){ 
 					 	$(current).css('opacity','0') ;
 						$(self).css('opacity','0');
-						current = ''
+						current = '' ;
 					}, 1000);
 				}
 				else {
 					setTimeout(function(){
-				 		$('.card').children().removeClass('r0 , r180')
-
+				 		$('.card').children().removeClass('r0 , r180') ;
+				 		current = '' ; 
+				 		$('.card').css('pointer-events','auto');
 					},1000);
-					current = ''
 				}
-
 			}
-			
 		})
-
 
 
 
