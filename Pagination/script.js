@@ -31,8 +31,8 @@ var data = [
 	{"file" : "30.jpeg"},
 ];
 
-var totalImage = data.length ;
 
+var totalImage = data.length ;
 
 // số sản phẩm trên 1 trang
 $('#get').click(function(){
@@ -92,8 +92,6 @@ $('#get').click(function(){
 	for (var i=0 ; i<imagesPerPage ; i++){
 		$('img')[i].src = data[i].file;
 	}
-	// $($('span')[0]).css('visibility','hidden');
-	// $($('span')[1]).css('visibility','hidden');
 	$($('span')[0]).css('display','none');
 	$($('span')[1]).css('display','none');
 
@@ -145,7 +143,7 @@ $('#get').click(function(){
 			$($('span')[0]).css('display','block');
 			$($('span')[1]).css('display','block');
 		}
-		if(n==numberOfPage ){
+		if(n==numberOfPage){
 			$($('span')[numberOfPage+2]).css('display','none');
 			$($('span')[numberOfPage+3]).css('display','none');
 		}
@@ -184,22 +182,23 @@ $('#get').click(function(){
 		else if (this.innerText == '»' || this.innerText == '«') {
 			$('span')[n+1].className += "active" ;
 		}
-		else if (this.innerText == '' && n == '1') {
-			$('span')[2].className += "active"
+		else if (this.innerText == ' Cuối ' ) {
+			$('span')[numberOfPage+1].className += "active" ;
 		}
-		else if (this.innerText == '' && n == numberOfPage) {
-			$('span')[numberOfPage+1].className += "active"
+		else if (this.innerText == ' Đầu ' ) {
+			$('span')[2].className += "active" ;
 		}
+
 
 
 
 		// trang cuối chỉ hiển thị ô nào có ảnh
 		for ( var i =0 ; i<$('img').length ; i++) {
 			if( $('img')[i].src.indexOf('jpeg')==-1 ){
-				$($('img')[i]).css('display','none')
+				$($('img')[i]).parent().css('display','none')
 			}
 			else if ( $('img')[i].src.indexOf('jpeg')>-1 ){
-				$($('img')[i]).css('display','block')
+				$($('img')[i]).parent().css('display','block')
 			}
 		}
 
