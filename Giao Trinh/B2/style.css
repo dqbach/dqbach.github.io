@@ -5,7 +5,7 @@
 	font-family: sans-serif;
 }
 body {
-	background: url('anh/bg.jpg');
+	background-image: url('anh/bg.jpg');
 }
 h1 {
 	margin: 20px;
@@ -23,7 +23,7 @@ h1 {
   	margin: 0 0 20px 0;
   	padding: 30px;
   	text-align: center;
-  	background: white;
+  	background-color: white;
 }
 img {
 	width: 100%;
