@@ -24,10 +24,12 @@ h1 {
   	padding: 30px;
   	text-align: center;
   	background-color: white;
+  	border-radius:20px;
 }
 img {
 	width: 100%;
 	margin-bottom: 30px;
+	border-radius:20px;
 }
 
 
