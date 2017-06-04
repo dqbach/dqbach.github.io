@@ -8,12 +8,12 @@ body {
 	background-image: url('anh/bg.jpg');
 }
 h1 {
-	margin: 20px;
+	padding:20px;
 	width: 100%;
 	text-align: center;
 }
 #columns {
-	columns: 4;
+	column-count: 4;
   	width: 80%;
 	margin: auto;
 }

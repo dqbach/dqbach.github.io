@@ -4,3 +4,82 @@
 	padding: 0; 
 	font-family: sans-serif;
 }
+body {
+	background: url('anh/bg.jpg');
+}
+#menu {
+	width: 65%;
+	margin: auto;
+	text-align: center;
+	background-image:  url('anh/a.png') , url('anh/bg2.jpg') ;
+	background-size:80%; 
+	color:white;
+	padding: 30px;
+	padding-top: 10px;
+}
+h1 {
+	margin: 10px;
+	font-family: 'Sriracha', cursive;
+	font-weight: normal;
+}
+#tieu_de_to {
+	font-family: 'Coiny', cursive;
+	
+	
+}
+#noi_dung_menu {
+	column-count: 3 ;
+	column-gap: 60px; 
+	column-rule: 1px dotted;
+	border: 1px dotted white;
+	border-radius: 30px;
+	padding: 30px 30px 20px 30px;
+}
+ul {
+	list-style-type: none;
+}
+.mon_an {
+	margin: auto;
+	text-align: center;
+}
+.anh1 {
+	background-image: url('anh/1.png') ;
+}
+.anh2 {
+	background-image: url('anh/2.png') ;
+}
+.anh3 {
+	background-image: url('anh/3.png') ;
+}
+.anh4 {
+	background-image: url('anh/4.png') ;
+}
+.anh5 {
+	background-image: url('anh/5.png') ;
+}
+.anh6 {
+	background-image: url('anh/6.png') ;
+}
+.anh {
+	width: 70%;
+	height: 100px;
+	margin: auto;
+	background-size:contain; 
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+.duong_ke {
+	border-top: 1px dotted white;
+	margin: 30px 0;
+}
+p {
+	font-family: 'Itim', cursive;
+	text-align: left;
+	margin-bottom: 10px; 
+	font-size: 18px;
+}
+span {
+	font-size:22px;
+	color: #dc872d;
+	font-weight:bold;  
+}
