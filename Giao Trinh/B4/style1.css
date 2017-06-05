@@ -6,16 +6,13 @@
 }
 div {
 	width: 100%;
-	display: flex;
-	justify-content:center;
+	text-align: center;
 	
 }
 ul {
 	list-style-type: none ;
 	margin: 100px 0 ;
-}
-ul ul {
-	
+	display: inline-block;
 }
 li {
 	float: left;
