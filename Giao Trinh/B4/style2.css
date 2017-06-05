@@ -5,17 +5,17 @@
 	font-family: sans-serif;
 }
 div {
-	width: 100%;
+	width: 20%;
 	display: flex;
 	justify-content:center;
-	
+	float: left;
 }
 ul {
 	list-style-type: none ;
-	margin: 100px 0 ;
+	margin: 70% 0 ;
 }
 li {
-	float: left;
+
 }
 a {
 	text-decoration: none;
@@ -23,59 +23,59 @@ a {
 	transition: all 0.3s ;
 	font-weight:bold;
 	color: #b5b5b5;
+	padding: 30px;
 }
 
 .menu1 a {
 	padding: 30px;
-	margin: 5px;
-	border-bottom: 3px solid white
+	transition: all 0.1s ;
+	border:3px solid white ;
 }
 .menu1 a:hover {
-	border-bottom: 3px solid #d94f5c ;  
+	border: 3px solid #d94f5c ;  
 	color: #d94f5c;
 }
 .menu2 , .menu4 {
 	background: #2A282B ; 
 }
 .menu2 a {
-	color:#d94f5c;
-	padding: 30px;
-	margin: 5px;
+	padding: 30px 60px 30px 0;
+	border-bottom: 3px solid #d94f5c ;
+	color:#d94f5c; 
 }
 .menu2 a:hover {
+	padding: 30px 30px 30px 30px;
 	background: #d94f5c ;  
 	color: white;
 }
 .menu3 a {
-	padding: 30px;
-	border-top: 3px solid white ;
-	border-bottom: 3px solid #d94f5c ;	
-	border-right:3px solid white;
-	border-left:3px solid white;
+	border-top:3px solid white ;
+	border-bottom:3px solid white ;
 }
 .menu3 a:hover {
-	border-top: 3px solid #d94f5c ;
-	border-bottom: 3px solid white ;
-	border-right:3px solid #d94f5c;
-	border-left:3px solid #d94f5c;
-	color:#d94f5c;
+	padding: 10px 30px ;
+	margin: 20px 0;
+	border-top:3px solid #d94f5c ;
+	border-bottom:3px solid #d94f5c ;
+	color: #d94f5c;
 }
 .menu4 a {
-	padding: 30px;
-	background: #d94f5c ;
-	color: white;  
+	padding: 30px 40px ;
+	background:#d94f5c ;
+	color:white; 
 }
 .menu4 a:hover {
-	margin: 0 30px;
-
+	background:none ;
+	color:#d94f5c; 
+	padding: 30px 0 30px 80px;
+	margin: 5px 0 ;  
 }
 .menu5 a {
-	padding: 30px;
-	border-top: 3px solid white ;
-	border-bottom: 3px solid #d94f5c ;	
+	background:none ;
+	color:#d94f5c; 
 }
 .menu5 a:hover {
-	color:#d94f5c;
-	padding: 45px 30px;
-	border-top: 3px solid #d94f5c ;
+	background:#d94f5c ;
+	padding: 50px 30px;
+	color:white; 
 }
