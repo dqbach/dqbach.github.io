@@ -4,9 +4,12 @@
 	padding: 0; 
 	font-family: sans-serif;
 }
+body{
+	background: #f2f2f2;
+}
 .menu{
 	text-align: center;
-	padding: 250px 0;
+	padding: 230px 0;
 }
 ul {
 	list-style-type: none;
@@ -124,8 +127,23 @@ a {
 	float: left;
 }
 
+/*-------------------------------------------------------------------------*/
 
+#menu6 {
+	position: fixed;
+	top:50%;
+	left:0%;
+	margin-top: -129px ;
+}
 
-
-
-
+#menu6 a{
+	padding: 15px 25px 15px  5px ;
+	color: #F16767;
+	border-bottom: 3px solid #F16767;
+	border-top: 3px solid #F16767;
+	margin-top: -3px;
+}
+#menu6 a:hover {
+	background: #F16767;
+	color:white;
+}

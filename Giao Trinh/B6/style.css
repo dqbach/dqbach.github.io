@@ -1,0 +1,18 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0; 
+	font-family: sans-serif;
+}
+@keyframes ride {
+	0% { transform:translateX(0px) }
+	100% { transform:translateX(-1489px) }
+}
+div {
+	height: 100px;
+	width: 124px;
+	overflow: hidden;
+}
+img {
+	animation: ride .5s steps(12) infinite;
+}
