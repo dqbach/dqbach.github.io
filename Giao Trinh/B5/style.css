@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0; 
+	font-family: sans-serif;
+}
+.menu{
+	text-align: center;
+	padding: 250px 0;
+}
+ul {
+	list-style-type: none;
+	display: inline-block;
+}
+a {
+	text-decoration: none;
+	padding: 30px;
+	display: block;
+	font-weight:bold;
+	color: #e4987a;
+	transition: 0.3s;
+}
+.menuCha a:hover {
+	background: #F16767 ;
+	color: white;
+}
+.dropDown {
+	position: relative;
+}
+.menuCon {
+	position: absolute;
+	left: 0;
+	height: 0px;
+	overflow: hidden;
+	opacity: 0 ;
+	transition: 0.5s;
+}
+.menuCon a {
+	background: #F7C96B ;
+	color: white;
+}
+.menuCon a:hover {
+	background: #15C2D2;
+	color: white;
+}
+.dropDown:hover > a {
+	background: #F16767 ;
+	color: white;
+}
+/*-------------------------------------------------------------------------*/
+
+#menu1 li , #menu2 li {
+	float:left;
+}
+.menuCon1 {
+	width: 300%;
+}
+.menuCon1 li{
+	width: 33.33%;
+} 
+.dropDown1:hover .menuCon1{
+	height: 100%;
+	opacity: 1;
+}
+/*-------------------------------------------------------------------------*/
+
+#menu2 , #menu4  {
+	background: #33334C ;
+} 
+.menuCon2 {
+	width: 100%;
+}
+.menuCon2 li{
+	width: 100%;
+	clear: both;
+} 
+.dropDown2:hover .menuCon2{
+	height: 300%;
+	opacity: 1;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.menuCon3 {
+	position: static;
+	width: 100%;
+}
+.dropDown3:hover .menuCon3{
+	height: 234px;
+	opacity: 1;
+}
+.dropDown3 {
+	height: 78px !important;
+	overflow:hidden;
+	transition: 0.5s;
+}
+.dropDown3:hover {
+	height: 312px !important;
+}
+/*-------------------------------------------------------------------------*/
+
+.menuCon4 {
+	width: 100%;
+	left: 100%;
+	top:0;
+}
+.dropDown4:hover .menuCon4{
+	height: 300%;
+	opacity: 1;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.menuCon5 {
+	width: 300%;
+	left: 100%; 
+    top: 0;
+}
+.dropDown5:hover .menuCon5 {
+	opacity: 1;
+	height: 100% ;
+}
+.menuCon5 li {
+	float: left;
+}
+
+
+
+
+
+
