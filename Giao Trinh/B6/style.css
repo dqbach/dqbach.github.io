@@ -141,7 +141,7 @@ h2	{
 	transform: rotateX(0deg);
 	background: rgba(255, 138, 0, 0.6);
 }
-.transform h1  {
+.rotateX h1 , .rotateY h1 , .rotateZ h1 {
 	opacity: 0;
 	transition: 1s ;
 }
