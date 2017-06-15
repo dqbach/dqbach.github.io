@@ -4,7 +4,7 @@
 		const totalImage = data.length ;
 		
 		//reset lại lúc đầu tiên
-		//$('#report').html(origin);  //Cần phải bỏ lệnh này không là Vue không chạy được
+		$('#report').html(origin);
 
 		// gọi ra số trang sẽ hiển thị ảnh
 		let numberOfPage = Math.ceil(totalImage/imagesPerPage)
@@ -133,10 +133,10 @@
 			$('#bottomImageCaption2').html($('#bottomImageCaption2').text().substring(0,41)+' ...');
 		}
 	}
+ 
+ 	
 
-
-
-
+ 	
 	
 
 

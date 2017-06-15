@@ -13,7 +13,7 @@
 .page {
     width: 215.9mm;
     height: 279.4mm;
-    padding: 15mm;
+    padding: 10mm;
     margin: 10mm auto;
     border: 1px #D3D3D3 solid;
     border-radius: 5px;
@@ -22,8 +22,8 @@
     page-break-after: always;
 }
 .subpage {
-	height: 249mm;
-	/*outline: 15mm #FFEAEA solid;*/
+	height: 259mm;
+	/*outline: 10mm #FFEAEA solid;*/
 }
 p {
 	text-align: center;
@@ -34,13 +34,14 @@ p {
 }
 .image_box {
 	width: 100% ;
-	height: 768px;
-	display: table-cell ;
-	text-align: center ;
-	vertical-align: middle
+	height: 807px;
+	display: flex ;
+	justify-content: center ;
+	align-items:center;
+	flex-flow: row wrap;
 }
 .image_info {
-	display: inline-block ;
+	width: 100% ;
 }
 img {
 	width: 100% ;
@@ -55,24 +56,23 @@ img {
 	display: block
 }
 .b2 {
-	width: 72%;
-    margin: 1.4%;
+	width: 70%;
 }
 .b3 {
 	width: 48%;
-    margin: 6% 1%;
+    margin: 0 1%;
 }
 .b5 {
-	width: 48%;
-    margin: 0% 1%;
+	width: 45%;
+    margin: 0 2.5%;
 }
 .b7 { 
 	width: 32%;
-    margin: 4% 0.65%;
+    margin:0 0.65%;
 }
 .b10 { 
 	width: 32%;
-    margin: 1.1% 0.65%;
+    margin:0 0.65%;
 
 }
 @page {
@@ -92,13 +92,13 @@ img {
 
 /* FIRST PAGE / FIRST PAGE / FIRST PAGE / FIRST PAGE / FIRST PAGE / FIRST PAGE */
 section{
-	height: 906px;
+	height: 949px;
 	overflow:hidden;
 }
 
 #logo_box {
-	width: 450px ;
-	height: 125px ;
+	width: 482px ;
+	height: 142px ;
 	background: white;
 	padding: 2%;
 	display: flex;
@@ -106,16 +106,17 @@ section{
 	align-items: center;
 	float: left;
 	margin-bottom: 3px; 
-}
-#reportLogo{
+}	
+#reportLogo , .doctorInfoLogo{
 	width: auto;
 	max-width: 100%;
+	cursor: pointer;
  /* 	height : auto;
   	max-height: 100%;*/
 }
 #topDoctorText {
-	width: 220px ;
-	height: 125px ;
+	width: 250px ;
+	height: 142px ;
 	border: 1px solid #f89828;
 	float: right;
 	padding: 10px;
@@ -125,16 +126,16 @@ section{
 	margin-left:6px; 
 }
 #greetingText {
-	width: 474px;
-	height: 280px ;
+	width: 482px;
+	height: 316px ;
 	border: 1px solid #f89828;
 	float: left;
 	padding: 10px;
 	margin: 3px 0;
 }
 #topDoctorImageBox{
-	width: 220px;
-	height: 233px ;
+	width: 250px;
+	height: 270px ;
 	border: 1px solid #f89828;
 	float: right;
 	margin: 3px 0 3px 6px;
@@ -143,7 +144,7 @@ section{
 	display: flex;
 }
 #bottomDoctorText {
-	width: 220px;
+	width: 250px;
 	border: 1px solid #f89828;
 	float: right;
 	padding: 10px;
@@ -166,7 +167,7 @@ section{
 }
 .bottomText {
 	border: 1px solid #f89828;
-	width: 47%;
+	width: 48%;
 	padding: 10px;
 	float: left;
 	margin: 3px 0;
@@ -178,7 +179,7 @@ section{
 
 } 
 .bottom {
-	width: 47%;
+	width: 48%;
 	float: left;
 	text-align: center;
 }
@@ -210,13 +211,57 @@ section{
 	display: inline-block;
 	margin-top: 3px 
 }
+.hover , .hover2 {
+	transition: 0.3s;
+	cursor: pointer;
+}
+.hover:hover {
+	background:#fbddb9 !important;
+	color: black !important;
+}
+.hover2:hover img{
+	filter:blur(5px);
+}
+#topDoctorImageBox , .bottomImageBox , #logo_box{
+	position: relative;
+}
+.upload{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 92px;
+	margin-left: -46px;
+	margin-top: -25px;
+	background: url(up.png) top  no-repeat;
+	background-size: 40%; 
+	padding-top:40px;
+	opacity: 0;
+	transition: 0.3s;
+}
+#topDoctorImageBox .upload   {
+	width: 102px;
+	margin-left: -51px;
+	padding-top:50px;
+}
+#logo_box .upload {
+	width: 146px;
+	margin-left: -73px;
+	padding-top:50px;
+	background-size: 27%; 
+}
+.hover2:hover .upload {
+	opacity: 1;
+}
+
+
+
 
 /* SECOND PAGE / SECOND PAGE / SECOND PAGE / SECOND PAGE / SECOND PAGE / SECOND PAGE / SECOND PAGE */
 
 
 .doctorInfo {
 	width: 100%;
-	height: 143px;
+	height: 140px;
 	background: #CBD2E4;
 	border-radius:10px; 
 	/*font-weight: bold;*/
@@ -225,31 +270,25 @@ section{
 	text-align: left;
 	padding: 8px 0 8px 20px;
 }
-.doctorInfo div:nth-child(1){
-	width: 30%; 
+.doctorInfo div{
+	width: 33.33%; 
 	height: 100%;
-	float: left;
-}
-.doctorInfo div:nth-child(2){
-	width: 36%; 
-	height: 100%;
-	padding-top: 33px;
-	float: left;
-}
-.doctorInfo div:nth-child(3){
-	width: 34%; 
-	height: 100%;
-	padding-right: 10px;
 	float: left;
 	display: flex;
-	align-items:center;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: row wrap;
+}
+.doctorInfo div:nth-child(3){
+	padding-right: 20px;
+	justify-content: flex-end;
 }
 
 /* LAST PAGE / LAST PAGE / LAST PAGE / LAST PAGE / LAST PAGE / LAST PAGE / LAST PAGE / LAST PAGE */
 
 pre {
     white-space: pre-line;
-    height: 906px;
+    height: 950px;
 }
 
 
