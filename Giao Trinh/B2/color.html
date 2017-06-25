@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			border-radius:50%;
+			background-color:green;
+			position: absolute; 
+			left: 50%;
+			top:150px;
+			margin-left: -300px;
+			transform-origin: 250% 250% ;
+		}
+
+
+		/* Em viết mã màu vào sao cho giống bài mẫu nhất có thể nhé */
+		.mau1 {
+			background-color:#fef200;
+		}
+		.mau2 {
+			background-color:#ffd302;
+		}
+		.mau3 {
+			background-color:#fcb215;
+		}
+		.mau4 {
+			background-color:#f7921c;
+		}
+		.mau5 {
+			background-color:#f4761f;
+		}
+		.mau6 {
+			background-color:#f05423;
+		}
+		.mau7 {
+			background-color:#ed1b24; 
+		}
+		.mau8 {
+			background-color:#cf233b;
+		}
+		.mau9 {
+			background-color:#b12951; 
+		}
+		.mau10 {
+			background-color:#942c5f;
+		}
+		.mau11 {
+			background-color:#792e71;
+		}
+		.mau12 {
+			background-color:#592f81;
+		}
+		.mau13 {
+			background-color:#303092;
+		}
+		.mau14 {
+			background-color:#025f88;
+		}
+		.mau15 {
+			background-color:#008375;
+		}
+		.mau16 {
+			background-color:#00a650;
+		}
+		.mau17 {
+			background-color:#5cbb47;
+		}
+		.mau18 {
+			background-color:#b8d432;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="mau1"></div>
+	<div class="mau2"></div>
+	<div class="mau3"></div>
+	<div class="mau4"></div>
+	<div class="mau5"></div>
+	<div class="mau6"></div>
+	<div class="mau7"></div>
+	<div class="mau8"></div>
+	<div class="mau9"></div>
+	<div class="mau10"></div>
+	<div class="mau11"></div>
+	<div class="mau12"></div>
+	<div class="mau13"></div>
+	<div class="mau14"></div>
+	<div class="mau15"></div>
+	<div class="mau16"></div>
+	<div class="mau17"></div>
+	<div class="mau18"></div>
+
+
+
+	<script>
+		var div = document.getElementsByTagName('div') ;
+		for (var i=0 ; i<25 ; i++) {
+			var j = i*20
+			div[i].style.transform='rotate('+j+'deg)' ;
+		}
+	</script>
+
+</body>
+</html>

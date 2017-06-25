@@ -1,0 +1,56 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0; 
+}
+#thoi_khoa_bieu {
+	width: 1200px;
+	margin: auto;
+}
+#tieu_de{
+	background-image: url('1.jpg');
+	background-size: 100% ;
+	background-position: center;
+	border: 1px solid white;
+}
+h1 {
+	text-align: center;
+	color: #5c191d;
+	font-size: 40px;
+	margin:300px; 
+	margin-top:100px;
+	margin-bottom: 100px; 
+}
+ul {
+	width: 14.28%;
+	float: left;
+	list-style-type: none;
+}
+li {
+	padding: 30px;
+	border: 1px solid white;
+	color: #5c191d;
+	font-size: 20px; 
+	text-align: center;
+}
+.danhsach1 {
+	background: #eceaeb;
+}
+.danhsach2 {
+	background: #f8e6e4;
+}
+.danhsach3 {
+	background: #ecc5c6;
+}
+.danhsach4 {
+	background: #f8c7c0;
+}
+.danhsach5 {
+	background: #e4a9b8;
+}
+.danhsach6 {
+	background: #f3a8a3;
+}
+.danhsach7 {
+	background: #ffa99d;
+}
