@@ -107,8 +107,8 @@ p {
 .anh6 p {
 	position: absolute;
 	width: 704px;
-	left: 25%; 
-	top:89%;
+	left: 5%; 
+	bottom:5%;
 	font-size: 32px;
 } 
 /*................................................................*/
