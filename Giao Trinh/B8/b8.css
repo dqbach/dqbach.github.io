@@ -10,11 +10,11 @@ img {
 	width: 100%;
 }
 /*................................................................*/
-.tieu-de {
+#tieu-de {
 	position: relative;
 	margin-bottom:100px; 
 }
-.tieu-de p{
+#tieu-de p{
 	position: absolute;
 	font-family: 'Dancing Script', cursive;
 	color: #4d3f33;
@@ -163,3 +163,21 @@ p {
     right: -97%;
 } 
 /*................................................................*/
+
+
+
+
+
+
+
+a {
+	text-decoration: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 5px;
+	background-color: tomato;
+	color: white;
+	border-radius: 5px;
+	font-family: 'Inconsolata', monospace;
+}
