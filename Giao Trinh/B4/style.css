@@ -15,8 +15,7 @@ body {
 	margin: 50px auto;
 	background:url('paper.jpg') no-repeat center; 
 	background-size:100%; 
-	box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.5);
-	
+	/*box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.5);*/
 }
 #picture {
 	width: 35%;

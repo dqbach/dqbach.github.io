@@ -18,7 +18,7 @@
 		margin: auto;
 	}
 	.card {
-		width: 14%;
+		width: 16%;
 		margin: 0.33%;
 		position: relative;
 		float: left;
@@ -48,6 +48,12 @@
 	.r180 {
 		transform: rotateY(180deg);
 	}
+	audio {
+		position: absolute;
+		top: 0%;
+		left: 50%;
+		margin-left: -150px;
+	}
 	</style>
 
 </head>		
@@ -59,16 +65,24 @@
 			<img class="back" src="a10.jpg">
 		</div>
 
-		<audio id="bg-music">
-    		<source src="bg.mp3" type="audio/mpeg">
-		</audio>
-
-
-
-
-
-
 	</main>
+
+	<audio id="bg-music" autoplay controls>
+    		<source src="bg.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="ok">
+    		<source src="ok.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="x">
+    		<source src="x.mp3" type="audio/mpeg">
+	</audio>
+
+
+
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		
@@ -132,6 +146,7 @@
 						$(self).css('opacity','0');
 						current = '' ;
 					}, 1000);
+					document.getElementById('ok').play();
 				}
 				else {
 					setTimeout(function(){
@@ -139,6 +154,7 @@
 				 		current = '' ; 
 				 		$('.card').css('pointer-events','auto');
 					},1000);
+					document.getElementById('x').play();
 				}
 			}
 		})
