@@ -56,7 +56,7 @@ p {
 	margin-bottom:100px;
 }
 /*................................................................*/
-.anh2 , .anh5 , .anh6 , .anh9 , .anh11{
+.anh2 , .anh5 , .anh6 , .anh9 , .anh11 , .anh13{
 	position: relative;
 	margin-bottom: 200px; 
 } 
@@ -163,13 +163,28 @@ p {
     right: -97%;
 } 
 /*................................................................*/
+.anh13 p {
+	position: absolute;
+	bottom:10%;
+	font-size: 32px;
+    left: 7%;
+    text-align: center;
+} 
+/*................................................................*/
+.end {
+	background-image: url('anh/bg2.jpg'); 
+}
+.end p {
+	text-align: center;
+	padding: 200px;
+	margin-bottom: 0; 
+	font-family: 'Inconsolata', monospace;
+	color: white;
+	font-size: 30px;
+}
 
 
-
-
-
-
-
+/*................................................................*/
 a {
 	text-decoration: none;
 	position: fixed;
