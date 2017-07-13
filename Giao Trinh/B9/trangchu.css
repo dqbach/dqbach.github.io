@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Slab', serif;
+}
+ul {
+	list-style-type: none;
+}
+a , span {
+	text-decoration: none;
+	display: inline-block;
+	color: black;
+}
+img {
+	width: 100%;
+}
+/*------------------------------------------------------*/
+.div-tren-cung {
+	background-color: #e8e8e8; 
+	margin-bottom: 30px; 
+	text-align: center;
+}
+.div-tren-cung p {
+	display: inline-block;
+	padding: 18%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+	color: #bd721d;
+}
+.div-tren-cung i {
+	margin-right:10px;
+}
+/*------------------------------------------------------*/
+.ava{
+	width: 240px;
+	height: 240px;
+	margin: auto;
+	background-image: url('anh/ava.jpg');
+	background-position: center;
+	border-radius: 50%;
+}
+.div-ava p {
+	font-family: 'Pattaya', sans-serif;
+	text-align: center;
+	font-size: 70px;
+	color: #af8351;
+	margin-bottom: 50px; 
+}
+/*------------------------------------------------------*/
+.menu {
+	width: 1119px;
+	margin: auto;
+	height: 60px;
+	margin-bottom: 50px; 
+}
+.menu li {
+	float: left;
+}
+.menu a {
+	padding: 20px;
+	padding-left:60px ;
+	padding-right:60px;
+	border: 1px solid #C69F73;
+	margin-right: -1px;
+}
+.menu a:hover {
+	background-color:#C69F73;
+	color: white;
+}
+.menu .active {
+	background-color:#C69F73;
+	color: white;
+}
+/*------------------------------------------------------*/
+.blog1 {
+	width: 1119px;
+	margin: auto;
+	padding: 50px;
+	border: 1px solid #C69F73; 
+	margin-bottom: 50px;
+} 
+.anh img {
+	border-radius: 10px; 
+	margin-bottom: 20px;
+}
+h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
+	text-align: center;
+}
+.blog1 p , .noidung p {
+	margin-bottom: 20px;
+}
+.date , .doc-tiep {
+	border: 1px solid #C69F73;
+	padding:10px; 
+	padding-right:30px; 
+	padding-left:30px;
+	border-radius: 30px;
+}
+.date {
+	background-color:#C69F73;
+	color: white;
+}
+.doc-tiep {
+	float: right;
+	padding-right:50px; 
+	padding-left:50px;
+}
+.doc-tiep:hover {
+	background-color:#C69F73;
+	color: white;
+}
+/*-----------------------------------------------------*/
+.noidung {
+	width: 1119px;
+	margin: auto;
+	
+} 
+.blog {
+	float: left;
+	width: 60%;
+	margin-bottom:200px; 
+}
+.blog2 , .blog3 {
+	padding: 30px;
+	border: 1px solid #C69F73; 
+	margin-bottom:30px;
+}
+/*-----------------------------------------------------*/
+.mucluc {
+	float: right;
+	width: 30%;
+}
