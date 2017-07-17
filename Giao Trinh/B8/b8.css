@@ -1,4 +1,4 @@
-*{
+* {
  	margin:0; 
  	box-sizing:border-box;
  	padding:0;	
@@ -68,6 +68,7 @@ p {
 	font-size: 32px;
 } 
 .text2 {
+	display: inline;
 	background-color: white;
 	font-family: 'Inconsolata', monospace;
 }
