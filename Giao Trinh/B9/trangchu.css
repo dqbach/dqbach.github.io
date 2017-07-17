@@ -64,6 +64,7 @@ img {
 	padding-right:60px;
 	border: 1px solid #C69F73;
 	margin-right: -1px;
+	font-size: 16px;
 }
 .menu a:hover {
 	background-color:#C69F73;
