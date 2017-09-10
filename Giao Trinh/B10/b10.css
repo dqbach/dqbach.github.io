@@ -1,0 +1,127 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+ul {
+	list-style-type: none;
+}
+a , span {
+	text-decoration: none;
+	display: inline-block;
+	color: black;
+}
+img {
+	width: 100%;
+}
+/*------------------------------------------------------*/
+
+.menu-bar {
+	background-color: #C69F73;
+	border: 1px solid #C69F73;
+	height: 67px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+.menu {
+	width: 1046px;
+	margin: auto;
+}
+.menu li {
+	float: left;
+}
+.menu a {
+	padding: 20px;
+	padding-left:70px ;
+	padding-right:70px;
+	font-size: 20px;
+	color: white;
+}
+.menu a:hover {
+	background-color:white;
+	color: #C69F73;
+}
+
+/*------------------------------------------------------*/
+.ava-bar {
+	margin-top: 117px;
+}
+.ava{
+	width: 240px;
+	height: 240px;
+	margin: auto;
+	background-image: url('anh/ava.jpg');
+	background-position: center;
+	border-radius: 50%;
+	margin-bottom: 50px; 
+}
+.ava-bar p {
+	font-family: 'Pattaya', sans-serif;
+	text-align: center;
+	font-size: 70px;
+	color: #af8351;
+	margin-bottom: 50px; 
+}
+/*------------------------------------------------------*/
+.blog1 {
+	width: 1119px;
+	margin: auto;
+	padding: 50px;
+	border: 1px solid #C69F73; 
+	margin-bottom: 50px;
+} 
+.anh img {
+	border-radius: 10px; 
+	margin-bottom: 20px;
+}
+h2 {
+	margin-bottom: 20px;
+	font-size: 30px;
+	text-align: center;
+}
+.blog1 p , .noidung p {
+	margin-bottom: 20px;
+}
+.date , .doc-tiep {
+	border: 1px solid #C69F73;
+	padding:10px; 
+	padding-right:30px; 
+	padding-left:30px;
+	border-radius: 30px;
+}
+.date {
+	background-color:#C69F73;
+	color: white;
+}
+.doc-tiep {
+	float: right;
+	padding-right:50px; 
+	padding-left:50px;
+}
+.doc-tiep:hover {
+	background-color:#C69F73;
+	color: white;
+}
+/*-----------------------------------------------------*/
+.noidung {
+	width: 1119px;
+	margin: auto;
+	
+} 
+.blog {
+	float: left;
+	width: 60%;
+	margin-bottom:200px; 
+}
+.blog2 , .blog3 {
+	padding: 30px;
+	border: 1px solid #C69F73; 
+	margin-bottom:30px;
+}
+/*-----------------------------------------------------*/
+.mucluc {
+	float: right;
+	width: 30%;
+}
