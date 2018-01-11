@@ -25,6 +25,7 @@ h3 {
 	padding-bottom: 30px ;
 	position: relative;
 	display: inline-block;
+	    margin-left: 15px;
 }
 h3::after{
 	content: "";
