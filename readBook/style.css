@@ -74,7 +74,7 @@ header {
     right: 15px;
     top: 10px;
 }
-.search-text {
+#search-text {
 	font-weight: normal;
 	margin-top: 30px;
 	font-size: 30px;
