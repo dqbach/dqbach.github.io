@@ -450,6 +450,7 @@ footer {
 	height: 100vh;
 	overflow: hidden;
 	background: url('images/404.png')center center no-repeat;
+	background-size: 50%;
 }
 ._404_page header {
 	position: fixed;
