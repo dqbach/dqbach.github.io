@@ -449,19 +449,26 @@ footer {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
-	background: url('images/404.png')center center no-repeat;
-	background-size: 50%;
-}
-._404_page header {
-	position: fixed;
-	top:0;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 ._404_page footer{
 	position: fixed;
 	bottom:0;
 	width: 100%;
 }
-
+._404_page section{
+	position: relative;
+}
+._404_page img {
+	max-width: 100%;
+}
+._404_page .book__read {
+	
+}
 
 
 
