@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<style>
 		:root {
 		  	--main-color: #f78f38;
@@ -13,7 +13,7 @@
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
-			font-family: 'Oswald', sans-serif;
+			font-family: 'Quicksand', sans-serif;
 		}
 		img {
 			width: 100%;
@@ -29,52 +29,74 @@
 			color: var(--main-color);
 			display: inline-block;
 		}
+		p {
+			color: #555;
+		}
 		/*-----------------------------------------------------------------------------------------------------*/
-		aside {
+
+		header {
 			position: fixed;
-			width: 150px;
-			height: 100%;
-			box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+			width: 100%;
 			background: white;
 			text-align: center;
+			z-index: 9;
+			top: 0;
+			box-shadow: 0 1px 33px rgba(0,0,0,0.15);
 		}
-		aside div {
-			padding: 30px;
-			border-bottom: 1px solid var(--main-border);
+		header>div {
+			margin:auto;
+			display: inline-flex;
+			align-items: center;
+		} 
+		
+		header>div>img {
+			margin:10px 10px 10px 0;
+			width: 80px;
+			height: 80px;
 		}
-		aside div p {
+		header>div>p {
 			font-size: 20px;
     		color:var(--main-color);
-    		margin-top: 5px;
+    		text-align: left;
 		}
 		.icon {
 			width: 22px;
-			height: 22px;
+			margin-bottom: 10px;
+		}
+		ul {
+			list-style: none;
+			display: flex;
+			margin-left: 100px;
 		}
 		li {
-			border-bottom: 1px solid var(--main-border);
-			padding: 10px;
-			border-right: 3px solid white;
-			font-weight: 200;
+			width: 100px;
+			height: 100px;
+			border-bottom: 3px solid white;
 			cursor: pointer;
 			color: var(--main-color);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-flow: column;
 		}
 		li.active {
-			border-right: 3px solid var(--main-color) ;
+			border-bottom: 3px solid var(--main-color) ;
 		}
 		li:hover {
-			border-right: 3px solid var(--main-color) ;
+			border-bottom: 3px solid var(--main-color) ;
+		}
+		li p {
+			color: var(--main-color)
 		}
 
 		/*-----------------------------------------------------------------------------------------------------*/
 		
 		main {
-			width: calc(100% - 150px);
-			margin-left: 150px;
+			margin-top: 100px;
 		}
 		.home_wrap{
 			display: flex;
-			height: 100vh;
+			height: calc(100vh - 100px);
 			flex-flow: wrap;
 		}
 		.home_wrap div {
@@ -83,14 +105,16 @@
 			font-size: 68px;
 			text-align: center;
 		}
+		.home_wrap div p:first-child {
+			color: var(--main-color)
+		} 
 		.home_wrap div p:last-child {
 			font-size: 20px;
-			color: #555;
 		}
 		
 		.wrap {
 			height: 100vh;
-			padding: 50px;
+			padding: 150px 50px 50px 50px;
 
 		}
 		.wrap>div {
@@ -103,7 +127,7 @@
 		.wrap h1 {
 			text-align: center;
 			color: #eee;
-			line-height: 140px;
+			line-height: 100px;
 			font-size: 60px;
 			font-weight: 300;
 			margin-bottom: 50px; 
@@ -111,21 +135,16 @@
 		.border-block-top {
 		    position: absolute;
 		    background: transparent;
-		    width: 110px;
-		    height: 110px;
+		    width: 80px;
+		    height: 80px;
 		    border-top: 3px solid var(--main-color);
 		    border-left: 3px solid var(--main-color);
 		    left: 20px;
 		    top: 20px;
 		}
 		.abm_wrap img {
-			width: 25%;
-			margin: 0 0 12% 12%; 
-			float: left;
-		}
-		.abm_wrap .info {
-			float:right;
-			margin: 0 12% 12% 0; 
+			width: 300px;
+			height: 300px;
 		}
 		.abm_wrap .info p {
 			margin-bottom:20px; 
@@ -143,19 +162,10 @@
 		/*-----------------------------------------------------------------------------------------------------*/
 
 		.edu_wrap , .exp_wrap ,.csk_wrap{
-			float: left;
-			width: 36%;
+			display: inline-block;
 			letter-spacing: 1px;
 		}
-		.edu_wrap {
-			width: 29%;
-		}
-		.csk_wrap {
-			width: 25%;
-		}
-		.edu_wrap {
-			margin-left: 5%;: 
-		}
+
 		.title{
 			border-left: 2px solid var(--main-color);
 			padding: 0 10px;
@@ -195,14 +205,11 @@
 		.cont_wrap .border-block-top {
 			width: 110px;
 		}
-
-
 		.cont_wrap div div {
 			display: flex;
 			align-items: center;
-			width: 562px;
-			margin: auto;
-				
+			width: 600px;
+			margin: auto;	
 		}
 		.cont_wrap img {
 			width: 80px;
@@ -221,38 +228,58 @@
 			font-weight: 300;
 			letter-spacing: 2px;
 			font-size: 20px;
-			text-align: center;
-			margin-top: 100px;
+			margin-top: 50px;
+		}
+
+
+
+
+		.info_wrap {
+			display: flex;
+			align-items: center;
+			justify-content:space-evenly;
+		}
+		.abm_wrap .info_wrap {
+			height: calc(100% - 150px);
+		}
+		.rsm_wrap .info_wrap {
+			align-items: flex-start;
+		}
+		.cont_wrap .info_wrap {
+			flex-flow: column;
 		}
 
 
 	</style>
 </head>
 <body>
-	<aside>
+	<header>
 		<div>
 			<img src="images/ava.png" alt="">
-			<p>Đỗ<br>Quang Bách</p>
+			<p>Đỗ<br>Quang<br>Bách</p>
+			<ul>
+				<li class="active">
+					<img class="icon" src="images/home.svg" alt="">
+					<p>Home</p>
+				</li>
+				<li>
+					<img class="icon" src="images/user.svg" alt="">
+					<p>About Me</p>
+				</li>
+				<li>
+					<img class="icon" src="images/id.svg" alt="">
+					<p>Resume</p>
+				</li>
+				<li>
+					<img class="icon" src="images/mail.svg" alt="">
+					<p>Contact</p>
+				</li>
+			</ul>
 		</div>
-		<ul>
-			<li class="active">
-				<img class="icon" src="images/home.svg" alt="">
-				<p>Home</p>
-			</li>
-			<li>
-				<img class="icon" src="images/user.svg" alt="">
-				<p>About Me</p>
-			</li>
-			<li>
-				<img class="icon" src="images/id.svg" alt="">
-				<p>Resume</p>
-			</li>
-			<li>
-				<img class="icon" src="images/mail.svg" alt="">
-				<p>Contact</p>
-			</li>
-		</ul>
-	</aside>
+	</header>
+
+
+
 
 	<main>
 		<div class="home_wrap">
@@ -266,14 +293,17 @@
 			<div>
 				<div class="border-block-top"></div>
 				<h1>About Me</h1>
-				<img src="images/ava.png" alt="">
-				<div class="info">
-					<p><span>Họ tên</span><span>Đỗ Quang Bách</span></p>
-					<p><span>Ngày sinh</span><span>16 / 12 / 1987</span></p>
-					<p><span>Địa chỉ</span><span>20 ngõ 389 phố Vọng , Hà Nội</span></p>
-					<p><span>Email</span><span><a href="mailto:doquangbach@gmail.com">doquangbach@gmail.com</a></span></p>
-					<p><span>Điện thoại</span><span><a href="tel:0989778263">0989778263</a></span></p>
+				<div class="info_wrap">
+					<img src="images/ava.png" alt="">
+					<div class="info">
+						<p><span>Họ tên</span><span>Đỗ Quang Bách</span></p>
+						<p><span>Ngày sinh</span><span>16 / 12 / 1987</span></p>
+						<p><span>Địa chỉ</span><span>20 ngõ 389 phố Vọng , Hà Nội</span></p>
+						<p><span>Email</span><span><a href="mailto:doquangbach@gmail.com">doquangbach@gmail.com</a></span></p>
+						<p><span>Điện thoại</span><span><a href="tel:0989778263">0989778263</a></span></p>
+					</div>
 				</div>
+				
 			</div>
 		</div>
 
@@ -281,57 +311,60 @@
 			<div>
 				<div class="border-block-top"></div>
 				<h1>Resume</h1>
-				<div class="edu_wrap">
-					<p class="title">Education</p>
-					<div>
-						<p class="year">2006 - 2009</p>
-						<p>Cao đẳng nghề công nghiệp Hà Nội</p>
+				<div class="info_wrap">
+					<div class="edu_wrap">
+						<p class="title">Education</p>
+						<div>
+							<p class="year">2006 - 2009</p>
+							<p>Cao đẳng nghề công nghiệp Hà Nội</p>
+						</div>
+						<div>
+							<p class="year">2012 - 2015</p>
+							<p>FPT Arena Multimedia</p>
+						</div>
+						<div>
+							<p class="year">2017</p>
+							<p>TechMaster</p>
+						</div>
+						
 					</div>
-					<div>
-						<p class="year">2012 - 2015</p>
-						<p>FPT Arena Multimedia</p>
+					<div class="exp_wrap">
+						<p class="title">Experience</p>
+						<div>
+							<p class="year">2010 - 2012</p>
+							<p>Nhân viên pha chế và Quản lý quầy Bar</p>
+						</div>
+						<div>
+							<p class="year">2012 - 2015</p>
+							<p>Học đồ họa và làm Freelance Graphic Designer</p>
+						</div>
+						<div>
+							<p class="year">2016</p>
+							<p>Nhân viên 3D tại Mopix Animation Studio</p>
+						</div>
+						<div>
+							<p class="year">2017</p>
+							<p>Học code và làm trợ giảng tại TechMaster</p>
+						</div>
+						
 					</div>
-					<div>
-						<p class="year">2017</p>
-						<p>TechMaster</p>
+					<div class="csk_wrap">
+						<p class="title">Coding Skill</p>
+						<p>HTML5</p>
+						<div class="skill-container">
+	                        <div class="skill-percentage skill-1"></div>
+	                    </div>
+	                    <p>CSS3</p>
+						<div class="skill-container">
+	                        <div class="skill-percentage skill-1"></div>
+	                    </div>
+	                    <p>JavaScript</p>
+						<div class="skill-container">
+	                        <div class="skill-percentage skill-2"></div>
+	                    </div>
 					</div>
-					
 				</div>
-				<div class="exp_wrap">
-					<p class="title">Experience</p>
-					<div>
-						<p class="year">2010 - 2012</p>
-						<p>Nhân viên pha chế và Quản lý quầy Bar</p>
-					</div>
-					<div>
-						<p class="year">2012 - 2015</p>
-						<p>Học đồ họa và làm Freelance Graphic Designer</p>
-					</div>
-					<div>
-						<p class="year">2016</p>
-						<p>Nhân viên 3D tại Mopix Animation Studio</p>
-					</div>
-					<div>
-						<p class="year">2017</p>
-						<p>Học code và làm trợ giảng tại TechMaster</p>
-					</div>
-					
-				</div>
-				<div class="csk_wrap">
-					<p class="title">Coding Skill</p>
-					<p>HTML5</p>
-					<div class="skill-container">
-                        <div class="skill-percentage skill-1"></div>
-                    </div>
-                    <p>CSS3</p>
-					<div class="skill-container">
-                        <div class="skill-percentage skill-1"></div>
-                    </div>
-                    <p>JavaScript</p>
-					<div class="skill-container">
-                        <div class="skill-percentage skill-2"></div>
-                    </div>
-				</div>
+				
 			</div>
 		</div>
 
@@ -339,15 +372,18 @@
 			<div>
 				<div class="border-block-top"></div>
 				<h1>Contact</h1>
-				<div>
-					<a href="tel:0989778263"><img src="images/phone.svg" alt=""></a>
-					<a href="tel:0989778263">0989778263</a>
+				<div class="info_wrap">
+					<div>
+						<a href="tel:0989778263"><img src="images/phone.svg" alt=""></a>
+						<a href="tel:0989778263">0989778263</a>
+					</div>
+					<div>
+						<a href="mailto:doquangbach@gmail.com"><img src="images/mail.svg" alt=""></a>
+						<a href="mailto:doquangbach@gmail.com">doquangbach@gmail.com</a>
+					</div>
+					<p>Cảm ơn anh , chị đã dành thời gian .</p>
 				</div>
-				<div>
-					<a href="mailto:doquangbach@gmail.com"><img src="images/mail.svg" alt=""></a>
-					<a href="mailto:doquangbach@gmail.com">doquangbach@gmail.com</a>
-				</div>
-				<p>Cảm ơn anh , chị đã dành thời gian .</p>
+				
 			</div>
 		</div>
 
