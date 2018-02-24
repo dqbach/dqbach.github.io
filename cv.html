@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+	<style>
+		:root {
+		  	--main-color: #f78f38;
+		  	--main-border:#eaeaea;
+		}
+		body,body * {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Oswald', sans-serif;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+		body {
+			height: 100vh;
+			background: url('http://lmpixels.com/demo/unique/unique-vcard/images/bg.png') center;
+			background-size: 100% ; 
+		}
+		a {
+			text-decoration: none;
+			color: var(--main-color);
+			display: inline-block;
+		}
+		/*-----------------------------------------------------------------------------------------------------*/
+		aside {
+			position: fixed;
+			width: 150px;
+			height: 100%;
+			box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+			background: white;
+			text-align: center;
+		}
+		aside div {
+			padding: 30px;
+			border-bottom: 1px solid var(--main-border);
+		}
+		aside div p {
+			font-size: 20px;
+    		color:var(--main-color);
+    		margin-top: 5px;
+		}
+		.icon {
+			width: 22px;
+			height: 22px;
+		}
+		li {
+			border-bottom: 1px solid var(--main-border);
+			padding: 10px;
+			border-right: 3px solid white;
+			font-weight: 200;
+			cursor: pointer;
+			color: var(--main-color);
+		}
+		li.active {
+			border-right: 3px solid var(--main-color) ;
+		}
+		li:hover {
+			border-right: 3px solid var(--main-color) ;
+		}
+
+		/*-----------------------------------------------------------------------------------------------------*/
+		
+		main {
+			width: calc(100% - 150px);
+			margin-left: 150px;
+		}
+		.home_wrap{
+			display: flex;
+			height: 100vh;
+			flex-flow: wrap;
+		}
+		.home_wrap div {
+			margin:auto;
+			color: var(--main-color);
+			font-size: 68px;
+			text-align: center;
+		}
+		.home_wrap div p:last-child {
+			font-size: 20px;
+			color: #555;
+		}
+		
+		.wrap {
+			height: 100vh;
+			padding: 50px;
+
+		}
+		.wrap>div {
+			background: white;
+			height: 100%;
+			box-shadow: 0 1px 33px rgba(0,0,0,0.15);
+			position: relative;
+			overflow: auto;
+		}
+		.wrap h1 {
+			text-align: center;
+			color: #eee;
+			line-height: 140px;
+			font-size: 60px;
+			font-weight: 300;
+			margin-bottom: 50px; 
+		}
+		.border-block-top {
+		    position: absolute;
+		    background: transparent;
+		    width: 110px;
+		    height: 110px;
+		    border-top: 3px solid var(--main-color);
+		    border-left: 3px solid var(--main-color);
+		    left: 20px;
+		    top: 20px;
+		}
+		.abm_wrap img {
+			width: 25%;
+			margin: 0 0 12% 12%; 
+			float: left;
+		}
+		.abm_wrap .info {
+			float:right;
+			margin: 0 12% 12% 0; 
+		}
+		.abm_wrap .info p {
+			margin-bottom:20px; 
+			font-size: 20px;
+			letter-spacing: 3px;
+		}
+		.abm_wrap .info p span:first-child {
+			margin-right: 30px;
+			border-bottom: 2px solid var(--main-color);
+		}
+		.abm_wrap .info p span:last-child {
+			font-weight: 300;
+		}
+
+		/*-----------------------------------------------------------------------------------------------------*/
+
+		.edu_wrap , .exp_wrap ,.csk_wrap{
+			float: left;
+			width: 36%;
+			letter-spacing: 1px;
+		}
+		.edu_wrap {
+			width: 29%;
+		}
+		.csk_wrap {
+			width: 25%;
+		}
+		.edu_wrap {
+			margin-left: 5%;: 
+		}
+		.title{
+			border-left: 2px solid var(--main-color);
+			padding: 0 10px;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+		.year {
+			color: white;
+			background:var(--main-color);
+			padding:0px 5px 0px 20px; 
+			display: inline-block;
+			margin:15px 0; 
+		}
+
+		.skill-container{
+			background-color: transparent;
+		    border: 1px solid #555;
+		    height: 12px;
+		    margin:10px 0;
+		    width: 100%;
+		}
+		.skill-percentage{
+			background-color: var(--main-color);
+		    border: 1px solid #fff;
+		    height: 10px;
+		    padding: 0;
+		}
+		.skill-1 {
+			width: 66.66%
+		}
+		.skill-2 {
+			width: 33.33%
+		}
+
+		/*-----------------------------------------------------------------------------------------------------*/
+		
+		.cont_wrap .border-block-top {
+			width: 110px;
+		}
+
+
+		.cont_wrap div div {
+			display: flex;
+			align-items: center;
+			width: 562px;
+			margin: auto;
+				
+		}
+		.cont_wrap img {
+			width: 80px;
+			border-radius: 50%;
+			border: 2px solid var(--main-color);
+			padding: 20px;
+			margin-top: 12px;
+		}
+		.cont_wrap a {
+			font-size: 40px;
+			letter-spacing: 3px;
+			font-weight: 300;
+			margin-left: 20px; 
+		}
+		.cont_wrap p {
+			font-weight: 300;
+			letter-spacing: 2px;
+			font-size: 20px;
+			text-align: center;
+			margin-top: 100px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<aside>
+		<div>
+			<img src="images/ava.png" alt="">
+			<p>Đỗ<br>Quang Bách</p>
+		</div>
+		<ul>
+			<li class="active">
+				<img class="icon" src="images/home.svg" alt="">
+				<p>Home</p>
+			</li>
+			<li>
+				<img class="icon" src="images/user.svg" alt="">
+				<p>About Me</p>
+			</li>
+			<li>
+				<img class="icon" src="images/id.svg" alt="">
+				<p>Resume</p>
+			</li>
+			<li>
+				<img class="icon" src="images/mail.svg" alt="">
+				<p>Contact</p>
+			</li>
+		</ul>
+	</aside>
+
+	<main>
+		<div class="home_wrap">
+			<div>
+				<p>Đỗ Quang Bách</p>
+				<p>CV</p>
+			</div>
+		</div>
+
+		<div class="abm_wrap wrap">
+			<div>
+				<div class="border-block-top"></div>
+				<h1>About Me</h1>
+				<img src="images/ava.png" alt="">
+				<div class="info">
+					<p><span>Họ tên</span><span>Đỗ Quang Bách</span></p>
+					<p><span>Ngày sinh</span><span>16 / 12 / 1987</span></p>
+					<p><span>Địa chỉ</span><span>20 ngõ 389 phố Vọng , Hà Nội</span></p>
+					<p><span>Email</span><span><a href="mailto:doquangbach@gmail.com">doquangbach@gmail.com</a></span></p>
+					<p><span>Điện thoại</span><span><a href="tel:0989778263">0989778263</a></span></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="rsm_wrap wrap">
+			<div>
+				<div class="border-block-top"></div>
+				<h1>Resume</h1>
+				<div class="edu_wrap">
+					<p class="title">Education</p>
+					<div>
+						<p class="year">2006 - 2009</p>
+						<p>Cao đẳng nghề công nghiệp Hà Nội</p>
+					</div>
+					<div>
+						<p class="year">2012 - 2015</p>
+						<p>FPT Arena Multimedia</p>
+					</div>
+					<div>
+						<p class="year">2017</p>
+						<p>TechMaster</p>
+					</div>
+					
+				</div>
+				<div class="exp_wrap">
+					<p class="title">Experience</p>
+					<div>
+						<p class="year">2010 - 2012</p>
+						<p>Nhân viên pha chế và Quản lý quầy Bar</p>
+					</div>
+					<div>
+						<p class="year">2012 - 2015</p>
+						<p>Học đồ họa và làm Freelance Graphic Designer</p>
+					</div>
+					<div>
+						<p class="year">2016</p>
+						<p>Nhân viên 3D tại Mopix Animation Studio</p>
+					</div>
+					<div>
+						<p class="year">2017</p>
+						<p>Học code và làm trợ giảng tại TechMaster</p>
+					</div>
+					
+				</div>
+				<div class="csk_wrap">
+					<p class="title">Coding Skill</p>
+					<p>HTML5</p>
+					<div class="skill-container">
+                        <div class="skill-percentage skill-1"></div>
+                    </div>
+                    <p>CSS3</p>
+					<div class="skill-container">
+                        <div class="skill-percentage skill-1"></div>
+                    </div>
+                    <p>JavaScript</p>
+					<div class="skill-container">
+                        <div class="skill-percentage skill-2"></div>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="cont_wrap wrap">
+			<div>
+				<div class="border-block-top"></div>
+				<h1>Contact</h1>
+				<div>
+					<a href="tel:0989778263"><img src="images/phone.svg" alt=""></a>
+					<a href="tel:0989778263">0989778263</a>
+				</div>
+				<div>
+					<a href="mailto:doquangbach@gmail.com"><img src="images/mail.svg" alt=""></a>
+					<a href="mailto:doquangbach@gmail.com">doquangbach@gmail.com</a>
+				</div>
+				<p>Cảm ơn anh , chị đã dành thời gian .</p>
+			</div>
+		</div>
+
+	</main>
+
+
+
+	
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			var li = document.querySelectorAll('li');
+			var home = document.querySelector('.home_wrap');
+			var abm = document.querySelector('.abm_wrap');
+			var rsm = document.querySelector('.rsm_wrap');
+			var cont = document.querySelector('.cont_wrap');
+			var html = document.documentElement;
+
+			
+			var remove_active = function(){
+				for(var j=0 ; j<li.length ; j++){
+					li[j].classList.remove('active')
+				}
+			}
+				
+
+			li[0].onclick = function(){
+				var time = setInterval(function(){
+					if (html.scrollTop > 0){
+						html.scrollTop = html.scrollTop-10;
+					} else {
+						clearInterval(time)
+					}
+				},1)
+				remove_active();
+				this.classList.add('active');
+			}
+
+			li[1].onclick = function(){
+				var time = setInterval(function(){
+					if(html.scrollTop < abm.offsetTop){
+						html.scrollTop = html.scrollTop+10;	
+					}
+					else if(html.scrollTop > abm.offsetTop+10){
+						html.scrollTop = html.scrollTop-10;	
+					} 
+					else {
+						clearInterval(time);
+					}
+				},1)
+				remove_active();
+				this.classList.add('active');
+			}
+
+			li[2].onclick = function(){
+				var time = setInterval(function(){
+					if(html.scrollTop < rsm.offsetTop){
+						html.scrollTop = html.scrollTop+10;	
+					} 
+					else if(html.scrollTop > rsm.offsetTop+10){
+						html.scrollTop = html.scrollTop-10;	
+					} 
+					else {
+						clearInterval(time);
+					}
+				},1)
+				remove_active();
+				this.classList.add('active');
+			}
+
+			li[3].onclick = function(){
+				var time = setInterval(function(){
+					if(html.scrollTop < cont.offsetTop){
+						html.scrollTop = html.scrollTop+10;	
+					}
+					else {
+						clearInterval(time);
+					}
+				},1)
+				remove_active();
+				this.classList.add('active');
+			}
+
+
+			var h = html.offsetHeight/2 ;
+
+			document.addEventListener('scroll',function(){
+				if(html.scrollTop < abm.offsetTop-h){
+					remove_active();
+					li[0].classList.add('active');
+				}
+				else if(html.scrollTop > abm.offsetTop-h && html.scrollTop < rsm.offsetTop-h){
+					remove_active();
+					li[1].classList.add('active');
+				}
+				else if(html.scrollTop > rsm.offsetTop-h && html.scrollTop < cont.offsetTop-h){
+					remove_active();
+					li[2].classList.add('active');
+				}
+				else if(html.scrollTop > cont.offsetTop-h){
+					remove_active();
+					li[3].classList.add('active');
+				}
+			})
+
+		},false)
+	</script>
+</body>
+</html>
