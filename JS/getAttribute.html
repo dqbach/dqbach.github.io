@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button class="nut" data-noidung="1111111111">Nut 1</button>
+	<button class="nut" data-noidung="2222222222">Nut 2</button>
+	<button class="nut" data-noidung="3333333333">Nut 3</button>
+	<p></p>
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			var nut = document.getElementsByClassName('nut');
+			for(var i = 0 ; i<nut.length ; i++){
+				nut[i].onclick = function(){
+					var test = this.getAttribute('data-noidung');
+					//var p = document.getElementsByTagName('p');
+					console.log(test)
+				}
+			}	
+		},false)
+		
+
+
+
+
+	</script>
+</body>
+</html>

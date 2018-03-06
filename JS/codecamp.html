@@ -1,0 +1,93 @@
+<script>
+	
+	var data = [
+    {
+      name: "Lưu Minh Sao Khuê",
+      position: "goalkeeper",
+      birth_year: 1997,
+      height: "1m81",
+      club: "FLC Thanh Hoa",
+    },
+    {
+      name: "Đỗ Quang Bách",
+      position: "defender",
+      birth_year: 1995,
+      height: "1m76",
+      club: "Viettel",
+    },
+    {
+      name: "Đứa Nào Đấy",
+      position: "striker",
+      birth_year: 1996,
+      height: "1m68",
+      club: "HAGL",
+    }
+    ];
+
+	function countAllPlayers(){
+		return data.length
+	}
+
+	function checkNumberOfPlayers(){
+		return data.length >=16
+	}
+
+	function getPlayersByBirthYear(year){
+		var arr = data.filter(function(value){
+			return value.birth_year == year;
+		})
+	}
+
+	function getPlayersByClub(club){
+		var arr = data.filter(function(value){
+			return value.club.toLowerCase() === club.toLowerCase()
+		})
+	}
+
+	function getTallerPlayers(height){
+		var arr = data.filter(function(value){
+			return +value.height.replace('m','') > +height.replace('m','')
+		})
+	}
+
+	function sortPlayersByName(){
+		for(var j = 0 ; j < data.length-1 ; j++ ){
+			for(var i = 0 ; i < data.length-1 ; i++ ){
+				var a = data[i].name.split(' ').reverse().join('');
+				var b = data[i+1].name.split(' ').reverse().join('');
+				if(a > b){
+					var swap = data[i];
+					data[i]=data[i+1];
+					data[i+1]=swap;
+				}
+			}
+		}
+	}
+
+	function sortPlayersByHeight(){
+		for(var j = 0 ; j < data.length-1 ; j++ ){
+			for(var i = 0 ; i < data.length-1 ; i++ ){
+				var a = +data[i].height.replace('m','');
+				var b = +data[i+1].height.replace('m','');
+				if(a > b){
+					var swap = data[i];
+					data[i]=data[i+1];
+					data[i+1]=swap;
+				}
+			}
+		}
+	}
+
+	function getRandomPlayer(){
+		return data[Math.floor(Math.random() * data.length)];
+	}
+
+	function getPositionOfPlayer(index){
+		return data[index-1].position;
+	}
+
+	function isVietnamWin(){
+		return Math.random() <= 0.5;
+	}
+
+</script>

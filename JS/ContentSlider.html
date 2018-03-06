@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<style>
+		*{margin:0;padding: 0; box-sizing: border-box;font-family: 'Varela Round', sans-serif;}
+		div{width: 500px;margin:auto;overflow: hidden;position: relative;height: 600px;}
+		.slide{width: 2500px;height: 500px;margin:0;position: absolute;top:0;left: 0;}
+		.slide div{width: 500px;height:500px;float:left;}
+		ul {list-style-type:none;width:2500px;margin-top:500px; }
+		li {width: 83.4px;float: left;cursor: pointer;background:#f26533;text-align: center;padding: 10px;display:block;color:white;}
+		li:hover {background: #ac4824}
+		.active {background: #ac4824}
+		.right{left:-100%;}
+		.left{left:0%;}
+		.transition{transition: 0.3s;}
+	</style>
+</head>
+<body>
+	<div>
+
+		<div class="slide">
+			<div><img src="images/1.png"></div>
+		</div>
+
+		<ul class="ul">
+			<li data-number="0" class="active">THỎ</li>
+			<li data-number="1">HƯƠU</li>
+			<li data-number="2">GẤU</li>
+			<li data-number="3">CHỒN</li>
+			<li data-number="4">CÁO</li>
+			<li data-number="5">CHIM</li>
+		</ul>
+
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			var images = [
+				{'file':"images/1.png"},
+				{'file':"images/2.png"},
+				{'file':"images/3.png"},
+				{'file':"images/4.png"},
+				{'file':"images/5.png"},
+				{'file':"images/6.png"},
+			];
+
+			var slide = document.querySelector('.slide');
+			var li = document.querySelectorAll('li');
+			var img = document.querySelectorAll('img');
+
+
+			for(var i=0 ; i<li.length ; i++){
+				li[i].onclick=function(){
+					//lấy số của nút đang active :
+					var active = document.querySelector('.active');
+					var old_number = +active.getAttribute('data-number');
+					//Khi ấn 1 nút nào đó , nếu nút này đã active thì ko có gì xảy ra còn nếu chưa thì chạy tiếp :
+					if(this.classList!="active"){
+						for(var j=0;j<li.length;j++){
+							li[j].classList.remove('active'); // tắt nút đang active
+ 						}
+						this.classList.add('active'); // cho nút này active
+					}
+					//lấy số của nút mới active :
+					var active = document.querySelector('.active');
+					var new_number = +active.getAttribute('data-number');
+
+					
+					// reset lại cái slide với cái ảnh cũ 
+					slide.innerHTML="<div><img src="+images[old_number].file+"></div>";
+
+					// tạo 1 thẻ div mới để chứa cái ảnh mới
+					var div = document.createElement('div');
+
+					// cho ảnh mới vào thẻ div mới 
+					div.innerHTML="<img src="+images[new_number].file+">";
+					// Viết kiểu ES6: div.innerHTML=`<img src="${images[new_number].file}">`;
+
+
+
+					if(new_number>old_number){
+						slide.classList.remove('right','left','transition');
+						slide.appendChild(div);
+						setTimeout(function(){
+							slide.classList.add('right','transition');
+						},100)
+					}
+					else if(new_number<old_number){
+						slide.classList.remove('left','transition');
+						var last_div = document.querySelector('.slide div');
+						slide.insertBefore(div,last_div);
+						setTimeout(function(){
+							slide.classList.add('left','transition');
+						},100)
+					}
+				}
+			}
+		},false)
+	</script>
+</body>
+</html>

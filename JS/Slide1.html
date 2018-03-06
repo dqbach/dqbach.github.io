@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<style>
+		*{margin:0;padding: 0; box-sizing: border-box;font-family: 'Alegreya Sans', sans-serif;}
+		.button_box{position: fixed;bottom: 20px;left: 50%;margin-left: -45px;}
+		ul {list-style-type: none;text-align: center;}
+		li {width: 20px;height: 20px;border-radius:50%;display:block;cursor: pointer;border: 1px solid white;float: left;margin:0 5px }
+		li:hover , .active {background: white}
+		.cacslide{position: relative;width: 100%;height: 100vh;overflow:hidden;}
+
+		.slide {opacity: 0;visibility:hidden;transition: 0.4s}
+		.visible {opacity: 1;visibility: visible;}
+
+		.slide * {position: absolute;color:white;left: 100px;}
+		.slide img{max-width: 100%;top:0;left: 0}
+
+		.slide .tgd1 {left: -25%; transition: 0.5s 0.7s}
+		.visible .tgd1 {left: 0;}
+
+		.slide .tgd2 {top: -300px;left: -25%;transition: 0.5s 0.5s}
+		.visible .tgd2 {left: 0;}
+		
+		.slide .tgt {left: 100%;}
+		.visible .tgt {left:80%;transition: 0.5s 0.6s}
+
+		.slide h2 {transition: 0.5s 0.8s;opacity: 0;left: 30px;top:100px;font-size: 100px;font-weight: 100;}
+		.visible  h2 {opacity:1;left:100px;}
+
+		.slide h3 {transition: 0.5s 0.85s;opacity: 0;left: 30px;top: 220px;font-size: 35px;font-weight: 700}
+		.visible  h3 {opacity:1;left:100px;}
+
+		.slide span {transition: 0.5s 0.9s;opacity: 0;left: 30px;top: 290px;width: 50px;background: white;height: 3px;}
+		.visible  span {opacity:1;left:100px;}
+
+		.slide p {transition: 0.5s 0.95s;opacity: 0;left: 30px;top:350px;width: 300px;font-size: 14px;}
+		.visible  p {opacity:1;left:100px;}
+
+		.slide a{transition: 0.5s 1s;opacity:0;left:30px;top:500px;text-decoration:none;padding:10px 20px;border:solid 2px white;border-radius: 5px;}
+		.visible  a {opacity:1;left:100px;}
+
+
+	</style>
+</head>
+<body>
+	
+	<div class="cacslide">
+		<div class="slide visible">
+			<img src="images/a1.jpg" alt="">
+			<img class="tgd1" src="images/tgnd.png" alt="">
+			<img class="tgd2" src="images/tgnd.png" alt="">
+			<img class="tgt" src="images/tgnt.png" alt="">
+			<h2>01</h2>
+			<h3>SLIDE </h3>
+			<span></span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid excepturi corporis repellendus omnis esse, explicabo ea sequi expedita minima. Vitae consequatur saepe neque pariatur inventore magnam quae perspiciatis molestias esse?</p>
+			<a href="">Button</a>
+		</div>
+
+		<div class="slide">
+			<img src="images/a2.jpg" alt="">
+			<img class="tgd1" src="images/tgxd.png" alt="">
+			<img class="tgd2" src="images/tgxd.png" alt="">
+			<img class="tgt" src="images/tgxt.png" alt="">
+			<h2>02</h2>
+			<h3>SLIDE </h3>
+			<span></span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid excepturi corporis repellendus omnis esse, explicabo ea sequi expedita minima. Vitae consequatur saepe neque pariatur inventore magnam quae perspiciatis molestias esse?</p>
+			<a href="">Button</a>
+		</div>
+
+		<div class="slide">
+			<img src="images/a3.jpg" alt="">
+			<img class="tgd1" src="images/tgdd.png" alt="">
+			<img class="tgd2" src="images/tgdd.png" alt="">
+			<img class="tgt" src="images/tgdt.png" alt="">
+			<h2>03</h2>
+			<h3>SLIDE </h3>
+			<span></span>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid excepturi corporis repellendus omnis esse, explicabo ea sequi expedita minima. Vitae consequatur saepe neque pariatur inventore magnam quae perspiciatis molestias esse?</p>
+			<a href="">Button</a>
+		</div>
+
+
+	</div>
+
+
+	<div class="button_box">
+		<ul>
+			<li class="active"></li>
+			<li ></li>
+			<li ></li>
+		</ul>
+	</div>	
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			var li = document.querySelectorAll('li') ;
+			var slide = document.querySelectorAll('.slide') ;
+			var active = document.querySelector('.active')
+			
+			for(var i=0;i<li.length;i++){
+				li[i].onclick=function(){
+					for(var j=0;j<li.length;j++){
+						li[j].classList.remove('active');
+					}
+					this.classList.add('active');
+
+					//gọi thẻ có class vừa mới active
+					var active_tag = this;
+					// // dùng hàm previousElementSibling để gọi ra thẻ trước , chạy vòng lặp để khi ra NULL thì sẽ có số i biết là đã lặp bao lần , số lần đó là vị trí của nút active
+					for (var vitrinut = 0 ; active_tag = active_tag.previousElementSibling ; vitrinut++){}
+
+					for (var k=0;k<slide.length;k++){
+						slide[k].classList.remove('visible');
+					}
+					slide[vitrinut].classList.add('visible');
+
+					
+				}
+			}
+
+
+
+
+
+				var time = function(){
+					setInterval(function(){
+							var slideHientai = document.querySelector('.active');
+							for (var vitriSlide = 0 ; slideHientai = slideHientai.previousElementSibling  ; vitriSlide++ ) {}
+								console.log('slide o vi tri : '+vitriSlide)
+							for (var k=0;k<slide.length;k++){
+								slide[k].classList.remove('visible');
+								li[k].classList.remove('active');
+							}
+							if(vitriSlide == 2){
+								slide[0].classList.add('visible')
+								li[0].classList.add('active');
+							}
+							else{
+								slide[vitriSlide+1].classList.add('visible')
+								li[vitriSlide+1].classList.add('active');
+							}
+					},5000)
+				}
+				time()
+
+		},false)
+	</script>
+</body>
+</html>

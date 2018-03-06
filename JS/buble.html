@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	.particle{
+		border-radius: 50%;
+		position: absolute;
+		transition: 100s linear ;
+	}
+
+
+
+		
+	</style>
+</head>
+<body>
+
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+			for(var i=0;i<300;i++){
+				var div = document.createElement('div');
+				div.classList.add('particle');
+				document.body.appendChild(div);
+			}
+			var particles = document.querySelectorAll('.particle');
+
+			for(var i=0;i<particles.length;i++){
+				particles[i].style.width = Math.random()*30 + 'px';
+				particles[i].style.height = particles[i].style.width;
+				particles[i].style.background = 'hsl('+ Math.random() * 360+',100%,75%';
+				document.body.style.background ='white';
+				particles[i].style.transform = 'translate('+Math.random() * 100+'vw,'+Math.random() * 100 +'vh)';
+			}
+			setTimeout(function(){
+				for(var i=0;i<particles.length;i++){
+					particles[i].style.transform = 'translate('+Math.random() * 100+'vw,'+Math.random() * 100 +'vh)';
+				}
+			},1)
+
+			setInterval(function(){
+				for(var i=0;i<particles.length;i++){
+					particles[i].style.transform = 'translate('+Math.random() * 100+'vw,'+Math.random() * 100 +'vh)';
+				}
+			},100000)
+
+
+
+
+		},false)
+
+
+	</script>
+</body>
+</html>

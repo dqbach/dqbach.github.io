@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<meta charset="utf-8">
+<title>Scroll to Top Animation Example</title>
+	<style>
+		p{cursor: pointer;}
+		div{width: 200px;height: 500px;}
+		.green {background: green;}
+		.orange {background: orange;height: 100px;}
+	</style>
+</head>
+  
+<body>
+
+	<p class="goOrange">Đến màu cam</p>
+
+	<div class="green"></div>
+	<div class="orange"></div>
+
+	<p class="goBottom" >Xuống cuối</p>
+
+	<div class="green"></div>
+	<div class="green"></div>
+
+	<p class="upTop" >Lên Top</p>
+
+	<script>
+
+		document.addEventListener('DOMContentLoaded',function(){
+			
+
+			// -------- LÊN TOP -----------
+			var upTop = document.querySelector('.upTop');
+
+			var goOrange = document.querySelector('.goOrange');
+			var orange = document.querySelector('.orange');
+
+			var goBottom = document.querySelector('.goBottom');
+
+			var html = document.documentElement ;
+
+		// -------------------------------------------------------------- 
+			upTop.onclick = function(){
+				var time = setInterval(function(){
+					if(html.scrollTop > 0){
+						html.scrollTop = html.scrollTop-10;	
+						console.log(html.scrollTop);
+					}
+					else{
+						clearInterval(time);
+					}
+				},1)
+			}
+		// -------------------------------------------------------------- 	
+			goOrange.onclick = function(){
+				var time = setInterval(function(){
+					if(html.scrollTop < orange.offsetTop){
+						html.scrollTop = html.scrollTop+10;	
+						console.log(html.scrollTop);
+					}
+					else{
+						clearInterval(time);
+					}
+				},1)
+			}
+		// -------------------------------------------------------------- 
+			goBottom.onclick = function(){
+				var time = setInterval(function(){
+					if(html.scrollTop < 1328){
+						html.scrollTop = html.scrollTop+10;	
+						console.log(html.scrollTop);
+					}
+					else{
+						clearInterval(time);
+					}
+				},1)
+			}
+			
+
+			
+
+
+		})
+
+		
+
+	</script>
+</body>
+</html>

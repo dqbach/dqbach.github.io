@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box}
+		body{height: 3000px}
+		.red {height:40px;background: #a70e1a;width: 100vw;transition: 0.3s}
+		.black {background: #222;position: fixed;top:0;z-index: 2;height:50px;}
+		.test{height:500px;background:pink;float:right;width: 300px;border-top:5px solid orangered }
+		.fix{position:fixed;top:50px;}
+		.bienmat{transform: translateY(200px);transition: 0.3s;opacity:0;}
+		.hienra {transform: translateY(0px);opacity:1}
+
+	</style>
+</head>
+<body>
+
+    <div style="height:25px;background: black"></div>
+	<div style="height:70px;background: #f0a52b"></div>
+	<div class="red"></div>
+
+	<div style="width:1040px;margin:15px auto">
+		<div style="float:left;height:1500px;background:#f1f1f1;;width:720px;margin-right: 20px"></div>
+		<div style="float:right;width:300px;">
+			<div style="height:800px;width:300px;background:#f1f1f1"></div>
+			<div class="test"></div>
+		</div>
+		<div class="bienmat" style="float:left;height:300px;background:#8ef1ab;;width:720px;margin-right: 20px"></div>
+
+
+	</div>
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded',function(){
+		    var red = document.querySelector('.red');
+            var test = document.querySelector('.test');
+            var vitri = test.offsetTop ;
+            var bienmat = document.querySelector('.bienmat');
+	        var vitri2 = bienmat.offsetTop;
+
+			window.addEventListener('scroll',function(){
+			   if(window.pageYOffset > 95){
+			       red.classList.add('black')
+			   }
+			   else {
+                   red.classList.remove('black')
+			   }
+			   if (window.pageYOffset < vitri-95 || window.pageYOffset > vitri+395) {
+                    test.classList.remove('fix')
+                }
+			   else if (window.pageYOffset > vitri-95){
+                    test.classList.add('fix')
+			   }
+			   if (window.pageYOffset > vitri2-495){
+			       bienmat.classList.add('hienra')
+			   }
+			   else if (window.pageYOffset < vitri2-495){
+                   bienmat.classList.remove('hienra')
+               }
+
+			})
+		},false)
+	</script>
+
+</body>
+</html>

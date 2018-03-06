@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://use.fontawesome.com/c4dfb90488.js"></script>
+  <style>
+	* {margin:0;padding: 0;box-sizing: border-box}
+	body {perspective:1000px;background:rgba(0,0,0,0.7)}
+	.button {width:100px;margin:auto;background:#388a5a; color:white;height: 50px;line-height: 50px;text-align: center;cursor: pointer;}
+	.menu {width: 300px;height: 100vh;background:#48a770;position: absolute;top:0;transform: translateX(-100%);transition: 0.5s;z-index: 0}
+	.black{width:100vw;position: absolute;top:0;background: black;opacity: 0;visibility: hidden;height:100vh;z-index: 1}
+	.sang{transform: translateX(0)}
+    .show{opacity: 0.2;visibility: visible}
+    .white{transform-origin: 100% 0;transition: 0.5s;width: 100vw;background: white;height: 100vh;padding-top:10%}
+    .ef{transform: rotateY(-25deg)scale(0.95)translateX(-20px)translateY(20px)}
+  </style>
+</head>
+<body>
+	<div class="white">
+		<div class="button">CLICK</div>
+	</div>
+	<div class="black"></div>
+	<div class="menu"></div>
+<script>
+	document.addEventListener('DOMContentLoaded',function(){
+	    var nut = document.getElementsByClassName('button');
+	    var menu = document.getElementsByClassName('menu');
+	   	var black = document.getElementsByClassName('black');
+        var white = document.getElementsByClassName('white');
+
+        console.log(nut)
+	    nut[0].onclick = function(){
+	    	menu[0].classList.add('sang');
+	    	black[0].classList.add('show');
+            white[0].classList.add('ef');
+
+        }
+	    black[0].onclick = function(){
+            menu[0].classList.remove('sang');
+            this.classList.remove('show');
+            white[0].classList.remove('ef');
+
+        }
+    },false)
+</script>
+</body>
+</html>

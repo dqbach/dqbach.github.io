@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://use.fontawesome.com/c4dfb90488.js"></script>
+  <style>
+	* {margin:0;padding: 0}
+	.xanh {background: #4468B0;height: 42px;border-bottom: 1px solid #29487d;}
+	.icon {margin-right: 100px;float: right;}
+	.nut{width: 42px;height:42px;float: left;position: relative;display: flex;align-items: center;}
+	.fa{font-size: 25px}
+	.content {width: 200px;height: 200px;position: absolute;top:44px;right:0;background:#ececec;opacity: 0;visibility: hidden;}
+	.content::after {content: "";width:0;height: 0;border:7px solid rgba(0,0,0,0);border-bottom-color:#ececec;position: absolute;top:-14px;right:25px; }
+	.trang{color:white;}
+	.visible{opacity: 1;visibility: visible;}
+  </style>
+</head>
+<body>
+<div class="xanh">
+	<div class="icon">
+		<div class="nut" data-id="id1"><i class="fa fa-user" aria-hidden="true"></i>
+			<div class="content" id="id1"></div>
+		</div>
+		<div class="nut" data-id="id2"><i class="fa fa-comment" aria-hidden="true"></i>
+			<div class="content" id="id2"></div>
+		</div>
+		<div class="nut" data-id="id3"><i class="fa fa-globe" aria-hidden="true"></i>
+			<div class="content" id="id3"></div>
+		</div>
+		<div class="nut" data-id="id4"><i class="fa fa-question-circle" aria-hidden="true"></i>
+			<div class="content" id="id4"></div>
+		</div>
+		<div class="nut" data-id="id5"><i class="fa fa-caret-down" aria-hidden="true"></i>
+			<div class="content" id="id5"></div>
+		</div>
+	</div>
+</div>
+<script>
+	document.addEventListener('DOMContentLoaded',function(){
+		var nut = document.getElementsByClassName('nut');
+		var content = document.getElementsByClassName('content');
+		for(var i=0 ; i<nut.length ; i++){
+			nut[i].onclick=function(){
+
+				//KIỂM TRA ICON CÓ MÀU TRẮNG HAY KHÔNG
+				if(this.classList[1]=="trang"){ // nếu icon đó có class trắng rồi 
+					this.classList.remove('trang'); //thì khi ấn vào sẽ bỏ class trắng
+				}
+				else{ // nếu icon đó ko có class trắng 
+					for(var k=0 ; k<nut.length ; k++){
+						nut[k].classList.remove('trang'); // bỏ class trắng những nút khác
+					}
+					this.classList.add('trang'); // thêm class trắng vào icon
+				}
+
+				//CLICK VÀO THÌ LẤY DATA CỦA ICON (TRÙNG VỚI ID CỦA THẺ BỊ ẢNH HƯỞNG)
+				var id = this.getAttribute('data-id'); //lấy attribute
+				var show = document.getElementById(id); //lấy thẻ dựa trên attribute(trùng id mà)
+				if(show.classList[1] == 'visible'){//nếu thẻ này đang hiện ra (vì có class hiện ra)
+					show.classList.remove('visible');//thì bỏ class hiện ra này đi
+				}
+				else{ //nếu thẻ này ko hiện ra (vì css cho nó biến mất)
+					for(var j=0 ; j<content.length ; j++){
+						content[j].classList.remove('visible');//tất cả sẽ mất class hiện ra (nếu có)
+					}
+					show.classList.add('visible');// thằng được liên kết với icon sẽ hiện ra 
+					console.log(show.classList[1])
+				}
+			}
+		};
+	},false)
+</script>
+</body>
+</html>
