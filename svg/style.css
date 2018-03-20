@@ -140,7 +140,7 @@ animation: ban_dap 1.5s ease-in-out;
 }
 #tc{
   transform-origin: 100% 50% ;
-  animation: tc 0.5s ease-in-out infinite alternate;
+  /* animation: tc 0.5s ease-in-out infinite alternate; */
 }
 /*----------------------------------------------------*/
 @keyframes yen_scale {

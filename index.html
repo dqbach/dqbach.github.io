@@ -291,6 +291,23 @@
 			flex-flow: column;
 		}
 
+		/* ------------------------------------------------ */
+		
+		.port_wrap .info_wrap {
+			padding: 0 10%;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			text-align: center;
+		}
+		.port_wrap a {
+			padding: 30px 30px 10px 30px;
+		}
+		.port_wrap a:hover {
+			background: #f78f3880;
+		}
+		.port_wrap p {
+			margin: 10px;
+		}
 
 	</style>
 </head>
@@ -311,6 +328,10 @@
 				<li>
 					<img class="icon" src="images/id.svg" alt="">
 					<p>Resume</p>
+				</li>
+				<li>
+					<img class="icon" src="images/port.svg" alt="">
+					<p>Portfolio</p>
 				</li>
 				<li>
 					<img class="icon" src="images/mail.svg" alt="">
@@ -435,6 +456,40 @@
 			</div>
 		</div>
 
+		<div class="port_wrap wrap">
+			<div>
+				<div class="border-block-top"></div>
+				<h1>Portfolio</h1>
+				<div class="info_wrap">
+					<a href="http://bit.ly/2G8NZWg">
+						<img src="images/2.png" alt="">
+						<p>Project tại TechMaster</p>
+					</a>
+					<a href="http://bit.ly/2HML9mO">
+						<img src="images/1.png" alt="">
+						<p>Template giảng dạy</p>
+					</a>
+					<a href="http://bit.ly/2HNJ22a">
+						<img src="images/3.png" alt="">
+						<p>Mini Quz</p>
+					</a>
+					<a href="http://bit.ly/2G8Oxvi">
+						<img src="images/4.png" alt="">
+						<p>Máy tính đơn giản</p>
+					</a>
+					<a href="http://bit.ly/2GMzANq">
+						<img src="images/5.png" alt="">
+						<p>Thiệp mừng</p>
+					</a>
+					<a href="http://bit.ly/2FXo0h5">
+						<img src="images/6.png" alt="">
+						<p>Demo SVG</p>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+
 		<div class="cont_wrap wrap">
 			<div>
 				<div class="border-block-top"></div>
@@ -466,6 +521,7 @@
 			var abm = document.querySelector('.abm_wrap');
 			var rsm = document.querySelector('.rsm_wrap');
 			var cont = document.querySelector('.cont_wrap');
+			var port = document.querySelector('.port_wrap');
 			var html = document.documentElement;
 
 			
@@ -522,6 +578,22 @@
 
 			li[3].onclick = function(){
 				var time = setInterval(function(){
+					if(html.scrollTop < port.offsetTop){
+						html.scrollTop = html.scrollTop+10;	
+					} 
+					else if(html.scrollTop > port.offsetTop+10){
+						html.scrollTop = html.scrollTop-10;	
+					} 
+					else {
+						clearInterval(time);
+					}
+				},1)
+				remove_active();
+				this.classList.add('active');
+			}
+
+			li[4].onclick = function(){
+				var time = setInterval(function(){
 					if(html.scrollTop < cont.offsetTop){
 						html.scrollTop = html.scrollTop+10;	
 					}
@@ -545,13 +617,17 @@
 					remove_active();
 					li[1].classList.add('active');
 				}
-				else if(html.scrollTop > rsm.offsetTop-h && html.scrollTop < cont.offsetTop-h){
+				else if(html.scrollTop > rsm.offsetTop-h && html.scrollTop < port.offsetTop-h){
 					remove_active();
 					li[2].classList.add('active');
 				}
-				else if(html.scrollTop > cont.offsetTop-h){
+				else if(html.scrollTop > port.offsetTop-h && html.scrollTop < cont.offsetTop-h){
 					remove_active();
 					li[3].classList.add('active');
+				}
+				else if(html.scrollTop > cont.offsetTop-h){
+					remove_active();
+					li[4].classList.add('active');
 				}
 			})
 
