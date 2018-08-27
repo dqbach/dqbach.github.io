@@ -1,0 +1,85 @@
+@import 'mixins' ;
+
+@font-face {
+    font-family:Gotham;
+    src:url(fonts/GothamBook.ttf)
+}
+@font-face {
+    font-family: Gotham;
+    src: url(fonts/GothamBold.ttf);
+    font-weight: bold;
+}
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+
+
+$dark-color:black;
+$light-color:white;
+
+
+body , body * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Gotham;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    line-height: 1.43;
+    position: relative;
+    color: $dark-color;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+p {font-size:14px ;
+    @media (max-width: 575px) {
+        font-size: 12px;
+    }
+}
+.title-1 {
+    font-family: 'Abril Fatface';
+    font-weight: normal;
+    font-size: 80px;
+    color: $light-color;
+    line-height: 0.8 !important;
+    @media (max-width: 575px) {
+        font-size: 30px;
+    }
+}
+.title-2 {
+    font-family: 'Abril Fatface';
+    font-weight: normal;
+    font-size: 42px;
+    color: $light-color;
+    line-height: 0.8 !important;
+
+    @media (max-width: 575px) {
+        font-size: 20px;
+    }
+}
+
+.title-3 {
+    font-family: Gotham;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.43;
+    color: $dark-color
+}
+.none {
+    display: none !important;
+}
+
