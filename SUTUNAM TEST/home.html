@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
     <!-- HEADER -->
@@ -29,7 +33,7 @@
     <span class="white-line"></span>
     
     <!-- MENU -->
-    <section class="menu-container">
+    <section class="menu-container ">
         <div class="menu-content">
             <div class="menu-content__items menu-content__hotels">
                 <h3 class="menu-content__items__title title-2">Hotels G</h3>
@@ -148,10 +152,11 @@
     
     <main>
         <!-- WELCOME -->
-        <section  class="welcome-container">
+        <section  class="welcome-container scrollify">
             <div class="hero-img"></div>
             <div class="welcome-container__title">
-                <h2 class="title-1">Welcome home<br>in Singapore</h2>
+                <h2 class="title-1">Welcome home</h2>
+                <h2 class="title-1">in Singapore</h2>
                 <p>Hotel G Singapore is a chic lifestyle hotel designed with trendy and graphic elements to reflect the cosmopolitan rhythms and dynamism of the Lion City. Hotel G Singapore is the ideal retreat for fun and relaxation after a day of exploring the city at your doorstep.
                 </p>
                 <a href="">KNOW MORE</a>
@@ -177,7 +182,7 @@
         </section> 
     
         <!-- ABOUT -->
-        <section class="about-container ">
+        <section class="about-container scrollify ">
             <div class="about-col">
                 <img class="girl" src="img/g2.png" alt="">
                 <h2 class="title-1">About Hotels G</h2>
@@ -201,7 +206,7 @@
         </section>
     
         <!-- OUR HOTELS -->
-        <section class="hotels-container ">
+        <section class="hotels-container scrollify">
             <h3 class="title-2">Our hotels</h3>
             <div class="black-line"></div>
     
@@ -237,7 +242,7 @@
         </section>
     
         <!-- G TALK -->
-        <section class="g-talk-container ">
+        <section class="g-talk-container scrollify">
             <div class="right-col">
                 <div class="intro-box">
                     <h2 class="g-talk-container__title title-1">G Talk</h2>
@@ -309,7 +314,7 @@
         </section>
     
         <!-- Insta G -->
-        <section class="insta-container ">
+        <section class="insta-container scrollify   ">
             <h3 class="title-2">Insta G</h3>
             <div class='line'>
                 <span></span>
@@ -317,17 +322,30 @@
                 <span></span>
                 <p>@hotels_G</p>
             </div>
-            <div class="img-insta-box">   
-                <a href=""><img src="img/img-insta-1.png" alt=""></a>
-                <a href=""><img src="img/img-insta-2.png" alt=""></a>
-                <a href=""><img src="img/img-insta-3.png" alt=""></a>
-                <a href=""><img src="img/img-insta-4.png" alt=""></a>
-                <a class="plus" href=""><img src="img/copie.svg" alt=""></a>
+            <div class="img-insta-box">  
+                
+                <a href="http://source.unsplash.com/random/500x500?v=1" data-fancybox="insta" data-caption="Nội dung ảnh 1">
+                            <img src="http://source.unsplash.com/random/500x500?v=1" alt="" />
+                            <button>View</button>
+                </a>
+                <a href="http://source.unsplash.com/random/500x500?v=2" data-fancybox="insta" data-caption="Nội dung ảnh 2">
+                            <img src="http://source.unsplash.com/random/500x500?v=2" alt="" />
+                            <button>View</button>
+                </a>
+                <a href="http://source.unsplash.com/random/500x500?v=3" data-fancybox="insta" data-caption="Nội dung ảnh 3">
+                            <img src="http://source.unsplash.com/random/500x500?v=3" alt="" />
+                            <button>View</button>
+                </a>
+                <a href="http://source.unsplash.com/random/500x500?v=4" data-fancybox="insta" data-caption="Nội dung ảnh 4">
+                            <img src="http://source.unsplash.com/random/500x500?v=4" alt="" />
+                            <button>View</button>
+                </a>
+                <a class="plus" href="https://www.instagram.com/"><img src="img/copie.svg" alt=""></a> 
             </div>
         </section>
         
         <!-- Newsletter -->
-        <section class="newsletter-container">
+        <section class="newsletter-container scrollify  ">
             <h3 class="title-2">Newsletter</h3>
             <div class="line"></div>
             <img class="totop" src="img/totop.svg" alt="">
@@ -369,6 +387,9 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script/owl.carousel.min.js"></script>
+    <script src="script/jquery.fancybox.min.js"></script>
+    <script src="script/jquery.scrollify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="script/script.js"></script>
 </body>
 </html>

@@ -28,6 +28,10 @@ body , body * {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
 
 a {
     text-decoration: none;

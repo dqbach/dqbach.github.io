@@ -1,6 +1,15 @@
 jQuery(document).ready(function(){
     
+// 3D 
+    var card = $(".card");
+    $(document).on("mousemove",function(e) {  
+        var ax = -($(window).innerWidth()/2- e.pageX)/40;
+        var ay = ($(window).innerHeight()/2- e.pageY)/20;
+        card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+    });
 
+
+// MENU BTN CLICK    
     $(".menu-btn").click(function(){
         $(".book-btn").toggleClass("book-btn-active");
         $(".menu-btn__hamburger").toggleClass("active");
@@ -8,10 +17,8 @@ jQuery(document).ready(function(){
         $(".menu-container").toggleClass("menu-container-active");
     });
 
-    $(".totop").click(function(){
-        $('html , body').animate({scrollTop:0},500);
-    });
 
+// MENU ON RESPONSIVE
     $(window).ready(function() {
         if ($(window).width() < 576){
             $(".menu-content__items__list , .menu-content__items__slide , .menu-content__items__about").slideUp() ;
@@ -25,14 +32,11 @@ jQuery(document).ready(function(){
         }
       });
 
-    
-    var card = $(".card");
-
-    $(document).on("mousemove",function(e) {  
-    var ax = -($(window).innerWidth()/2- e.pageX)/40;
-    var ay = ($(window).innerHeight()/2- e.pageY)/20;
-    card.attr("style", "transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-webkit-transform: rotateY("+ax+"deg) rotateX("+ay+"deg);-moz-transform: rotateY("+ax+"deg) rotateX("+ay+"deg)");
+// TO TOP BTN CLICK   
+    $(".totop").click(function(){
+        $('html , body').animate({scrollTop:0},500);
     });
+
 
 
 // SLIDE
@@ -85,5 +89,66 @@ jQuery(document).ready(function(){
         }
     })
 
+// FANCY BOX
+    $(".img-insta-box a[data-fancybox='insta']").fancybox();
+
+
+
+//OPENING
+    new TimelineMax()
+    .to($('.hero-img'),0.5,{x:0,opacity:1})
+    .staggerTo($('.welcome-container__title *'),0.5,{x:0,opacity:1},0.2);
+
+    new TimelineMax()
+    .to($('.card img'),1,{scale:1,opacity:1})
+    .to($('.card h2'),0.5,{x:-50+'%',opacity:1})
+    .to($('.card .enter-btn'),1,{y:-50+'%',opacity:1});
+
+    TweenMax.to($('.card ul'),1,{x:-50+'%',opacity:1});
+
+
+
+// WHEN SCROLL
+$(window).on('load , scroll ',(function() {
+    var position = $(window).scrollTop();
+
+    if(position >=  $('.about-container').offset().top-2){
+        TweenMax.to($('.about-container .title-1'),0.5,{y:0,opacity:1});
+        TweenMax.to($('.about-container .title-2'),0.5,{x:0,opacity:1});
+        TweenMax.to($('.about-container .black-line'),0.3,{width:100+'%', opacity:1});
+        new TimelineMax().staggerTo($('.brand img'),0.3,{scale:1,opacity:1},0.2);
+    } ;
+    if(position >= 1697-600 ){
+        TweenMax.to($('.about-col p'),0.5,{x:0,opacity:1});
+        TweenMax.to($('.featured-col p'),0.5,{x:0,opacity:1});
+    }
+    if(position >= $('.hotels-container').offset().top){
+        TweenMax.to($('.hotels-container__slide'),0.5,{y:0,opacity:1});
+        TweenMax.to($('.hotels-container .discover-btn'),0.5,{x:0,opacity:0.2});
+        TweenMax.to($('.g-talk-container .left-col'),0.5,{x:0,opacity:1});
+    }
+    if(position >= $('.g-talk-container').offset().top){
+        TweenMax.to($('.g-talk-container .intro-box'),0.5,{x:0,opacity:1});  
+        TweenMax.to($('.g-talk-container .slide-box'),0.5,{y:0,opacity:1});   
+    }
+    if(position >= $('.insta-container').offset().top){
+        new TimelineMax() .staggerTo($('.insta-container a[data-fancybox="insta"]'),0.5,{y:0,opacity:1},0.1);
+        TweenMax.to($('.insta-container .plus'),0.5,{x:0,opacity:1});   
+    }
+    return false
+}));
+
+$.scrollify({
+    section : ".scrollify",
+    setHeights: false,
+  });
   
+
+    
+
+
+
+
+
 });
+

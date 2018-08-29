@@ -93,7 +93,15 @@ header {
         color: $dark-color;
         letter-spacing: 2.8px;
         font-weight: bold;
-        background: $light-color;  
+        background: $light-color;
+        transition: 0.3s;
+
+        &:hover{
+            background:$dark-color;
+            color: $light-color;
+            border-color:$light-color;
+            @include transform(scale(1.1));
+        }
     }
     @media (max-width: 575px) {
         &{
@@ -113,10 +121,28 @@ header {
 }
 
 .book-btn-active {
+    a {
+        background:$dark-color;
+        color: $light-color;
+        border-color:$light-color;
+        &:hover {
+            background:$light-color;
+            color: $dark-color;
+            border-color:$dark-color;    
+        }
+    } 
+
         @media (max-width: 575px) {
         width: 100%;
         left: 0;
         top: calc(100% - 60px) ;
+
+        a {
+            background:$light-color;
+            color: $dark-color;
+            border-color:$dark-color;    
+        }
+
     }
 }
 // --------------------------------------------------- WHITE COL
@@ -437,6 +463,8 @@ header {
         font-size: 87px;
         line-height: 0.92;
         text-align: right;
+        opacity: 0;
+        @include transform(translateX(-100%) translateY(-50%) translateZ(50px));
     }
 
 
@@ -445,6 +473,8 @@ header {
         width: 501px;
         margin-left: -22px;
         z-index: 0;
+        opacity: 0;
+        @include transform(translateY(-50%) translateX(-50%) scale(1.1) );
     }
     
     .enter-btn {
@@ -453,6 +483,8 @@ header {
         margin-top: 210px; 
         letter-spacing: 2.8px;
         font-weight: bold;
+        @include transform(translateX(-50%) translateY(-100%) translateZ(100px));
+        opacity: 0;
    
         &:after{
             position: absolute;
@@ -469,6 +501,8 @@ header {
         margin-left: 305px;
         margin-top: 66px;
         width: 116px;
+        @include transform(translateX(100%) translateY(-100%) translateZ(50px));
+        opacity: 0;
 
         a {
             color: $dark-color;
@@ -522,6 +556,7 @@ header {
 // --------------------------------------------------- WELCOME CONTAINER 
 .welcome-container{
     width: 100%;
+    overflow-x: hidden;
     height:100vh;
     position: relative;
 
@@ -539,9 +574,9 @@ header {
     &:after {
         position: absolute;
         content:'';
-        right: 100px;
+        right: 0;
         bottom: 0;
-        width: calc(50% - 100px);
+        width: 50%;
         height: 20vh;
         z-index: 0;
         background: #eee;
@@ -573,20 +608,30 @@ header {
             font-family: Gotham;
             line-height: 1.43;
             letter-spacing: normal;
+            opacity: 0;
+            @include transform(translateX(-100px));
+
             @media (max-width: 575px) {
                 font-size: 12px;
                 line-height: 1.25;
                 width: 55.93vw;
                 margin: 11px 0 20px 0;
                 height: 48px;
-                overflow: hidden
+                overflow: hidden;
+                
             }
+        }
+        h2.title-1{
+            opacity: 0;
+            @include transform(translateX(-100px));
         }
         a {
             font-weight: bold;
             letter-spacing: 2.8px;
             color: $light-color;
-            display: inline;
+            display: inline-block;
+            opacity:0;
+                @include transform(translateX(-100px));
 
             &:after {
                 position: absolute;
@@ -596,6 +641,7 @@ header {
                 height: 4px;
                 top:28px;
                 left: 0;
+                
             }
             
         }
@@ -617,8 +663,8 @@ header {
         top:140px;
         right: 140px;
         z-index:1;
-        -webkit-box-shadow: 0px 5px 35px 0 rgba(0, 0, 0, 0.25);
-        box-shadow: 0px 5px 35px 0 rgba(0, 0, 0, 0.25);
+        opacity:0;
+        @include transform(translateX(100px));
 
         @media (max-width: 575px) {
             width: 78.12vw;
@@ -704,8 +750,9 @@ header {
 
 // --------------------------------------------------- ABOUT CONTAINER 
 .about-container{
-    height: 1400px;
+    height: 1400px - 116px;
     width: 100%;
+    overflow-x: hidden;
     @include display-flex;
     @media (max-width: 575px) {
         @include flex-direction-column;
@@ -770,6 +817,9 @@ header {
             right: 68px;
             top: 608px;
             z-index: 2;
+            opacity:0;
+            @include transform(translateY(100px));
+
             @media (max-width: 575px) { 
                 font-size: 30px;
                 width: 116px;
@@ -782,6 +832,9 @@ header {
             margin: 929px 80px 0 auto ;
             line-height: 1.43;
             width: 22vw;
+            opacity:0;
+            @include transform(translateX(-100px));
+            
             @media (max-width: 575px) { 
                 position: absolute;
                 margin: 0;
@@ -808,13 +861,17 @@ header {
 
         .title-2{
             color: $dark-color;
+            opacity:0;
+            @include transform(translateX(100px));  
         }
+        
         .black-line{
             height: 4px;
-            width: 100%;
+            width: 0;
             display: block;
             margin-top: 15px;
             background: $dark-color;
+            opacity:0;
         }
 
         .brand {
@@ -853,8 +910,12 @@ header {
                     -webkit-box-shadow: 0px 5px 35px 0 rgba(0, 0, 0, 0.25);
                     box-shadow: 0px 5px 35px 0 rgba(0, 0, 0, 0.25);
                 }
+                
                 @media (max-width: 575px) {
                     width: 50%;    
+                }
+                img {
+                    @include transform(scale(0));
                 }
             }
 
@@ -869,6 +930,9 @@ header {
             padding-top:89px;
             line-height: 1.43;
             width: 22vw;
+            opacity: 0;
+            @include transform(translateX(100px));
+
             @media (max-width: 575px) {
                 font-size: 12px; 
                 width: 70.31vw;
@@ -885,6 +949,7 @@ header {
     margin: -116px auto 0 auto; 
     height: 348px ;
     position: relative;
+    padding-top: 116px ;
     @media (max-width: 575px) {
         width: 100%;
         padding: 45px 80px 0 11.87vw;
@@ -915,7 +980,7 @@ header {
             width:240px;
             background: $dark-color;
             position: absolute;
-            top:116px;
+            top:232px;
             z-index: 1;
             @media (max-width: 575px) {
                 width: 100%;;
@@ -926,11 +991,12 @@ header {
         
 
         .discover-btn{
-            opacity: 0.2;
             letter-spacing: 2.8px;
             color: $dark-color;
             font-weight: bold;
             margin-top: 129px;
+            opacity: 0;
+            @include transform(translateX(-100px));
 
             &::after {
                 position: absolute;
@@ -954,14 +1020,19 @@ header {
             @include flex-wrap-wrap;
             position: absolute;
             right: 0;
-            top:0;
+            top:116px;
             z-index: 0;
             width: 860px;
+            opacity: 0;
+            @include transform(translateY(100px));
+
+
             @media (max-width: 575px) {
                 width: 100%;
                 position: static;
                 margin-top: 20px;
-            }   
+            } 
+
             &__item {
                 width: 200px;
                 @media (max-width: 575px) {
@@ -970,7 +1041,6 @@ header {
                     }
                 } 
                 
-
                 &__img {
                         margin-bottom: 30px;
                         overflow: hidden;
@@ -1055,6 +1125,9 @@ header {
         }
         .intro-box{
             padding: 60px 239px 90px 80px;
+            opacity: 0;
+            @include transform(translateX(100px));
+
             .title-1 {
                 color: $dark-color;
                 margin-bottom: 28px;
@@ -1098,6 +1171,9 @@ header {
         .slide-box{
             padding: 80px 180px 9px 80px;
             background: #eee;
+            height: 580px;
+            opacity: 0;
+            @include transform(translateY(100px));
         
             .slide2 {
                 width: 420px;
@@ -1194,8 +1270,11 @@ header {
     .left-col{
         width: 50%;
         background: $dark-color;
-        position: relative;
-        height: 1250px;
+        position: relative;    
+        height: 1150px;
+        opacity: 0;
+        @include transform(translateX(-100px));
+
         @media (max-width: 575px) {
             display: none;
         }
@@ -1257,6 +1336,7 @@ header {
     position: relative;
     width: 1080px;
     margin: -234px auto 0 auto;
+    padding-top: 100px;
     @media (max-width: 575px) {
         width: calc(100% - 60px);
         margin: 0 -60px 0 0 ;
@@ -1322,9 +1402,43 @@ header {
         @include align-items-center;
         a {
             width: 210px;
+            opacity: 0;
+            @include transform(translateY(100px));
+            position: relative;
+            background: rgb(40, 60, 66);
+
+            button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include transform(translateY(-50%) translateX(-50%) scale(0) );
+                width: 150px;
+                padding: 12px 48px;
+                border: solid 2px white;
+                background: transparent;
+                font-weight: bold;
+                color: $light-color;
+                letter-spacing: 8px;
+                @include transition(0.3s);
+                cursor: pointer;
+                
+            }
+
+            &:hover button{
+                @include transform(translateY(-50%) translateX(-50%) scale(1) );
+            }
+            img{
+                @include transition(0.3s);
+            }
+            &:hover img {
+                opacity: 0.5;
+            }
         }
 
         .plus{
+            background: transparent;
+            @include transform(translateY(0)) ;
+            @include transform(translateX(100px));
             width: 20px;
             height: 20px;
             margin-left: 130px;
