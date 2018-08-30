@@ -564,11 +564,11 @@ header {
     line-height: 0.92;
     text-align: right;
     opacity: 0;
-    -webkit-transform: translateX(-100%) translateY(-50%) translateZ(50px);
-    -moz-transform: translateX(-100%) translateY(-50%) translateZ(50px);
-    -ms-transform: translateX(-100%) translateY(-50%) translateZ(50px);
-    -o-transform: translateX(-100%) translateY(-50%) translateZ(50px);
-    transform: translateX(-100%) translateY(-50%) translateZ(50px); }
+    -webkit-transform: translateX(-75%) translateY(-50%) translateZ(50px);
+    -moz-transform: translateX(-75%) translateY(-50%) translateZ(50px);
+    -ms-transform: translateX(-75%) translateY(-50%) translateZ(50px);
+    -o-transform: translateX(-75%) translateY(-50%) translateZ(50px);
+    transform: translateX(-75%) translateY(-50%) translateZ(50px); }
   .intro-container img {
     position: absolute;
     top: 50%;

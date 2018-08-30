@@ -498,7 +498,7 @@ header {
         line-height: 0.92;
         text-align: right;
         opacity: 0;
-        @include transform(translateX(-100%) translateY(-50%) translateZ(50px));
+        @include transform(translateX(-75%) translateY(-50%) translateZ(50px));
     }
 
 
