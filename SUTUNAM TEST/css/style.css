@@ -647,7 +647,7 @@ header {
     .intro-container .enter-btn div:nth-child(4) {
       height: 0px;
       width: 4px;
-      top: -15px;
+      top: -14px;
       left: -30px;
       -webkit-transition: 0.1s 0.4s;
       -o-transition: 0.1s 0.4s;
