@@ -8,6 +8,7 @@ header {
     left:0;
     padding: 40px;
     width: 100%;
+    @include transition(0.5s);
     @include display-flex;
     @include justify-content-space-between;
 
@@ -82,6 +83,7 @@ header {
     right: 140px;
     top:40px;
     z-index: 9999;
+    @include transition(0.5s);
         
     a {
         width: 160px;
@@ -93,14 +95,14 @@ header {
         color: $dark-color;
         letter-spacing: 2.8px;
         font-weight: bold;
-        background: $light-color;
         transition: 0.3s;
+        background:transparent;
 
         &:hover{
-            background:$dark-color;
+            background:$dark-color !important;
             color: $light-color;
-            border-color:$light-color;
-            @include transform(scale(1.1));
+            // border-color:$light-color;
+            // @include transform(scale(1.1));
         }
     }
     @media (max-width: 575px) {
@@ -122,13 +124,12 @@ header {
 
 .book-btn-active {
     a {
-        background:$dark-color;
-        color: $light-color;
-        border-color:$light-color;
+         background:$dark-color !important;
+         color: $light-color;
+         border-color:$light-color;
         &:hover {
-            background:$light-color;
-            color: $dark-color;
-            border-color:$dark-color;    
+            background:$light-color !important;
+            color: $dark-color; 
         }
     } 
 
@@ -145,6 +146,7 @@ header {
 
     }
 }
+
 // --------------------------------------------------- WHITE COL
 .white-line {
     width: 4px;
@@ -282,6 +284,11 @@ header {
 
     li {
         width: 50%;
+
+        &:hover a {
+            background: $light-color;
+            color: $dark-color !important;
+        }
     }
 }
 // --------------------------------------------------- MENU CONTENT HOTELS
@@ -310,6 +317,12 @@ header {
             color: #eee;
             text-transform: uppercase;
             font-weight: bold;
+            display: inline-block;
+
+            &:hover {
+                background: $light-color;
+                color: $dark-color
+            }
         }
         li:last-child{
             margin-bottom: 50px; 
@@ -339,9 +352,19 @@ header {
     }
 }
 // --------------------------------------------------- MENU CONTENT BLOG
-.menu-content__blog , .slide2 , .g-talk-container {
+.menu-content__blog , .slide2 , .g-talk-container ,.slide3 { 
+    .owl-item:hover {
+        &:hover  img {
+            @include transform(scale(1.1))
+        }
+    }
+
+
     .blog-img {
+        
         position: relative;
+
+        img{@include transition(1s);}
 
         .date{
             span:first-child{
@@ -381,7 +404,12 @@ header {
         text-transform: uppercase
     }
     .title{
-        color: $light-color
+        color: $light-color;
+        display: inline-block;
+    }
+    .title:hover {
+        background: $light-color;
+        color:$dark-color;
     }
     .read-blog-btn {
         font-weight: bold;
@@ -400,6 +428,12 @@ header {
             height: 4px;
             background: $light-color;
         }
+
+        &:hover {
+            background: $light-color;
+            color: $dark-color
+        }
+
         @media (max-width: 575px) {
             & {
                 margin-bottom: 40px;
@@ -478,12 +512,12 @@ header {
     }
     
     .enter-btn {
-        @include position-center(100px); 
+        @include position-center(100px);
+        @include transform(translateX(-50%) translateY(-100%) translateZ(100px));
         color: $light-color; 
         margin-top: 210px; 
         letter-spacing: 2.8px;
         font-weight: bold;
-        @include transform(translateX(-50%) translateY(-100%) translateZ(100px));
         opacity: 0;
    
         &:after{
@@ -495,7 +529,63 @@ header {
             top:31px;
             left: 0px;
         }
+        
+        div {
+            position: absolute;
+            background: $light-color;
+        }
+        div:nth-child(1){
+            height: 4px;
+            top:31px;
+            left: 60px;
+            width: 0px;
+            @include transition(.05s)
+        }
+        div:nth-child(2){
+            height: 0px;
+            width: 4px;
+            bottom: -14px;
+            left: 86px;
+            @include transition(.1s .15s)
+        }
+        div:nth-child(3) {
+            width: 0px;
+            height: 4px;
+            top: -14px;
+            right: -27px;
+            @include transition(.15s .3s)
+        }
+        div:nth-child(4) {
+            height: 0px;
+            width: 4px;
+            top: -15px;
+            left: -30px;
+            @include transition(.1s .4s)
+        }
+        div:nth-child(5) {
+            width: 0px;
+            height: 4px;
+            top: 31px;
+            left: -30px;
+            @include transition(.15s .55s)
+        }
+        &:hover div:nth-child(1){
+            width: 30px;
+        }
+        &:hover div:nth-child(2){
+            height: 44px;
+        }
+        &:hover div:nth-child(3){
+            width: 120px;
+        }
+        &:hover div:nth-child(4){
+            height: 49px;
+        }
+        &:hover div:nth-child(5){
+            width: 30px;
+        }
     }
+
     ul {
         @include position-center(50px); 
         margin-left: 305px;
@@ -631,7 +721,7 @@ header {
             color: $light-color;
             display: inline-block;
             opacity:0;
-                @include transform(translateX(-100px));
+            @include transform(translateX(-100px));
 
             &:after {
                 position: absolute;
@@ -640,8 +730,12 @@ header {
                 background: $light-color;
                 height: 4px;
                 top:28px;
-                left: 0;
-                
+                left: 0;  
+            }
+            
+            &:hover {
+                background: $light-color;
+                color: $dark-color;  
             }
             
         }
@@ -997,6 +1091,12 @@ header {
             margin-top: 129px;
             opacity: 0;
             @include transform(translateX(-100px));
+            display: inline-block;
+
+            &:hover{
+                color: $light-color;
+                background: $dark-color;
+            }
 
             &::after {
                 position: absolute;
@@ -1061,7 +1161,10 @@ header {
                         color: $dark-color;
                     }
                     span {font-weight: normal;}
-                    
+                    &:hover a{
+                        color: $light-color; 
+                        background: $dark-color;
+                    }
                 }
                 
                 p{
@@ -1072,6 +1175,11 @@ header {
                 .more{
                     text-decoration: underline;
                     color: $dark-color;
+                    display: inline-block;
+                    &:hover {
+                        color: $light-color; 
+                        background: $dark-color;
+                    }
                 }
             }
 
@@ -1113,6 +1221,8 @@ header {
     @include display-flex;
     @include flex-direction-row-reverse;
     margin-top: 257px;
+    
+
     @media (max-width: 575px) {
         padding: 0 60px 0 0;
     }
@@ -1146,6 +1256,11 @@ header {
                 color:$dark-color;
                 display: inline-block;
                 
+                &:hover {
+                    color:$light-color; 
+                    background: $dark-color;
+                }
+
                 &:after {
                     content: '';
                     position: absolute;
@@ -1187,7 +1302,11 @@ header {
                 }
                 .title{
                     color: $dark-color;
-                    font-weight: bold
+                    font-weight: bold;
+                    &:hover {
+                        color: $light-color;
+                        background: $dark-color;
+                    }
                 }
                 p {
                     color: #b8b8b8;
@@ -1196,6 +1315,11 @@ header {
                 .more {
                     text-decoration: underline;
                     margin-top: 20px;
+                    display: inline;
+                    &:hover {
+                        color: $light-color;
+                        background: $dark-color;
+                    }
                 }
             }
             @media (max-width: 575px) {
@@ -1233,6 +1357,9 @@ header {
                 } 
             }
         }
+        .owl-item div {
+            overflow: hidden;
+        }
         .owl-prev , .owl-next{
         background: url('../img/left-arrow.svg') !important;
         width: 29px;
@@ -1269,6 +1396,7 @@ header {
     }
     .left-col{
         width: 50%;
+        overflow-x: hidden;
         background: $dark-color;
         position: relative;    
         height: 1150px;
@@ -1284,7 +1412,14 @@ header {
         .blog-img {
             width: 680px;
             position: absolute;
-            right: 0
+            right: 0;
+            overflow: hidden;
+            img{
+                @include transition(1s);       
+            }
+            &:hover img{
+                @include transform(scale(1.05));    
+            }
         }
 
         .text-block {
@@ -1327,6 +1462,11 @@ header {
             .more {
                 text-decoration: underline;
                 margin-top: 20px;
+                display: inline-block;
+                &:hover {
+                    background: $light-color;
+                    color: $dark-color;
+                }
             }
         }
     }
@@ -1335,6 +1475,7 @@ header {
 .insta-container{
     position: relative;
     width: 1080px;
+    overflow-x: hidden;
     margin: -234px auto 0 auto;
     padding-top: 100px;
     @media (max-width: 575px) {
@@ -1471,6 +1612,7 @@ header {
 // --------------------------------------------------- NEWSLETTER  CONTAINER 
 .newsletter-container {
     width: 1080px;
+    overflow-x: hidden;
     margin: 138px auto 0 auto;
     position: relative;
     @media (max-width: 575px) {
@@ -1530,6 +1672,7 @@ header {
             color: $dark-color;
             border: none;
             background: #eee;
+            cursor: pointer;
         }
     }
     p {
@@ -1556,6 +1699,13 @@ header {
             line-height: 2.14;
             color: $dark-color;
             text-decoration: underline;
+            display: inline-block;
+            &:hover {
+                color: $light-color;
+                background: $dark-color;
+                text-decoration: none;
+                
+            }
             @media (max-width:575px){
                 font-size: 12px;
             }

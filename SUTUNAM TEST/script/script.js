@@ -100,19 +100,30 @@ jQuery(document).ready(function(){
     .staggerTo($('.welcome-container__title *'),0.5,{x:0,opacity:1},0.2);
 
     new TimelineMax()
-    .to($('.card img'),1,{scale:1,opacity:1})
-    .to($('.card h2'),0.5,{x:-50+'%',opacity:1})
-    .to($('.card .enter-btn'),1,{y:-50+'%',opacity:1});
+    .to($('.card img'),0.5,{scale:1,opacity:1})
+    .to($('.card h2'),0.3,{x:-50+'%',opacity:1})
+    .to($('.card .enter-btn'),0.5,{y:-50+'%',opacity:1});
 
-    TweenMax.to($('.card ul'),1,{x:-50+'%',opacity:1});
+    TweenMax.to($('.card ul'),0.5,{x:-50+'%',opacity:1});
 
 
 
 // WHEN SCROLL
 $(window).on('load , scroll ',(function() {
     var position = $(window).scrollTop();
-
+    if(position <  $('.about-container').offset().top){
+        $('header').css('background','rgba(0, 0, 0, 0)');
+        $('.book-btn').css('top','40px');
+        $('.book-btn a').css('background','rgba(0, 0, 0, 0)');
+        $('.book-btn-active a').css('background','rgba(0, 0, 0, 0)');
+        
+    }
     if(position >=  $('.about-container').offset().top-2){
+        $('header').css('background','rgba(0, 0, 0, 0.1)')
+        $('.book-btn').css('top','20px');
+        $('.book-btn a').css('background','#e6e6e6');
+        $('.book-btn-active a').css('background','rgba(0, 0, 0, 0)');
+
         TweenMax.to($('.about-container .title-1'),0.5,{y:0,opacity:1});
         TweenMax.to($('.about-container .title-2'),0.5,{x:0,opacity:1});
         TweenMax.to($('.about-container .black-line'),0.3,{width:100+'%', opacity:1});
@@ -122,16 +133,16 @@ $(window).on('load , scroll ',(function() {
         TweenMax.to($('.about-col p'),0.5,{x:0,opacity:1});
         TweenMax.to($('.featured-col p'),0.5,{x:0,opacity:1});
     }
-    if(position >= $('.hotels-container').offset().top){
+    if(position >= $('.hotels-container').offset().top-2){
         TweenMax.to($('.hotels-container__slide'),0.5,{y:0,opacity:1});
         TweenMax.to($('.hotels-container .discover-btn'),0.5,{x:0,opacity:0.2});
         TweenMax.to($('.g-talk-container .left-col'),0.5,{x:0,opacity:1});
     }
-    if(position >= $('.g-talk-container').offset().top){
+    if(position >= $('.g-talk-container').offset().top-2){
         TweenMax.to($('.g-talk-container .intro-box'),0.5,{x:0,opacity:1});  
         TweenMax.to($('.g-talk-container .slide-box'),0.5,{y:0,opacity:1});   
     }
-    if(position >= $('.insta-container').offset().top){
+    if(position >= $('.insta-container').offset().top-2){
         new TimelineMax() .staggerTo($('.insta-container a[data-fancybox="insta"]'),0.5,{y:0,opacity:1},0.1);
         TweenMax.to($('.insta-container .plus'),0.5,{x:0,opacity:1});   
     }
